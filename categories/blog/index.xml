@@ -1,26 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>行けたら行く</title>
-    <link>https://ted027.github.io/</link>
-    <description>Recent content on 行けたら行く</description>
+    <title>blog on 行けたら行く</title>
+    <link>https://ted027.github.io/categories/blog/</link>
+    <description>Recent content in blog on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 15 Apr 2019 18:07:43 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 15 Apr 2019 11:20:46 +0900</lastBuildDate>
     
-	<atom:link href="https://ted027.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ted027.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>今後書きたいことの備忘録</title>
-      <link>https://ted027.github.io/post/todo/</link>
-      <pubDate>Mon, 15 Apr 2019 18:07:43 +0900</pubDate>
-      
-      <guid>https://ted027.github.io/post/todo/</guid>
-      <description>書くことに困ったら戻ってくる予定。
-挫折したらそっとリストから消す予定。
- Hugoのビルド〜公開を簡単にしたい話 ブログ更新をスマホからできるようにしたい話 OSをUbuntuにしていろいろ入れた時の話 ブンバボーンとからだダンダンの話 tensorflow.jsの話 パワプロの補強思考設定(の情報取得)を自動化する話 パワプロの能力査定を自動化する話 山本由伸が凄いって話 Docker使ってて躓いたことの話 npmのバージョン管理で困った話  </description>
-    </item>
     
     <item>
       <title>ブログ始めました</title>
