@@ -3,24 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ted027.github.io/post/disqus/</loc>
-    <lastmod>2019-04-16T08:23:08+09:00</lastmod>
+    <loc>https://ted027.github.io/categories/</loc>
+    <lastmod>2019-04-15T18:07:43+09:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ted027.github.io/post/</loc>
-    <lastmod>2019-04-16T08:23:08+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ted027.github.io/</loc>
-    <lastmod>2019-04-16T08:23:08+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ted027.github.io/categories/</loc>
     <lastmod>2019-04-15T18:07:43+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -46,6 +35,12 @@
   <url>
     <loc>https://ted027.github.io/post/todo/</loc>
     <lastmod>2019-04-15T18:07:43+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ted027.github.io/</loc>
+    <lastmod>2019-04-15T18:07:43+09:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>

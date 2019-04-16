@@ -20,12 +20,11 @@
       <description>ほんのりエンジニアっぽいブログが書きたい GitHub Pages + Hugoでブログ始めてみました。
 Hugo  https://gohugo.io/  静的サイトジェネレータ。テーマが豊富。
 自分はUbuntu 18.04を使っているのですが、aptだとバージョンが古かったのでsnapで入れました。
-導入 sudo snap install hugo --channel=extended cd /usr/bin sudo ln -s /snap/bin/hugo hugo   参考: https://cu-fe-lab.com/posts/20181130_hugoubuntu-18.04/  GitHub Pages  https://pages.github.com/  GitHub上の静的ファイルをwebページとして公開する機能。
+導入 sudo snap install hugo --channel=extended cd /usr/bin sudo ln -s /snap/bin/hugo hugo  GitHub Pages  https://pages.github.com/  GitHub上の静的ファイルをwebページとして公開する機能。
 markdownでブログとか書きたいなーと思っていたのでちょうど良さそう。
 Hugoで生成したファイルをGitHub Pagesで公開する感じ。
-導入  GitHubでレポジトリを作る  レポジトリ名は、[ユーザ名].github.ioにする  このリポジトリ上にindex.htmlとかをpushすると、https://[ユーザ名].github.ioに公開される  Hugo + GitHub Pagesでブログを始める話 GitHub上にレポジトリを2つ用意  blog  適当な名前でいい hugoのソースや記事のmdファイルを配置するレポジトリ  [GitHubのユーザ名].github.io  この名前で作る 静的ファイルを配置するレポジトリ   後で[GitHubのユーザ名].github.ioはblogのsubmodule化します。
-Hugoで静的サイトを作成 「blog」のところはレポジトリに合わせておく。
-hugo new site blog  Hugoの設定  テーマを入れる  テーマ一覧から気に入ったのを選ぶ  「Demo」を押すとサンプルブログとか見れて楽しい  blog/thmem以下にテーマを落とす   cd blog/themes git clone https://github.</description>
+導入  GitHubでレポジトリを作る  レポジトリ名は、[ユーザ名].github.ioにする  このリポジトリ上の静的ファイルがhttps://[ユーザ名].github.ioに公開される  Hugo + GitHub Pagesでブログを始める話 GitHub上にレポジトリを2つ用意  blog  hugoのソースや記事のmdファイルを配置するレポジトリ  [GitHubのユーザ名].github.io  この名前で作る 静的ファイルを配置するレポジトリ   Hugoで静的サイトを作成 hugo new site blog  Hugoの設定  テーマを入れる
+ テーマ一覧から気に入ったのを選ぶ  「Demo」を押すとサンプルとか見れて楽しい  blog/thmem以下にテーマを落とす</description>
     </item>
     
   </channel>
