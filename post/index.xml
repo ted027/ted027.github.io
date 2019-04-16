@@ -50,7 +50,7 @@ Your website shortname is ted027-com
       <pubDate>Mon, 15 Apr 2019 11:20:46 +0900</pubDate>
       
       <guid>https://ted027.github.io/post/firstpage/</guid>
-      <description>ほんのりエンジニアっぽいブログが書きたい GitHub Pages + Hugoでブログ始めてみました。
+      <description>ほんのりエンジニアっぽいブログが書きたい Hugo + GitHub Pagesでブログ始めてみました。
 Hugo  https://gohugo.io/  静的サイトジェネレータ。テーマが豊富。
 自分はUbuntu 18.04を使っているのですが、aptだとバージョンが古かったのでsnapで入れました。
 導入 sudo snap install hugo --channel=extended cd /usr/bin sudo ln -s /snap/bin/hugo hugo  GitHub Pages  https://pages.github.com/  GitHub上の静的ファイルをwebページとして公開する機能。
