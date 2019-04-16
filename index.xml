@@ -6,10 +6,32 @@
     <description>Recent content on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 15 Apr 2019 18:07:43 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 16 Apr 2019 08:23:08 +0900</lastBuildDate>
     
 	<atom:link href="https://ted027.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HugoブログにDisqusでコメント欄をつけた話</title>
+      <link>https://ted027.github.io/post/disqus/</link>
+      <pubDate>Tue, 16 Apr 2019 08:23:08 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/post/disqus/</guid>
+      <description>ブログにコメント欄が欲しい 出来上がったブログを眺めていて、あれこれ言いたいことはあるんですが、まずコメント欄がない。
+ちょっと調べたところDisqusというオンラインサービスが簡単そう。
+やってみる  Disqusにユーザ登録する
+ Facebook, Twitter, Google各アカウントでの登録もできます  右上の歯車から「Add Disqus To Site」を選択
+ 画面下の「GET STARTED」を選択
+ 下の「I want to install Disqus on my site」を選択
+ Website名とカテゴリ、言語を入力
+ Japaneseが無かったのでEnglishにしました  プランを選択
+ 基本的なコメント欄をつけたいだけならBasicでよさそう  自分のサイトを選択
+ WordPressやらTumblrやらJekyllやらありますが、今回はHugoで作ったサイトなので、一番下の「I don&amp;rsquo;t see my platform listed, install manually with Universal Code」を選択  JavaScriptでWebsite上にDisqusを設置するための情報等が表示されます。特に弄らず一番下の「Configure Disqus」を選択
+ 設定画面に行きます。Website NameとWebsite URLを入力、Color schemeやらはお好みで
+ 設定が完了したら、「Configure your site&amp;rsquo;s community settings」を選択。「Shortname」の文字列をコピーします。
+Your website shortname is ted027-com
+ コピーしたShortnameを、config.</description>
+    </item>
     
     <item>
       <title>今後書きたいことの備忘録</title>

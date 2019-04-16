@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on 行けたら行く</title>
-    <link>https://ted027.github.io/tags/hugo/</link>
-    <description>Recent content in Hugo on 行けたら行く</description>
+    <title>コメント欄 on 行けたら行く</title>
+    <link>https://ted027.github.io/tags/%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%AC%84/</link>
+    <description>Recent content in コメント欄 on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 16 Apr 2019 08:23:08 +0900</lastBuildDate>
     
-	<atom:link href="https://ted027.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ted027.github.io/tags/%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%AC%84/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -31,22 +31,6 @@
  設定が完了したら、「Configure your site&amp;rsquo;s community settings」を選択。「Shortname」の文字列をコピーします。
 Your website shortname is ted027-com
  コピーしたShortnameを、config.</description>
-    </item>
-    
-    <item>
-      <title>Hugo &#43; GitHub Pagesでブログを始めた話</title>
-      <link>https://ted027.github.io/post/firstpage/</link>
-      <pubDate>Mon, 15 Apr 2019 11:20:46 +0900</pubDate>
-      
-      <guid>https://ted027.github.io/post/firstpage/</guid>
-      <description>ほんのりエンジニアっぽいブログが書きたい GitHub Pages + Hugoでブログ始めてみました。
-Hugo  https://gohugo.io/  静的サイトジェネレータ。テーマが豊富。
-自分はUbuntu 18.04を使っているのですが、aptだとバージョンが古かったのでsnapで入れました。
-導入 sudo snap install hugo --channel=extended cd /usr/bin sudo ln -s /snap/bin/hugo hugo  GitHub Pages  https://pages.github.com/  GitHub上の静的ファイルをwebページとして公開する機能。
-markdownでブログとか書きたいなーと思っていたのでちょうど良さそう。
-Hugoで生成したファイルをGitHub Pagesで公開する感じ。
-導入  GitHubでレポジトリを作る  レポジトリ名は、[ユーザ名].github.ioにする  このリポジトリ上の静的ファイルがhttps://[ユーザ名].github.ioに公開される  Hugo + GitHub Pagesでブログを始める話 GitHub上にレポジトリを2つ用意  blog  hugoのソースや記事のmdファイルを配置するレポジトリ  [GitHubのユーザ名].github.io  この名前で作る 静的ファイルを配置するレポジトリ   Hugoで静的サイトを作成 hugo new site blog  Hugoの設定  テーマを入れる
- テーマ一覧から気に入ったのを選ぶ  「Demo」を押すとサンプルとか見れて楽しい  blog/thmem以下にテーマを落とす</description>
     </item>
     
   </channel>

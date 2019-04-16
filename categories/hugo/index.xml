@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 行けたら行く</title>
-    <link>https://ted027.github.io/post/</link>
-    <description>Recent content in Posts on 行けたら行く</description>
+    <title>Hugo on 行けたら行く</title>
+    <link>https://ted027.github.io/categories/hugo/</link>
+    <description>Recent content in Hugo on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 16 Apr 2019 08:23:08 +0900</lastBuildDate>
     
-	<atom:link href="https://ted027.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ted027.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -31,17 +31,6 @@
  設定が完了したら、「Configure your site&amp;rsquo;s community settings」を選択。「Shortname」の文字列をコピーします。
 Your website shortname is ted027-com
  コピーしたShortnameを、config.</description>
-    </item>
-    
-    <item>
-      <title>今後書きたいことの備忘録</title>
-      <link>https://ted027.github.io/post/todo/</link>
-      <pubDate>Mon, 15 Apr 2019 18:07:43 +0900</pubDate>
-      
-      <guid>https://ted027.github.io/post/todo/</guid>
-      <description>書くことに困ったら戻ってくる予定。
-挫折したらそっとリストから消す予定。
- Hugoのビルド〜公開を簡単にしたい話 ブログ更新をスマホからできるようにしたい話 OSをUbuntuにしていろいろ入れた時の話 ブンバボーンとからだダンダンの話 tensorflow.jsの話 パワプロの補強思考設定(の情報取得)を自動化する話 パワプロの能力査定を自動化する話 山本由伸が凄いって話 Docker使ってて躓いたことの話 npmのバージョン管理で困った話  </description>
     </item>
     
     <item>
