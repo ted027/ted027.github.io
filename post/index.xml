@@ -6,10 +6,32 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 15 Apr 2019 18:07:43 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 16 Apr 2019 08:23:08 +0900</lastBuildDate>
     
 	<atom:link href="https://ted027.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HugoブログにDisqusでコメント欄をつけた話</title>
+      <link>https://ted027.github.io/post/disqus/</link>
+      <pubDate>Tue, 16 Apr 2019 08:23:08 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/post/disqus/</guid>
+      <description>ブログにコメント欄が欲しい 出来上がったブログを眺めていて、あれこれ言いたいことはあるんですが、まずコメント欄がない。
+ちょっと調べたところDisqusというオンラインサービスが簡単そう。
+やってみる  Disqusにユーザ登録する
+ Facebook, Twitter, Google各アカウントでの登録もできます  右上の歯車から「Add Disqus To Site」を選択
+ 画面下の「GET STARTED」を選択
+ 下の「I want to install Disqus on my site」を選択
+ Website名とカテゴリ、言語を入力
+ Japaneseが無かったのでEnglishにしました  プランを選択。基本的なコメント欄をつけたいだけならBasicでよさそう
+ 自分のサイトを選択。WordPressやらTumblrやらJekyllやらありますが、今回はHugoで作ったサイトなので、一番下の「I don&amp;rsquo;t see my platform listed, install manually with Universal Code」を選択
+ JavaScriptでWebsite上にDisqusを設置するための情報等が表示されます。特に弄らず一番下の「Configure Disqus」を選択
+ 設定画面に行きます。Website NameとWebsite URLを入力、Color schemeやらはお好みで
+ 設定が完了したら、「Configure your site&amp;rsquo;s community settings」を選択。「Shortname」の文字列をコピーします。
+  Your website shortname is ted027-com
+ コピーしたShortnameを、config.tomlに追加  disqusShortname = &amp;quot;ted027-com&amp;quot;</description>
+    </item>
     
     <item>
       <title>今後書きたいことの備忘録</title>
@@ -23,19 +45,20 @@
     </item>
     
     <item>
-      <title>ブログ始めました</title>
+      <title>Hugo &#43; GitHub Pagesでブログを始めた話</title>
       <link>https://ted027.github.io/post/firstpage/</link>
       <pubDate>Mon, 15 Apr 2019 11:20:46 +0900</pubDate>
       
       <guid>https://ted027.github.io/post/firstpage/</guid>
-      <description>ほんのりエンジニアっぽいブログが書きたい Github Pages + Hugoでブログ始めてみました。
-参考サイトは以下
- https://uqichi.net/posts/github-pages-x-hugo/ https://qiita.com/h6m3_u/items/5893a61091d258936716  Hugo  https://gohugo.io/  静的サイトジェネレータ。テーマが豊富。
-Hugoで生成したファイルをGithub Pagesで公開する感じ。
+      <description>ほんのりエンジニアっぽいブログが書きたい GitHub Pages + Hugoでブログ始めてみました。
+Hugo  https://gohugo.io/  静的サイトジェネレータ。テーマが豊富。
 自分はUbuntu 18.04を使っているのですが、aptだとバージョンが古かったのでsnapで入れました。
- 参考: https://cu-fe-lab.com/posts/20181130_hugoubuntu-18.04/  Github Pages  https://pages.github.com/  Github上の静的ファイルをwebページとして公開する機能。
+導入 sudo snap install hugo --channel=extended cd /usr/bin sudo ln -s /snap/bin/hugo hugo   参考: https://cu-fe-lab.com/posts/20181130_hugoubuntu-18.04/  GitHub Pages  https://pages.github.com/  GitHub上の静的ファイルをwebページとして公開する機能。
 markdownでブログとか書きたいなーと思っていたのでちょうど良さそう。
-タイトルやらデザインやらその他諸々は今後変わっていく予定。</description>
+Hugoで生成したファイルをGitHub Pagesで公開する感じ。
+導入  GitHubでレポジトリを作る  レポジトリ名は、[ユーザ名].github.ioにする  このリポジトリ上にindex.htmlとかをpushすると、https://[ユーザ名].github.ioに公開される  Hugo + GitHub Pagesでブログを始める話 GitHub上にレポジトリを2つ用意  blog  適当な名前でいい hugoのソースや記事のmdファイルを配置するレポジトリ  [GitHubのユーザ名].github.io  この名前で作る 静的ファイルを配置するレポジトリ   後で[GitHubのユーザ名].github.ioはblogのsubmodule化します。
+Hugoで静的サイトを作成 「blog」のところはレポジトリに合わせておく。
+hugo new site blog  Hugoの設定  テーマを入れる  テーマ一覧から気に入ったのを選ぶ  「Demo」を押すとサンプルブログとか見れて楽しい  blog/thmem以下にテーマを落とす   cd blog/themes git clone https://github.</description>
     </item>
     
   </channel>

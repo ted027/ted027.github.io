@@ -3,13 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ted027.github.io/categories/</loc>
-    <lastmod>2019-04-15T18:07:43+09:00</lastmod>
-    <priority>0</priority>
+    <loc>https://ted027.github.io/post/disqus/</loc>
+    <lastmod>2019-04-16T08:23:08+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://ted027.github.io/post/</loc>
+    <lastmod>2019-04-16T08:23:08+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ted027.github.io/</loc>
+    <lastmod>2019-04-16T08:23:08+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ted027.github.io/categories/</loc>
     <lastmod>2019-04-15T18:07:43+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -38,12 +49,6 @@
   </url>
   
   <url>
-    <loc>https://ted027.github.io/</loc>
-    <lastmod>2019-04-15T18:07:43+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ted027.github.io/tags/github-pages/</loc>
     <lastmod>2019-04-15T11:20:46+09:00</lastmod>
     <priority>0</priority>
@@ -56,20 +61,20 @@
   </url>
   
   <url>
+    <loc>https://ted027.github.io/post/firstpage/</loc>
+    <lastmod>2019-04-15T11:20:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ted027.github.io/categories/ubuntu/</loc>
+    <lastmod>2019-04-15T11:20:46+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ted027.github.io/tags/ubuntu/</loc>
     <lastmod>2019-04-15T11:20:46+09:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ted027.github.io/categories/blog/</loc>
-    <lastmod>2019-04-15T11:20:46+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ted027.github.io/post/firstpage/</loc>
-    <lastmod>2019-04-15T11:20:46+09:00</lastmod>
   </url>
   
 </urlset>

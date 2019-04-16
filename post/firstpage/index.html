@@ -4,33 +4,35 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ブログ始めました - 行けたら行く</title>
+	<title>Hugo &#43; GitHub Pagesでブログを始めた話 - 行けたら行く</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta property="og:title" content="ブログ始めました" />
-<meta property="og:description" content="ほんのりエンジニアっぽいブログが書きたい Github Pages &#43; Hugoでブログ始めてみました。
-参考サイトは以下
- https://uqichi.net/posts/github-pages-x-hugo/ https://qiita.com/h6m3_u/items/5893a61091d258936716  Hugo  https://gohugo.io/  静的サイトジェネレータ。テーマが豊富。
-Hugoで生成したファイルをGithub Pagesで公開する感じ。
+	<meta property="og:title" content="Hugo &#43; GitHub Pagesでブログを始めた話" />
+<meta property="og:description" content="ほんのりエンジニアっぽいブログが書きたい GitHub Pages &#43; Hugoでブログ始めてみました。
+Hugo  https://gohugo.io/  静的サイトジェネレータ。テーマが豊富。
 自分はUbuntu 18.04を使っているのですが、aptだとバージョンが古かったのでsnapで入れました。
- 参考: https://cu-fe-lab.com/posts/20181130_hugoubuntu-18.04/  Github Pages  https://pages.github.com/  Github上の静的ファイルをwebページとして公開する機能。
+導入 sudo snap install hugo --channel=extended cd /usr/bin sudo ln -s /snap/bin/hugo hugo   参考: https://cu-fe-lab.com/posts/20181130_hugoubuntu-18.04/  GitHub Pages  https://pages.github.com/  GitHub上の静的ファイルをwebページとして公開する機能。
 markdownでブログとか書きたいなーと思っていたのでちょうど良さそう。
-タイトルやらデザインやらその他諸々は今後変わっていく予定。" />
+Hugoで生成したファイルをGitHub Pagesで公開する感じ。
+導入  GitHubでレポジトリを作る  レポジトリ名は、[ユーザ名].github.ioにする  このリポジトリ上にindex.htmlとかをpushすると、https://[ユーザ名].github.ioに公開される  Hugo &#43; GitHub Pagesでブログを始める話 GitHub上にレポジトリを2つ用意  blog  適当な名前でいい hugoのソースや記事のmdファイルを配置するレポジトリ  [GitHubのユーザ名].github.io  この名前で作る 静的ファイルを配置するレポジトリ   後で[GitHubのユーザ名].github.ioはblogのsubmodule化します。
+Hugoで静的サイトを作成 「blog」のところはレポジトリに合わせておく。
+hugo new site blog  Hugoの設定  テーマを入れる  テーマ一覧から気に入ったのを選ぶ  「Demo」を押すとサンプルブログとか見れて楽しい  blog/thmem以下にテーマを落とす   cd blog/themes git clone https://github." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ted027.github.io/post/firstpage/" />
 <meta property="article:published_time" content="2019-04-15T11:20:46&#43;09:00"/>
 <meta property="article:modified_time" content="2019-04-15T11:20:46&#43;09:00"/>
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ブログ始めました"/>
-<meta name="twitter:description" content="ほんのりエンジニアっぽいブログが書きたい Github Pages &#43; Hugoでブログ始めてみました。
-参考サイトは以下
- https://uqichi.net/posts/github-pages-x-hugo/ https://qiita.com/h6m3_u/items/5893a61091d258936716  Hugo  https://gohugo.io/  静的サイトジェネレータ。テーマが豊富。
-Hugoで生成したファイルをGithub Pagesで公開する感じ。
+<meta name="twitter:title" content="Hugo &#43; GitHub Pagesでブログを始めた話"/>
+<meta name="twitter:description" content="ほんのりエンジニアっぽいブログが書きたい GitHub Pages &#43; Hugoでブログ始めてみました。
+Hugo  https://gohugo.io/  静的サイトジェネレータ。テーマが豊富。
 自分はUbuntu 18.04を使っているのですが、aptだとバージョンが古かったのでsnapで入れました。
- 参考: https://cu-fe-lab.com/posts/20181130_hugoubuntu-18.04/  Github Pages  https://pages.github.com/  Github上の静的ファイルをwebページとして公開する機能。
+導入 sudo snap install hugo --channel=extended cd /usr/bin sudo ln -s /snap/bin/hugo hugo   参考: https://cu-fe-lab.com/posts/20181130_hugoubuntu-18.04/  GitHub Pages  https://pages.github.com/  GitHub上の静的ファイルをwebページとして公開する機能。
 markdownでブログとか書きたいなーと思っていたのでちょうど良さそう。
-タイトルやらデザインやらその他諸々は今後変わっていく予定。"/>
+Hugoで生成したファイルをGitHub Pagesで公開する感じ。
+導入  GitHubでレポジトリを作る  レポジトリ名は、[ユーザ名].github.ioにする  このリポジトリ上にindex.htmlとかをpushすると、https://[ユーザ名].github.ioに公開される  Hugo &#43; GitHub Pagesでブログを始める話 GitHub上にレポジトリを2つ用意  blog  適当な名前でいい hugoのソースや記事のmdファイルを配置するレポジトリ  [GitHubのユーザ名].github.io  この名前で作る 静的ファイルを配置するレポジトリ   後で[GitHubのユーザ名].github.ioはblogのsubmodule化します。
+Hugoで静的サイトを作成 「blog」のところはレポジトリに合わせておく。
+hugo new site blog  Hugoの設定  テーマを入れる  テーマ一覧から気に入ったのを選ぶ  「Demo」を押すとサンプルブログとか見れて楽しい  blog/thmem以下にテーマを落とす   cd blog/themes git clone https://github."/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -39,6 +41,17 @@ markdownでブログとか書きたいなーと思っていたのでちょうど
 	
 	<link rel="shortcut icon" href="/favicon.ico">
 		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-138367212-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
 </head>
 <body class="body">
 	<div class="container container--outer">
@@ -59,7 +72,7 @@ markdownでブログとか書きたいなーと思っていたのでちょうど
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">ブログ始めました</h1>
+			<h1 class="post__title">Hugo &#43; GitHub Pagesでブログを始めた話</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
@@ -68,15 +81,211 @@ markdownでブログとか書きたいなーと思っていたのでちょうど
 
 <div class="meta__item-categories meta__item">
 	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/blog" rel="category">blog</a></span>
+	<span class="meta__text"><a class="meta__link" href="/categories/ubuntu" rel="category">Ubuntu</a></span>
 </div>
 </div>
 		</header><div class="content post__content clearfix">
 			
 
-<h3 id="ほんのりエンジニアっぽいブログが書きたい">ほんのりエンジニアっぽいブログが書きたい</h3>
+<h2 id="ほんのりエンジニアっぽいブログが書きたい">ほんのりエンジニアっぽいブログが書きたい</h2>
 
-<p><a href="https://pages.github.com/">Github Pages</a> + <a href="https://gohugo.io/">Hugo</a>でブログ始めてみました。</p>
+<p><a href="https://pages.github.com/">GitHub Pages</a> + <a href="https://gohugo.io/">Hugo</a>でブログ始めてみました。</p>
+
+<hr />
+
+<h2 id="hugo">Hugo</h2>
+
+<ul>
+<li><a href="https://gohugo.io/">https://gohugo.io/</a></li>
+</ul>
+
+<p>静的サイトジェネレータ。テーマが豊富。</p>
+
+<p>自分はUbuntu 18.04を使っているのですが、aptだとバージョンが古かったのでsnapで入れました。</p>
+
+<h3 id="導入">導入</h3>
+
+<pre><code>sudo snap install hugo --channel=extended
+cd /usr/bin
+sudo ln -s /snap/bin/hugo hugo
+</code></pre>
+
+<ul>
+<li>参考: <a href="https://cu-fe-lab.com/posts/20181130_hugoubuntu-18.04/">https://cu-fe-lab.com/posts/20181130_hugoubuntu-18.04/</a></li>
+</ul>
+
+<hr />
+
+<h2 id="github-pages">GitHub Pages</h2>
+
+<ul>
+<li><a href="https://pages.github.com/">https://pages.github.com/</a></li>
+</ul>
+
+<p>GitHub上の静的ファイルをwebページとして公開する機能。</p>
+
+<p>markdownでブログとか書きたいなーと思っていたのでちょうど良さそう。</p>
+
+<p>Hugoで生成したファイルをGitHub Pagesで公開する感じ。</p>
+
+<h3 id="導入-1">導入</h3>
+
+<ol>
+<li>GitHubでレポジトリを作る
+
+<ul>
+<li>レポジトリ名は、<code>[ユーザ名].github.io</code>にする</li>
+</ul></li>
+<li>このリポジトリ上に<code>index.html</code>とかをpushすると、<code>https://[ユーザ名].github.io</code>に公開される</li>
+</ol>
+
+<hr />
+
+<h2 id="hugo-github-pagesでブログを始める話">Hugo + GitHub Pagesでブログを始める話</h2>
+
+<h3 id="github上にレポジトリを2つ用意">GitHub上にレポジトリを2つ用意</h3>
+
+<ul>
+<li>blog
+
+<ul>
+<li>適当な名前でいい</li>
+<li>hugoのソースや記事のmdファイルを配置するレポジトリ</li>
+</ul></li>
+<li>[GitHubのユーザ名].github.io
+
+<ul>
+<li>この名前で作る</li>
+<li>静的ファイルを配置するレポジトリ</li>
+</ul></li>
+</ul>
+
+<p>後で<code>[GitHubのユーザ名].github.io</code>は<code>blog</code>のsubmodule化します。</p>
+
+<h3 id="hugoで静的サイトを作成">Hugoで静的サイトを作成</h3>
+
+<p>「blog」のところはレポジトリに合わせておく。</p>
+
+<pre><code>hugo new site blog
+</code></pre>
+
+<h3 id="hugoの設定">Hugoの設定</h3>
+
+<ol>
+<li>テーマを入れる
+
+<ul>
+<li><a href="https://themes.gohugo.io/">テーマ一覧</a>から気に入ったのを選ぶ
+
+<ul>
+<li>「Demo」を押すとサンプルブログとか見れて楽しい</li>
+</ul></li>
+<li><code>blog/thmem</code>以下にテーマを落とす</li>
+</ul></li>
+</ol>
+
+<pre><code>cd blog/themes
+git clone https://github.com/[好きなテーマ]
+cd -
+</code></pre>
+
+<ol>
+<li>Hugoの設定ファイルを編集する
+
+<ul>
+<li><code>blog/config.toml</code>を編集</li>
+<li>これ以外にもテーマによって設定項目が色々ありますが、テーマのページを見ると大抵書いてあります</li>
+</ul></li>
+</ol>
+
+<pre><code>baseURL = &quot;https://[GitHubのユーザ名].github.io/&quot;
+languageCode = &quot;ja&quot;
+title = &quot;My Blog&quot;
+theme = &quot;[好きなテーマ]&quot;
+</code></pre>
+
+<h3 id="記事を作成">記事を作成</h3>
+
+<pre><code>cd blog
+hugo new post/first.md
+cd -
+</code></pre>
+
+<p>こんな記事ができる。</p>
+
+<pre><code>---
+title: &quot;First&quot;
+date: 2019-04-15T00:00:00+09:00
+draft: true
+---
+</code></pre>
+
+<ul>
+<li><code>draft</code>がtrueだと未公開になるので、公開する際はfalseに</li>
+<li>markdownで好きなように記事を書く
+
+<ul>
+<li>ちなみに、記事にデフォルトで入る項目は<code>blog/archetypes/default.md</code>で弄れます</li>
+</ul></li>
+</ul>
+
+<h3 id="ローカルサーバで確認">ローカルサーバで確認</h3>
+
+<p><code>hugo server --buildDrafts --watch</code></p>
+
+<ul>
+<li><code>--buildDrafts</code>をつけると<code>draft: true</code>の記事もプレビューできます</li>
+<li><code>--watch</code>をつけておくと記事を更新するたびにプレビューも更新されます</li>
+<li><a href="http://localhost:1313">http://localhost:1313</a> で確認</li>
+</ul>
+
+<p><code>hugo</code>コマンドでビルドし公開用ディレクトリが作成されますが、その前にGihHub側を準備します</p>
+
+<h3 id="githubに公開">GitHubに公開</h3>
+
+<ol>
+<li>「blog」を上げる</li>
+</ol>
+
+<pre><code>cd blog
+git init
+git remote add origin git@github.com:[GitHubのユーザ名]/blog.git
+git add -A
+git commit -m &quot;initial commit&quot;
+git push origin master
+cd -
+</code></pre>
+
+<ol>
+<li>「blog」の公開用ディレクトリをサブモジュール化する
+
+<ul>
+<li><code>hugo</code>でビルドすると、<code>blog/public</code>に公開用ファイル一式が作成されます</li>
+<li>なので、<code>[GitHubのユーザ名].github.io</code>レポジトリをサブモジュールとして<code>blog/public</code>に追加しておくと、ビルドしてpushするだけで、GitHub Pagesを使ってブログが公開できます</li>
+</ul></li>
+</ol>
+
+<pre><code>git submodule add git@github.com:[GitHubのユーザ名]/[GitHubのユーザ名].github.io.git hugo/public
+</code></pre>
+
+<ol>
+<li>ビルドして公開</li>
+</ol>
+
+<pre><code>cd blog
+hugo
+git add -A
+git commit -m &quot;initial commit&quot;
+git push origin master
+</code></pre>
+
+<p>少し待って<code>https://[ユーザ名].github.io</code>にアクセスすると公開されてるはず。</p>
+
+<hr />
+
+<p>自動化とか諸々はまたの機会に。</p>
+
+<hr />
 
 <p>参考サイトは以下</p>
 
@@ -85,46 +294,12 @@ markdownでブログとか書きたいなーと思っていたのでちょうど
 <li><a href="https://qiita.com/h6m3_u/items/5893a61091d258936716">https://qiita.com/h6m3_u/items/5893a61091d258936716</a></li>
 </ul>
 
-<hr />
-
-<h3 id="hugo">Hugo</h3>
-
-<ul>
-<li><a href="https://gohugo.io/">https://gohugo.io/</a></li>
-</ul>
-
-<p>静的サイトジェネレータ。テーマが豊富。</p>
-
-<p>Hugoで生成したファイルをGithub Pagesで公開する感じ。</p>
-
-<p>自分はUbuntu 18.04を使っているのですが、aptだとバージョンが古かったのでsnapで入れました。</p>
-
-<ul>
-<li>参考: <a href="https://cu-fe-lab.com/posts/20181130_hugoubuntu-18.04/">https://cu-fe-lab.com/posts/20181130_hugoubuntu-18.04/</a></li>
-</ul>
-
-<hr />
-
-<h3 id="github-pages">Github Pages</h3>
-
-<ul>
-<li><a href="https://pages.github.com/">https://pages.github.com/</a></li>
-</ul>
-
-<p>Github上の静的ファイルをwebページとして公開する機能。</p>
-
-<p>markdownでブログとか書きたいなーと思っていたのでちょうど良さそう。</p>
-
-<hr />
-
-<p>タイトルやらデザインやらその他諸々は今後変わっていく予定。</p>
-
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="tags__icon icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="/tags/github-pages/" rel="tag">Github Pages</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/github-pages/" rel="tag">GitHub Pages</a></li>
 		<li class="tags__item"><a class="tags__link btn" href="/tags/hugo/" rel="tag">Hugo</a></li>
 		<li class="tags__item"><a class="tags__link btn" href="/tags/ubuntu/" rel="tag">Ubuntu</a></li>
 	</ul>
@@ -147,6 +322,29 @@ markdownでブログとか書きたいなーと思っていたのでちょうど
 	</div>
 </nav>
 
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "ted027-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
 
 			</div>
 			<aside class="sidebar"><div class="widget-search widget">
@@ -162,8 +360,9 @@ markdownでブログとか書きたいなーと思っていたのでちょうど
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/disqus/">HugoブログにDisqusでコメント欄をつけた話</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/todo/">今後書きたいことの備忘録</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/firstpage/">ブログ始めました</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/firstpage/">Hugo &#43; GitHub Pagesでブログを始めた話</a></li>
 		</ul>
 	</div>
 </div>
@@ -171,8 +370,8 @@ markdownでブログとか書きたいなーと思っていたのでちょうど
 	<h4 class="widget__title">Categories</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/categories/blog">Blog</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/todo">Todo</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/ubuntu">Ubuntu</a></li>
 		</ul>
 	</div>
 </div>
@@ -189,7 +388,7 @@ markdownでブログとか書きたいなーと思っていたのでちょうど
 	<h4 class="widget-social__title widget__title">Social</h4>
 	<div class="widget-social__content widget__content">
 		<div class="widget-social__item widget__item">
-			<a class="widget-social__link widget__link btn" title="Facebook" rel="noopener noreferrer" href="https://facebook.com/imai.tetsu" target="_blank">
+			<a class="widget-social__link widget__link btn" title="Facebook" rel="noopener noreferrer" href="https://facebook.com/imaitt" target="_blank">
 				<svg class="widget-social__link-icon icon icon-facebook" width="24" height="24" viewBox="0 0 352 352"><path d="m0 32v288c0 17.5 14.5 32 32 32h288c17.5 0 32-14.5 32-32v-288c0-17.5-14.5-32-32-32h-288c-17.5 0-32 14.5-32 32zm320 0v288h-83v-108h41.5l6-48h-47.5v-31c0-14 3.5-23.5 23.5-23.5h26v-43.5c-4.4-.6-19.8-1.5-37.5-1.5-36.9 0-62 22.2-62 63.5v36h-42v48h42v108h-155v-288z"/></svg>
 				<span>Facebook</span>
 			</a>
@@ -204,6 +403,12 @@ markdownでブログとか書きたいなーと思っていたのでちょうど
 			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/ted027" target="_blank">
 				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
 				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:imaitt0207@gmail.com">
+				<svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>imaitt0207@gmail.com</span>
 			</a>
 		</div>
 	</div>

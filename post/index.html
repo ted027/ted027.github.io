@@ -12,7 +12,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://ted027.github.io/post/" />
 
-<meta property="og:updated_time" content="2019-04-15T18:07:43&#43;09:00"/>
+<meta property="og:updated_time" content="2019-04-16T08:23:08&#43;09:00"/>
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -26,6 +26,17 @@
 	
 	<link rel="shortcut icon" href="/favicon.ico">
 		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-138367212-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
 </head>
 <body class="body">
 	<div class="container container--outer">
@@ -47,6 +58,36 @@
 	<header class="main__header">
 		<h1 class="main__title">Posts</h1>
 	</header><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/post/disqus/" rel="bookmark">
+			HugoブログにDisqusでコメント欄をつけた話
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2019-04-16T08:23:08">2019-04-16</time>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		ブログにコメント欄が欲しい 出来上がったブログを眺めていて、あれこれ言いたいことはあるんですが、まずコメント欄がない。
+ちょっと調べたところDisqusというオンラインサービスが簡単そう。
+やってみる  Disqusにユーザ登録する
+ Facebook, Twitter, Google各アカウントでの登録もできます  右上の歯車から「Add Disqus To Site」を選択
+ 画面下の「GET STARTED」を選択
+ 下の「I want to install Disqus on my site」を選択
+ Website名とカテゴリ、言語を入力
+ Japaneseが無かったのでEnglishにしました  プランを選択。基本的なコメント欄をつけたいだけならBasicでよさそう
+ 自分のサイトを選択。WordPressやらTumblrやらJekyllやらありますが、今回はHugoで作ったサイトなので、一番下の「I don&rsquo;t see my platform listed, install manually with Universal Code」を選択
+ JavaScriptでWebsite上にDisqusを設置するための情報等が表示されます。特に弄らず一番下の「Configure Disqus」を選択
+ 設定画面に行きます。Website NameとWebsite URLを入力、Color schemeやらはお好みで
+ 設定が完了したら、「Configure your site&rsquo;s community settings」を選択。「Shortname」の文字列をコピーします。
+  Your website shortname is ted027-com
+ コピーしたShortnameを、config.tomlに追加  disqusShortname = &quot;ted027-com&quot;
+	</div>
+</article><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
 			<a href="/post/todo/" rel="bookmark">
@@ -74,7 +115,7 @@
 	<header class="list__header">
 		<h3 class="list__title post__title ">
 			<a href="/post/firstpage/" rel="bookmark">
-			ブログ始めました
+			Hugo &#43; GitHub Pagesでブログを始めた話
 			</a>
 		</h3>
 		<div class="list__meta meta">
@@ -85,19 +126,20 @@
 
 <div class="meta__item-categories meta__item">
 	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/blog" rel="category">blog</a></span>
+	<span class="meta__text"><a class="meta__link" href="/categories/ubuntu" rel="category">Ubuntu</a></span>
 </div>
 </div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		ほんのりエンジニアっぽいブログが書きたい Github Pages + Hugoでブログ始めてみました。
-参考サイトは以下
- https://uqichi.net/posts/github-pages-x-hugo/ https://qiita.com/h6m3_u/items/5893a61091d258936716  Hugo  https://gohugo.io/  静的サイトジェネレータ。テーマが豊富。
-Hugoで生成したファイルをGithub Pagesで公開する感じ。
+		ほんのりエンジニアっぽいブログが書きたい GitHub Pages + Hugoでブログ始めてみました。
+Hugo  https://gohugo.io/  静的サイトジェネレータ。テーマが豊富。
 自分はUbuntu 18.04を使っているのですが、aptだとバージョンが古かったのでsnapで入れました。
- 参考: https://cu-fe-lab.com/posts/20181130_hugoubuntu-18.04/  Github Pages  https://pages.github.com/  Github上の静的ファイルをwebページとして公開する機能。
+導入 sudo snap install hugo --channel=extended cd /usr/bin sudo ln -s /snap/bin/hugo hugo   参考: https://cu-fe-lab.com/posts/20181130_hugoubuntu-18.04/  GitHub Pages  https://pages.github.com/  GitHub上の静的ファイルをwebページとして公開する機能。
 markdownでブログとか書きたいなーと思っていたのでちょうど良さそう。
-タイトルやらデザインやらその他諸々は今後変わっていく予定。
+Hugoで生成したファイルをGitHub Pagesで公開する感じ。
+導入  GitHubでレポジトリを作る  レポジトリ名は、[ユーザ名].github.ioにする  このリポジトリ上にindex.htmlとかをpushすると、https://[ユーザ名].github.ioに公開される  Hugo + GitHub Pagesでブログを始める話 GitHub上にレポジトリを2つ用意  blog  適当な名前でいい hugoのソースや記事のmdファイルを配置するレポジトリ  [GitHubのユーザ名].github.io  この名前で作る 静的ファイルを配置するレポジトリ   後で[GitHubのユーザ名].github.ioはblogのsubmodule化します。
+Hugoで静的サイトを作成 「blog」のところはレポジトリに合わせておく。
+hugo new site blog  Hugoの設定  テーマを入れる  テーマ一覧から気に入ったのを選ぶ  「Demo」を押すとサンプルブログとか見れて楽しい  blog/thmem以下にテーマを落とす   cd blog/themes git clone https://github.
 	</div>
 </article>
 </main>
@@ -118,8 +160,9 @@ markdownでブログとか書きたいなーと思っていたのでちょうど
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/disqus/">HugoブログにDisqusでコメント欄をつけた話</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/todo/">今後書きたいことの備忘録</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/firstpage/">ブログ始めました</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/firstpage/">Hugo &#43; GitHub Pagesでブログを始めた話</a></li>
 		</ul>
 	</div>
 </div>
@@ -127,8 +170,8 @@ markdownでブログとか書きたいなーと思っていたのでちょうど
 	<h4 class="widget__title">Categories</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/categories/blog">Blog</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/todo">Todo</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/ubuntu">Ubuntu</a></li>
 		</ul>
 	</div>
 </div>
@@ -145,7 +188,7 @@ markdownでブログとか書きたいなーと思っていたのでちょうど
 	<h4 class="widget-social__title widget__title">Social</h4>
 	<div class="widget-social__content widget__content">
 		<div class="widget-social__item widget__item">
-			<a class="widget-social__link widget__link btn" title="Facebook" rel="noopener noreferrer" href="https://facebook.com/imai.tetsu" target="_blank">
+			<a class="widget-social__link widget__link btn" title="Facebook" rel="noopener noreferrer" href="https://facebook.com/imaitt" target="_blank">
 				<svg class="widget-social__link-icon icon icon-facebook" width="24" height="24" viewBox="0 0 352 352"><path d="m0 32v288c0 17.5 14.5 32 32 32h288c17.5 0 32-14.5 32-32v-288c0-17.5-14.5-32-32-32h-288c-17.5 0-32 14.5-32 32zm320 0v288h-83v-108h41.5l6-48h-47.5v-31c0-14 3.5-23.5 23.5-23.5h26v-43.5c-4.4-.6-19.8-1.5-37.5-1.5-36.9 0-62 22.2-62 63.5v36h-42v48h42v108h-155v-288z"/></svg>
 				<span>Facebook</span>
 			</a>
@@ -160,6 +203,12 @@ markdownでブログとか書きたいなーと思っていたのでちょうど
 			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/ted027" target="_blank">
 				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
 				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:imaitt0207@gmail.com">
+				<svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>imaitt0207@gmail.com</span>
 			</a>
 		</div>
 	</div>
