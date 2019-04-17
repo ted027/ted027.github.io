@@ -6,10 +6,21 @@
     <description>Recent content on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 16 Apr 2019 08:23:08 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 16 Apr 2019 22:34:09 +0900</lastBuildDate>
     
 	<atom:link href="https://ted027.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ubuntu 18.04にKindleをインストールした話</title>
+      <link>https://ted027.github.io/post/ubuntu-kindle/</link>
+      <pubDate>Tue, 16 Apr 2019 22:34:09 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/post/ubuntu-kindle/</guid>
+      <description>&lt;p&gt;UbuntuにKindleをインストールしようとして苦労したのでメモ。&lt;/p&gt;
+
+&lt;p&gt;Ubuntu用のKindle for PCクライアントはありません。なので、少々面倒ですがwineというwindowsエミュレータを使ってwindows版をインストールします。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>HugoブログにDisqusでコメント欄をつけた話</title>
@@ -17,20 +28,9 @@
       <pubDate>Tue, 16 Apr 2019 08:23:08 +0900</pubDate>
       
       <guid>https://ted027.github.io/post/disqus/</guid>
-      <description>ブログにコメント欄が欲しい 出来上がったブログを眺めていて、あれこれ言いたいことはあるんですが、まずコメント欄がない。
-ちょっと調べたところDisqusというオンラインサービスが簡単そう。
-やってみる  Disqusにユーザ登録する
- Facebook, Twitter, Google各アカウントでの登録もできます  右上の歯車から「Add Disqus To Site」を選択
- 画面下の「GET STARTED」を選択
- 下の「I want to install Disqus on my site」を選択
- Website名とカテゴリ、言語を入力
- Japaneseが無かったのでEnglishにしました  プランを選択
- 基本的なコメント欄をつけたいだけならBasicでよさそう  自分のサイトを選択
- WordPressやらTumblrやらJekyllやらありますが、今回はHugoで作ったサイトなので、一番下の「I don&amp;rsquo;t see my platform listed, install manually with Universal Code」を選択  JavaScriptでWebsite上にDisqusを設置するための情報等が表示されます。特に弄らず一番下の「Configure Disqus」を選択
- 設定画面に行きます。Website NameとWebsite URLを入力、Color schemeやらはお好みで
- 設定が完了したら、「Configure your site&amp;rsquo;s community settings」を選択。「Shortname」の文字列をコピーします。
-Your website shortname is ted027-com
- コピーしたShortnameを、config.</description>
+      <description>&lt;p&gt;出来上がったブログを眺めていて、あれこれ言いたいことはあるんですが、まずコメント欄が無い。&lt;/p&gt;
+
+&lt;p&gt;ちょっと調べたところ&lt;a href=&#34;https://help.disqus.com/&#34;&gt;Disqus&lt;/a&gt;というオンラインサービスが簡単そう。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -39,9 +39,9 @@ Your website shortname is ted027-com
       <pubDate>Mon, 15 Apr 2019 18:07:43 +0900</pubDate>
       
       <guid>https://ted027.github.io/post/todo/</guid>
-      <description>書くことに困ったら戻ってくる予定。
-挫折したらそっとリストから消す予定。
- Hugoのビルド〜公開を簡単にしたい話 ブログ更新をスマホからできるようにしたい話 OSをUbuntuにしていろいろ入れた時の話 ブンバボーンとからだダンダンの話 tensorflow.jsの話 パワプロの補強思考設定(の情報取得)を自動化する話 パワプロの能力査定を自動化する話 山本由伸が凄いって話 Docker使ってて躓いたことの話 npmのバージョン管理で困った話  </description>
+      <description>&lt;p&gt;書くことに困ったら戻ってくる予定。&lt;/p&gt;
+
+&lt;p&gt;挫折したらそっとリストから消す予定。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -50,14 +50,9 @@ Your website shortname is ted027-com
       <pubDate>Mon, 15 Apr 2019 11:20:46 +0900</pubDate>
       
       <guid>https://ted027.github.io/post/firstpage/</guid>
-      <description>ほんのりエンジニアっぽいブログが書きたい Hugo + GitHub Pagesでブログ始めてみました。
-Hugo  https://gohugo.io/  静的サイトジェネレータ。テーマが豊富。
-自分はUbuntu 18.04を使っているのですが、aptだとバージョンが古かったのでsnapで入れました。
-導入 sudo snap install hugo --channel=extended cd /usr/bin sudo ln -s /snap/bin/hugo hugo  GitHub Pages  https://pages.github.com/  GitHub上の静的ファイルをwebページとして公開する機能。
-markdownでブログとか書きたいなーと思っていたのでちょうど良さそう。
-Hugoで生成したファイルをGitHub Pagesで公開する感じ。
-導入  GitHubでレポジトリを作る  レポジトリ名は、[ユーザ名].github.ioにする  このリポジトリ上の静的ファイルがhttps://[ユーザ名].github.ioに公開される  Hugo + GitHub Pagesでブログを始める話 GitHub上にレポジトリを2つ用意  blog  hugoのソースや記事のmdファイルを配置するレポジトリ  [GitHubのユーザ名].github.io  この名前で作る 静的ファイルを配置するレポジトリ   Hugoで静的サイトを作成 hugo new site blog  Hugoの設定  テーマを入れる
- テーマ一覧から気に入ったのを選ぶ  「Demo」を押すとサンプルとか見れて楽しい  blog/thmem以下にテーマを落とす</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; + &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;でブログ始めてみました。&lt;/p&gt;
+
+&lt;p&gt;ほんのりエンジニアっぽいブログを書きたいなあ、とふと思い立ったので。&lt;/p&gt;</description>
     </item>
     
   </channel>
