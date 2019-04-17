@@ -1113,6 +1113,16 @@ textarea {
 	display: inline-block;
 }
 
+/* Advertisement widget */
+.widget-advertise__field {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
 /* Footer */
 .footer {
 	padding: 10px 25px;
