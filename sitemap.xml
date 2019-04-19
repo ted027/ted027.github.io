@@ -3,19 +3,60 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ted027.github.io/tags/byobu/</loc>
-    <lastmod>2019-04-19T12:41:06+09:00</lastmod>
+    <loc>https://ted027.github.io/categories/blog/</loc>
+    <lastmod>2019-04-19T22:53:43+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ted027.github.io/tags/ci/</loc>
+    <lastmod>2019-04-19T22:53:43+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ted027.github.io/categories/</loc>
-    <lastmod>2019-04-19T12:41:06+09:00</lastmod>
+    <lastmod>2019-04-19T22:53:43+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ted027.github.io/tags/circleci/</loc>
+    <lastmod>2019-04-19T22:53:43+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ted027.github.io/post/circleci/</loc>
+    <lastmod>2019-04-19T22:53:43+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ted027.github.io/tags/hugo/</loc>
+    <lastmod>2019-04-19T22:53:43+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ted027.github.io/post/</loc>
+    <lastmod>2019-04-19T22:53:43+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ted027.github.io/tags/</loc>
+    <lastmod>2019-04-19T22:53:43+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ted027.github.io/</loc>
+    <lastmod>2019-04-19T22:53:43+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ted027.github.io/tags/byobu/</loc>
     <lastmod>2019-04-19T12:41:06+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -33,24 +74,12 @@
   </url>
   
   <url>
-    <loc>https://ted027.github.io/tags/</loc>
-    <lastmod>2019-04-19T12:41:06+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ted027.github.io/post/byobu/</loc>
     <lastmod>2019-04-19T12:41:06+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://ted027.github.io/tags/%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89/</loc>
-    <lastmod>2019-04-19T12:41:06+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ted027.github.io/</loc>
     <lastmod>2019-04-19T12:41:06+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -126,18 +155,6 @@
   </url>
   
   <url>
-    <loc>https://ted027.github.io/categories/hugo/</loc>
-    <lastmod>2019-04-16T08:23:08+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ted027.github.io/tags/hugo/</loc>
-    <lastmod>2019-04-16T08:23:08+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://ted027.github.io/post/disqus/</loc>
     <lastmod>2019-04-16T08:23:08+09:00</lastmod>
   </url>
@@ -172,7 +189,7 @@
   </url>
   
   <url>
-    <loc>https://ted027.github.io/post/firstpage/</loc>
+    <loc>https://ted027.github.io/post/hugo/</loc>
     <lastmod>2019-04-15T11:20:46+09:00</lastmod>
   </url>
   

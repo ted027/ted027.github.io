@@ -4,23 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>今後書きたいことの備忘録 - 行けたら行く</title>
+	<title>CircleCIでHugoのビルドを自動化した話 - 行けたら行く</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta property="og:title" content="今後書きたいことの備忘録" />
-<meta property="og:description" content="書くことに困ったら戻ってくる予定。
-
-挫折したらそっとリストから消す予定。" />
+	<meta property="og:title" content="CircleCIでHugoのビルドを自動化した話" />
+<meta property="og:description" content="Hugoのビルドとブログの更新を自動で行うようにした。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://ted027.github.io/post/todo/" />
-<meta property="article:published_time" content="2019-04-15T18:07:43&#43;09:00"/>
-<meta property="article:modified_time" content="2019-04-15T18:07:43&#43;09:00"/>
+<meta property="og:url" content="https://ted027.github.io/post/circleci/" />
+<meta property="article:published_time" content="2019-04-19T22:53:43&#43;09:00"/>
+<meta property="article:modified_time" content="2019-04-19T22:53:43&#43;09:00"/>
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="今後書きたいことの備忘録"/>
-<meta name="twitter:description" content="書くことに困ったら戻ってくる予定。
-
-挫折したらそっとリストから消す予定。"/>
+<meta name="twitter:title" content="CircleCIでHugoのビルドを自動化した話"/>
+<meta name="twitter:description" content="Hugoのビルドとブログの更新を自動で行うようにした。"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -60,45 +56,194 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">今後書きたいことの備忘録</h1>
+			<h1 class="post__title">CircleCIでHugoのビルドを自動化した話</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-04-15T18:07:43">2019-04-15</time>
+	<time class="meta__text" datetime="2019-04-19T22:53:43">2019-04-19</time>
 </div>
 
 <div class="meta__item-categories meta__item">
 	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/todo" rel="category">todo</a></span>
+	<span class="meta__text"><a class="meta__link" href="/categories/blog" rel="category">Blog</a></span>
 </div>
 </div>
 		</header><div class="content post__content clearfix">
-			<p>書くことに困ったら戻ってくる予定。</p>
-
-<p>挫折したらそっとリストから消す予定。</p>
+			<p>Hugoのビルドとブログの更新を自動で行うようにした。</p>
 
 <hr />
 
-<p><a href="https://t.afi-b.com/visit.php?guid=ON&a=z10341W-l353325a&p=J690746r" target="_blank" rel="nofollow"><img src="https://www.afi-b.com/upload_image/10341-1547340072-3.jpg" width="468" height="60" style="border:none;" alt="若手向け" /></a><img src="https://t.afi-b.com/lead/z10341W/J690746r/l353325a" width="1" height="1" style="border:none;" /></p>
+<p><a href="https://t.afi-b.com/visit.php?guid=ON&a=C9511S-p324426y&p=J690746r" target="_blank" rel="nofollow"><img src="https://www.afi-b.com/upload_image/9511-1526313401-3.gif" width="728" height="90" style="border:none;" alt="フォスターフリーランス" /></a><img src="https://t.afi-b.com/lead/C9511S/J690746r/p324426y" width="1" height="1" style="border:none;" /></p>
 
 <hr />
+
+<p><a href="https://www.ted027.com/hugo.md">Hugo + GitHub Pagesでブログを始めた話</a></p>
+
+<p>手動でビルドしてブログを更新しようとすると以下のような感じ。</p>
+
+<ol>
+<li>markdownで記事を書く</li>
+<li><code>hugo</code>でビルド</li>
+<li>Hugoのレポジトリをcommit、pushする</li>
+<li>public(GitHub Pages用のレポジトリ)をcommit、pushする</li>
+</ol>
+
+<p>大した手間ではないが、この手間が原因でブログが終わる予感がする。</p>
+
+<p>2と4は自動化して1と3だけにしたい。</p>
+
+<hr />
+
+<h3 id="とりあえずシェル">とりあえずシェル</h3>
+
+<pre><code class="language-deploy.sh">set -ex
+hugo
+cd public
+git add .
+
+msg=&quot;rebuilding site `date`&quot;
+git commit -m &quot;$msg&quot;
+
+git push origin master
+</code></pre>
 
 <ul>
-<li>Hugoのビルド〜公開を簡単にしたい話</li>
-<li>ブログ更新をスマホからできるようにしたい話</li>
-<li>OSをUbuntuにしていろいろ入れた時の話</li>
-<li>ブンバボーンとからだダンダンの話</li>
-<li>tensorflow.jsの話</li>
-<li>パワプロの補強思考設定(の情報取得)を自動化する話</li>
-<li>パワプロの能力査定を自動化する話</li>
-<li>山本由伸が凄いって話</li>
-<li>Docker使ってて躓いたことの話</li>
-<li>npmのバージョン管理で困った話</li>
+<li>参考: <a href="https://github.com/uqichi/blog/blob/master/deploy.sh">https://github.com/uqichi/blog/blob/master/deploy.sh</a></li>
 </ul>
+
+<p>参考というかほぼパクらせていただきました。。</p>
+
+<p>これで2と4がひと手間になった。</p>
 
 <hr />
 
-<p><a href="https://t.afi-b.com/visit.php?guid=ON&a=99886h-W336947J&p=J690746r" target="_blank" rel="nofollow"><img src="https://www.afi-b.com/upload_image/9886-1534983315-3.jpg" width="728" height="90" style="border:none;" alt="CodeCampGATE" /></a><img src="https://t.afi-b.com/lead/99886h/J690746r/W336947J" width="1" height="1" style="border:none;" /></p>
+<h3 id="ciで自動化">CIで自動化</h3>
+
+<p>ひと手間になったが、できればひと手間すらかけたくないので、CIで自動化。</p>
+
+<p>GitHubとの連携が簡単な<a href="https://circleci.com">CircleCI</a>を使いました。</p>
+
+<ol>
+<li><p>CircleCIに登録</p>
+
+<ul>
+<li><a href="https://circleci.com">https://circleci.com</a></li>
+<li>GitHubアカウント、Bitbucketアカウントで登録できる</li>
+<li>Hugoのレポジトリをフォローしておく</li>
+</ul></li>
+
+<li><p>CircleCI用のSSH Keyを作成</p>
+
+<ul>
+<li>ビルドした静的ファイルをGitHub Pagesのレポジトリにpushしたいので必要</li>
+</ul>
+
+<pre><code>ssh-keygen -t rsa -b 4096 -m pem -C &quot;CircleCI&quot; -f id_rsa_circleci -N &quot;&quot;
+</code></pre></li>
+
+<li><p>公開鍵をGitHubに登録する</p></li>
+
+<li><p>秘密鍵をCirCleCIに登録しておく</p>
+
+<ul>
+<li>プロジェクト（レポジトリ）横の設定歯車から、<code>SSH Permissions</code>を選択し、<code>Add SSH Key</code>する</li>
+<li>同時に、<code>Checkout SSH Permissions</code>から、自動登録されたRead OnlyのKeyを<code>Remove</code>する。こちらが優先で使われてしまうため</li>
+</ul></li>
+
+<li><p>.circleci/config.ymlを書く</p>
+
+<pre><code class="language-config.yml">version: 2
+jobs:
+build:
+    docker:
+    - image: circleci/golang:1.11
+    working_directory: ~/work
+    steps:
+    - add_ssh_keys:
+        fingerprints:
+            - &quot;YO:UR:FI:NG:ER:PR:IN:T&quot;
+    - run:
+        name: install hugo
+        command: |
+            mkdir ~/src; cd $_
+            git clone https://github.com/gohugoio/hugo.git
+            cd hugo
+            go install
+    - checkout
+    - run:
+        name: build
+        command: |
+            rm -rf public
+            git clone git@github.com:[github_user]/[github_user].github.io public
+            hugo
+    - run:
+        name: push
+        command: |
+            cd public
+            git config --global user.name &quot;CircleCI&quot;
+            git config --global user.email &quot;circleci@example.com&quot;
+            git add --all
+            msg=&quot;rebuilding site `date`&quot;
+            git commit -m &quot;$msg&quot;
+            git push origin master
+
+</code></pre></li>
+</ol>
+
+<p>適当な別ディレクトリ使ってhugoをインストールしてからビルドしてcommit, pushする。</p>
+
+<p>本当はさっきの<code>deploy.sh</code>を使ってサラッと書きたかったが、CIからsubmoduleをpushするところが手元と同じようには動かず、結局publicを消してからcloneしてきてビルドしてpush、という微妙な感じに。</p>
+
+<hr />
+
+<p>何はともあれ、これでHugoのレポジトリをpushすればCIが走って、勝手にブログも更新してくれるようになりました。</p>
+
+<p>この作業が無駄にならないことを祈る。</p>
+
+<hr />
+
+<div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
+    <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
+            href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FEffective-DevOps-%25E2%2580%25954%25E6%259C%25AC%25E6%259F%25B1%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%258C%2581%25E7%25B6%259A%25E5%258F%25AF%25E8%2583%25BD%25E3%2581%25AA%25E7%25B5%2584%25E7%25B9%2594%25E6%2596%2587%25E5%258C%2596%25E3%2581%25AE%25E8%2582%25B2%25E3%2581%25A6%25E6%2596%25B9-Jennifer-Davis%2Fdp%2F4873118352"
+            target="_blank" rel="nofollow"><img
+                src="https://images-fe.ssl-images-amazon.com/images/I/51hSE7AENQL._SL160_.jpg"
+                style="border: none;" /></a><img
+            src="///i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" width="1" height="1"
+            style="border:none;"></div>
+    <div class="kaerebalink-info" style="line-height:120%;zoom: 1;overflow: hidden;">
+        <div class="kaerebalink-name" style="margin-bottom:10px;line-height:120%"><a
+                href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FEffective-DevOps-%25E2%2580%25954%25E6%259C%25AC%25E6%259F%25B1%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%258C%2581%25E7%25B6%259A%25E5%258F%25AF%25E8%2583%25BD%25E3%2581%25AA%25E7%25B5%2584%25E7%25B9%2594%25E6%2596%2587%25E5%258C%2596%25E3%2581%25AE%25E8%2582%25B2%25E3%2581%25A6%25E6%2596%25B9-Jennifer-Davis%2Fdp%2F4873118352"
+                target="_blank" rel="nofollow">Effective DevOps 4本柱による持続可能な組織文化の育て方 [ Jennifer Davis ]</a><img
+                src="///i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" width="1" height="1"
+                style="border:none;">
+        </div>
+        <div class="kaerebalink-detail" style="margin-bottom:5px;"></div>
+        <div class="kaerebalink-link1" style="margin-top:10px;">
+            <div class="shoplinkamazon"
+                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
+                <a href="//af.moshimo.com/af/c/click?a_id=1414800&p_id=170&pc_id=185&pl_id=4062&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3DDevOps%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
+                    target="_blank" rel="nofollow">Amazonで調べる</a><img
+                    src="//i.moshimo.com/af/i/impression?a_id=1414800&p_id=170&pc_id=185&pl_id=4062" width="1"
+                    height="1" style="border:none;"></div>
+            <div class="shoplinkrakuten"
+                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
+                <a href="//af.moshimo.com/af/c/click?a_id=1414727&p_id=54&pc_id=54&pl_id=616&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FDevOps%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
+                    target="_blank" rel="nofollow">楽天市場で調べる</a><img
+                    src="//i.moshimo.com/af/i/impression?a_id=1414727&p_id=54&pc_id=54&pl_id=616" width="1" height="1"
+                    style="border:none;"></div>
+            <div class="shoplinkyahoo"
+                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
+                <a href="//af.moshimo.com/af/c/click?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502&s_v=b5Rz2P0601xu&url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3DDevOps"
+                    target="_blank" rel="nofollow">Yahooショッピングで調べる</a><img
+                    src="//i.moshimo.com/af/i/impression?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502" width="1"
+                    height="1" style="border:none;"></div>
+            <div class="shoplinkseven"
+                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
+                <a href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3DDevOps%26searchKeywordFlg%3D1"
+                    target="_blank"
+                    rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
+                        </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
+        </div>
 
 <hr />
 		</div>
@@ -106,7 +251,9 @@ if (!doNotTrack) {
 <div class="post__tags tags clearfix">
 	<svg class="tags__icon icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="/tags/todo/" rel="tag">todo</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/ci/" rel="tag">CI</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/circleci/" rel="tag">CircleCI</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/hugo/" rel="tag">Hugo</a></li>
 	</ul>
 </div>
 	</article>
@@ -123,10 +270,7 @@ if (!doNotTrack) {
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/post/hugo/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Hugo &#43; GitHub Pagesでブログを作った話</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/post/disqus/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">HugoブログにDisqusでコメント欄をつけた話</p></a>
+		<a class="post-nav__link" href="/post/byobu/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">byobuでよく使うコマンドの話</p></a>
 	</div>
 </nav>
 

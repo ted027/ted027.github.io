@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CircleCI on 行けたら行く</title>
+    <link>https://ted027.github.io/tags/circleci/</link>
+    <description>Recent content in CircleCI on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 19 Apr 2019 22:53:43 +0900</lastBuildDate>
+    
+	<atom:link href="https://ted027.github.io/tags/circleci/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CircleCIでHugoのビルドを自動化した話</title>
+      <link>https://ted027.github.io/post/circleci/</link>
+      <pubDate>Fri, 19 Apr 2019 22:53:43 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/post/circleci/</guid>
+      <description>&lt;p&gt;Hugoのビルドとブログの更新を自動で行うようにした。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

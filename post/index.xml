@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 19 Apr 2019 12:41:06 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 19 Apr 2019 22:53:43 +0900</lastBuildDate>
     
 	<atom:link href="https://ted027.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CircleCIでHugoのビルドを自動化した話</title>
+      <link>https://ted027.github.io/post/circleci/</link>
+      <pubDate>Fri, 19 Apr 2019 22:53:43 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/post/circleci/</guid>
+      <description>&lt;p&gt;Hugoのビルドとブログの更新を自動で行うようにした。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>byobuでよく使うコマンドの話</title>
@@ -26,7 +35,7 @@
       <pubDate>Thu, 18 Apr 2019 20:52:52 +0900</pubDate>
       
       <guid>https://ted027.github.io/post/webdominator/</guid>
-      <description>&lt;p&gt;ビジネス用のリュックを購入したけど、ピロピロした紐が邪魔だったので、まとめるやつを買った話。&lt;/p&gt;
+      <description>&lt;p&gt;ビジネス用のリュックを購入したけど、ピロピロした紐が邪魔だったので、まとめるやつを買った。&lt;/p&gt;
 
 &lt;p&gt;ウェブドミネーターというらしい。&lt;/p&gt;</description>
     </item>
@@ -39,7 +48,7 @@
       <guid>https://ted027.github.io/post/ubuntu-kindle/</guid>
       <description>&lt;p&gt;UbuntuにKindleをインストールしようとして苦労したのでメモ。&lt;/p&gt;
 
-&lt;p&gt;Ubuntu用のKindle for PCクライアントはありません。なので、少々面倒ですがwineというwindowsエミュレータを使ってwindows版をインストールします。&lt;/p&gt;</description>
+&lt;p&gt;Ubuntu用のKindle for PCクライアントは無いので、少々手間を掛けてwineというwindowsエミュレータを使ってwindows版をインストールする。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -48,9 +57,9 @@
       <pubDate>Tue, 16 Apr 2019 08:23:08 +0900</pubDate>
       
       <guid>https://ted027.github.io/post/disqus/</guid>
-      <description>&lt;p&gt;出来上がったブログを眺めていて、あれこれ言いたいことはあるが、とりあえずコメント欄がほしい。&lt;/p&gt;
+      <description>&lt;p&gt;ブログなのでコメント欄くらいはほしい。&lt;/p&gt;
 
-&lt;p&gt;ちょっと調べたところ&lt;a href=&#34;https://help.disqus.com/&#34;&gt;Disqus&lt;/a&gt;というオンラインサービスが簡単そう。&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://help.disqus.com/&#34;&gt;Disqus&lt;/a&gt;というサービスが簡単そう。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -65,14 +74,12 @@
     </item>
     
     <item>
-      <title>Hugo &#43; GitHub Pagesでブログを始めた話</title>
-      <link>https://ted027.github.io/post/firstpage/</link>
+      <title>Hugo &#43; GitHub Pagesでブログを作った話</title>
+      <link>https://ted027.github.io/post/hugo/</link>
       <pubDate>Mon, 15 Apr 2019 11:20:46 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/firstpage/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; + &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;でブログ始めてみました。&lt;/p&gt;
-
-&lt;p&gt;ほんのりエンジニアっぽいブログを書きたいなあ、とふと思い立ったので。&lt;/p&gt;</description>
+      <guid>https://ted027.github.io/post/hugo/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; + &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;でブログを作った。&lt;/p&gt;</description>
     </item>
     
   </channel>
