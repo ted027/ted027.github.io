@@ -129,16 +129,16 @@ if (!doNotTrack) {
 
 <p>markdownでブログが書けるなんて素晴らしい。</p>
 
-<p>自分のUbuntu 18.04環境では、aptだとバージョンが古かったので、snapでインストール。</p>
-
 <h3 id="導入">導入</h3>
+
+<p>自分のUbuntu 18.04環境では、aptだとバージョンが古かったので、snapでインストール。</p>
 
 <pre><code>sudo snap install hugo --channel=extended
 cd /usr/bin
 sudo ln -s /snap/bin/hugo hugo
 </code></pre>
 
-<p>でも後で公式見たら、gitから取れって言ってました。</p>
+<p>gitからでも取れる。</p>
 
 <pre><code>git clone https://github.com/gohugoio/hugo.git
 cd hugo
@@ -225,7 +225,7 @@ cd ../
 <ul>
 <li><code>blog/config.toml</code>を編集</li>
 
-<li><p>これ以外にもテーマによって設定項目が色々ありますが、テーマのページを見ると大抵書いてあります</p>
+<li><p>これ以外にもテーマによって設定項目が色々あるが、テーマのページを見ると大抵書いてある</p>
 
 <pre><code>baseURL = &quot;https://[github_user].github.io/&quot;
 languageCode = &quot;ja&quot;
@@ -272,7 +272,7 @@ draft: true
 <li><a href="http://localhost:1313">http://localhost:1313</a> で確認</li>
 </ul>
 
-<p><code>hugo</code>コマンドでビルドし公開用ディレクトリが作成されるが、その前にGihHub側の準備</p>
+<p><code>hugo</code>コマンドでビルドし公開用ディレクトリが作成されるけど、その前にGihHub Pagesとの連携の準備をします。</p>
 
 <hr />
 
