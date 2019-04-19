@@ -6,18 +6,18 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 18 Apr 2019 23:35:49 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 19 Apr 2019 12:41:06 +0900</lastBuildDate>
     
 	<atom:link href="https://ted027.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Test</title>
-      <link>https://ted027.github.io/post/test/</link>
-      <pubDate>Thu, 18 Apr 2019 23:35:49 +0900</pubDate>
+      <title>byobuでよく使うコマンドの話</title>
+      <link>https://ted027.github.io/post/byobu/</link>
+      <pubDate>Fri, 19 Apr 2019 12:41:06 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/test/</guid>
-      <description></description>
+      <guid>https://ted027.github.io/post/byobu/</guid>
+      <description>&lt;p&gt;仮想端末ソフトbyobuの導入やよく使うコマンドについてのメモ。&lt;/p&gt;</description>
     </item>
     
     <item>
