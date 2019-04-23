@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>パワプロの補強思考設定（2019年4月時点） - 行けたら行く</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<meta property="og:title" content="パワプロの補強思考設定（2019年4月時点）" />
+<meta property="og:description" content="実況パワフルプロ野球のペナントモードで、各球団の補強思考を設定できる。
+
+Pythonで移籍情報を取得して、近年の各球団の補強実績に即した設定を考えたい。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ted027.github.io/post/penant-addition/" />
+<meta property="article:published_time" content="2019-04-23T09:32:03&#43;09:00"/>
+<meta property="article:modified_time" content="2019-04-23T09:32:03&#43;09:00"/>
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="パワプロの補強思考設定（2019年4月時点）"/>
+<meta name="twitter:description" content="実況パワフルプロ野球のペナントモードで、各球団の補強思考を設定できる。
+
+Pythonで移籍情報を取得して、近年の各球団の補強実績に即した設定を考えたい。"/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-138367212-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="/" title="行けたら行く" rel="home">
+				<div class="logo__title">行けたら行く</div>
+				<div class="logo__tagline">野球と育児とコンピュータサイエンスのブログ</div>
+			</a>
+		</div>
+		<div class="divider"></div>
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">パワプロの補強思考設定（2019年4月時点）</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2019-04-23T09:32:03">2019-04-23</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/%e3%83%91%e3%83%af%e3%83%97%e3%83%ad" rel="category">パワプロ</a></span>
+</div>
+</div>
+		</header><div class="content post__content clearfix">
+			<p>実況パワフルプロ野球のペナントモードで、各球団の補強思考を設定できる。</p>
+
+<p>Pythonで移籍情報を取得して、近年の各球団の補強実績に即した設定を考えたい。</p>
+
+<hr />
+
+<p><a target="_blank" href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E3%2580%2590PS4%25E3%2580%2591MLB-The-Show-19-%25E8%258B%25B1%25E8%25AA%259E%25E7%2589%2588%2Fdp%2FB07N8YZ3QJ" rel="nofollow"><img src="https://images-fe.ssl-images-amazon.com/images/I/516lcsxQbCL._SL160_.jpg" alt="" style="border: none;" /><br />【PS4】MLB The Show 19(英語版)</a><img src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" alt="" width="1" height="1" style="border: 0px;" /></p>
+
+<hr />
+
+<h3 id="先に結論">先に結論</h3>
+
+<p>書いてない項目は「おまかせ」で。</p>
+
+<hr />
+
+<h4 id="広島">広島</h4>
+
+<ul>
+<li>トレード
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>新外国人獲得
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ドラフト
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>FA交渉
+
+<ul>
+<li>自チームの選手に対して
+
+<ul>
+<li>残留交渉する</li>
+</ul></li>
+<li>他チームの選手に対して
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>人数
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ポスティング
+
+<ul>
+<li>承認
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>契約更改
+
+<ul>
+<li>解雇方針
+
+<ul>
+<li>能力重視</li>
+</ul></li>
+</ul></li>
+<li>自由契約選手獲得
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h4 id="ヤクルト">ヤクルト</h4>
+
+<ul>
+<li>トレード
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>新外国人獲得
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ドラフト
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>FA交渉
+
+<ul>
+<li>自チームの選手に対して
+
+<ul>
+<li>残留交渉する</li>
+</ul></li>
+<li>他チームの選手に対して
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>人数
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ポスティング
+
+<ul>
+<li>承認
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>契約更改
+
+<ul>
+<li>解雇方針
+
+<ul>
+<li>能力重視</li>
+</ul></li>
+</ul></li>
+<li>自由契約選手獲得
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h4 id="読売">読売</h4>
+
+<ul>
+<li>トレード
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>新外国人獲得
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ドラフト
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>FA交渉
+
+<ul>
+<li>自チームの選手に対して
+
+<ul>
+<li>残留交渉する</li>
+</ul></li>
+<li>他チームの選手に対して
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>人数
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ポスティング
+
+<ul>
+<li>承認
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>契約更改
+
+<ul>
+<li>解雇方針
+
+<ul>
+<li>能力重視</li>
+</ul></li>
+</ul></li>
+<li>自由契約選手獲得
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h4 id="ｄｅｎａ">ＤｅＮＡ</h4>
+
+<ul>
+<li>トレード
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>新外国人獲得
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ドラフト
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>FA交渉
+
+<ul>
+<li>自チームの選手に対して
+
+<ul>
+<li>残留交渉する</li>
+</ul></li>
+<li>他チームの選手に対して
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>人数
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ポスティング
+
+<ul>
+<li>承認
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>契約更改
+
+<ul>
+<li>解雇方針
+
+<ul>
+<li>能力重視</li>
+</ul></li>
+</ul></li>
+<li>自由契約選手獲得
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h4 id="中日">中日</h4>
+
+<ul>
+<li>トレード
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>新外国人獲得
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ドラフト
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>FA交渉
+
+<ul>
+<li>自チームの選手に対して
+
+<ul>
+<li>残留交渉する</li>
+</ul></li>
+<li>他チームの選手に対して
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>人数
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ポスティング
+
+<ul>
+<li>承認
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>契約更改
+
+<ul>
+<li>解雇方針
+
+<ul>
+<li>能力重視</li>
+</ul></li>
+</ul></li>
+<li>自由契約選手獲得
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h4 id="阪神">阪神</h4>
+
+<ul>
+<li>トレード
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>新外国人獲得
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ドラフト
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>FA交渉
+
+<ul>
+<li>自チームの選手に対して
+
+<ul>
+<li>残留交渉する</li>
+</ul></li>
+<li>他チームの選手に対して
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>人数
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ポスティング
+
+<ul>
+<li>承認
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>契約更改
+
+<ul>
+<li>解雇方針
+
+<ul>
+<li>能力重視</li>
+</ul></li>
+</ul></li>
+<li>自由契約選手獲得
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h4 id="西武">西武</h4>
+
+<ul>
+<li>トレード
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>新外国人獲得
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ドラフト
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>FA交渉
+
+<ul>
+<li>自チームの選手に対して
+
+<ul>
+<li>残留交渉する</li>
+</ul></li>
+<li>他チームの選手に対して
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>人数
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ポスティング
+
+<ul>
+<li>承認
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>契約更改
+
+<ul>
+<li>解雇方針
+
+<ul>
+<li>能力重視</li>
+</ul></li>
+</ul></li>
+<li>自由契約選手獲得
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h4 id="ソフトバンク">ソフトバンク</h4>
+
+<ul>
+<li>トレード
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>新外国人獲得
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ドラフト
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>FA交渉
+
+<ul>
+<li>自チームの選手に対して
+
+<ul>
+<li>残留交渉する</li>
+</ul></li>
+<li>他チームの選手に対して
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>人数
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ポスティング
+
+<ul>
+<li>承認
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>契約更改
+
+<ul>
+<li>解雇方針
+
+<ul>
+<li>能力重視</li>
+</ul></li>
+</ul></li>
+<li>自由契約選手獲得
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h4 id="日本ハム">日本ハム</h4>
+
+<ul>
+<li>トレード
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>新外国人獲得
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ドラフト
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>FA交渉
+
+<ul>
+<li>自チームの選手に対して
+
+<ul>
+<li>残留交渉する</li>
+</ul></li>
+<li>他チームの選手に対して
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>人数
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ポスティング
+
+<ul>
+<li>承認
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>契約更改
+
+<ul>
+<li>解雇方針
+
+<ul>
+<li>能力重視</li>
+</ul></li>
+</ul></li>
+<li>自由契約選手獲得
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h4 id="オリックス">オリックス</h4>
+
+<ul>
+<li>トレード
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>新外国人獲得
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ドラフト
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>FA交渉
+
+<ul>
+<li>自チームの選手に対して
+
+<ul>
+<li>残留交渉する</li>
+</ul></li>
+<li>他チームの選手に対して
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>人数
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ポスティング
+
+<ul>
+<li>承認
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>契約更改
+
+<ul>
+<li>解雇方針
+
+<ul>
+<li>能力重視</li>
+</ul></li>
+</ul></li>
+<li>自由契約選手獲得
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h4 id="ロッテ">ロッテ</h4>
+
+<ul>
+<li>トレード
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>新外国人獲得
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ドラフト
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>FA交渉
+
+<ul>
+<li>自チームの選手に対して
+
+<ul>
+<li>残留交渉する</li>
+</ul></li>
+<li>他チームの選手に対して
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>人数
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ポスティング
+
+<ul>
+<li>承認
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>契約更改
+
+<ul>
+<li>解雇方針
+
+<ul>
+<li>能力重視</li>
+</ul></li>
+</ul></li>
+<li>自由契約選手獲得
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h4 id="楽天">楽天</h4>
+
+<ul>
+<li>トレード
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>新外国人獲得
+
+<ul>
+<li>頻度
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ドラフト
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>FA交渉
+
+<ul>
+<li>自チームの選手に対して
+
+<ul>
+<li>残留交渉する</li>
+</ul></li>
+<li>他チームの選手に対して
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>人数
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>ポスティング
+
+<ul>
+<li>承認
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+<li>契約更改
+
+<ul>
+<li>解雇方針
+
+<ul>
+<li>能力重視</li>
+</ul></li>
+</ul></li>
+<li>自由契約選手獲得
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>おまかせ</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h3 id="説明">説明</h3>
+
+<p>自分がペナントを始めるときは、以下のサイトを参考に補強思考を設定しています。（ありがとうございます）</p>
+
+<ul>
+<li><a href="http://disummer.blog.fc2.com/blog-entry-3.html">各球団のペナント補強思考【パワプロ2014】</a></li>
+</ul>
+
+<p>とはいえ4年前時点でのデータなので、最新の情報が欲しいと思い作りました。</p>
+
+<p>以下、各項目の判断基準を書きます。</p>
+
+<h4 id="トレード">トレード</h4>
+
+<p>2016年以降のトレードで、獲得した選手・放出した選手の合計数をチームごとに計算。</p>
+
+<ul>
+<li>頻度
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>獲得選手数の上位3チームを「積極的」、下位3チームを「消極的」、残りを「おまかせ」に</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h5 id="データソース">データソース</h5>
+
+<ul>
+<li><a href="http://npb.jp/announcement/2019/pn_traded.html">NPB公式</a>(2016〜2019)</li>
+</ul>
+
+<p>※注釈付き（人的補償での移籍等）は含みません</p>
+
+<hr />
+
+<h4 id="新外国人獲得">新外国人獲得</h4>
+
+<p>2016年オフ以降に新外国人として獲得した選手の合計数、平均年齢をチームごとに計算。
+ただし年齢は正確ではなく、獲得年から生誕年を引いただけの簡易的な疑似年齢。</p>
+
+<p>※ 一度対談し帰国した外国人選手を再度獲得するケース（2016オフC.マギーなど）は含めない。</p>
+
+<ul>
+<li>頻度
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>獲得選手数の上位3チームを「積極的」、下位3チームを「消極的」、残りを「おまかせ」に</li>
+</ul></li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>獲得選手の平均年齢上位3チームを「ベテラン中心」、下位3チームを「若手中心」、残りを「おまかせ」に</li>
+</ul></li>
+</ul></li>
+<li>重視特徴
+
+<ul>
+<li>単純な計算で判断しづらいので一律「おまかせ」に</li>
+</ul></li>
+</ul>
+
+<h5 id="データソース-1">データソース</h5>
+
+<ul>
+<li>Wikipediaを見ながらjsonで書きました</li>
+<li><a href="https://github.com/ted027/Scripts/blob/master/other/foreign_player.json">https://github.com/ted027/Scripts/blob/master/other/foreign_player.json</a></li>
+</ul>
+
+<hr />
+
+<h4 id="ドラフト">ドラフト</h4>
+
+<p>2017年以降にドラフトで獲得した選手の平均年齢をチームごとに計算。</p>
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>獲得選手の平均年齢上位3チームを「即戦力重視」、下位3チームを「将来性重視」、残りを「おまかせ」に</li>
+<li>「一芸重視」は単純な計算で判断しづらいので扱わない</li>
+</ul></li>
+</ul></li>
+<li>重視特徴
+
+<ul>
+<li>単純な計算で判断しづらいので一律「おまかせ」に</li>
+</ul></li>
+</ul>
+
+<h5 id="データソース-2">データソース</h5>
+
+<ul>
+<li><a href="https://www.sanspo.com/baseball/draft/18/draft_table.html">サンスポ ドラフト特集</a>(2017〜2018)</li>
+<li>2年分しか見れなかったので、いつか余裕があれば3年前以前もどこかから取って計算に入れたい</li>
+</ul>
+
+<hr />
+
+<h4 id="fa交渉">FA交渉</h4>
+
+<p>2016年オフ以降にFAで移籍した選手に関して、交渉した選手の合計数、交渉した選手の平均年齢、交渉した選手の翌年推定年俸をチームごとに計算。</p>
+
+<p>※ 交渉のみで獲得していない場合も計算に含んでいます。
+※ 交渉及び契約は全てが表に出るわけではないので、予想/推定も含んでいます。</p>
+
+<ul>
+<li>自チームの選手に対して
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>今日日、日本ハムも西武も広島も、残留交渉は行っています。ゲーム的にもパワプロ2018以降では、残留交渉でFA交渉枠を消費しないので、一律「残留交渉する」でいいと思います。</li>
+</ul></li>
+</ul></li>
+<li>他チームの選手に対して
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>交渉した選手合計数の上位3チームを「積極的」、下位3チームを「消極的」、残りを「おまかせ」に</li>
+</ul></li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>交渉した選手の翌年推定年俸の平均、上位3チームを「目玉選手重視」、下位3チームを「単独交渉重視」、残りを「おまかせ」に</li>
+<li>交渉した選手の平均年齢、上位3チームを「経験重視」、下位3チームを「若さ重視」、残りを「おまかせ」に</li>
+<li>複数条件に当てはまる場合、優先度は
+
+<ul>
+<li>目玉選手重視/単独交渉重視 &gt; 経験重視/若さ重視 &gt; おまかせ</li>
+</ul></li>
+<li>※ ここのロジックはいまいちだと思うので、いつか再考する予定です</li>
+</ul></li>
+</ul></li>
+<li>人数
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>年平均の交渉した選手数が1.5人より多いチームを「複数人」、0.5人より少ないチームを「一人」、残りを「おまかせ」に</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h5 id="データソース-3">データソース</h5>
+
+<ul>
+<li>Wikipediaを見ながらjsonで書きました</li>
+<li><a href="https://github.com/ted027/Scripts/blob/master/other/free_agent_player.json">https://github.com/ted027/Scripts/blob/master/other/free_agent_player.json</a></li>
+</ul>
+
+<hr />
+
+<h4 id="契約更改">契約更改</h4>
+
+<ul>
+<li>解雇方針
+
+<ul>
+<li>各所で言われているが、「おまかせ」だと<code>能力も成績もいいベテランが平気で首を切られ、それを獲得していけば普通に優勝できる</code>ようになってしまう</li>
+<li>一律「能力重視」にして功労者にやさしい世界にしてあげましょう</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h4 id="ポスティング">ポスティング</h4>
+
+<p>歴代で獲得した米国帰国選手の合計数をチームごとに計算。</p>
+
+<p>※ 米国から独立リーグ等を経てNPBに復帰した選手（藤川球児など）も含む。
+※ 日本球界を経ずに米国に渡り帰国した選手（マイケル中村、多田野数人など）は含めない。</p>
+
+<ul>
+<li>承認
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>正直なところ誰が拒否されたかは分からないので、承認しないことを公言している巨人とソフトバンクのみ「承認しない」、残りは「おまかせ」に</li>
+<li>承認ケースの多いヤクルトあたりは「承認する」にしてもいいかも</li>
+<li>上でも書いた<a href="http://disummer.blog.fc2.com/blog-entry-3.html">参考のサイト</a>では、金子千尋選手のFA取得時、各球団の交渉姿勢から判断していました。これも面白い。</li>
+</ul></li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>歴代で獲得した米国帰国選手の合計数上位3チームを「積極的」、下位3チームを「消極的」、残りを「おまかせ」に</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h5 id="データソース-4">データソース</h5>
+
+<ul>
+<li>Wikipediaを見ながらjsonで書きました</li>
+<li><a href="https://github.com/ted027/Scripts/blob/master/other/returned_player.json">https://github.com/ted027/Scripts/blob/master/other/returned_player.json</a></li>
+</ul>
+
+<hr />
+
+<h4 id="自由契約選手獲得">自由契約選手獲得</h4>
+
+<p>2016年オフ以降に自由契約から獲得した選手の平均年齢をチームごとに計算。
+ただし年齢は正確ではなく、獲得年から生誕年を引いただけの簡易的な疑似年齢。</p>
+
+<p>※ 自由契約したチームと再契約したケース（2018オフ上原浩治など）は含めない。
+※ 外国人選手（2018オフO.ガルシア、B.レアードなど）は含めない。</p>
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>由契約からの獲得選手の平均年齢上位3チームを「経験重視」、下位3チームを「のびしろ重視」、残りを「おまかせ」に</li>
+<li>「一芸重視」「器用さ重視」は単純な計算で判断しづらいので扱わない</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h5 id="データソース-5">データソース</h5>
+
+<ul>
+<li><a href="https://www.nikkansports.com/baseball/news/201809280000378.html">日刊スポーツ移籍情報</a>やWikipediaを見ながらjsonで書きました</li>
+<li><a href="https://github.com/ted027/Scripts/blob/master/other/unregistered_player.json">https://github.com/ted027/Scripts/blob/master/other/unregistered_player.json</a></li>
+</ul>
+
+<hr />
+
+<h4 id="その他細かい判断や計算など">その他細かい判断や計算など</h4>
+
+<ul>
+<li>基本的に育成選手は計算に含めない。パワプロで育成選手は扱わないため</li>
+<li>ただし育成から支配下登録された外国人選手は「新外国人選手」として計算に含む</li>
+</ul>
+
+<hr />
+
+<h3 id="以上の計算をしてくれたやつ">以上の計算をしてくれたやつ</h3>
+
+<ul>
+<li><a href="https://github.com/ted027/Scripts/blob/master/python_/addition.py">https://github.com/ted027/Scripts/blob/master/python_/addition.py</a></li>
+</ul>
+
+<hr />
+
+<h3 id="おわりに">おわりに</h3>
+
+<p>自動化したいといいつつ手で書いてばかりだった。</p>
+
+<p>間違いあるかもしれないので、もし気づいた方はそっと教えてくれるとありがたいです。</p>
+
+<hr />
+
+<p><a target="_blank" href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E3%2582%25B3%25E3%2583%258A%25E3%2583%259F%25E3%2583%2587%25E3%2582%25B8%25E3%2582%25BF%25E3%2583%25AB%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%2586%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588-%25E5%25AE%259F%25E6%25B3%2581%25E3%2583%2591%25E3%2583%25AF%25E3%2583%2595%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%25832018-PS4%25E3%2580%2590Amazon-co-jp%25E9%2599%2590%25E5%25AE%259A%25E3%2580%2591%25E3%2582%25AA%25E3%2583%25AA%25E3%2582%25B8%25E3%2583%258A%25E3%2583%25AB%25E5%25A3%2581%25E7%25B4%2599-%25E9%2585%258D%25E4%25BF%25A1%2Fdp%2FB07KJNWQFL" rel="nofollow"><img src="https://images-fe.ssl-images-amazon.com/images/I/51LFkDMGvoL._SL160_.jpg" alt="" style="border: none;" /><br />実況パワフルプロ野球2018 - PS4【Amazon.co.jp限定】オリジナル壁紙 配信</a><img src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" alt="" width="1" height="1" style="border: 0px;" /></p>
+
+<hr />
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="tags__icon icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/%E3%83%91%E3%83%AF%E3%83%97%E3%83%AD2018/" rel="tag">パワプロ2018</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/%E3%83%9A%E3%83%8A%E3%83%B3%E3%83%88/" rel="tag">ペナント</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/%E8%A3%9C%E5%BC%B7%E6%80%9D%E8%80%83/" rel="tag">補強思考</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/python/" rel="tag">Python</a></li>
+	</ul>
+</div>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="imait avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About imait</span>
+	</div>
+	<div class="authorbox__description">
+		自堕落な日々から仕事＆育児生活への変化に戸惑いを隠せない自称エンジニア。
+	</div>
+</div>
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/post/ubuntu/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">OSをUbuntu 18.04 LTSにした際にやったこと</p></a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "ted027-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-advertise widget">
+    <h4 class="widget__title"></h4>
+	<div class="widget__content">
+            <a href="https://t.afi-b.com/visit.php?guid=ON&a=99886h-V336937n&p=J690746r" target="_blank" rel="nofollow"><img src="https://www.afi-b.com/upload_image/9886-1534148705-3.jpg" width="336" height="280" style="border:none;" alt="CodeCampGATE" /></a><img src="https://t.afi-b.com/lead/99886h/J690746r/V336937n" width="1" height="1" style="border:none;" />
+	</div>
+</div><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://ted027.github.io/" />
+	</form>
+</div><div class="widget">
+	<h4 class="widget__title"></h4>
+	<div class="widget__content">
+        <a href="//af.moshimo.com/af/c/click?a_id=1414800&p_id=170&pc_id=185&pl_id=4157&guid=ON" target="_blank" rel="nofollow"><img src="//image.moshimo.com/af-img/0068/000000004157.gif" width="350" height="292" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=1414800&p_id=170&pc_id=185&pl_id=4157" width="1" height="1" style="border:none;">
+    </div>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/penant-addition/">パワプロの補強思考設定（2019年4月時点）</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/ubuntu/">OSをUbuntu 18.04 LTSにした際にやったこと</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/circleci/">CircleCIでHugoのビルドを自動化した話</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/byobu/">Byobuの導入とよく使うコマンド等</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/webdominator/">リュックの邪魔な紐をまとめるやつ</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/blog">Blog</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/shell">Shell</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/todo">Todo</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/ubuntu">Ubuntu</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e3%83%91%e3%83%af%e3%83%97%e3%83%ad">パワプロ</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e7%94%9f%e6%b4%bb">生活</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/byobu" title="Byobu">Byobu</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ci" title="Ci">Ci</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/circleci" title="Circleci">Circleci</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/disqus" title="Disqus">Disqus</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/github-pages" title="Github pages">Github pages</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/kindle" title="Kindle">Kindle</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/linux" title="Linux">Linux</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/os" title="Os">Os</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/python" title="Python">Python</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/shell" title="Shell">Shell</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/todo" title="Todo">Todo</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ubuntu" title="Ubuntu">Ubuntu</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/wine" title="Wine">Wine</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e3%81%be%e3%81%a8%e3%82%81%e3%82%8b" title="まとめる">まとめる</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e3%82%b3%e3%83%9e%e3%83%b3%e3%83%89" title="コマンド">コマンド</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e3%82%b3%e3%83%a1%e3%83%b3%e3%83%88%e6%ac%84" title="コメント欄">コメント欄</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e3%82%bb%e3%83%83%e3%83%88%e3%82%a2%e3%83%83%e3%83%97" title="セットアップ">セットアップ</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e3%83%91%e3%83%af%e3%83%97%e3%83%ad2018" title="パワプロ2018">パワプロ2018</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e3%83%9a%e3%83%8a%e3%83%b3%e3%83%88" title="ペナント">ペナント</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e7%b4%90" title="紐">紐</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e8%a3%9c%e5%bc%b7%e6%80%9d%e8%80%83" title="補強思考">補強思考</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/%e9%9e%84" title="鞄">鞄</a>
+	</div>
+</div>
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/imaitt" target="_blank">
+				<svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
+				<span>Twitter</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/ted027" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:imaitt0207@gmail.com">
+				<svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>imaitt0207@gmail.com</span>
+			</a>
+		</div>
+	</div>
+</div><div class="widget">
+    <h4 class="widget__title"></h4>
+    <div class="widget__content">
+        <div class="cstmreba">
+            <div class="kaerebalink-box">
+                <div class="kaerebalink-image"><a
+                        href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E6%2596%25B0%25E3%2581%2597%25E3%2581%2584Linux%25E3%2581%25AE%25E6%2595%2599%25E7%25A7%2591%25E6%259B%25B8-%25E4%25B8%2589%25E5%25AE%2585-%25E8%258B%25B1%25E6%2598%258E%2Fdp%2F4797380942"
+                        target="_blank" rel="nofollow"><img
+                            src="https://images-fe.ssl-images-amazon.com/images/I/51dqjMRTh3L._SL160_.jpg"
+                            style="border: none;" /></a><img
+                        src="//i.moshimo.com/af/i/impression?a_id=1414800&p_id=170&pc_id=185&pl_id=4062" width="1"
+                        height="1" style="border:none;"></div>
+                <div class="kaerebalink-info">
+                    <div class="kaerebalink-name"><a
+                            href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E6%2596%25B0%25E3%2581%2597%25E3%2581%2584Linux%25E3%2581%25AE%25E6%2595%2599%25E7%25A7%2591%25E6%259B%25B8-%25E4%25B8%2589%25E5%25AE%2585-%25E8%258B%25B1%25E6%2598%258E%2Fdp%2F4797380942"
+                            target="_blank" rel="nofollow">新しいLinuxの教科書</a><img
+                            src="//i.moshimo.com/af/i/impression?a_id=1414800&p_id=170&pc_id=185&pl_id=4062" width="1"
+                            height="1" style="border:none;">
+                    </div>
+                    <div class="kaerebalink-detail"></div>
+                    <div class="kaerebalink-link1">
+                        <div class="shoplinkamazon"><a
+                                href="//af.moshimo.com/af/c/click?a_id=1414800&p_id=170&pc_id=185&pl_id=4062&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3Dlinux%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
+                                target="_blank" rel="nofollow">Amazonで調べる</a><img
+                                src="//i.moshimo.com/af/i/impression?a_id=1414800&p_id=170&pc_id=185&pl_id=4062"
+                                width="1" height="1" style="border:none;"></div>
+                        <div class="shoplinkrakuten"><a
+                                href="//af.moshimo.com/af/c/click?a_id=1414727&p_id=54&pc_id=54&pl_id=616&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2Flinux%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
+                                target="_blank" rel="nofollow">楽天市場で調べる</a><img
+                                src="//i.moshimo.com/af/i/impression?a_id=1414727&p_id=54&pc_id=54&pl_id=616" width="1"
+                                height="1" style="border:none;"></div>
+                        <div class="shoplinkyahoo"><a
+                                href="//af.moshimo.com/af/c/click?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502&s_v=b5Rz2P0601xu&url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3Dlinux"
+                                target="_blank" rel="nofollow">Yahooショッピングで調べる</a><img
+                                src="//i.moshimo.com/af/i/impression?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502"
+                                width="1" height="1" style="border:none;"></div>
+                        <div class="shoplinkseven"><a
+                                href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3Dlinux%26searchKeywordFlg%3D1"
+                                target="_blank"
+                                rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
+                                    </a> </div> </div> </div> <div class="booklink-footer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="widget">
+            <h4 class="widget__title"></h4>
+            <div class="widget__content">
+                <div class="cstmreba">
+                    <div class="kaerebalink-box">
+                        <div class="kaerebalink-image"><a
+                                href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E8%25A6%258B%25E3%2581%25A6%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2582%258F%25E3%2581%258B%25E3%2582%258B%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25B4%25E3%2583%25AA%25E3%2582%25BA%25E3%2583%25A0%25E3%2581%25AE%25E4%25BB%2595%25E7%25B5%2584%25E3%2581%25BF-%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E5%259B%25B3%25E9%2591%2591-%25E7%25A7%258B%25E5%25BA%25AD-%25E4%25BC%25B8%25E4%25B9%259F%2Fdp%2F4798155659"
+                                target="_blank" rel="nofollow"><img
+                                    src="https://images-fe.ssl-images-amazon.com/images/I/5142Bv%2BF3KL._SL160_.jpg"
+                                    style="border: none;" /></a><img
+                                src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
+                                width="1" height="1" style="border:none;"></div>
+                        <div class="kaerebalink-info">
+                            <div class="kaerebalink-name"><a
+                                    href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E8%25A6%258B%25E3%2581%25A6%25E8%25A9%25A6%25E3%2581%2597%25E3%2581%25A6%25E3%2582%258F%25E3%2581%258B%25E3%2582%258B%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25B4%25E3%2583%25AA%25E3%2582%25BA%25E3%2583%25A0%25E3%2581%25AE%25E4%25BB%2595%25E7%25B5%2584%25E3%2581%25BF-%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%25E5%259B%25B3%25E9%2591%2591-%25E7%25A7%258B%25E5%25BA%25AD-%25E4%25BC%25B8%25E4%25B9%259F%2Fdp%2F4798155659"
+                                    target="_blank" rel="nofollow">機械学習図鑑 見て試してわかる機械学習アルゴリズムの仕組み</a><img
+                                    src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
+                                    width="1" height="1" style="border:none;">
+                            </div>
+                            <div class="kaerebalink-detail"></div>
+                            <div class="kaerebalink-link1">
+                                <div class="shoplinkamazon"><a
+                                        href="//af.moshimo.com/af/c/click?a_id=1414800&p_id=170&pc_id=185&pl_id=4062&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3D%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
+                                        target="_blank" rel="nofollow">Amazonで調べる</a><img
+                                        src="//i.moshimo.com/af/i/impression?a_id=1414800&p_id=170&pc_id=185&pl_id=4062"
+                                        width="1" height="1" style="border:none;"></div>
+                                <div class="shoplinkrakuten"><a
+                                        href="//af.moshimo.com/af/c/click?a_id=1414727&p_id=54&pc_id=54&pl_id=616&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
+                                        target="_blank" rel="nofollow">楽天市場で調べる</a><img
+                                        src="//i.moshimo.com/af/i/impression?a_id=1414727&p_id=54&pc_id=54&pl_id=616"
+                                        width="1" height="1" style="border:none;"></div>
+                                <div class="shoplinkyahoo"><a
+                                        href="//af.moshimo.com/af/c/click?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502&s_v=b5Rz2P0601xu&url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3D%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592"
+                                        target="_blank" rel="nofollow">Yahooショッピングで調べる</a><img
+                                        src="//i.moshimo.com/af/i/impression?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502"
+                                        width="1" height="1" style="border:none;"></div>
+                                <div class="shoplinkseven"><a
+                                        href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3D%25E6%25A9%259F%25E6%25A2%25B0%25E5%25AD%25A6%25E7%25BF%2592%26searchKeywordFlg%3D1"
+                                        target="_blank"
+                                        rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
+                                            </a> </div> </div> </div> <div class="booklink-footer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget">
+                    <h4 class="widget__title"></h4>
+                    <div class="widget__content">
+                        <div class="cstmreba">
+                            <div class="kaerebalink-box">
+                                <div class="kaerebalink-image"><a
+                                        href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FPython%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2588%2586%25E6%259E%2590%25E5%2585%25A5%25E9%2596%2580-%25E7%25AC%25AC2%25E7%2589%2588-%25E2%2580%2595NumPy%25E3%2580%2581pandas%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2587%25A6%25E7%2590%2586-Wes-McKinney%2Fdp%2F487311845X"
+                                        target="_blank" rel="nofollow"><img
+                                            src="https://images-fe.ssl-images-amazon.com/images/I/51NjGkPfTQL._SL160_.jpg"
+                                            style="border: none;" /></a><img
+                                        src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
+                                        width="1" height="1" style="border:none;"></div>
+                                <div class="kaerebalink-info">
+                                    <div class="kaerebalink-name"><a
+                                            href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FPython%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2588%2586%25E6%259E%2590%25E5%2585%25A5%25E9%2596%2580-%25E7%25AC%25AC2%25E7%2589%2588-%25E2%2580%2595NumPy%25E3%2580%2581pandas%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2587%25A6%25E7%2590%2586-Wes-McKinney%2Fdp%2F487311845X"
+                                            target="_blank" rel="nofollow">Pythonによるデータ分析入門
+                                            Numpy、pandasを使ったデータ処理</a><img
+                                            src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
+                                            width="1" height="1" style="border:none;">
+                                    </div>
+                                    <div class="kaerebalink-detail"></div>
+                                    <div class="kaerebalink-link1">
+                                        <div class="shoplinkamazon"><a
+                                                href="//af.moshimo.com/af/c/click?a_id=1414800&p_id=170&pc_id=185&pl_id=4062&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3Dpython%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
+                                                target="_blank" rel="nofollow">Amazonで調べる</a><img
+                                                src="//i.moshimo.com/af/i/impression?a_id=1414800&p_id=170&pc_id=185&pl_id=4062"
+                                                width="1" height="1" style="border:none;"></div>
+                                        <div class="shoplinkrakuten"><a
+                                                href="//af.moshimo.com/af/c/click?a_id=1414727&p_id=54&pc_id=54&pl_id=616&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2Fpython%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
+                                                target="_blank" rel="nofollow">楽天市場で調べる</a><img
+                                                src="//i.moshimo.com/af/i/impression?a_id=1414727&p_id=54&pc_id=54&pl_id=616"
+                                                width="1" height="1" style="border:none;"></div>
+                                        <div class="shoplinkyahoo"><a
+                                                href="//af.moshimo.com/af/c/click?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502&s_v=b5Rz2P0601xu&url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3Dpython"
+                                                target="_blank" rel="nofollow">Yahooショッピングで調べる</a><img
+                                                src="//i.moshimo.com/af/i/impression?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502"
+                                                width="1" height="1" style="border:none;"></div>
+                                        <div class="shoplinkseven"><a
+                                                href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3Dpython%26searchKeywordFlg%3D1"
+                                                target="_blank"
+                                                rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
+                                                    </a> </div> </div> </div> <div class="booklink-footer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget">
+                            <h4 class="widget__title"></h4>
+                            <div class="widget__content">
+                                <div class="cstmreba">
+                                    <div class="kaerebalink-box">
+                                        <div class="kaerebalink-image"><a
+                                                href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FDocker%25E5%25AE%259F%25E8%25B7%25B5%25E3%2582%25AC%25E3%2582%25A4%25E3%2583%2589-%25E7%25AC%25AC2%25E7%2589%2588-impress-top-gear%2Fdp%2F4295005525"
+                                                target="_blank" rel="nofollow"><img
+                                                    src="https://images-fe.ssl-images-amazon.com/images/I/51lsC1rZ8HL._SL160_.jpg"
+                                                    style="border: none;" /></a><img
+                                                src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
+                                                width="1" height="1" style="border:none;"></div>
+                                        <div class="kaerebalink-info">
+                                            <div class="kaerebalink-name"><a
+                                                    href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FDocker%25E5%25AE%259F%25E8%25B7%25B5%25E3%2582%25AC%25E3%2582%25A4%25E3%2583%2589-%25E7%25AC%25AC2%25E7%2589%2588-impress-top-gear%2Fdp%2F4295005525"
+                                                    target="_blank" rel="nofollow">Docker実践ガイド コンテナ環境の構築・運用・活用
+                                                    第２版</a><img
+                                                    src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
+                                                    width="1" height="1" style="border:none;">
+                                            </div>
+                                            <div class="kaerebalink-detail"></div>
+                                            <div class="kaerebalink-link1">
+                                                <div class="shoplinkamazon"><a
+                                                        href="//af.moshimo.com/af/c/click?a_id=1414800&p_id=170&pc_id=185&pl_id=4062&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3Ddocker%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
+                                                        target="_blank" rel="nofollow">Amazonで調べる</a><img
+                                                        src="//i.moshimo.com/af/i/impression?a_id=1414800&p_id=170&pc_id=185&pl_id=4062"
+                                                        width="1" height="1" style="border:none;"></div>
+                                                <div class="shoplinkrakuten"><a
+                                                        href="//af.moshimo.com/af/c/click?a_id=1414727&p_id=54&pc_id=54&pl_id=616&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2Fdocker%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
+                                                        target="_blank" rel="nofollow">楽天市場で調べる</a><img
+                                                        src="//i.moshimo.com/af/i/impression?a_id=1414727&p_id=54&pc_id=54&pl_id=616"
+                                                        width="1" height="1" style="border:none;"></div>
+                                                <div class="shoplinkyahoo"><a
+                                                        href="//af.moshimo.com/af/c/click?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502&s_v=b5Rz2P0601xu&url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3Ddocker"
+                                                        target="_blank" rel="nofollow">Yahooショッピングで調べる</a><img
+                                                        src="//i.moshimo.com/af/i/impression?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502"
+                                                        width="1" height="1" style="border:none;"></div>
+                                                <div class="shoplinkseven"><a
+                                                        href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3Ddocker%26searchKeywordFlg%3D1"
+                                                        target="_blank"
+                                                        rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
+                                                            </a> </div> </div> </div> <div class="booklink-footer">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget">
+                                    <h4 class="widget__title"></h4>
+                                    <div class="widget__content">
+                                        <div class="cstmreba">
+                                            <div class="kaerebalink-box">
+                                                <div class="kaerebalink-image"><a
+                                                        href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FGitHub%25E5%25AE%259F%25E8%25B7%25B5%25E5%2585%25A5%25E9%2596%2580-~Pull-Request%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E9%2596%258B%25E7%2599%25BA%25E3%2581%25AE%25E5%25A4%2589%25E9%259D%25A9-PRESS-plus%2Fdp%2F477416366X"
+                                                        target="_blank" rel="nofollow"><img
+                                                            src="https://images-fe.ssl-images-amazon.com/images/I/51PjpAUHZBL._SL160_.jpg"
+                                                            style="border: none;" /></a><img
+                                                        src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=40626"
+                                                        width="1" height="1" style="border:none;"></div>
+                                                <div class="kaerebalink-info">
+                                                    <div class="kaerebalink-name"><a
+                                                            href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FGitHub%25E5%25AE%259F%25E8%25B7%25B5%25E5%2585%25A5%25E9%2596%2580-~Pull-Request%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E9%2596%258B%25E7%2599%25BA%25E3%2581%25AE%25E5%25A4%2589%25E9%259D%25A9-PRESS-plus%2Fdp%2F477416366X"
+                                                            target="_blank" rel="nofollow">GitHub実践入門 〜Pull
+                                                            Requestによる開発の変革 Pull　Requestによる開発の変革 （WEB+DB
+                                                            PRESS plus） [ 大塚弘記 ]</a><img
+                                                            src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=40626"
+                                                            width="1" height="1" style="border:none;">
+                                                    </div>
+                                                    <div class="kaerebalink-detail"></div>
+                                                    <div class="kaerebalink-link1">
+                                                        <div class="shoplinkamazon"><a
+                                                                href="//af.moshimo.com/af/c/click?a_id=1414800&p_id=170&pc_id=185&pl_id=4062&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3Dgithub%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
+                                                                target="_blank" rel="nofollow">Amazonで調べる</a><img
+                                                                src="//i.moshimo.com/af/i/impression?a_id=1414800&p_id=170&pc_id=185&pl_id=4062"
+                                                                width="1" height="1" style="border:none;"></div>
+                                                        <div class="shoplinkrakuten"><a
+                                                                href="//af.moshimo.com/af/c/click?a_id=1414727&p_id=54&pc_id=54&pl_id=616&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2Fgithub%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
+                                                                target="_blank" rel="nofollow">楽天市場で調べる</a><img
+                                                                src="//i.moshimo.com/af/i/impression?a_id=1414727&p_id=54&pc_id=54&pl_id=616"
+                                                                width="1" height="1" style="border:none;"></div>
+                                                        <div class="shoplinkyahoo"><a
+                                                                href="//af.moshimo.com/af/c/click?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502&s_v=b5Rz2P0601xu&url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3Dgithub"
+                                                                target="_blank" rel="nofollow">Yahooショッピングで調べる</a><img
+                                                                src="//i.moshimo.com/af/i/impression?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502"
+                                                                width="1" height="1" style="border:none;"></div>
+                                                        <div class="shoplinkseven"><a
+                                                                href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3Dgithub%26searchKeywordFlg%3D1"
+                                                                target="_blank"
+                                                                rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
+                                                                    </a> </div> </div> </div> <div
+                                                                    class="booklink-footer"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2019 行けたら行く.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script></body>
+</html>

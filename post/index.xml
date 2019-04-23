@@ -6,10 +6,21 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 21 Apr 2019 22:52:31 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 23 Apr 2019 09:32:03 +0900</lastBuildDate>
     
 	<atom:link href="https://ted027.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>パワプロの補強思考設定（2019年4月時点）</title>
+      <link>https://ted027.github.io/post/penant-addition/</link>
+      <pubDate>Tue, 23 Apr 2019 09:32:03 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/post/penant-addition/</guid>
+      <description>&lt;p&gt;実況パワフルプロ野球のペナントモードで、各球団の補強思考を設定できる。&lt;/p&gt;
+
+&lt;p&gt;Pythonで移籍情報を取得して、近年の各球団の補強実績に即した設定を考えたい。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>OSをUbuntu 18.04 LTSにした際にやったこと</title>
