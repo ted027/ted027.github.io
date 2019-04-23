@@ -6,17 +6,26 @@
     <description>Recent content in パワプロ2018 on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 23 Apr 2019 09:32:03 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 23 Apr 2019 16:19:47 +0900</lastBuildDate>
     
 	<atom:link href="https://ted027.github.io/tags/%E3%83%91%E3%83%AF%E3%83%97%E3%83%AD2018/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>パワプロの補強思考設定（2019年4月時点）</title>
-      <link>https://ted027.github.io/post/penant-addition/</link>
+      <title>パワプロ ペナント補強思考設定の条件判断を説明</title>
+      <link>https://ted027.github.io/post/penant-add-descript/</link>
+      <pubDate>Tue, 23 Apr 2019 16:19:47 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/post/penant-add-descript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>パワプロ ペナントの補強思考設定（2019年4月時点）</title>
+      <link>https://ted027.github.io/post/penant-add/</link>
       <pubDate>Tue, 23 Apr 2019 09:32:03 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/penant-addition/</guid>
+      <guid>https://ted027.github.io/post/penant-add/</guid>
       <description>&lt;p&gt;実況パワフルプロ野球のペナントモードで、各球団の補強思考を設定できる。&lt;/p&gt;
 
 &lt;p&gt;Pythonで近年の移籍情報を取得して、各球団の補強実績に即した設定を算出したい。&lt;/p&gt;</description>

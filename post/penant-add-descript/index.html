@@ -4,23 +4,22 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Categories - 行けたら行く</title>
+	<title>パワプロ ペナント補強思考設定の条件判断を説明 - 行けたら行く</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta property="og:title" content="Categories" />
+	<meta property="og:title" content="パワプロ ペナント補強思考設定の条件判断を説明" />
 <meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://ted027.github.io/categories/" />
-
-<meta property="og:updated_time" content="2019-04-23T16:19:47&#43;09:00"/>
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ted027.github.io/post/penant-add-descript/" />
+<meta property="article:published_time" content="2019-04-23T16:19:47&#43;09:00"/>
+<meta property="article:modified_time" content="2019-04-23T16:19:47&#43;09:00"/>
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
+<meta name="twitter:title" content="パワプロ ペナント補強思考設定の条件判断を説明"/>
 <meta name="twitter:description" content=""/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="alternate" type="application/rss+xml" href="/categories/index.xml" title="行けたら行く">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 	<link rel="stylesheet" href="/css/style.css">
 	
@@ -54,118 +53,370 @@ if (!doNotTrack) {
 		<div class="wrapper flex">
 			<div class="primary">
 			
-<main class="main list" role="main">
-	<header class="main__header">
-		<h1 class="main__title">Categories</h1>
-	</header><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/categories/%E3%83%91%E3%83%AF%E3%83%97%E3%83%AD/" rel="bookmark">
-			パワプロ
-			</a>
-		</h3>
-		<div class="list__meta meta">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">パワプロ ペナント補強思考設定の条件判断を説明</h1>
+			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
 	<time class="meta__text" datetime="2019-04-23T16:19:47">2019-04-23</time>
 </div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/%e3%83%91%e3%83%af%e3%83%97%e3%83%ad" rel="category">パワプロ</a></span>
 </div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
+</div>
+		</header><div class="content post__content clearfix">
+			<hr />
+
+<p><a target="_blank" href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E3%2580%2590PS4%25E3%2580%2591MLB-The-Show-19-%25E8%258B%25B1%25E8%25AA%259E%25E7%2589%2588%2Fdp%2FB07N8YZ3QJ" rel="nofollow"><img src="https://images-fe.ssl-images-amazon.com/images/I/516lcsxQbCL._SL160_.jpg" alt="" style="border: none;" /><br />【PS4】MLB The Show 19(英語版)</a><img src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" alt="" width="1" height="1" style="border: 0px;" /></p>
+
+<hr />
+
+<p>パワプロペナントの補強思考設定を計算するプログラムを作った。</p>
+
+<p>2019年4月現在の計算結果は以下。</p>
+
+<ul>
+<li><a href="https://www.ted027.com/post/penant-add-descript">パワプロ ペナントの補強思考設定（2019年4月時点）</a></li>
+</ul>
+
+<p>以下、各項目の判断基準を書きます。</p>
+
+<hr />
+
+<h4 id="トレード">トレード</h4>
+
+<p>2016年以降のトレードで、獲得した選手・放出した選手の合計数をチームごとに計算。</p>
+
+<ul>
+<li>頻度
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>獲得選手数の上位3チームを「積極的」、下位3チームを「消極的」、残りを「おまかせ」に</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h5 id="データソース">データソース</h5>
+
+<ul>
+<li><a href="http://npb.jp/announcement/2019/pn_traded.html">NPB公式</a>(2016〜2019)</li>
+</ul>
+
+<p>※注釈付き（人的補償での移籍等）は含みません</p>
+
+<hr />
+
+<h4 id="新外国人獲得">新外国人獲得</h4>
+
+<p>2016年オフ以降に新外国人として獲得した選手の合計数、平均年齢をチームごとに計算。</p>
+
+<p>ただし年齢は正確ではなく、獲得年から生誕年を引いただけの簡易的な疑似年齢。</p>
+
+<p>※ 一度対談し帰国した外国人選手を再度獲得するケース（2016オフC.マギーなど）は含めない。</p>
+
+<ul>
+<li>頻度
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>獲得選手数の上位3チームを「積極的」、下位3チームを「消極的」、残りを「おまかせ」に</li>
+</ul></li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>獲得選手の平均年齢上位3チームを「ベテラン中心」、下位3チームを「若手中心」、残りを「おまかせ」に</li>
+</ul></li>
+</ul></li>
+<li>重視特徴
+
+<ul>
+<li>単純な計算で判断しづらいので一律「おまかせ」に</li>
+</ul></li>
+</ul>
+
+<h5 id="データソース-1">データソース</h5>
+
+<ul>
+<li>Wikipediaを見ながらjsonで書きました</li>
+<li><a href="https://github.com/ted027/Scripts/blob/master/other/foreign_player.json">https://github.com/ted027/Scripts/blob/master/other/foreign_player.json</a></li>
+</ul>
+
+<hr />
+
+<h4 id="ドラフト">ドラフト</h4>
+
+<p>2017年以降にドラフトで獲得した選手の平均年齢をチームごとに計算。</p>
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>獲得選手の平均年齢上位3チームを「即戦力重視」、下位3チームを「将来性重視」、残りを「おまかせ」に</li>
+<li>「一芸重視」は単純な計算で判断しづらいので扱わない</li>
+</ul></li>
+</ul></li>
+<li>重視特徴
+
+<ul>
+<li>単純な計算で判断しづらいので一律「おまかせ」に</li>
+</ul></li>
+</ul>
+
+<h5 id="データソース-2">データソース</h5>
+
+<ul>
+<li><a href="https://www.sanspo.com/baseball/draft/18/draft_table.html">サンスポ ドラフト特集</a>(2017〜2018)</li>
+<li>2年分しか見れなかったので、いつか余裕があれば3年前以前もどこかから取って計算に入れたい</li>
+</ul>
+
+<hr />
+
+<h4 id="fa交渉">FA交渉</h4>
+
+<p>2009年オフ以降にFAで獲得した選手に関して、選手の合計数、平均年齢、平均の翌年推定年俸をチームごとに計算。</p>
+
+<ul>
+<li>自チームの選手に対して
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>今日日、日本ハムも西武も広島も、残留交渉は行っていそうです。ゲーム的にも、パワプロ2018では残留交渉でFA交渉枠を消費しないので、一律「残留交渉する」でいいと思います。</li>
+</ul></li>
+</ul></li>
+<li>他チームの選手に対して
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>獲得した選手合計数の上位3チームを「積極的」、下位3チームを「消極的」、残りを「おまかせ」に</li>
+</ul></li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>獲得した選手の平均翌年推定年俸の平均、上位3チームを「目玉選手重視」、下位3チームを「単独交渉重視」、残りを「おまかせ」に</li>
+<li>獲得した選手の平均年齢、上位3チームを「経験重視」、下位3チームを「若さ重視」、残りを「おまかせ」に</li>
+<li>複数条件に当てはまる場合、優先度は
+
+<ul>
+<li>目玉選手重視/単独交渉重視 &gt; 経験重視/若さ重視 &gt; おまかせ</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>人数
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>年平均の獲得した選手数が0.7人より多いチームを「複数人」、0.2人より少ないチームを「一人」、残りを「おまかせ」に</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h5 id="データソース-3">データソース</h5>
+
+<ul>
+<li><a href="https://www.gurazeni.com/">ここ</a>やWikipediaを見ながらjsonで書きました</li>
+<li><a href="https://github.com/ted027/Scripts/blob/master/other/free_agent_player.json">https://github.com/ted027/Scripts/blob/master/other/free_agent_player.json</a></li>
+</ul>
+
+<hr />
+
+<h4 id="契約更改">契約更改</h4>
+
+<ul>
+<li>解雇方針
+
+<ul>
+<li>各所で言われているが、「おまかせ」だと<code>能力も成績もいいベテランが平気で首を切られ、それを獲得していけば普通に優勝できる</code>ようになってしまう</li>
+<li>一律「能力重視」にして功労者にやさしい世界にしてあげましょう</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h4 id="ポスティング">ポスティング</h4>
+
+<p>歴代で獲得した米国帰国選手の合計数をチームごとに計算。</p>
+
+<p>※ 米国から独立リーグ等を経てNPBに復帰した選手（藤川球児など）も含む。</p>
+
+<p>※ 日本球界を経ずに米国に渡り帰国した選手（マイケル中村、多田野数人など）は含めない。</p>
+
+<ul>
+<li>承認
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>正直なところ誰が拒否されたかは分からないので、承認しないことを公言している巨人とソフトバンクのみ「承認しない」、残りは「おまかせ」に</li>
+<li>承認ケースの多いヤクルトあたりは「承認する」にしてもいいかも</li>
+<li>上でも書いた<a href="http://disummer.blog.fc2.com/blog-entry-3.html">参考のサイト</a>では、金子千尋選手のFA取得時、各球団の交渉姿勢から判断していました。これも面白い。</li>
+</ul></li>
+</ul></li>
+<li>獲得方針
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>歴代で獲得した米国帰国選手の合計数上位3チームを「積極的」、下位3チームを「消極的」、残りを「おまかせ」に</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h5 id="データソース-4">データソース</h5>
+
+<ul>
+<li>Wikipediaを見ながらjsonで書きました</li>
+<li><a href="https://github.com/ted027/Scripts/blob/master/other/returned_player.json">https://github.com/ted027/Scripts/blob/master/other/returned_player.json</a></li>
+</ul>
+
+<hr />
+
+<h4 id="自由契約選手獲得">自由契約選手獲得</h4>
+
+<p>2016年オフ以降に自由契約から獲得した選手の平均年齢をチームごとに計算。</p>
+
+<p>ただし年齢は正確ではなく、獲得年から生誕年を引いただけの簡易的な疑似年齢。</p>
+
+<p>※ 自由契約したチームと再契約したケース（2018オフ上原浩治など）は含めない。</p>
+
+<p>※ 外国人選手（2018オフO.ガルシア、B.レアードなど）は含めない。</p>
+
+<ul>
+<li>獲得方針
+
+<ul>
+<li>判断基準
+
+<ul>
+<li>由契約からの獲得選手の平均年齢上位3チームを「経験重視」、下位3チームを「のびしろ重視」、残りを「おまかせ」に</li>
+<li>「一芸重視」「器用さ重視」は単純な計算で判断しづらいので扱わない</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h5 id="データソース-5">データソース</h5>
+
+<ul>
+<li><a href="https://www.nikkansports.com/baseball/news/201809280000378.html">日刊スポーツ移籍情報</a>やWikipediaを見ながらjsonで書きました</li>
+<li><a href="https://github.com/ted027/Scripts/blob/master/other/unregistered_player.json">https://github.com/ted027/Scripts/blob/master/other/unregistered_player.json</a></li>
+</ul>
+
+<hr />
+
+<h4 id="その他細かい判断や計算など">その他細かい判断や計算など</h4>
+
+<ul>
+<li>基本的に育成選手は計算に含めない。パワプロで育成選手は扱わないため</li>
+<li>ただし育成から支配下登録された外国人選手は「新外国人選手」として計算に含む</li>
+<li>データ数が0で平均が取れない場合、上位3/下位3の判断から除外し、設定は「おまかせ」にする</li>
+</ul>
+
+<hr />
+
+<h3 id="以上の計算をしてくれたやつ">以上の計算をしてくれたやつ</h3>
+
+<ul>
+<li><a href="https://github.com/ted027/Scripts/blob/master/python_/addition.py">https://github.com/ted027/Scripts/blob/master/python_/addition.py</a></li>
+</ul>
+
+<hr />
+
+<h3 id="おわりに">おわりに</h3>
+
+<p>自動化したいといいつつ手で書いてばかりだった。</p>
+
+<p>間違いがあるかもしれないので、もし気づいた方はそっと教えてくれるとありがたいです。</p>
+
+<hr />
+
+<p><a target="_blank" href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E3%2582%25B3%25E3%2583%258A%25E3%2583%259F%25E3%2583%2587%25E3%2582%25B8%25E3%2582%25BF%25E3%2583%25AB%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%2586%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588-%25E5%25AE%259F%25E6%25B3%2581%25E3%2583%2591%25E3%2583%25AF%25E3%2583%2595%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%25832018-PS4%25E3%2580%2590Amazon-co-jp%25E9%2599%2590%25E5%25AE%259A%25E3%2580%2591%25E3%2582%25AA%25E3%2583%25AA%25E3%2582%25B8%25E3%2583%258A%25E3%2583%25AB%25E5%25A3%2581%25E7%25B4%2599-%25E9%2585%258D%25E4%25BF%25A1%2Fdp%2FB07KJNWQFL" rel="nofollow"><img src="https://images-fe.ssl-images-amazon.com/images/I/51LFkDMGvoL._SL160_.jpg" alt="" style="border: none;" /><br />実況パワフルプロ野球2018 - PS4【Amazon.co.jp限定】オリジナル壁紙 配信</a><img src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" alt="" width="1" height="1" style="border: 0px;" /></p>
+
+<hr />
+		</div>
 		
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/categories/ubuntu/" rel="bookmark">
-			Ubuntu
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-04-21T22:52:31">2019-04-21</time>
+<div class="post__tags tags clearfix">
+	<svg class="tags__icon icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/%E3%83%91%E3%83%AF%E3%83%97%E3%83%AD2018/" rel="tag">パワプロ2018</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/%E3%83%9A%E3%83%8A%E3%83%B3%E3%83%88/" rel="tag">ペナント</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/%E8%A3%9C%E5%BC%B7%E6%80%9D%E8%80%83/" rel="tag">補強思考</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/python/" rel="tag">Python</a></li>
+	</ul>
 </div>
-</div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/categories/blog/" rel="bookmark">
-			Blog
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-04-19T22:53:43">2019-04-19</time>
-</div>
-</div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/categories/shell/" rel="bookmark">
-			Shell
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-04-19T12:41:06">2019-04-19</time>
-</div>
-</div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/categories/%E7%94%9F%E6%B4%BB/" rel="bookmark">
-			生活
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-04-18T20:52:52">2019-04-18</time>
-</div>
-</div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/categories/todo/" rel="bookmark">
-			todo
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-04-15T18:07:43">2019-04-15</time>
-</div>
-</div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		
-	</div>
-</article>
+	</article>
 </main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="imait avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About imait</span>
+	</div>
+	<div class="authorbox__description">
+		自堕落な日々から仕事＆育児生活への変化に戸惑いを隠せない自称エンジニア。
+	</div>
+</div>
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/post/penant-add/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">パワプロ ペナントの補強思考設定（2019年4月時点）</p></a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "ted027-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
 
 
 			</div>
-			
-<aside class="sidebar"><div class="widget-advertise widget">
+			<aside class="sidebar"><div class="widget-advertise widget">
     <h4 class="widget__title"></h4>
 	<div class="widget__content">
             <a href="https://t.afi-b.com/visit.php?guid=ON&a=99886h-V336937n&p=J690746r" target="_blank" rel="nofollow"><img src="https://www.afi-b.com/upload_image/9886-1534148705-3.jpg" width="336" height="280" style="border:none;" alt="CodeCampGATE" /></a><img src="https://t.afi-b.com/lead/99886h/J690746r/V336937n" width="1" height="1" style="border:none;" />
