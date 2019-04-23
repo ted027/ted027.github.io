@@ -12,14 +12,12 @@
     
     
     <item>
-      <title>Hugo &#43; GitHub Pagesでブログを始めた話</title>
-      <link>https://ted027.github.io/post/firstpage/</link>
+      <title>Hugo &#43; GitHub Pagesでブログを作った話</title>
+      <link>https://ted027.github.io/post/hugo/</link>
       <pubDate>Mon, 15 Apr 2019 11:20:46 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/firstpage/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; + &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;でブログ始めてみました。&lt;/p&gt;
-
-&lt;p&gt;ほんのりエンジニアっぽいブログを書きたいなあ、とふと思い立ったので。&lt;/p&gt;</description>
+      <guid>https://ted027.github.io/post/hugo/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; + &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;でブログを作った。&lt;/p&gt;</description>
     </item>
     
   </channel>

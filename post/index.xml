@@ -6,18 +6,56 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 19 Apr 2019 12:41:06 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 23 Apr 2019 16:19:47 +0900</lastBuildDate>
     
 	<atom:link href="https://ted027.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>byobuでよく使うコマンドの話</title>
+      <title>パワプロ ペナント補強思考設定の条件判断</title>
+      <link>https://ted027.github.io/post/penant-add-descript/</link>
+      <pubDate>Tue, 23 Apr 2019 16:19:47 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/post/penant-add-descript/</guid>
+      <description>&lt;p&gt;補強思考設定、各項目の判断基準の説明です。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>パワプロ ペナントの補強思考設定（2019年4月時点）</title>
+      <link>https://ted027.github.io/post/penant-add/</link>
+      <pubDate>Tue, 23 Apr 2019 09:32:03 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/post/penant-add/</guid>
+      <description>&lt;p&gt;実況パワフルプロ野球のペナントモードで、各球団の補強思考を設定できる。&lt;/p&gt;
+
+&lt;p&gt;Pythonで近年の移籍情報を取得して、各球団の補強実績に即した設定を算出したい。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>OSをUbuntu 18.04 LTSにした際にやったこと</title>
+      <link>https://ted027.github.io/post/ubuntu/</link>
+      <pubDate>Sun, 21 Apr 2019 22:52:31 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/post/ubuntu/</guid>
+      <description>&lt;p&gt;新しいノートPC購入を機に、OSをUbuntu 18.04 LTSにした際の備忘録。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>CircleCIでHugoのビルドを自動化した話</title>
+      <link>https://ted027.github.io/post/circleci/</link>
+      <pubDate>Fri, 19 Apr 2019 22:53:43 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/post/circleci/</guid>
+      <description>&lt;p&gt;Hugoのビルドとブログの更新を自動で行うようにした。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Byobuの導入とよく使うコマンド等</title>
       <link>https://ted027.github.io/post/byobu/</link>
       <pubDate>Fri, 19 Apr 2019 12:41:06 +0900</pubDate>
       
       <guid>https://ted027.github.io/post/byobu/</guid>
-      <description>&lt;p&gt;仮想端末ソフトbyobuの導入やよく使うコマンドについてのメモ。&lt;/p&gt;</description>
+      <description>&lt;p&gt;仮想端末ソフトByobuの導入やよく使うコマンドについてのメモ。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -26,7 +64,7 @@
       <pubDate>Thu, 18 Apr 2019 20:52:52 +0900</pubDate>
       
       <guid>https://ted027.github.io/post/webdominator/</guid>
-      <description>&lt;p&gt;ビジネス用のリュックを購入したけど、ピロピロした紐が邪魔だったので、まとめるやつを買った話。&lt;/p&gt;
+      <description>&lt;p&gt;ビジネス用のリュックを購入したけど、ピロピロした紐が邪魔だったので、まとめるやつを買った。&lt;/p&gt;
 
 &lt;p&gt;ウェブドミネーターというらしい。&lt;/p&gt;</description>
     </item>
@@ -39,18 +77,18 @@
       <guid>https://ted027.github.io/post/ubuntu-kindle/</guid>
       <description>&lt;p&gt;UbuntuにKindleをインストールしようとして苦労したのでメモ。&lt;/p&gt;
 
-&lt;p&gt;Ubuntu用のKindle for PCクライアントはありません。なので、少々面倒ですがwineというwindowsエミュレータを使ってwindows版をインストールします。&lt;/p&gt;</description>
+&lt;p&gt;Ubuntu用のKindle for PCクライアントは無いので、ちょっと手間を掛けてWineというWindowsエミュレータを使ってWindows版をインストールする。&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>HugoブログにDisqusでコメント欄をつけた話</title>
+      <title>HugoブログにDisqusでコメント欄をつけた</title>
       <link>https://ted027.github.io/post/disqus/</link>
       <pubDate>Tue, 16 Apr 2019 08:23:08 +0900</pubDate>
       
       <guid>https://ted027.github.io/post/disqus/</guid>
-      <description>&lt;p&gt;出来上がったブログを眺めていて、あれこれ言いたいことはあるが、とりあえずコメント欄がほしい。&lt;/p&gt;
+      <description>&lt;p&gt;ブログなのでコメント欄くらいはほしい。&lt;/p&gt;
 
-&lt;p&gt;ちょっと調べたところ&lt;a href=&#34;https://help.disqus.com/&#34;&gt;Disqus&lt;/a&gt;というオンラインサービスが簡単そう。&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;https://help.disqus.com/&#34;&gt;Disqus&lt;/a&gt;というサービスが簡単そう。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -65,14 +103,12 @@
     </item>
     
     <item>
-      <title>Hugo &#43; GitHub Pagesでブログを始めた話</title>
-      <link>https://ted027.github.io/post/firstpage/</link>
+      <title>Hugo &#43; GitHub Pagesでブログを作った話</title>
+      <link>https://ted027.github.io/post/hugo/</link>
       <pubDate>Mon, 15 Apr 2019 11:20:46 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/firstpage/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; + &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;でブログ始めてみました。&lt;/p&gt;
-
-&lt;p&gt;ほんのりエンジニアっぽいブログを書きたいなあ、とふと思い立ったので。&lt;/p&gt;</description>
+      <guid>https://ted027.github.io/post/hugo/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; + &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;でブログを作った。&lt;/p&gt;</description>
     </item>
     
   </channel>

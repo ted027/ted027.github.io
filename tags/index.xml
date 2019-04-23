@@ -6,10 +6,100 @@
     <description>Recent content in Tags on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 19 Apr 2019 12:41:06 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 23 Apr 2019 16:19:47 +0900</lastBuildDate>
     
 	<atom:link href="https://ted027.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python</title>
+      <link>https://ted027.github.io/tags/python/</link>
+      <pubDate>Tue, 23 Apr 2019 16:19:47 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>パワプロ2018</title>
+      <link>https://ted027.github.io/tags/%E3%83%91%E3%83%AF%E3%83%97%E3%83%AD2018/</link>
+      <pubDate>Tue, 23 Apr 2019 16:19:47 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/tags/%E3%83%91%E3%83%AF%E3%83%97%E3%83%AD2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ペナント</title>
+      <link>https://ted027.github.io/tags/%E3%83%9A%E3%83%8A%E3%83%B3%E3%83%88/</link>
+      <pubDate>Tue, 23 Apr 2019 16:19:47 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/tags/%E3%83%9A%E3%83%8A%E3%83%B3%E3%83%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>補強思考</title>
+      <link>https://ted027.github.io/tags/%E8%A3%9C%E5%BC%B7%E6%80%9D%E8%80%83/</link>
+      <pubDate>Tue, 23 Apr 2019 16:19:47 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/tags/%E8%A3%9C%E5%BC%B7%E6%80%9D%E8%80%83/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OS</title>
+      <link>https://ted027.github.io/tags/os/</link>
+      <pubDate>Sun, 21 Apr 2019 22:52:31 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/tags/os/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://ted027.github.io/tags/ubuntu/</link>
+      <pubDate>Sun, 21 Apr 2019 22:52:31 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>セットアップ</title>
+      <link>https://ted027.github.io/tags/%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/</link>
+      <pubDate>Sun, 21 Apr 2019 22:52:31 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/tags/%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CI</title>
+      <link>https://ted027.github.io/tags/ci/</link>
+      <pubDate>Fri, 19 Apr 2019 22:53:43 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/tags/ci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CircleCI</title>
+      <link>https://ted027.github.io/tags/circleci/</link>
+      <pubDate>Fri, 19 Apr 2019 22:53:43 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/tags/circleci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://ted027.github.io/tags/hugo/</link>
+      <pubDate>Fri, 19 Apr 2019 22:53:43 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Byobu</title>
@@ -84,15 +174,6 @@
     </item>
     
     <item>
-      <title>Ubuntu</title>
-      <link>https://ted027.github.io/tags/ubuntu/</link>
-      <pubDate>Tue, 16 Apr 2019 22:34:09 +0900</pubDate>
-      
-      <guid>https://ted027.github.io/tags/ubuntu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Wine</title>
       <link>https://ted027.github.io/tags/wine/</link>
       <pubDate>Tue, 16 Apr 2019 22:34:09 +0900</pubDate>
@@ -107,15 +188,6 @@
       <pubDate>Tue, 16 Apr 2019 08:23:08 +0900</pubDate>
       
       <guid>https://ted027.github.io/tags/disqus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://ted027.github.io/tags/hugo/</link>
-      <pubDate>Tue, 16 Apr 2019 08:23:08 +0900</pubDate>
-      
-      <guid>https://ted027.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     

@@ -19,7 +19,7 @@
       <guid>https://ted027.github.io/post/ubuntu-kindle/</guid>
       <description>&lt;p&gt;UbuntuにKindleをインストールしようとして苦労したのでメモ。&lt;/p&gt;
 
-&lt;p&gt;Ubuntu用のKindle for PCクライアントはありません。なので、少々面倒ですがwineというwindowsエミュレータを使ってwindows版をインストールします。&lt;/p&gt;</description>
+&lt;p&gt;Ubuntu用のKindle for PCクライアントは無いので、ちょっと手間を掛けてWineというWindowsエミュレータを使ってWindows版をインストールする。&lt;/p&gt;</description>
     </item>
     
   </channel>
