@@ -6,10 +6,19 @@
     <description>Recent content on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 23 Apr 2019 16:19:47 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 24 Apr 2019 08:10:53 +0900</lastBuildDate>
     
 	<atom:link href="https://ted027.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dockerでコマンド実行結果を変数に入れられなくて困った話</title>
+      <link>https://ted027.github.io/post/docker-var/</link>
+      <pubDate>Wed, 24 Apr 2019 08:10:53 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/post/docker-var/</guid>
+      <description>&lt;p&gt;Dockerfileではコマンド実行結果を変数に入れられない。それでも入れたい時の回避策。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>パワプロ ペナント補強思考設定の条件判断</title>
