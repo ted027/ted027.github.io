@@ -163,7 +163,7 @@ if (!doNotTrack) {
 <li>判断基準
 
 <ul>
-<li>獲得選手数の上位3チームを「積極的」、下位3チームを「消極的」、残りを「おまかせ」に</li>
+<li>獲得選手数の上位4チームを「積極的」、下位4チームを「消極的」、残りを「おまかせ」に</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -193,7 +193,7 @@ if (!doNotTrack) {
 <li>判断基準
 
 <ul>
-<li>獲得選手数の上位3チームを「積極的」、下位3チームを「消極的」、残りを「おまかせ」に</li>
+<li>獲得選手数の上位4チームを「積極的」、下位4チームを「消極的」、残りを「おまかせ」に</li>
 </ul></li>
 </ul></li>
 <li>獲得方針
@@ -202,7 +202,7 @@ if (!doNotTrack) {
 <li>判断基準
 
 <ul>
-<li>獲得選手の平均年齢上位3チームを「ベテラン中心」、下位3チームを「若手中心」、残りを「おまかせ」に</li>
+<li>獲得選手の平均年齢上位4チームを「ベテラン中心」、下位4チームを「若手中心」、残りを「おまかせ」に</li>
 </ul></li>
 </ul></li>
 <li>重視特徴
@@ -232,7 +232,7 @@ if (!doNotTrack) {
 <li>判断基準
 
 <ul>
-<li>獲得選手の平均年齢上位3チームを「即戦力重視」、下位3チームを「将来性重視」、残りを「おまかせ」に</li>
+<li>獲得選手の平均年齢上位4チームを「即戦力重視」、下位4チームを「将来性重視」、残りを「おまかせ」に</li>
 <li>「一芸重視」は単純な計算で判断しづらいので扱わない</li>
 </ul></li>
 </ul></li>
@@ -272,7 +272,7 @@ if (!doNotTrack) {
 <li>判断基準
 
 <ul>
-<li>獲得した選手合計数の上位3チームを「積極的」、下位3チームを「消極的」、残りを「おまかせ」に</li>
+<li>獲得した選手合計数の上位4チームを「積極的」、下位4チームを「消極的」、残りを「おまかせ」に</li>
 </ul></li>
 </ul></li>
 <li>獲得方針
@@ -281,8 +281,8 @@ if (!doNotTrack) {
 <li>判断基準
 
 <ul>
-<li>獲得した選手の平均翌年推定年俸の平均、上位3チームを「目玉選手重視」、下位3チームを「単独交渉重視」、残りを「おまかせ」に</li>
-<li>獲得した選手の平均年齢、上位3チームを「経験重視」、下位3チームを「若さ重視」、残りを「おまかせ」に</li>
+<li>獲得した選手の平均翌年推定年俸の平均、上位4チームを「目玉選手重視」、下位4チームを「単独交渉重視」、残りを「おまかせ」に</li>
+<li>獲得した選手の平均年齢、上位4チームを「経験重視」、下位4チームを「若さ重視」、残りを「おまかせ」に</li>
 <li>複数条件に当てはまる場合、優先度は
 
 <ul>
@@ -349,7 +349,7 @@ if (!doNotTrack) {
 <li>判断基準
 
 <ul>
-<li>歴代で獲得した米国帰国選手の合計数上位3チームを「積極的」、下位3チームを「消極的」、残りを「おまかせ」に</li>
+<li>歴代で獲得した米国帰国選手の合計数上位4チームを「積極的」、下位4チームを「消極的」、残りを「おまかせ」に</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -380,7 +380,7 @@ if (!doNotTrack) {
 <li>判断基準
 
 <ul>
-<li>由契約からの獲得選手の平均年齢上位3チームを「経験重視」、下位3チームを「のびしろ重視」、残りを「おまかせ」に</li>
+<li>由契約からの獲得選手の平均年齢上位4チームを「経験重視」、下位4チームを「のびしろ重視」、残りを「おまかせ」に</li>
 <li>「一芸重視」「器用さ重視」は単純な計算で判断しづらいので扱わない</li>
 </ul></li>
 </ul></li>
@@ -400,7 +400,12 @@ if (!doNotTrack) {
 <ul>
 <li>基本的に育成選手は計算に含めない。パワプロで育成選手は扱わないため</li>
 <li>ただし育成から支配下登録された外国人選手は「新外国人選手」として計算に含む</li>
-<li>データ数が0で平均が取れない場合、上位3/下位3の判断から除外し、設定は「おまかせ」にする</li>
+<li>データ数が0で平均が取れない場合、上位4/下位4の判断から除外し、設定は「おまかせ」にする</li>
+<li>上位4位と5位/下位4と5位が同数の場合、上位4位/下位4位も「おまかせ」に吸収する
+
+<ul>
+<li>その場合、上位3位と4位/下位3と4位が同数の場合…で繰り返し</li>
+</ul></li>
 </ul>
 
 <hr />
@@ -413,7 +418,7 @@ if (!doNotTrack) {
 
 <hr />
 
-<h3 id="おわりに">おわりに</h3>
+<h3 id="おわり">おわり</h3>
 
 <p>自動化したいといいつつ手で書いてばかりだった。</p>
 
@@ -617,11 +622,11 @@ if (!doNotTrack) {
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/dockerfile/">Dockerfileの書き方や紛らわしいコマンド達の話</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/docker-var/">Dockerでコマンド実行結果を変数に入れられなくて困った話</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/penant-add-descript/">パワプロ ペナント補強思考設定の条件判断</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/penant-add/">パワプロ ペナントの補強思考設定（2019年4月時点）</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/ubuntu/">OSをUbuntu 18.04 LTSにした際にやったこと</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/circleci/">CircleCIでHugoのビルドを自動化した話</a></li>
 		</ul>
 	</div>
 </div>
@@ -645,9 +650,11 @@ if (!doNotTrack) {
 		<a class="widget-taglist__link widget__link btn" href="/tags/byobu" title="Byobu">Byobu</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/ci" title="Ci">Ci</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/circleci" title="Circleci">Circleci</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cmd" title="Cmd">Cmd</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/disqus" title="Disqus">Disqus</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/dockerfile" title="Dockerfile">Dockerfile</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/entrypoint" title="Entrypoint">Entrypoint</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/github-pages" title="Github pages">Github pages</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/kindle" title="Kindle">Kindle</a>
@@ -785,6 +792,51 @@ if (!doNotTrack) {
                 <div class="widget">
                     <h4 class="widget__title"></h4>
                     <div class="widget__content">
+                    <div class="cstmreba">
+                        <div class="kaerebalink-box">
+                            <div class="kaerebalink-image"><a
+                                    href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E3%2583%2596%25E3%2583%25AD%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2581%25E3%2582%25A7%25E3%2583%25BC%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E9%2596%258B%25E7%2599%25BA%25E3%2581%25AE%25E6%2595%2599%25E7%25A7%2591%25E6%259B%25B8-%25E5%258A%25A0%25E5%25B5%259C-%25E9%2595%25B7%25E9%2596%2580%2Fdp%2F4839965137"
+                                    rel="nofollow" target="_blank"><img
+                                        src="https://images-fe.ssl-images-amazon.com/images/I/61o-cvbpNEL._SL160_.jpg"
+                                        style="border: none;" /></a><img height="1"
+                                    src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
+                                    style="border:none;" width="1" /></div>
+                            <div class="kaerebalink-info">
+                                <div class="kaerebalink-name"><a
+                                        href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E3%2583%2596%25E3%2583%25AD%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2581%25E3%2582%25A7%25E3%2583%25BC%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%2597%25E3%2583%25AA%25E3%2582%25B1%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E9%2596%258B%25E7%2599%25BA%25E3%2581%25AE%25E6%2595%2599%25E7%25A7%2591%25E6%259B%25B8-%25E5%258A%25A0%25E5%25B5%259C-%25E9%2595%25B7%25E9%2596%2580%2Fdp%2F4839965137"
+                                        rel="nofollow" target="_blank">ブロックチェーンアプリケーション開発の教科書</a><img height="1"
+                                        src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
+                                        style="border:none;" width="1" /></div>
+                                <div class="kaerebalink-detail"></div>
+                                <div class="kaerebalink-link1">
+                                    <div class="shoplinkamazon"><a
+                                            href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;s_v=b5Rz2P0601xu&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3D%25E3%2583%2596%25E3%2583%25AD%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2581%25E3%2582%25A7%25E3%2583%25BC%25E3%2583%25B3%25E3%2580%2580%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
+                                            rel="nofollow" target="_blank">Amazonで調べる</a><img height="1"
+                                            src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
+                                            style="border:none;" width="1" /></div>
+                                    <div class="shoplinkrakuten"><a
+                                            href="//af.moshimo.com/af/c/click?a_id=1414727&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;s_v=b5Rz2P0601xu&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2596%25E3%2583%25AD%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2581%25E3%2582%25A7%25E3%2583%25BC%25E3%2583%25B3%25E3%2580%2580%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
+                                            rel="nofollow" target="_blank">楽天市場で調べる</a><img height="1"
+                                            src="//i.moshimo.com/af/i/impression?a_id=1414727&amp;p_id=54&amp;pc_id=54&amp;pl_id=616"
+                                            style="border:none;" width="1" /></div>
+                                    <div class="shoplinkyahoo"><a
+                                            href="//af.moshimo.com/af/c/click?a_id=1418766&amp;p_id=1225&amp;pc_id=1925&amp;pl_id=18502&amp;s_v=b5Rz2P0601xu&amp;url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3D%25E3%2583%2596%25E3%2583%25AD%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2581%25E3%2582%25A7%25E3%2583%25BC%25E3%2583%25B3%25E3%2580%2580%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0"
+                                            rel="nofollow" target="_blank">Yahooショッピングで調べる</a><img height="1"
+                                            src="//i.moshimo.com/af/i/impression?a_id=1418766&amp;p_id=1225&amp;pc_id=1925&amp;pl_id=18502"
+                                            style="border:none;" width="1" /></div>
+                                    <div class="shoplinkseven"><a
+                                        href="//af.moshimo.com/af/c/click?a_id=1414728&amp;p_id=932&amp;pc_id=1188&amp;pl_id=12456&amp;s_v=b5Rz2P0601xu&amp;url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3D%25E3%2583%2596%25E3%2583%25AD%25E3%2583%2583%25E3%2582%25AF%25E3%2583%2581%25E3%2582%25A7%25E3%2583%25BC%25E3%2583%25B3%25E3%2580%2580%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%26searchKeywordFlg%3D1"
+                                        target="_blank"
+                                        rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
+                                            </a> </div> </div> </div> <div class="booklink-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget">
+                    <h4 class="widget__title"></h4>
+                    <div class="widget__content">
                         <div class="cstmreba">
                             <div class="kaerebalink-box">
                                 <div class="kaerebalink-image"><a
@@ -872,7 +924,7 @@ if (!doNotTrack) {
                                                         target="_blank"
                                                         rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                                                             </a> </div> </div> </div> <div class="booklink-footer">
-                                                </div>
+                                            </div>
                                             </div>
                                         </div>
                                     </div>

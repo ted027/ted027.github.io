@@ -6,10 +6,19 @@
     <description>Recent content on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 24 Apr 2019 08:10:53 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 24 Apr 2019 17:35:18 +0900</lastBuildDate>
     
 	<atom:link href="https://ted027.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dockerfileの書き方や紛らわしいコマンド達の話</title>
+      <link>https://ted027.github.io/post/dockerfile/</link>
+      <pubDate>Wed, 24 Apr 2019 17:35:18 +0900</pubDate>
+      
+      <guid>https://ted027.github.io/post/dockerfile/</guid>
+      <description>&lt;p&gt;Dockerfileを書く時に気にしていること、よくわからなくて調べたことなど。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Dockerでコマンド実行結果を変数に入れられなくて困った話</title>
