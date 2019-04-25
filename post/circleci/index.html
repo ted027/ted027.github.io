@@ -128,7 +128,7 @@ hugo
 cd public
 git add .
 
-msg=&quot;rebuilding site `date`&quot;
+msg=&quot;rebuilding site `date +'%Y-%m-%d %H:%M:%S'`&quot;
 git commit -m &quot;$msg&quot;
 
 git push origin master
@@ -137,8 +137,6 @@ git push origin master
 <ul>
 <li>参考: <a href="https://github.com/uqichi/blog/blob/master/deploy.sh">https://github.com/uqichi/blog/blob/master/deploy.sh</a></li>
 </ul>
-
-<p>参考というかほぼパクらせていただきました。。</p>
 
 <p>これで2と4がひと手間になった。</p>
 
@@ -434,11 +432,11 @@ build:
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/puml-ubu/">Ubuntu環境にVSCode&#43;PlantUMLを導入する</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/puml-win/">Windows環境にVSCode&#43;PlantUMLを導入する</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/dockerfile/">Dockerfileの書き方や紛らわしいコマンドの話</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/docker-var/">Dockerでコマンド実行結果を変数に入れられなくて困った話</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/penant-add-descript/">パワプロ ペナント補強思考設定の条件判断</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/penant-add/">パワプロ ペナントの補強思考設定（2019年4月時点）</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/ubuntu/">OSをUbuntu 18.04 LTSにした際にやったこと</a></li>
 		</ul>
 	</div>
 </div>
@@ -448,6 +446,7 @@ build:
 		<ul class="widget__list">
 			<li class="widget__item"><a class="widget__link" href="/categories/blog">Blog</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/docker">Docker</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/plantuml">Plantuml</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/shell">Shell</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/todo">Todo</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/ubuntu">Ubuntu</a></li>
@@ -472,10 +471,13 @@ build:
 		<a class="widget-taglist__link widget__link btn" href="/tags/kindle" title="Kindle">Kindle</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/linux" title="Linux">Linux</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/os" title="Os">Os</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/plantuml" title="Plantuml">Plantuml</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/python" title="Python">Python</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/shell" title="Shell">Shell</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/todo" title="Todo">Todo</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/ubuntu" title="Ubuntu">Ubuntu</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/vscode" title="Vscode">Vscode</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/windows" title="Windows">Windows</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wine" title="Wine">Wine</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/%e3%81%be%e3%81%a8%e3%82%81%e3%82%8b" title="まとめる">まとめる</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/%e3%82%b3%e3%83%9e%e3%83%b3%e3%83%89" title="コマンド">コマンド</a>
