@@ -6,17 +6,35 @@
     <description>Recent content in Tags on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 25 Apr 2019 09:33:57 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 25 Apr 2019 17:02:54 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>AWS</title>
+      <link>https://www.ted027.com/tags/aws/</link>
+      <pubDate>Thu, 25 Apr 2019 17:02:54 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>PlantUML</title>
       <link>https://www.ted027.com/tags/plantuml/</link>
-      <pubDate>Thu, 25 Apr 2019 09:33:57 +0900</pubDate>
+      <pubDate>Thu, 25 Apr 2019 17:02:54 +0900</pubDate>
       
       <guid>https://www.ted027.com/tags/plantuml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>構成図</title>
+      <link>https://www.ted027.com/tags/%E6%A7%8B%E6%88%90%E5%9B%B3/</link>
+      <pubDate>Thu, 25 Apr 2019 17:02:54 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/%E6%A7%8B%E6%88%90%E5%9B%B3/</guid>
       <description></description>
     </item>
     

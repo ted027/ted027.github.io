@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/aws/</link>
+    <description>Recent content in AWS on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 25 Apr 2019 17:02:54 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PlantUMLでAWSアイコンを使ったシステム構成図を作る</title>
+      <link>https://www.ted027.com/post/puml-aws/</link>
+      <pubDate>Thu, 25 Apr 2019 17:02:54 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/puml-aws/</guid>
+      <description>&lt;p&gt;公開されているAWS Simple Iconsのpumlファイルをincludeすることで、PlantUMLで簡単に図に導入できる。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
