@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dockerfile on 行けたら行く</title>
-    <link>https://ted027.github.io/tags/dockerfile/</link>
+    <link>https://www.ted027.com/tags/dockerfile/</link>
     <description>Recent content in Dockerfile on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 24 Apr 2019 17:35:18 +0900</lastBuildDate>
     
-	<atom:link href="https://ted027.github.io/tags/dockerfile/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ted027.com/tags/dockerfile/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dockerfileの書き方や紛らわしいコマンドの話</title>
-      <link>https://ted027.github.io/post/dockerfile/</link>
+      <link>https://www.ted027.com/post/dockerfile/</link>
       <pubDate>Wed, 24 Apr 2019 17:35:18 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/dockerfile/</guid>
+      <guid>https://www.ted027.com/post/dockerfile/</guid>
       <description>&lt;p&gt;Dockerfileを書く時に気にしていること、よくわからなくて調べたことなど。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Dockerでコマンド実行結果を変数に入れられなくて困った話</title>
-      <link>https://ted027.github.io/post/docker-var/</link>
+      <link>https://www.ted027.com/post/docker-var/</link>
       <pubDate>Wed, 24 Apr 2019 08:10:53 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/docker-var/</guid>
+      <guid>https://www.ted027.com/post/docker-var/</guid>
       <description>&lt;p&gt;Dockerfileではコマンド実行結果を変数に入れられない。それでも入れたい時の回避策。&lt;/p&gt;</description>
     </item>
     

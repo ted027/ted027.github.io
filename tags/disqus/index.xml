@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Disqus on 行けたら行く</title>
-    <link>https://ted027.github.io/tags/disqus/</link>
+    <link>https://www.ted027.com/tags/disqus/</link>
     <description>Recent content in Disqus on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 16 Apr 2019 08:23:08 +0900</lastBuildDate>
     
-	<atom:link href="https://ted027.github.io/tags/disqus/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ted027.com/tags/disqus/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>HugoブログにDisqusでコメント欄をつけた</title>
-      <link>https://ted027.github.io/post/disqus/</link>
+      <link>https://www.ted027.com/post/disqus/</link>
       <pubDate>Tue, 16 Apr 2019 08:23:08 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/disqus/</guid>
+      <guid>https://www.ted027.com/post/disqus/</guid>
       <description>&lt;p&gt;ブログなのでコメント欄くらいはほしい。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://help.disqus.com/&#34;&gt;Disqus&lt;/a&gt;というサービスが簡単そう。&lt;/p&gt;</description>

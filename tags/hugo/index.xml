@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on 行けたら行く</title>
-    <link>https://ted027.github.io/tags/hugo/</link>
+    <link>https://www.ted027.com/tags/hugo/</link>
     <description>Recent content in Hugo on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 19 Apr 2019 22:53:43 +0900</lastBuildDate>
     
-	<atom:link href="https://ted027.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ted027.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CircleCIでHugoのビルドを自動化した話</title>
-      <link>https://ted027.github.io/post/circleci/</link>
+      <link>https://www.ted027.com/post/circleci/</link>
       <pubDate>Fri, 19 Apr 2019 22:53:43 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/circleci/</guid>
+      <guid>https://www.ted027.com/post/circleci/</guid>
       <description>&lt;p&gt;Hugoのビルドとブログの更新を自動で行うようにした。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>HugoブログにDisqusでコメント欄をつけた</title>
-      <link>https://ted027.github.io/post/disqus/</link>
+      <link>https://www.ted027.com/post/disqus/</link>
       <pubDate>Tue, 16 Apr 2019 08:23:08 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/disqus/</guid>
+      <guid>https://www.ted027.com/post/disqus/</guid>
       <description>&lt;p&gt;ブログなのでコメント欄くらいはほしい。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://help.disqus.com/&#34;&gt;Disqus&lt;/a&gt;というサービスが簡単そう。&lt;/p&gt;</description>
@@ -33,10 +33,10 @@
     
     <item>
       <title>Hugo &#43; GitHub Pagesでブログを作った話</title>
-      <link>https://ted027.github.io/post/hugo/</link>
+      <link>https://www.ted027.com/post/hugo/</link>
       <pubDate>Mon, 15 Apr 2019 11:20:46 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/hugo/</guid>
+      <guid>https://www.ted027.com/post/hugo/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; + &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;でブログを作った。&lt;/p&gt;</description>
     </item>
     

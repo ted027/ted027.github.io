@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wine on 行けたら行く</title>
-    <link>https://ted027.github.io/tags/wine/</link>
+    <link>https://www.ted027.com/tags/wine/</link>
     <description>Recent content in Wine on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 16 Apr 2019 22:34:09 +0900</lastBuildDate>
     
-	<atom:link href="https://ted027.github.io/tags/wine/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ted027.com/tags/wine/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ubuntu 18.04にKindleをインストールした話</title>
-      <link>https://ted027.github.io/post/ubuntu-kindle/</link>
+      <link>https://www.ted027.com/post/ubuntu-kindle/</link>
       <pubDate>Tue, 16 Apr 2019 22:34:09 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/ubuntu-kindle/</guid>
+      <guid>https://www.ted027.com/post/ubuntu-kindle/</guid>
       <description>&lt;p&gt;UbuntuにKindleをインストールしようとして苦労したのでメモ。&lt;/p&gt;
 
 &lt;p&gt;Ubuntu用のKindle for PCクライアントは無いので、ちょっと手間を掛けてWineというWindowsエミュレータを使ってWindows版をインストールする。&lt;/p&gt;</description>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OS on 行けたら行く</title>
-    <link>https://ted027.github.io/tags/os/</link>
+    <link>https://www.ted027.com/tags/os/</link>
     <description>Recent content in OS on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 21 Apr 2019 22:52:31 +0900</lastBuildDate>
     
-	<atom:link href="https://ted027.github.io/tags/os/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ted027.com/tags/os/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>OSをUbuntu 18.04 LTSにした際にやったこと</title>
-      <link>https://ted027.github.io/post/ubuntu/</link>
+      <link>https://www.ted027.com/post/ubuntu/</link>
       <pubDate>Sun, 21 Apr 2019 22:52:31 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/ubuntu/</guid>
+      <guid>https://www.ted027.com/post/ubuntu/</guid>
       <description>&lt;p&gt;新しいノートPC購入を機に、OSをUbuntu 18.04 LTSにした際の備忘録。&lt;/p&gt;</description>
     </item>
     

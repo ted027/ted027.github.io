@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shell on 行けたら行く</title>
-    <link>https://ted027.github.io/tags/shell/</link>
+    <link>https://www.ted027.com/tags/shell/</link>
     <description>Recent content in Shell on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 19 Apr 2019 12:41:06 +0900</lastBuildDate>
     
-	<atom:link href="https://ted027.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ted027.com/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Byobuの導入とよく使うコマンド等</title>
-      <link>https://ted027.github.io/post/byobu/</link>
+      <link>https://www.ted027.com/post/byobu/</link>
       <pubDate>Fri, 19 Apr 2019 12:41:06 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/byobu/</guid>
+      <guid>https://www.ted027.com/post/byobu/</guid>
       <description>&lt;p&gt;仮想端末ソフトByobuの導入やよく使うコマンドについてのメモ。&lt;/p&gt;</description>
     </item>
     

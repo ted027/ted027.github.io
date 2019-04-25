@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>行けたら行く</title>
-    <link>https://ted027.github.io/</link>
+    <link>https://www.ted027.com/</link>
     <description>Recent content on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Thu, 25 Apr 2019 09:33:57 +0900</lastBuildDate>
     
-	<atom:link href="https://ted027.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ted027.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ubuntu環境にVSCode&#43;PlantUMLを導入する</title>
-      <link>https://ted027.github.io/post/puml-ubu/</link>
+      <link>https://www.ted027.com/post/puml-ubu/</link>
       <pubDate>Thu, 25 Apr 2019 09:33:57 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/puml-ubu/</guid>
+      <guid>https://www.ted027.com/post/puml-ubu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Windows環境にVSCode&#43;PlantUMLを導入する</title>
-      <link>https://ted027.github.io/post/puml-win/</link>
+      <link>https://www.ted027.com/post/puml-win/</link>
       <pubDate>Thu, 25 Apr 2019 09:33:57 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/puml-win/</guid>
+      <guid>https://www.ted027.com/post/puml-win/</guid>
       <description>&lt;p&gt;PlantUMLは、構成や関連を言語で記載しUML図を作成できるコンポーネント。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Dockerfileの書き方や紛らわしいコマンドの話</title>
-      <link>https://ted027.github.io/post/dockerfile/</link>
+      <link>https://www.ted027.com/post/dockerfile/</link>
       <pubDate>Wed, 24 Apr 2019 17:35:18 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/dockerfile/</guid>
+      <guid>https://www.ted027.com/post/dockerfile/</guid>
       <description>&lt;p&gt;Dockerfileを書く時に気にしていること、よくわからなくて調べたことなど。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Dockerでコマンド実行結果を変数に入れられなくて困った話</title>
-      <link>https://ted027.github.io/post/docker-var/</link>
+      <link>https://www.ted027.com/post/docker-var/</link>
       <pubDate>Wed, 24 Apr 2019 08:10:53 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/docker-var/</guid>
+      <guid>https://www.ted027.com/post/docker-var/</guid>
       <description>&lt;p&gt;Dockerfileではコマンド実行結果を変数に入れられない。それでも入れたい時の回避策。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>パワプロ ペナント補強思考設定の条件判断</title>
-      <link>https://ted027.github.io/post/penant-add-descript/</link>
+      <link>https://www.ted027.com/post/penant-add-descript/</link>
       <pubDate>Tue, 23 Apr 2019 16:19:47 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/penant-add-descript/</guid>
+      <guid>https://www.ted027.com/post/penant-add-descript/</guid>
       <description>&lt;p&gt;補強思考設定、各項目の判断基準の説明です。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>パワプロ ペナントの補強思考設定（2019年4月時点）</title>
-      <link>https://ted027.github.io/post/penant-add/</link>
+      <link>https://www.ted027.com/post/penant-add/</link>
       <pubDate>Tue, 23 Apr 2019 09:32:03 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/penant-add/</guid>
+      <guid>https://www.ted027.com/post/penant-add/</guid>
       <description>&lt;p&gt;実況パワフルプロ野球のペナントモードで、各球団の補強思考を設定できる。&lt;/p&gt;
 
 &lt;p&gt;Pythonで近年の移籍情報を取得して、各球団の補強実績に即した設定を算出したい。&lt;/p&gt;</description>
@@ -69,37 +69,37 @@
     
     <item>
       <title>OSをUbuntu 18.04 LTSにした際にやったこと</title>
-      <link>https://ted027.github.io/post/ubuntu/</link>
+      <link>https://www.ted027.com/post/ubuntu/</link>
       <pubDate>Sun, 21 Apr 2019 22:52:31 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/ubuntu/</guid>
+      <guid>https://www.ted027.com/post/ubuntu/</guid>
       <description>&lt;p&gt;新しいノートPC購入を機に、OSをUbuntu 18.04 LTSにした際の備忘録。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>CircleCIでHugoのビルドを自動化した話</title>
-      <link>https://ted027.github.io/post/circleci/</link>
+      <link>https://www.ted027.com/post/circleci/</link>
       <pubDate>Fri, 19 Apr 2019 22:53:43 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/circleci/</guid>
+      <guid>https://www.ted027.com/post/circleci/</guid>
       <description>&lt;p&gt;Hugoのビルドとブログの更新を自動で行うようにした。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Byobuの導入とよく使うコマンド等</title>
-      <link>https://ted027.github.io/post/byobu/</link>
+      <link>https://www.ted027.com/post/byobu/</link>
       <pubDate>Fri, 19 Apr 2019 12:41:06 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/byobu/</guid>
+      <guid>https://www.ted027.com/post/byobu/</guid>
       <description>&lt;p&gt;仮想端末ソフトByobuの導入やよく使うコマンドについてのメモ。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>リュックの邪魔な紐をまとめるやつ</title>
-      <link>https://ted027.github.io/post/webdominator/</link>
+      <link>https://www.ted027.com/post/webdominator/</link>
       <pubDate>Thu, 18 Apr 2019 20:52:52 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/webdominator/</guid>
+      <guid>https://www.ted027.com/post/webdominator/</guid>
       <description>&lt;p&gt;ビジネス用のリュックを購入したけど、ピロピロした紐が邪魔だったので、まとめるやつを買った。&lt;/p&gt;
 
 &lt;p&gt;ウェブドミネーターというらしい。&lt;/p&gt;</description>
@@ -107,10 +107,10 @@
     
     <item>
       <title>Ubuntu 18.04にKindleをインストールした話</title>
-      <link>https://ted027.github.io/post/ubuntu-kindle/</link>
+      <link>https://www.ted027.com/post/ubuntu-kindle/</link>
       <pubDate>Tue, 16 Apr 2019 22:34:09 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/ubuntu-kindle/</guid>
+      <guid>https://www.ted027.com/post/ubuntu-kindle/</guid>
       <description>&lt;p&gt;UbuntuにKindleをインストールしようとして苦労したのでメモ。&lt;/p&gt;
 
 &lt;p&gt;Ubuntu用のKindle for PCクライアントは無いので、ちょっと手間を掛けてWineというWindowsエミュレータを使ってWindows版をインストールする。&lt;/p&gt;</description>
@@ -118,10 +118,10 @@
     
     <item>
       <title>HugoブログにDisqusでコメント欄をつけた</title>
-      <link>https://ted027.github.io/post/disqus/</link>
+      <link>https://www.ted027.com/post/disqus/</link>
       <pubDate>Tue, 16 Apr 2019 08:23:08 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/disqus/</guid>
+      <guid>https://www.ted027.com/post/disqus/</guid>
       <description>&lt;p&gt;ブログなのでコメント欄くらいはほしい。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://help.disqus.com/&#34;&gt;Disqus&lt;/a&gt;というサービスが簡単そう。&lt;/p&gt;</description>
@@ -129,10 +129,10 @@
     
     <item>
       <title>今後書きたいことの備忘録</title>
-      <link>https://ted027.github.io/post/todo/</link>
+      <link>https://www.ted027.com/post/todo/</link>
       <pubDate>Mon, 15 Apr 2019 18:07:43 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/todo/</guid>
+      <guid>https://www.ted027.com/post/todo/</guid>
       <description>&lt;p&gt;書くことに困ったら戻ってくる予定。&lt;/p&gt;
 
 &lt;p&gt;挫折したらそっとリストから消す予定。&lt;/p&gt;</description>
@@ -140,10 +140,10 @@
     
     <item>
       <title>Hugo &#43; GitHub Pagesでブログを作った話</title>
-      <link>https://ted027.github.io/post/hugo/</link>
+      <link>https://www.ted027.com/post/hugo/</link>
       <pubDate>Mon, 15 Apr 2019 11:20:46 +0900</pubDate>
       
-      <guid>https://ted027.github.io/post/hugo/</guid>
+      <guid>https://www.ted027.com/post/hugo/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; + &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;でブログを作った。&lt;/p&gt;</description>
     </item>
     
