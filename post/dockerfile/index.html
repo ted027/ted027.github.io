@@ -112,12 +112,11 @@ if (!doNotTrack) {
 
 <p>複数モジュールインストールする場合は一行ずつ分けて、アルファベット順に並べておくのがいい。追加削除がしやすく、重複も防げる。</p>
 
-<pre><code class="language-Dockerfile">WORKDIR /usr/my/path
-RUN set -ex &amp;&amp; \
-    apt-get update &amp;&amp; apt-get install -y \
-    automake \
-    build-essential \
-    curl
+<pre><code class="language-Dockerfile">RUN set -ex &amp;&amp; \
+    yum -yq install \
+    clock \
+    gcc \
+    make
 </code></pre>
 
 <hr />
