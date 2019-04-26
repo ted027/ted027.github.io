@@ -133,7 +133,7 @@
       <guid>https://www.ted027.com/post/disqus/</guid>
       <description>&lt;p&gt;ブログなのでコメント欄くらいはほしい。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://help.disqus.com/&#34;&gt;Disqus&lt;/a&gt;というサービスが簡単そう。&lt;/p&gt;</description>
+&lt;p&gt;DisqusというサービスならHugoに簡単に導入できそう。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -153,7 +153,7 @@
       <pubDate>Mon, 15 Apr 2019 11:20:46 +0900</pubDate>
       
       <guid>https://www.ted027.com/post/hugo/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; + &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;でブログを作った。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Hugo + GitHub Pagesを使ってブログを作った。&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -113,20 +113,20 @@ if (!doNotTrack) {
 <ol>
 <li><p>32bit版のWineを使えるようにする</p>
 
-<pre><code>sudo dpkg --add-architecture i386
+<pre><code>$ sudo dpkg --add-architecture i386
 </code></pre></li>
 
 <li><p>レポジトリを追加</p>
 
-<pre><code>wget -nc https://dl.winehq.org/wine-builds/winehq.key
-sudo apt-key add winehq.key
-sudo apt-add-repository -y -n https://dl.winehq.org/wine-builds/ubuntu/
+<pre><code>$ wget -nc https://dl.winehq.org/wine-builds/winehq.key
+$ sudo apt-key add winehq.key
+$ sudo apt-add-repository -y -n https://dl.winehq.org/wine-builds/ubuntu/
 </code></pre></li>
 
 <li><p>Wineをインストール</p>
 
-<pre><code>sudo apt update
-sudo apt install winehq-stable
+<pre><code>$ sudo apt update
+$ sudo apt install winehq-stable
 </code></pre></li>
 </ol>
 
@@ -137,7 +137,7 @@ sudo apt install winehq-stable
 <ol>
 <li><p>OSを選択</p>
 
-<pre><code>winecfg
+<pre><code>$ winecfg
 </code></pre></li>
 </ol>
 
@@ -152,15 +152,15 @@ sudo apt install winehq-stable
 <ol>
 <li><p>winetricksをインストール</p>
 
-<pre><code>cd ~/.wine
-wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
-sudo chmod +x winetricks
+<pre><code>$ cd ~/.wine
+$ wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+$ sudo chmod +x winetricks
 </code></pre></li>
 
 <li><p>文字化けを直す</p>
 
-<pre><code>sudo sh winetricks allfonts
-sudo sh winetricks fontsmooth-rgb
+<pre><code>$ sudo sh winetricks allfonts
+$ sudo sh winetricks fontsmooth-rgb
 </code></pre></li>
 </ol>
 

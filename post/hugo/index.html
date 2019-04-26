@@ -8,7 +8,7 @@
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<meta property="og:title" content="Hugo &#43; GitHub Pagesでブログを作った話" />
-<meta property="og:description" content="Hugo &#43; GitHub Pagesでブログを作った。" />
+<meta property="og:description" content="Hugo &#43; GitHub Pagesを使ってブログを作った。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.ted027.com/post/hugo/" />
 <meta property="article:published_time" content="2019-04-15T11:20:46&#43;09:00"/>
@@ -16,7 +16,7 @@
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hugo &#43; GitHub Pagesでブログを作った話"/>
-<meta name="twitter:description" content="Hugo &#43; GitHub Pagesでブログを作った。"/>
+<meta name="twitter:description" content="Hugo &#43; GitHub Pagesを使ってブログを作った。"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -94,7 +94,7 @@ if (!doNotTrack) {
 
 			<br/>
 		</header><div class="content post__content clearfix">
-			<p><a href="https://gohugo.io/">Hugo</a> + <a href="https://pages.github.com/">GitHub Pages</a>でブログを作った。</p>
+			<p>Hugo + GitHub Pagesを使ってブログを作った。</p>
 
 <hr />
 
@@ -149,7 +149,7 @@ if (!doNotTrack) {
 <li><a href="https://gohugo.io/">https://gohugo.io/</a></li>
 </ul>
 
-<p>静的サイトジェネレータ。テーマが豊富。</p>
+<p>静的サイトジェネレータ。テーマが豊富でカスタマイズ性が高い。</p>
 
 <p>markdownでブログが書けるなんて素晴らしい。</p>
 
@@ -157,16 +157,16 @@ if (!doNotTrack) {
 
 <p>自分のUbuntu 18.04環境では、aptだとバージョンが古かったので、snapでインストール。</p>
 
-<pre><code>sudo snap install hugo --channel=extended
-cd /usr/bin
-sudo ln -s /snap/bin/hugo hugo
+<pre><code>$ sudo snap install hugo --channel=extended
+$ cd /usr/bin
+$ sudo ln -s /snap/bin/hugo hugo
 </code></pre>
 
 <p>gitからでも取れる。</p>
 
-<pre><code>git clone https://github.com/gohugoio/hugo.git
-cd hugo
-go install --tags extended
+<pre><code>$ git clone https://github.com/gohugoio/hugo.git
+$ cd hugo
+$ go install --tags extended
 </code></pre>
 
 <hr />
@@ -218,8 +218,8 @@ go install --tags extended
 
 <h3 id="hugoで静的サイトを作成">Hugoで静的サイトを作成</h3>
 
-<pre><code>hugo new site blog
-cd blog
+<pre><code>$ hugo new site blog
+$ cd blog
 </code></pre>
 
 <hr />
@@ -238,9 +238,9 @@ cd blog
 
 <li><p><code>blog/thmem</code>以下にテーマを落とす</p>
 
-<pre><code>cd themes
-git clone https://github.com/[theme_name]
-cd ../
+<pre><code>$ cd themes
+$ git clone https://github.com/[theme_name]
+$ cd ../
 </code></pre></li>
 </ul></li>
 
@@ -251,7 +251,7 @@ cd ../
 
 <li><p>これ以外にもテーマによって設定項目が色々あるが、テーマのページを見ると大抵書いてある</p>
 
-<pre><code>baseURL = &quot;https://[github_user].github.io/&quot;
+<pre><code class="language-config.toml">baseURL = &quot;https://[github_user].github.io/&quot;
 languageCode = &quot;ja&quot;
 title = &quot;My Blog&quot;
 theme = &quot;[theme_name]&quot;
@@ -263,7 +263,7 @@ theme = &quot;[theme_name]&quot;
 
 <h3 id="記事を作成">記事を作成</h3>
 
-<pre><code>hugo new post/first.md
+<pre><code>$ hugo new post/first.md
 </code></pre>
 
 <p>こんな記事ができる。</p>
@@ -288,7 +288,8 @@ draft: true
 
 <h3 id="ローカルサーバで確認">ローカルサーバで確認</h3>
 
-<p><code>hugo server --buildDrafts --watch</code></p>
+<pre><code>$ hugo server --buildDrafts --watch
+</code></pre>
 
 <ul>
 <li><code>--buildDrafts</code>をつけると<code>draft: true</code>の記事もプレビューできる</li>
@@ -305,11 +306,11 @@ draft: true
 <ol>
 <li><p>「blog」をpushする</p>
 
-<pre><code>git init
-git remote add origin git@github.com:[github_user]/blog.git
-git add -A
-git commit -m &quot;initial commit&quot;
-git push origin master
+<pre><code>$ git init
+$ git remote add origin git@github.com:[github_user]/blog.git
+$ git add -A
+$ git commit -m &quot;initial commit&quot;
+$ git push origin master
 </code></pre></li>
 
 <li><p>「blog」の公開用ディレクトリをサブモジュール化する</p>
@@ -319,16 +320,16 @@ git push origin master
 <li>なので、<code>[github_user].github.io</code>レポジトリをサブモジュールとして<code>blog/public</code>に追加しておくと、ビルドしてpushすることで、GitHub Pagesを使ってブログが公開できる</li>
 </ul>
 
-<pre><code>git submodule add git@github.com:[github_user]/[github_user].github.io.git public
+<pre><code>$ git submodule add git@github.com:[github_user]/[github_user].github.io.git public
 </code></pre></li>
 
 <li><p>ビルドして公開</p>
 
-<pre><code>hugo
-cd public
-git add -A
-git commit -m &quot;initial article&quot;
-git push origin master
+<pre><code>$ hugo
+$ cd public
+$ git add -A
+$ git commit -m &quot;initial article&quot;
+$ git push origin master
 </code></pre></li>
 </ol>
 
