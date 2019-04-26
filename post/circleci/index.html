@@ -166,7 +166,8 @@ git push origin master
 <ul>
 <li><a href="https://circleci.com">https://circleci.com</a></li>
 <li>GitHubアカウント、Bitbucketアカウントで登録できる</li>
-<li>Hugoのレポジトリをフォローしておく</li>
+<li>CIを回したいレポジトリをフォローしておく
+今回はHugoのレポジトリ</li>
 </ul></li>
 
 <li><p>CircleCI用のSSH Keyを作成</p>
@@ -175,7 +176,7 @@ git push origin master
 <li>ビルドした静的ファイルをGitHub Pagesのレポジトリにpushしたいので必要</li>
 </ul>
 
-<pre><code>ssh-keygen -t rsa -b 4096 -m pem -C &quot;CircleCI&quot; -f id_rsa_circleci -N &quot;&quot;
+<pre><code>$ ssh-keygen -t rsa -b 4096 -m pem -C &quot;CircleCI&quot; -f id_rsa_circleci -N &quot;&quot;
 </code></pre></li>
 
 <li><p>公開鍵をGitHubに登録する</p></li>
@@ -183,8 +184,19 @@ git push origin master
 <li><p>秘密鍵をCirCleCIに登録しておく</p>
 
 <ul>
-<li>プロジェクト（レポジトリ）横の設定歯車から、<code>SSH Permissions</code>を選択し、<code>Add SSH Key</code>する</li>
-<li>同時に、<code>Checkout SSH Permissions</code>から、自動登録されたRead OnlyのKeyを<code>Remove</code>する。こちらが優先で使われてしまうため</li>
+<li><p>プロジェクト（レポジトリ）横の設定歯車から、<code>SSH Permissions</code>を選択し、<code>Add SSH Key</code>する</p>
+
+
+<figure >
+    
+        <img src="/img/circleci_ssh.png"
+             />
+        
+    
+</figure>
+</li>
+
+<li><p>同時に、<code>Checkout SSH Permissions</code>から、自動登録されたRead OnlyのKeyを<code>Remove</code>する。こちらが優先で使われてしまうため</p></li>
 </ul></li>
 
 <li><p>.circleci/config.ymlを書く</p>
