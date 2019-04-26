@@ -6,10 +6,28 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 25 Apr 2019 17:02:54 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 26 Apr 2019 14:23:28 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linuxでファイル検索する際のコマンド</title>
+      <link>https://www.ted027.com/post/shell-search/</link>
+      <pubDate>Fri, 26 Apr 2019 14:23:28 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/shell-search/</guid>
+      <description>&lt;p&gt;特定ディレクトリや配下ディレクトリのファイル名/ファイルの中身を検索する。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Makefileで一部だけ並列処理で実行する</title>
+      <link>https://www.ted027.com/post/make-parallel/</link>
+      <pubDate>Fri, 26 Apr 2019 07:32:32 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/make-parallel/</guid>
+      <description>&lt;p&gt;Makefileでターゲットを呼ぶ際、全部でなく一部分だけ並列で実行したかった。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>PlantUMLでAWSアイコンを使ったシステム構成図を作る</title>
@@ -95,7 +113,7 @@
     </item>
     
     <item>
-      <title>Byobuの導入とよく使うコマンド等</title>
+      <title>端末ソフトByobuの導入とよく使うコマンド等</title>
       <link>https://www.ted027.com/post/byobu/</link>
       <pubDate>Fri, 19 Apr 2019 12:41:06 +0900</pubDate>
       
@@ -115,7 +133,7 @@
     </item>
     
     <item>
-      <title>Ubuntu 18.04にKindleをインストールした話</title>
+      <title>Ubuntu 18.04にKindleをインストールした</title>
       <link>https://www.ted027.com/post/ubuntu-kindle/</link>
       <pubDate>Tue, 16 Apr 2019 22:34:09 +0900</pubDate>
       

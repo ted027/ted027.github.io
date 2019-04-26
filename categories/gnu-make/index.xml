@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GNU Make on 行けたら行く</title>
+    <link>https://www.ted027.com/categories/gnu-make/</link>
+    <description>Recent content in GNU Make on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 26 Apr 2019 07:32:32 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/categories/gnu-make/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Makefileで一部だけ並列処理で実行する</title>
+      <link>https://www.ted027.com/post/make-parallel/</link>
+      <pubDate>Fri, 26 Apr 2019 07:32:32 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/make-parallel/</guid>
+      <description>&lt;p&gt;Makefileでターゲットを呼ぶ際、全部でなく一部分だけ並列で実行したかった。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

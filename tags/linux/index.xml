@@ -6,10 +6,19 @@
     <description>Recent content in Linux on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 21 Apr 2019 22:52:31 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 26 Apr 2019 14:23:28 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linuxでファイル検索する際のコマンド</title>
+      <link>https://www.ted027.com/post/shell-search/</link>
+      <pubDate>Fri, 26 Apr 2019 14:23:28 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/shell-search/</guid>
+      <description>&lt;p&gt;特定ディレクトリや配下ディレクトリのファイル名/ファイルの中身を検索する。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>OSをUbuntu 18.04 LTSにした際にやったこと</title>
@@ -21,7 +30,7 @@
     </item>
     
     <item>
-      <title>Ubuntu 18.04にKindleをインストールした話</title>
+      <title>Ubuntu 18.04にKindleをインストールした</title>
       <link>https://www.ted027.com/post/ubuntu-kindle/</link>
       <pubDate>Tue, 16 Apr 2019 22:34:09 +0900</pubDate>
       

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>仮想端末 on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/%E4%BB%AE%E6%83%B3%E7%AB%AF%E6%9C%AB/</link>
+    <description>Recent content in 仮想端末 on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 19 Apr 2019 12:41:06 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/tags/%E4%BB%AE%E6%83%B3%E7%AB%AF%E6%9C%AB/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>端末ソフトByobuの導入とよく使うコマンド等</title>
+      <link>https://www.ted027.com/post/byobu/</link>
+      <pubDate>Fri, 19 Apr 2019 12:41:06 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/byobu/</guid>
+      <description>&lt;p&gt;仮想端末ソフトByobuの導入やよく使うコマンドについてのメモ。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
