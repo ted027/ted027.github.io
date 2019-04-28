@@ -5,7 +5,7 @@
 }
 
 .narrow__area {
-	display: block;
+	display: inline-block;
 	text-align: center;
 }
 
