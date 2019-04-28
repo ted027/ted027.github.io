@@ -179,33 +179,22 @@ AWSCLOUD(aws) {
 USERS(users,Users)
 CLIENT(client)
 
-users -r-&gt; client
-client -r-&gt; route53
-client -r-&gt; cloudfront
-cloudfront --&gt; api
+users -&gt; client
+client -&gt; route53
+client -&gt; cloudfront
+cloudfront -&gt; api
 
-api -r-&gt; lambda
-lambda -r-&gt; web_bucket
-lambda -r-&gt; table
+api -&gt; lambda
+lambda -&gt; web_bucket
+lambda -&gt; table
 
-web_bucket .r.&gt; log_bucket
+web_bucket .&gt; log_bucket
 
 route53 .[hidden]. cloudfront
 table .[hidden]. web_bucket
 
 @enduml
-
 </code></pre>
-
-<p>矢印中の<code>r</code>は右方向矢印、の意味。</p>
-
-<ul>
-<li><code>r</code>(right), <code>l</code>(left), <code>t</code>(top), <code>b</code>(bottom)</li>
-</ul>
-
-<p>指定しなければ<code>b</code>(bottom)にしようとするはず。</p>
-
-<p>自由に配置を変えることはできないけど、これを使ってある程度配置を整えられる。</p>
 
 <p>図にすると以下のような感じ。</p>
 
@@ -271,7 +260,7 @@ table .[hidden]. web_bucket
 		<span class="authorbox__name">About imait</span>
 	</div>
 	<div class="authorbox__description">
-		自堕落な日々から仕事＆育児生活への変化に戸惑いを隠せない自称エンジニア。
+		横浜あたりでクラウドサービスをせこせこ開発しているエンジニァーです。
 	</div>
 </div>
 
