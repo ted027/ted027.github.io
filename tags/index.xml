@@ -6,10 +6,37 @@
     <description>Recent content in Tags on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 26 Apr 2019 16:05:19 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 28 Apr 2019 21:43:13 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GitHub Pages</title>
+      <link>https://www.ted027.com/tags/github-pages/</link>
+      <pubDate>Sun, 28 Apr 2019 21:43:13 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/github-pages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://www.ted027.com/tags/hugo/</link>
+      <pubDate>Sun, 28 Apr 2019 21:43:13 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ドメイン</title>
+      <link>https://www.ted027.com/tags/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3/</link>
+      <pubDate>Sun, 28 Apr 2019 21:43:13 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Docker</title>
@@ -237,15 +264,6 @@
     </item>
     
     <item>
-      <title>Hugo</title>
-      <link>https://www.ted027.com/tags/hugo/</link>
-      <pubDate>Fri, 19 Apr 2019 22:53:43 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Byobu</title>
       <link>https://www.ted027.com/tags/byobu/</link>
       <pubDate>Fri, 19 Apr 2019 12:41:06 +0900</pubDate>
@@ -350,15 +368,6 @@
       <pubDate>Mon, 15 Apr 2019 18:07:43 +0900</pubDate>
       
       <guid>https://www.ted027.com/tags/todo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>GitHub Pages</title>
-      <link>https://www.ted027.com/tags/github-pages/</link>
-      <pubDate>Mon, 15 Apr 2019 11:20:46 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/tags/github-pages/</guid>
       <description></description>
     </item>
     

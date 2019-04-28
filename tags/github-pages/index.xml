@@ -6,10 +6,19 @@
     <description>Recent content in GitHub Pages on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 15 Apr 2019 11:20:46 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 28 Apr 2019 21:43:13 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GitHub Pagesで独自ドメインの設定</title>
+      <link>https://www.ted027.com/post/domain/</link>
+      <pubDate>Sun, 28 Apr 2019 21:43:13 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/domain/</guid>
+      <description>&lt;p&gt;GitHub Pagesに独自ドメインを設定した。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hugo &#43; GitHub Pagesでブログを作った話</title>
