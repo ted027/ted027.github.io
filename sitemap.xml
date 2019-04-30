@@ -3,13 +3,54 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.ted027.com/categories/blog/</loc>
-    <lastmod>2019-04-28T21:43:13+09:00</lastmod>
+    <loc>https://www.ted027.com/categories/</loc>
+    <lastmod>2019-04-29T23:14:58+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/</loc>
+    <loc>https://www.ted027.com/post/</loc>
+    <lastmod>2019-04-29T23:14:58+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/scratch/</loc>
+    <lastmod>2019-04-29T23:14:58+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/</loc>
+    <lastmod>2019-04-29T23:14:58+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E6%95%99%E8%82%B2/</loc>
+    <lastmod>2019-04-29T23:14:58+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/scratch/</loc>
+    <lastmod>2019-04-29T23:14:58+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/%E6%95%99%E8%82%B2/</loc>
+    <lastmod>2019-04-29T23:14:58+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/</loc>
+    <lastmod>2019-04-29T23:14:58+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/blog/</loc>
     <lastmod>2019-04-28T21:43:13+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -32,25 +73,7 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/post/</loc>
-    <lastmod>2019-04-28T21:43:13+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/</loc>
-    <lastmod>2019-04-28T21:43:13+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/tags/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3/</loc>
-    <lastmod>2019-04-28T21:43:13+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/</loc>
     <lastmod>2019-04-28T21:43:13+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -183,7 +206,7 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/tags/vscode/</loc>
+    <loc>https://www.ted027.com/tags/visual-studio-code/</loc>
     <lastmod>2019-04-25T09:33:57+09:00</lastmod>
     <priority>0</priority>
   </url>

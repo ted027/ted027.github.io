@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Visual Studio Code on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/visual-studio-code/</link>
+    <description>Recent content in Visual Studio Code on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 25 Apr 2019 09:33:57 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/tags/visual-studio-code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ubuntu環境にPlantUML &#43; Visual Studio Codeを導入する</title>
+      <link>https://www.ted027.com/post/puml-ubu/</link>
+      <pubDate>Thu, 25 Apr 2019 09:33:57 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/puml-ubu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows環境にPlantUML &#43; Visual Studio Codeを導入する</title>
+      <link>https://www.ted027.com/post/puml-win/</link>
+      <pubDate>Thu, 25 Apr 2019 09:33:57 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/puml-win/</guid>
+      <description>&lt;p&gt;PlantUMLは、構成や関連を言語で記載しUML図を作成できるコンポーネント。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
