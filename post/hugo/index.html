@@ -131,19 +131,13 @@ if (!doNotTrack) {
 <h3 id="導入">導入</h3>
 
 <p>自分のUbuntu 18.04環境では、aptだとバージョンが古かったので、snapでインストール。</p>
-
-<pre><code>$ sudo snap install hugo --channel=extended
-$ cd /usr/bin
-$ sudo ln -s /snap/bin/hugo hugo
-</code></pre>
-
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo snap install hugo --channel=extended
+$ <span style="color:#fff;font-weight:bold">cd</span> /usr/bin
+$ sudo ln -s /snap/bin/hugo hugo</code></pre></div>
 <p>gitからでも取れる。</p>
-
-<pre><code>$ git clone https://github.com/gohugoio/hugo.git
-$ cd hugo
-$ go install --tags extended
-</code></pre>
-
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git clone https://github.com/gohugoio/hugo.git
+$ <span style="color:#fff;font-weight:bold">cd</span> hugo
+$ go install --tags extended</code></pre></div>
 <hr />
 
 <h3 id="github-pages">GitHub Pages</h3>
@@ -192,11 +186,8 @@ $ go install --tags extended
 <hr />
 
 <h3 id="hugoで静的サイトを作成">Hugoで静的サイトを作成</h3>
-
-<pre><code>$ hugo new site blog
-$ cd blog
-</code></pre>
-
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ hugo new site blog
+$ <span style="color:#fff;font-weight:bold">cd</span> blog</code></pre></div>
 <hr />
 
 <h3 id="hugoの設定">Hugoの設定</h3>
@@ -212,11 +203,9 @@ $ cd blog
 </ul></li>
 
 <li><p><code>blog/thmem</code>以下にテーマを落とす</p>
-
-<pre><code>$ cd themes
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ <span style="color:#fff;font-weight:bold">cd</span> themes
 $ git clone https://github.com/[theme_name]
-$ cd ../
-</code></pre></li>
+$ <span style="color:#fff;font-weight:bold">cd</span> ../</code></pre></div></li>
 </ul></li>
 
 <li><p>Hugoの設定ファイルを編集する</p>
@@ -225,31 +214,23 @@ $ cd ../
 <li><code>blog/config.toml</code>を編集</li>
 
 <li><p>これ以外にもテーマによって設定項目が色々あるが、テーマのページを見ると大抵書いてある</p>
-
-<pre><code class="language-config.toml">baseURL = &quot;https://[github_user].github.io/&quot;
-languageCode = &quot;ja&quot;
-title = &quot;My Blog&quot;
-theme = &quot;[theme_name]&quot;
-</code></pre></li>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-config.toml" data-lang="config.toml">baseURL = <span style="color:#0ff;font-weight:bold">&#34;https://[github_user].github.io/&#34;</span>
+languageCode = <span style="color:#0ff;font-weight:bold">&#34;ja&#34;</span>
+title = <span style="color:#0ff;font-weight:bold">&#34;My Blog&#34;</span>
+theme = <span style="color:#0ff;font-weight:bold">&#34;[theme_name]&#34;</span></code></pre></div></li>
 </ul></li>
 </ol>
 
 <hr />
 
 <h3 id="記事を作成">記事を作成</h3>
-
-<pre><code>$ hugo new post/first.md
-</code></pre>
-
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ hugo new post/first.md</code></pre></div>
 <p>こんな記事ができる。</p>
-
-<pre><code>---
-title: &quot;First&quot;
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
+title: &#34;First&#34;
 date: 2019-04-15T00:00:00+09:00
 draft: true
----
-</code></pre>
-
+---</code></pre></div>
 <ul>
 <li><code>draft: true</code>だと未公開になるので、公開する際はfalseにする</li>
 <li>markdownで記事を書く
@@ -262,10 +243,7 @@ draft: true
 <hr />
 
 <h3 id="ローカルサーバで確認">ローカルサーバで確認</h3>
-
-<pre><code>$ hugo server --buildDrafts --watch
-</code></pre>
-
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ hugo server --buildDrafts --watch</code></pre></div>
 <ul>
 <li><code>--buildDrafts</code>をつけると<code>draft: true</code>の記事もプレビューできる</li>
 <li><code>--watch</code>をつけておくと記事を更新するたびにプレビューも更新される</li>
@@ -280,13 +258,11 @@ draft: true
 
 <ol>
 <li><p>「blog」をpushする</p>
-
-<pre><code>$ git init
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git init
 $ git remote add origin git@github.com:[github_user]/blog.git
 $ git add -A
-$ git commit -m &quot;initial commit&quot;
-$ git push origin master
-</code></pre></li>
+$ git commit -m <span style="color:#0ff;font-weight:bold">&#34;initial commit&#34;</span>
+$ git push origin master</code></pre></div></li>
 
 <li><p>「blog」の公開用ディレクトリをサブモジュール化する</p>
 
@@ -294,18 +270,14 @@ $ git push origin master
 <li><code>hugo</code>でビルドすると、<code>blog/public</code>に公開用ファイル一式が作成される</li>
 <li>なので、<code>[github_user].github.io</code>レポジトリをサブモジュールとして<code>blog/public</code>に追加しておくと、ビルドしてpushすることで、GitHub Pagesを使ってブログが公開できる</li>
 </ul>
-
-<pre><code>$ git submodule add git@github.com:[github_user]/[github_user].github.io.git public
-</code></pre></li>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git submodule add git@github.com:[github_user]/[github_user].github.io.git public</code></pre></div></li>
 
 <li><p>ビルドして公開</p>
-
-<pre><code>$ hugo
-$ cd public
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ hugo
+$ <span style="color:#fff;font-weight:bold">cd</span> public
 $ git add -A
-$ git commit -m &quot;initial article&quot;
-$ git push origin master
-</code></pre></li>
+$ git commit -m <span style="color:#0ff;font-weight:bold">&#34;initial article&#34;</span>
+$ git push origin master</code></pre></div></li>
 </ol>
 
 <p>少し待って<code>https://[github_user].github.io</code>にアクセスすると公開されてるはず。</p>
@@ -570,11 +542,11 @@ $ git push origin master
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/python-library/">Pythonでライブラリを使う</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/python-win/">Pythonを導入する（Windows環境）</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/scratch/">小学生からの教育用プログラミング言語 Scratchの使い方</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/domain/">GitHub Pagesで独自ドメインの設定</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/jenkins-docker/">JenkinsでDockerfileから実行する際のデフォルトオプション</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/shell-search/">Linuxでファイル検索する際のコマンド</a></li>
 		</ul>
 	</div>
 </div>

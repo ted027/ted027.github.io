@@ -153,26 +153,20 @@ if (!doNotTrack) {
 <h3 id="jenkinsジョブでdockerイメージをagentを指定">JenkinsジョブでDockerイメージをagentを指定</h3>
 
 <p>Jenkins Pipelineジョブでは、実行agentとしてDocker imageを指定できる。</p>
-
-<pre><code class="language-groovy">agent {
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">agent {
     docker {
-        image 'maven:3-alpine'
-        args  '-v /tmp:/tmp'
+        image <span style="color:#0ff;font-weight:bold">&#39;maven:3-alpine&#39;</span>
+        args  <span style="color:#0ff;font-weight:bold">&#39;-v /tmp:/tmp&#39;</span>
     }
-}
-</code></pre>
-
+}</code></pre></div>
 <p>pullしたイメージを使えるだけでなく、自前のDockerfileからビルドしたイメージを使うこともできる。</p>
-
-<pre><code class="language-groovy">agent {
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">agent {
     dockerfile {
-        filename 'Dockerfile'
-        additionalBuildArgs  '--build-arg version=1.0.2'
-        args '-v /tmp:/tmp'
+        filename <span style="color:#0ff;font-weight:bold">&#39;Dockerfile&#39;</span>
+        additionalBuildArgs  <span style="color:#0ff;font-weight:bold">&#39;--build-arg version=1.0.2&#39;</span>
+        args <span style="color:#0ff;font-weight:bold">&#39;-v /tmp:/tmp&#39;</span>
     }
-}
-</code></pre>
-
+}</code></pre></div>
 <hr />
 
 <h3 id="docker-buildのデフォルト実行オプション">Docker buildのデフォルト実行オプション</h3>
@@ -225,22 +219,19 @@ if (!doNotTrack) {
 <h3 id="解決策">解決策</h3>
 
 <p>自分は結局、モジュールをルートディレクトリに展開して、</p>
-
-<pre><code class="language-groovy">stage ('stage') {
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">stage (<span style="color:#0ff;font-weight:bold">&#39;stage&#39;</span>) {
   agent {
     dockerfile {
-        filename 'Dockerfile'
-        additionalBuildArgs  '...'
-        args '...'
+        filename <span style="color:#0ff;font-weight:bold">&#39;Dockerfile&#39;</span>
+        additionalBuildArgs  <span style="color:#0ff;font-weight:bold">&#39;...&#39;</span>
+        args <span style="color:#0ff;font-weight:bold">&#39;...&#39;</span>
     }
   }
   steps {
       cd /
       ...
   }
-}
-</code></pre>
-
+}</code></pre></div>
 <p><code>cd</code>するだけでした。すっきりする解決策ではないけど、これだけで問題なく動いたので。。</p>
 
 <hr />
@@ -248,19 +239,16 @@ if (!doNotTrack) {
 <h3 id="もう少しちゃんとした解決策">もう少しちゃんとした解決策</h3>
 
 <p>今後、デフォルトのオプションを上書きしないと無理〜な場面も出てくるかもしれないので、そちらの方法も確認。</p>
-
-<pre><code class="language-groovy">stage ('stage') {
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">stage (<span style="color:#0ff;font-weight:bold">&#39;stage&#39;</span>) {
   steps {
-    sh 'docker build -t my/image .'
+    sh <span style="color:#0ff;font-weight:bold">&#39;docker build -t my/image .&#39;</span>
     script {
-      docker.image(&quot;my/image&quot;).withRun('-v $HOME/.m2:/root/.m2&quot;) {
-        sh 'ls'
+      docker.<span style="color:#007f7f">image</span>(<span style="color:#0ff;font-weight:bold">&#34;my/image&#34;</span>).<span style="color:#007f7f">withRun</span>(<span style="color:#0ff;font-weight:bold">&#39;-v $HOME/.m2:/root/.m2&#34;) {
+</span><span style="color:#0ff;font-weight:bold">        sh &#39;</span>ls<span style="color:#f00">&#39;</span>
       }
     }
   }
-}
-</code></pre>
-
+}</code></pre></div>
 <p>確かに、自分で<code>build</code>して<code>run</code>すればいいですね。</p>
 
 <p>参考サイトは以下。</p>
@@ -512,11 +500,11 @@ if (!doNotTrack) {
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/python-library/">Pythonでライブラリを使う</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/python-win/">Pythonを導入する（Windows環境）</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/scratch/">小学生からの教育用プログラミング言語 Scratchの使い方</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/domain/">GitHub Pagesで独自ドメインの設定</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/jenkins-docker/">JenkinsでDockerfileから実行する際のデフォルトオプション</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/shell-search/">Linuxでファイル検索する際のコマンド</a></li>
 		</ul>
 	</div>
 </div>

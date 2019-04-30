@@ -6,10 +6,19 @@
     <description>Recent content in Python on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 30 Apr 2019 20:37:26 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 30 Apr 2019 22:39:20 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pythonでライブラリを使う</title>
+      <link>https://www.ted027.com/post/python-library/</link>
+      <pubDate>Tue, 30 Apr 2019 22:39:20 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/python-library/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Pythonを導入する（Windows環境）</title>

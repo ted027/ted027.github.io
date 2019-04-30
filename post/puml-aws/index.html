@@ -172,8 +172,7 @@ if (!doNotTrack) {
 <h3 id="使い方">使い方</h3>
 
 <p><code>.pu</code>ファイル内でincludeする。</p>
-
-<pre><code class="language-sample.pu">@startuml
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sample.pu" data-lang="sample.pu">@startuml
 
 !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
 !includeurl AWSPUML/common.puml
@@ -181,21 +180,15 @@ if (!doNotTrack) {
 !includeurl AWSPUML/ApplicationServices/AmazonAPIGateway/AmazonAPIGateway.puml
 !includeurl AWSPUML/Compute/AWSLambda/LambdaFunction/LambdaFunction.puml
 !includeurl AWSPUML/Database/AmazonDynamoDB/table/table.puml
-...
-</code></pre>
-
+...</code></pre></div>
 <p>サービスのパスは上のGitHubを見ながら、ほしいものをincludeしていく。</p>
 
 <h3 id="書いてみる">書いてみる</h3>
 
 <p>includeしたAWSアイコンは、基本的に以下の書式で書ける。</p>
-
-<pre><code>AWS_SERVICE_NAME_UPPERCASE(puml resource name, display name)
-</code></pre>
-
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plantuml" data-lang="plantuml">AWS_SERVICE_NAME_UPPERCASE(puml resource name, display name)</code></pre></div>
 <p><code>cloud</code>みたいに、<code>{}</code>で括って他のサービスを入れられる。</p>
-
-<pre><code class="language-sample.pu">@startuml
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sample.pu" data-lang="sample.pu">@startuml
 
 !define AWSPUML https://raw.githubusercontent.com/milo-minderbinder/AWS-PlantUML/release/18-2-22/dist
 !includeurl AWSPUML/common.puml
@@ -240,9 +233,7 @@ web_bucket .&gt; log_bucket
 route53 .[hidden]. cloudfront
 table .[hidden]. web_bucket
 
-@enduml
-</code></pre>
-
+@enduml</code></pre></div>
 <p>図にすると以下のような感じ。</p>
 
 
@@ -503,11 +494,11 @@ table .[hidden]. web_bucket
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/python-library/">Pythonでライブラリを使う</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/python-win/">Pythonを導入する（Windows環境）</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/scratch/">小学生からの教育用プログラミング言語 Scratchの使い方</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/domain/">GitHub Pagesで独自ドメインの設定</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/jenkins-docker/">JenkinsでDockerfileから実行する際のデフォルトオプション</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/shell-search/">Linuxでファイル検索する際のコマンド</a></li>
 		</ul>
 	</div>
 </div>

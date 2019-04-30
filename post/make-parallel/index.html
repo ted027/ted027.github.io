@@ -123,24 +123,19 @@ if (!doNotTrack) {
 <h3 id="概要">概要</h3>
 
 <p>Makeを並列で実行するには、<code>-j</code>のオプションをつけて実行する。</p>
-
-<pre><code>$ make target -j3
-</code></pre>
-
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ make target -j3</code></pre></div>
 <p>ただ今回、targetに書いた処理のうち一部だけ並列化し、他の部分は順序通り実行してほしかった。</p>
 
 <p>シェルで並列実行といえば、コマンドに<code>&amp;</code>をつけてバックグラウンド実行にして、それをwaitで待つ、というのが一般的。</p>
 
 <p>なので以下のように書きました。が、これだと待ってくれない。</p>
-
-<pre><code class="language-Makefile">target:
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Makefile" data-lang="Makefile">target:
     command-parallel1 &amp;
     command-parallel2 &amp;
-    wait
+    <span style="color:#fff;font-weight:bold">wait</span>
     command3
     ...
-</code></pre>
-
+</code></pre></div>
 <hr />
 
 <h3 id="makeで改行するとwaitは効かない">Makeで改行するとwaitは効かない</h3>
@@ -157,15 +152,13 @@ if (!doNotTrack) {
 <p>となり、高い確率で、並列処理中に<code>command3</code>へ進んでしまう。</p>
 
 <p>これを防ぐには、シェルを変えずにワンライナーで書けばよい。</p>
-
-<pre><code class="language-Makefile">target:
-    command-parallel1 &amp; \
-    command-parallel2 &amp; \
-    wait \
-    command3
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Makefile" data-lang="Makefile">target:
+    command-parallel1 &amp; <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>    command-parallel2 &amp; <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>    <span style="color:#fff;font-weight:bold">wait</span> <span style="color:#0ff;font-weight:bold">\
+</span><span style="color:#0ff;font-weight:bold"></span>    command3
     ...
-</code></pre>
-
+</code></pre></div>
 <hr />
 
 <h3 id="並列処理で起きたエラーはスキップされる">並列処理で起きたエラーはスキップされる</h3>
@@ -175,22 +168,18 @@ if (!doNotTrack) {
 <p>ところが、並列処理の中でエラーが起きた際にスキップされてしまう可能性がある。</p>
 
 <p>waitの仕様として、最後に終了した子プロセスの終了コードを自身の終了コードとする。なので、</p>
-
-<pre><code class="language-Makefile">target:
-    command-parallel1 &amp; \ # &lt;- 先にエラー終了
-    command-parallel2 &amp; \ # &lt;- 後で正常終了
-    wait \ # &lt;- 正常終了とみなす
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Makefile" data-lang="Makefile">target:
+    command-parallel1 &amp; <span style="color:#0ff;font-weight:bold">\ </span><span style="color:#007f7f"># &lt;- 先にエラー終了</span>
+    command-parallel2 &amp; <span style="color:#0ff;font-weight:bold">\ </span><span style="color:#007f7f"># &lt;- 後で正常終了</span>
+    <span style="color:#fff;font-weight:bold">wait</span> <span style="color:#0ff;font-weight:bold">\ </span><span style="color:#007f7f"># &lt;- 正常終了とみなす</span>
     command3
     ...
-</code></pre>
-
+</code></pre></div>
 <p>のように、<code>command-parallel1</code>のエラーが無視されてしまうケースがある。</p>
 
 <p><code>wait $(PID)</code>でプロセスIDごとに待ってみようとしても、改行すると効かなくなるので、</p>
-
-<pre><code>    wait $(PID1) &amp;&amp; wait $(PID2)
-</code></pre>
-
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Makefile" data-lang="Makefile">    <span style="color:#fff;font-weight:bold">wait</span> <span style="color:#fff;font-weight:bold">$(</span>PID1<span style="color:#fff;font-weight:bold">)</span> &amp;&amp; <span style="color:#fff;font-weight:bold">wait</span> <span style="color:#fff;font-weight:bold">$(</span>PID2<span style="color:#fff;font-weight:bold">)</span>
+</code></pre></div>
 <p>と、それぞれの終了ステータスを見て進むこともできない。</p>
 
 <hr />
@@ -198,19 +187,14 @@ if (!doNotTrack) {
 <h3 id="結局jobsオプションで解決">結局jobsオプションで解決</h3>
 
 <p>解決といえるか微妙だけど、targetの形を変えて、</p>
-
-<pre><code class="language-Makefile">target-parallel:
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Makefile" data-lang="Makefile">target-parallel:
     command-parallel1
     command-parallel2
 
 target-post:
     command3
-</code></pre>
-
-<pre><code>$ make -j3 target-parallel
-$ make target-post
-</code></pre>
-
+</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ make -j3 target-parallel
+$ make target-post</code></pre></div>
 <p>で落ち着いた。</p>
 
 <p>結論としては、失敗するかもしれないような処理を並列化とwaitで雑に処理するな、ということですね。</p>
@@ -459,11 +443,11 @@ $ make target-post
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/python-library/">Pythonでライブラリを使う</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/python-win/">Pythonを導入する（Windows環境）</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/scratch/">小学生からの教育用プログラミング言語 Scratchの使い方</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/domain/">GitHub Pagesで独自ドメインの設定</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/jenkins-docker/">JenkinsでDockerfileから実行する際のデフォルトオプション</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/shell-search/">Linuxでファイル検索する際のコマンド</a></li>
 		</ul>
 	</div>
 </div>
