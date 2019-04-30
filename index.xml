@@ -6,10 +6,19 @@
     <description>Recent content on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 29 Apr 2019 23:14:58 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 30 Apr 2019 20:37:26 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pythonを導入する（Windows環境）</title>
+      <link>https://www.ted027.com/post/python-win/</link>
+      <pubDate>Tue, 30 Apr 2019 20:37:26 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/python-win/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>小学生からの教育用プログラミング言語 Scratchの使い方</title>
@@ -66,7 +75,7 @@
     </item>
     
     <item>
-      <title>Ubuntu環境にPlantUML &#43; Visual Studio Codeを導入する</title>
+      <title>PlantUML &#43; Visual Studio Codeを導入する（Ubuntu環境）</title>
       <link>https://www.ted027.com/post/puml-ubu/</link>
       <pubDate>Thu, 25 Apr 2019 09:33:57 +0900</pubDate>
       
@@ -75,7 +84,7 @@
     </item>
     
     <item>
-      <title>Windows環境にPlantUML &#43; Visual Studio Codeを導入する</title>
+      <title>PlantUML &#43; Visual Studio Codeを導入する（Windows環境）</title>
       <link>https://www.ted027.com/post/puml-win/</link>
       <pubDate>Thu, 25 Apr 2019 09:33:57 +0900</pubDate>
       

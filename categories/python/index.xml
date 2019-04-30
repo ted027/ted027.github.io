@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on 行けたら行く</title>
+    <link>https://www.ted027.com/categories/python/</link>
+    <description>Recent content in Python on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 30 Apr 2019 20:37:26 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pythonを導入する（Windows環境）</title>
+      <link>https://www.ted027.com/post/python-win/</link>
+      <pubDate>Tue, 30 Apr 2019 20:37:26 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/python-win/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
