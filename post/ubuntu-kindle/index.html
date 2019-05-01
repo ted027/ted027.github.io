@@ -130,24 +130,24 @@ if (!doNotTrack) {
 
 <ol>
 <li><p>32bit版のWineを使えるようにする</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo dpkg --add-architecture i386</code></pre></div></li>
-
-<li><p>レポジトリを追加</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo dpkg --add-architecture i386</code></pre></div>
+<ol>
+<li>レポジトリを追加</li>
+</ol>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ wget -nc https://dl.winehq.org/wine-builds/winehq.key
 $ sudo apt-key add winehq.key
 $ sudo apt-add-repository -y -n https://dl.winehq.org/wine-builds/ubuntu/</code></pre></div></li>
 
 <li><p>Wineをインストール</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo apt update
-$ sudo apt install winehq-stable</code></pre></div></li>
-</ol>
-
+$ sudo apt install winehq-stable</code></pre></div>
 <hr />
 
 <h3 id="wineの設定">Wineの設定</h3>
 
 <ol>
-<li><p>OSを選択</p>
+<li>OSを選択</li>
+</ol>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ winecfg</code></pre></div></li>
 </ol>
 
@@ -163,9 +163,10 @@ $ sudo apt install winehq-stable</code></pre></div></li>
 <li><p>winetricksをインストール</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ <span style="color:#fff;font-weight:bold">cd</span> ~/.wine
 $ wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
-$ sudo chmod +x winetricks</code></pre></div></li>
-
-<li><p>文字化けを直す</p>
+$ sudo chmod +x winetricks</code></pre></div>
+<ol>
+<li>文字化けを直す</li>
+</ol>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo sh winetricks allfonts
 $ sudo sh winetricks fontsmooth-rgb</code></pre></div></li>
 </ol>

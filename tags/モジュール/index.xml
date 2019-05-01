@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>モジュール on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB/</link>
+    <description>Recent content in モジュール on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 30 Apr 2019 22:39:20 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/tags/%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pythonでライブラリを使う</title>
+      <link>https://www.ted027.com/post/python-library/</link>
+      <pubDate>Tue, 30 Apr 2019 22:39:20 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/python-library/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

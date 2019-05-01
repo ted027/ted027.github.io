@@ -188,13 +188,12 @@ git push origin master</code></pre></div>
 <ul>
 <li>ビルドした静的ファイルをGitHub Pagesのレポジトリにpushしたいので必要</li>
 </ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ssh-keygen -t rsa -b <span style="color:#ff0;font-weight:bold">4096</span> -m pem -C <span style="color:#0ff;font-weight:bold">&#34;CircleCI&#34;</span> -f id_rsa_circleci -N <span style="color:#0ff;font-weight:bold">&#34;&#34;</span></code></pre></div></li>
-
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ssh-keygen -t rsa -b <span style="color:#ff0;font-weight:bold">4096</span> -m pem -C <span style="color:#0ff;font-weight:bold">&#34;CircleCI&#34;</span> -f id_rsa_circleci -N <span style="color:#0ff;font-weight:bold">&#34;&#34;</span></code></pre></div>
+<ol>
 <li><p>公開鍵をGitHubに登録する</p></li>
 
-<li><p>秘密鍵をCirCleCIに登録しておく</p>
+<li><p>秘密鍵をCirCleCIに登録しておく</p></li>
 
-<ul>
 <li><p>プロジェクト（レポジトリ）横の設定歯車から、<code>SSH Permissions</code>を選択し、<code>Add SSH Key</code>する</p>
 
 
@@ -206,11 +205,15 @@ git push origin master</code></pre></div>
     
 </figure>
 </li>
+</ol>
 
-<li><p>同時に、<code>Checkout SSH Permissions</code>から、自動登録されたRead OnlyのKeyを<code>Remove</code>する。こちらが優先で使われてしまうため</p></li>
-</ul></li>
+<ul>
+<li>同時に、<code>Checkout SSH Permissions</code>から、自動登録されたRead OnlyのKeyを<code>Remove</code>する。こちらが優先で使われてしまうため</li>
+</ul>
 
-<li><p>.circleci/config.ymlを書く</p>
+<ol>
+<li>.circleci/config.ymlを書く</li>
+</ol>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-:config.yml" data-lang=":config.yml">version: <span style="color:#ff0;font-weight:bold">2</span>
 jobs:
 build:
