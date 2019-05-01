@@ -151,18 +151,21 @@ if (!doNotTrack) {
 
 <hr />
 
-<h3 id="pythonで野球hack">Pythonで野球Hack</h3>
+<h3 id="pythonでスクレイピング">Pythonでスクレイピング</h3>
 
 <p>Pythonでは、bs4というライブラリを使って簡単にウェブスクレイピングできる。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ pip install requests bs4</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">import</span> bs4</code></pre></div>
 <p>これを使って他サイトからプロ野球速報を取得したい。</p>
 
-<h3 id="書いてみた">書いてみた</h3>
+<hr />
+
+<h3 id="書いてみる">書いてみる</h3>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python:scores.py" data-lang="python:scores.py"><span style="color:#fff;font-weight:bold">import</span> requests
 <span style="color:#fff;font-weight:bold">import</span> bs4
 <span style="color:#fff;font-weight:bold">import</span> json
 
-<span style="color:#fff;font-weight:bold">def</span> startArray(soup):
+
+<span style="color:#fff;font-weight:bold">def</span> start_array(soup):
     starts = []
     raw_starts = soup.select(<span style="color:#0ff;font-weight:bold">&#39;.teams .yjSt&#39;</span>)
     <span style="color:#fff;font-weight:bold">for</span> raw_info in raw_starts:
@@ -171,7 +174,8 @@ if (!doNotTrack) {
             starts.append(info)
     <span style="color:#fff;font-weight:bold">return</span> starts
 
-<span style="color:#fff;font-weight:bold">def</span> inningArray(soup):
+
+<span style="color:#fff;font-weight:bold">def</span> inning_array(soup):
     innings = []
     raw_innings = soup.select(<span style="color:#0ff;font-weight:bold">&#39;.teams .yjMSt&#39;</span>)
     <span style="color:#fff;font-weight:bold">for</span> raw_inning in raw_innings:
@@ -185,7 +189,8 @@ if (!doNotTrack) {
         innings.append(inning)
     <span style="color:#fff;font-weight:bold">return</span> innings
 
-<span style="color:#fff;font-weight:bold">def</span> teamArray(soup):
+
+<span style="color:#fff;font-weight:bold">def</span> team_array(soup):
     teams = []
     team_alp = {
         <span style="color:#0ff;font-weight:bold">&#39;広島&#39;</span>: <span style="color:#0ff;font-weight:bold">&#39;C&#39;</span>,
@@ -207,14 +212,17 @@ if (!doNotTrack) {
         teams.append(alp)
     <span style="color:#fff;font-weight:bold">return</span> teams
 
-<span style="color:#fff;font-weight:bold">def</span> scoreArray(soup):
+
+<span style="color:#fff;font-weight:bold">def</span> score_array(soup):
     scores = []
     raw_scores = soup.select(<span style="color:#0ff;font-weight:bold">&#39;.teams .score_r&#39;</span>)
     <span style="color:#fff;font-weight:bold">for</span> raw_score in raw_scores:
         scores.append(raw_score.text)
     <span style="color:#fff;font-weight:bold">return</span> scores
 
-<span style="color:#fff;font-weight:bold">def</span> liveScores():
+
+<span style="color:#fff;font-weight:bold">def</span> live_scores():
+
     url = <span style="color:#0ff;font-weight:bold">&#39;http://baseball.yahoo.co.jp/npb/schedule/&#39;</span>
     res = requests.get(url)
     res.raise_for_status()
@@ -222,10 +230,10 @@ if (!doNotTrack) {
     soup = bs4.BeautifulSoup(res.text, <span style="color:#0ff;font-weight:bold">&#39;html.parser&#39;</span>)
 
     games = <span style="color:#fff;font-weight:bold">len</span>(soup.select(<span style="color:#0ff;font-weight:bold">&#39;.teams&#39;</span>))
-    starts = startArray(soup)
-    innings = inningArray(soup)
-    teams = teamArray(soup)
-    scores = scoreArray(soup)
+    starts = start_array(soup)
+    innings = inning_array(soup)
+    teams = team_array(soup)
+    scores = score_array(soup)
 
     output = []
     <span style="color:#fff;font-weight:bold">for</span> i in <span style="color:#fff;font-weight:bold">range</span>(games):
@@ -235,19 +243,29 @@ if (!doNotTrack) {
                 <span style="color:#0ff;font-weight:bold">&#39;inning&#39;</span>: innings[i]
             },
             <span style="color:#0ff;font-weight:bold">&#39;home&#39;</span>: {
-                <span style="color:#0ff;font-weight:bold">&#39;team&#39;</span>: teams[i*<span style="color:#ff0;font-weight:bold">2</span>+<span style="color:#ff0;font-weight:bold">1</span>],
-                <span style="color:#0ff;font-weight:bold">&#39;score&#39;</span>: scores[i*<span style="color:#ff0;font-weight:bold">2</span>+<span style="color:#ff0;font-weight:bold">1</span>]
+                <span style="color:#0ff;font-weight:bold">&#39;team&#39;</span>: teams[i * <span style="color:#ff0;font-weight:bold">2</span> + <span style="color:#ff0;font-weight:bold">1</span>],
+                <span style="color:#0ff;font-weight:bold">&#39;score&#39;</span>: scores[i * <span style="color:#ff0;font-weight:bold">2</span> + <span style="color:#ff0;font-weight:bold">1</span>]
             },
             <span style="color:#0ff;font-weight:bold">&#39;away&#39;</span>: {
-                <span style="color:#0ff;font-weight:bold">&#39;team&#39;</span>: teams[i*<span style="color:#ff0;font-weight:bold">2</span>],
-                <span style="color:#0ff;font-weight:bold">&#39;score&#39;</span>: scores[i*<span style="color:#ff0;font-weight:bold">2</span>]
+                <span style="color:#0ff;font-weight:bold">&#39;team&#39;</span>: teams[i * <span style="color:#ff0;font-weight:bold">2</span>],
+                <span style="color:#0ff;font-weight:bold">&#39;score&#39;</span>: scores[i * <span style="color:#ff0;font-weight:bold">2</span>]
             }
         }
         output.append(game_score)
 
     <span style="color:#fff;font-weight:bold">return</span> json.dumps(output)
 
-<span style="color:#fff;font-weight:bold">print</span>(liveScores())</code></pre></div>
+
+<span style="color:#fff;font-weight:bold">print</span>(live_scores())</code></pre></div>
+<hr />
+
+<h3 id="結果">結果</h3>
+
+<p>以下のような<code>JSON</code>形式の配列が表示される。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[{<span style="font-weight:bold">&#34;info&#34;</span>: {<span style="font-weight:bold">&#34;start&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;14:00&#34;</span>, <span style="font-weight:bold">&#34;inning&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;end&#34;</span>}, <span style="font-weight:bold">&#34;home&#34;</span>: {<span style="font-weight:bold">&#34;team&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;G&#34;</span>, <span style="font-weight:bold">&#34;score&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;5&#34;</span>}, <span style="font-weight:bold">&#34;away&#34;</span>: {<span style="font-weight:bold">&#34;team&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;D&#34;</span>, <span style="font-weight:bold">&#34;score&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;1&#34;</span>}},
+<span style="color:#f00">...</span></code></pre></div>
+<hr />
+
 <h3 id="おわり">おわり</h3>
 
 <p>個人成績を取得してセイバーメトリクスを算出、みたいなこともやってみたい。</p>
