@@ -6,10 +6,19 @@
     <description>Recent content in Python on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 01 May 2019 14:14:13 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 02 May 2019 12:11:56 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pythonでプロ野球の個人成績一覧をJSONにして取得する</title>
+      <link>https://www.ted027.com/post/python-personal-records/</link>
+      <pubDate>Thu, 02 May 2019 12:11:56 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/python-personal-records/</guid>
+      <description>&lt;p&gt;スコア速報と同じく、Pythonでスクレイピングして各チーム最新の個人成績を取得したい。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Pythonでプロ野球スコア速報を取得する</title>

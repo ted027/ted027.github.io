@@ -4,19 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>パワプロ ペナント補強思考設定の条件判断 - 行けたら行く</title>
+	<title>Pythonでプロ野球の個人成績一覧をJSONにして取得する - 行けたら行く</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta property="og:title" content="パワプロ ペナント補強思考設定の条件判断" />
-<meta property="og:description" content="補強思考設定、各項目の判断基準の説明です。" />
+	<meta property="og:title" content="Pythonでプロ野球の個人成績一覧をJSONにして取得する" />
+<meta property="og:description" content="スコア速報と同じく、Pythonでスクレイピングして各チーム最新の個人成績を取得したい。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.ted027.com/post/penant-add-descript/" />
-<meta property="article:published_time" content="2019-04-23T16:19:47&#43;09:00"/>
-<meta property="article:modified_time" content="2019-04-23T16:19:47&#43;09:00"/>
+<meta property="og:url" content="https://www.ted027.com/post/python-personal-records/" />
+<meta property="article:published_time" content="2019-05-02T12:11:56&#43;09:00"/>
+<meta property="article:modified_time" content="2019-05-02T12:11:56&#43;09:00"/>
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="パワプロ ペナント補強思考設定の条件判断"/>
-<meta name="twitter:description" content="補強思考設定、各項目の判断基準の説明です。"/>
+<meta name="twitter:title" content="Pythonでプロ野球の個人成績一覧をJSONにして取得する"/>
+<meta name="twitter:description" content="スコア速報と同じく、Pythonでスクレイピングして各チーム最新の個人成績を取得したい。"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -64,16 +64,16 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">パワプロ ペナント補強思考設定の条件判断</h1>
+			<h1 class="post__title">Pythonでプロ野球の個人成績一覧をJSONにして取得する</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-04-23T16:19:47">2019-04-23</time>
+	<time class="meta__text" datetime="2019-05-02T12:11:56">2019-05-02</time>
 </div>
 
 <div class="meta__item-categories meta__item">
 	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/%e3%83%91%e3%83%af%e3%83%97%e3%83%ad" rel="category">パワプロ</a>, <a class="meta__link" href="/categories/%e9%87%8e%e7%90%83" rel="category">野球</a></span>
+	<span class="meta__text"><a class="meta__link" href="/categories/%e9%87%8e%e7%90%83" rel="category">野球</a></span>
 </div>
 </div>
 			<br/>
@@ -82,68 +82,69 @@ if (!doNotTrack) {
 <section class="section sns_parent">
   <div class="container sns_section">
       <div class="sns_button twitter">
-        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpenant-add-descript%2f&text=%e3%83%91%e3%83%af%e3%83%97%e3%83%ad%20%e3%83%9a%e3%83%8a%e3%83%b3%e3%83%88%e8%a3%9c%e5%bc%b7%e6%80%9d%e8%80%83%e8%a8%ad%e5%ae%9a%e3%81%ae%e6%9d%a1%e4%bb%b6%e5%88%a4%e6%96%ad" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f&text=Python%e3%81%a7%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e3%81%ae%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e4%b8%80%e8%a6%a7%e3%82%92JSON%e3%81%ab%e3%81%97%e3%81%a6%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
       </div>
       <div class="sns_button line">
-        <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpenant-add-descript%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
+        <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
       </div>
       <div class="sns_button facebook">
-        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fpenant-add-descript%2f&t=%e3%83%91%e3%83%af%e3%83%97%e3%83%ad%20%e3%83%9a%e3%83%8a%e3%83%b3%e3%83%88%e8%a3%9c%e5%bc%b7%e6%80%9d%e8%80%83%e8%a8%ad%e5%ae%9a%e3%81%ae%e6%9d%a1%e4%bb%b6%e5%88%a4%e6%96%ad" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f&t=Python%e3%81%a7%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e3%81%ae%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e4%b8%80%e8%a6%a7%e3%82%92JSON%e3%81%ab%e3%81%97%e3%81%a6%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
       </div>
       <div class="sns_button hatena">
-        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fpenant-add-descript%2f&title=%e3%83%91%e3%83%af%e3%83%97%e3%83%ad%20%e3%83%9a%e3%83%8a%e3%83%b3%e3%83%88%e8%a3%9c%e5%bc%b7%e6%80%9d%e8%80%83%e8%a8%ad%e5%ae%9a%e3%81%ae%e6%9d%a1%e4%bb%b6%e5%88%a4%e6%96%ad" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f&title=Python%e3%81%a7%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e3%81%ae%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e4%b8%80%e8%a6%a7%e3%82%92JSON%e3%81%ab%e3%81%97%e3%81%a6%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
       </div>
       <div class="sns_button pocket">
-        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpenant-add-descript%2f&title=%e3%83%91%e3%83%af%e3%83%97%e3%83%ad%20%e3%83%9a%e3%83%8a%e3%83%b3%e3%83%88%e8%a3%9c%e5%bc%b7%e6%80%9d%e8%80%83%e8%a8%ad%e5%ae%9a%e3%81%ae%e6%9d%a1%e4%bb%b6%e5%88%a4%e6%96%ad" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f&title=Python%e3%81%a7%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e3%81%ae%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e4%b8%80%e8%a6%a7%e3%82%92JSON%e3%81%ab%e3%81%97%e3%81%a6%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
       </div>
   </div>
 </section>
 
 			<br/>
 		</header><div class="content post__content clearfix">
-			<p>補強思考設定、各項目の判断基準の説明です。</p>
+			<p>スコア速報と同じく、Pythonでスクレイピングして各チーム最新の個人成績を取得したい。</p>
 
 <hr />
 
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
-            href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FPS4-%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%2583%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25AA%25E3%2583%2583%25E3%2583%25842019-%25E3%2580%2590%25E5%25BA%2597%25E8%2588%2597%25E9%2599%2590%25E5%25AE%259A%25E6%2597%25A9%25E6%259C%259F%25E8%25B3%25BC%25E5%2585%25A5%25E7%2589%25B9%25E5%2585%25B8%25E3%2580%2591%25E6%25B5%25B7%25E5%25A4%2596%25E7%25A7%25BB%25E7%25B1%258D%25E9%2581%25B8%25E6%2589%258B%25E5%2585%2588%25E8%25A1%258C%25E5%2585%25A5%25E6%2589%258BDLC-%25E3%2580%2590Amazon-co-jp%25E9%2599%2590%25E5%25AE%259A%25E3%2580%2591%25E3%2582%25AA%25E3%2583%25AA%25E3%2582%25B8%25E3%2583%258A%25E3%2583%25ABPC-%25E3%2582%25B9%25E3%2583%259E%25E3%2583%259B%25E5%25A3%2581%25E7%25B4%2599%2Fdp%2FB07MVQLCR1"
-            target="_blank" rel="nofollow"><img
-                src="https://images-fe.ssl-images-amazon.com/images/I/51Nufh5pvYL._SL160_.jpg"
-                style="border: none;" /></a><img
-            src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" width="1"
-            height="1" style="border:none;"></div>
+            href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FPython%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2588%2586%25E6%259E%2590%25E5%2585%25A5%25E9%2596%2580-%25E7%25AC%25AC2%25E7%2589%2588-%25E2%2580%2595NumPy%25E3%2580%2581pandas%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2587%25A6%25E7%2590%2586-Wes-McKinney%2Fdp%2F487311845X"
+            rel="nofollow" target="_blank"><img
+                src="https://images-fe.ssl-images-amazon.com/images/I/51NjGkPfTQL._SL160_.jpg"
+                style="border: none;" /></a><img height="1"
+            src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
+            style="border:none;" width="1" /></div>
     <div class="kaerebalink-info" style="line-height:120%;zoom: 1;overflow: hidden;">
         <div class="kaerebalink-name" style="margin-bottom:10px;line-height:120%"><a
-                href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FPS4-%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%2583%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25AA%25E3%2583%2583%25E3%2583%25842019-%25E3%2580%2590%25E5%25BA%2597%25E8%2588%2597%25E9%2599%2590%25E5%25AE%259A%25E6%2597%25A9%25E6%259C%259F%25E8%25B3%25BC%25E5%2585%25A5%25E7%2589%25B9%25E5%2585%25B8%25E3%2580%2591%25E6%25B5%25B7%25E5%25A4%2596%25E7%25A7%25BB%25E7%25B1%258D%25E9%2581%25B8%25E6%2589%258B%25E5%2585%2588%25E8%25A1%258C%25E5%2585%25A5%25E6%2589%258BDLC-%25E3%2580%2590Amazon-co-jp%25E9%2599%2590%25E5%25AE%259A%25E3%2580%2591%25E3%2582%25AA%25E3%2583%25AA%25E3%2582%25B8%25E3%2583%258A%25E3%2583%25ABPC-%25E3%2582%25B9%25E3%2583%259E%25E3%2583%259B%25E5%25A3%2581%25E7%25B4%2599%2Fdp%2FB07MVQLCR1"
-                target="_blank" rel="nofollow">プロ野球スピリッツ2019 【店舗限定早期購入特典】海外移籍選手先行入手DLC 配信
-                【Amazon.co.jp限定】</a><img
-                src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" width="1"
-                height="1" style="border:none;">
+                href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FPython%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2588%2586%25E6%259E%2590%25E5%2585%25A5%25E9%2596%2580-%25E7%25AC%25AC2%25E7%2589%2588-%25E2%2580%2595NumPy%25E3%2580%2581pandas%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2587%25A6%25E7%2590%2586-Wes-McKinney%2Fdp%2F487311845X"
+                rel="nofollow" target="_blank">Pythonによるデータ分析入門 第2版 ―NumPy、pandasを使ったデータ処理</a><img height="1"
+                src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
+                style="border:none;" width="1" />
+
         </div>
         <div class="kaerebalink-detail" style="margin-bottom:5px;"></div>
         <div class="kaerebalink-link1" style="margin-top:10px;">
             <div class="shoplinkamazon"
                 style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1414800&p_id=170&pc_id=185&pl_id=4062&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3D%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%2583%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25AA%25E3%2583%2583%25E3%2583%25842019%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
-                    target="_blank" rel="nofollow">Amazonで調べる</a><img
-                    src="//i.moshimo.com/af/i/impression?a_id=1414800&p_id=170&pc_id=185&pl_id=4062" width="1"
-                    height="1" style="border:none;"></div>
+                <a href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;s_v=b5Rz2P0601xu&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3DPython%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
+                    rel="nofollow" target="_blank">Amazonで調べる</a><img height="1"
+                    src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
+                    style="border:none;" width="1" /></div>
             <div class="shoplinkrakuten"
                 style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1414727&p_id=54&pc_id=54&pl_id=616&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%2583%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25AA%25E3%2583%2583%25E3%2583%25842019%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
-                    target="_blank" rel="nofollow">楽天市場で調べる</a><img
-                    src="//i.moshimo.com/af/i/impression?a_id=1414727&p_id=54&pc_id=54&pl_id=616" width="1" height="1"
-                    style="border:none;"></div>
+                <a href="//af.moshimo.com/af/c/click?a_id=1414727&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;s_v=b5Rz2P0601xu&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FPython%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
+                    rel="nofollow" target="_blank">楽天市場で調べる</a><img height="1"
+                    src="//i.moshimo.com/af/i/impression?a_id=1414727&amp;p_id=54&amp;pc_id=54&amp;pl_id=616"
+                    style="border:none;" width="1" /></div>
+
             <div class="shoplinkyahoo"
                 style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502&s_v=b5Rz2P0601xu&url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3D%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%2583%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25AA%25E3%2583%2583%25E3%2583%25842019"
-                    target="_blank" rel="nofollow">Yahooショッピングで調べる</a><img
-                    src="//i.moshimo.com/af/i/impression?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502" width="1"
-                    height="1" style="border:none;"></div>
+                <a href="//af.moshimo.com/af/c/click?a_id=1418766&amp;p_id=1225&amp;pc_id=1925&amp;pl_id=18502&amp;s_v=b5Rz2P0601xu&amp;url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3DPython"
+                    rel="nofollow" target="_blank">Yahooショッピングで調べる</a><img height="1"
+                    src="//i.moshimo.com/af/i/impression?a_id=1418766&amp;p_id=1225&amp;pc_id=1925&amp;pl_id=18502"
+                    style="border:none;" width="1" /></div>
             <div class="shoplinkseven"
                 style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3D%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%2583%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25AA%25E3%2583%2583%25E3%2583%25842019%26searchKeywordFlg%3D1"
+                <a href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3DPython%26searchKeywordFlg%3D1"
                     target="_blank"
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
@@ -151,348 +152,315 @@ if (!doNotTrack) {
 
 <hr />
 
-<p>2019年4月現在の計算結果は以下。</p>
+<h3 id="やること">やること</h3>
 
-<p><a href="https://www.ted027.com/post/penant-add">[参考記事]パワプロ ペナントの補強思考設定（2019年4月時点）</a></p>
-
-<hr />
-
-
-<figure >
-    
-        <img src="/img/penant-add-bs.png"
-             />
-        
-    
-</figure>
-
+<p>プロ野球の個人成績を見れるサイトのhtmlから要素を引っこ抜き、個人成績ページから適当に情報をつまんでJSONにまとめる。</p>
 
 <hr />
 
-<h3 id="トレード">トレード</h3>
+<h3 id="書いてみる">書いてみる</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python:records.py" data-lang="python:records.py"><span style="color:#fff;font-weight:bold">import</span> requests
+<span style="color:#fff;font-weight:bold">import</span> json
+<span style="color:#fff;font-weight:bold">from</span> bs4 <span style="color:#fff;font-weight:bold">import</span> BeautifulSoup
 
-<p>2016年以降のトレードで、獲得した選手・放出した選手の合計数をチームごとに計算。</p>
+BASEURL = <span style="color:#0ff;font-weight:bold">&#39;https://baseball.yahoo.co.jp/&#39;</span>
 
-<ul>
-<li>頻度
+NAME_HI = -<span style="color:#ff0;font-weight:bold">1</span>
+TEAM_H1 = -<span style="color:#ff0;font-weight:bold">2</span>
 
-<ul>
-<li>判断基準
+EXCEPT_TITLE = <span style="color:#ff0;font-weight:bold">1</span>
+EXCEPT_TITLE_HEADER = <span style="color:#ff0;font-weight:bold">2</span>
 
-<ul>
-<li>獲得選手数の上位4チームを「積極的」、下位4チームを「消極的」、残りを「おまかせ」に</li>
-</ul></li>
-</ul></li>
-</ul>
+EXCEPT_HEAD_CONTENT = <span style="color:#ff0;font-weight:bold">1</span>
 
-<h4 id="データソース">データソース</h4>
+CHANCE_STR_DIVIDER = <span style="color:#ff0;font-weight:bold">4</span>
 
-<ul>
-<li><a href="http://npb.jp/announcement/2019/pn_traded.html">NPB公式</a>(2016〜2019)</li>
-</ul>
+PITCHER_DUMP_VAL = <span style="color:#ff0;font-weight:bold">1</span>
+HITTER_DUMP_VAL = <span style="color:#ff0;font-weight:bold">2</span>
 
-<p>※注釈付き（人的補償での移籍等）は含みません</p>
+TEAM_NUM_LIST = [<span style="color:#ff0;font-weight:bold">376</span> <span style="color:#fff;font-weight:bold">if</span> i == <span style="color:#ff0;font-weight:bold">10</span> <span style="color:#fff;font-weight:bold">else</span> i <span style="color:#fff;font-weight:bold">for</span> i in <span style="color:#fff;font-weight:bold">list</span>(<span style="color:#fff;font-weight:bold">range</span>(<span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#ff0;font-weight:bold">13</span>))]
 
+
+<span style="color:#fff;font-weight:bold">def</span> request_soup(url):
+    res = requests.get(url)
+    res.raise_for_status()
+    <span style="color:#fff;font-weight:bold">return</span> BeautifulSoup(res.content, <span style="color:#0ff;font-weight:bold">&#34;html.parser&#34;</span>)
+
+
+<span style="color:#fff;font-weight:bold">def</span> link_tail_list(url):
+    soup = request_soup(url)
+    table = soup.find(<span style="color:#0ff;font-weight:bold">&#34;table&#34;</span>)
+    td_player_list = table.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>, class_=<span style="color:#0ff;font-weight:bold">&#39;lt yjM&#39;</span>)
+    <span style="color:#fff;font-weight:bold">return</span> [pl.find(<span style="color:#0ff;font-weight:bold">&#39;a&#39;</span>).get(<span style="color:#0ff;font-weight:bold">&#39;href&#39;</span>) <span style="color:#fff;font-weight:bold">for</span> pl in td_player_list]
+
+
+<span style="color:#fff;font-weight:bold">def</span> basic_information(personal_soup):
+    name = personal_soup.find_all(<span style="color:#0ff;font-weight:bold">&#39;h1&#39;</span>)[NAME_HI].text.split(<span style="color:#0ff;font-weight:bold">&#39;（&#39;</span>)[<span style="color:#ff0;font-weight:bold">0</span>]
+    team = personal_soup.find_all(<span style="color:#0ff;font-weight:bold">&#39;h1&#39;</span>)[TEAM_H1].text
+    <span style="color:#fff;font-weight:bold">return</span> {<span style="color:#0ff;font-weight:bold">&#39;Name&#39;</span>: name, <span style="color:#0ff;font-weight:bold">&#39;Team&#39;</span>: team}
+
+
+<span style="color:#fff;font-weight:bold">def</span> confirm_pitcher_tables(tables):
+    <span style="color:#0ff;font-weight:bold">&#34;&#34;&#34;
+</span><span style="color:#0ff;font-weight:bold">    return basic and right/left records
+</span><span style="color:#0ff;font-weight:bold">    &#34;&#34;&#34;</span>
+    records_table = rl_table = None
+    <span style="color:#fff;font-weight:bold">for</span> table in tables:
+        table_type = table.find(<span style="color:#0ff;font-weight:bold">&#39;tr&#39;</span>).text.replace(<span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold">&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;&#39;</span>)
+        <span style="color:#fff;font-weight:bold">if</span> <span style="color:#0ff;font-weight:bold">&#39;投手成績&#39;</span> in table_type:
+            records_table = table
+        <span style="color:#fff;font-weight:bold">elif</span> <span style="color:#0ff;font-weight:bold">&#39;左右打者別成績&#39;</span> in table_type:
+            rl_table = table
+    <span style="color:#fff;font-weight:bold">return</span> records_table, rl_table
+
+
+<span style="color:#fff;font-weight:bold">def</span> confirm_hitter_tables(tables):
+    <span style="color:#0ff;font-weight:bold">&#34;&#34;&#34;
+</span><span style="color:#0ff;font-weight:bold">    return basic, chance, right/left, count, runner records
+</span><span style="color:#0ff;font-weight:bold">    &#34;&#34;&#34;</span>
+    records_table = chance_table = rl_table = count_table = runner_table = None
+    <span style="color:#fff;font-weight:bold">for</span> table in tables:
+        table_type = table.find(<span style="color:#0ff;font-weight:bold">&#39;tr&#39;</span>).text.replace(<span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold">&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;&#39;</span>)
+        <span style="color:#fff;font-weight:bold">if</span> <span style="color:#0ff;font-weight:bold">&#39;打者成績&#39;</span> in table_type:
+            records_table = table
+        <span style="color:#fff;font-weight:bold">elif</span> <span style="color:#0ff;font-weight:bold">&#39;得点圏成績&#39;</span> in table_type:
+            chance_table = table
+        <span style="color:#fff;font-weight:bold">elif</span> <span style="color:#0ff;font-weight:bold">&#39;左右投手別成績&#39;</span> in table_type:
+            rl_table = table
+        <span style="color:#fff;font-weight:bold">elif</span> <span style="color:#0ff;font-weight:bold">&#39;カウント別成績&#39;</span> in table_type:
+            count_table = table
+        <span style="color:#fff;font-weight:bold">elif</span> <span style="color:#0ff;font-weight:bold">&#39;塁状況別成績&#39;</span> in table_type:
+            runner_table = table
+    <span style="color:#fff;font-weight:bold">return</span> records_table, chance_table, rl_table, count_table, runner_table
+
+
+<span style="color:#fff;font-weight:bold">def</span> dict_records(records_table):
+    rheader = [th.text <span style="color:#fff;font-weight:bold">for</span> th in records_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;th&#39;</span>)[EXCEPT_TITLE:]]
+    rbody = [td.text <span style="color:#fff;font-weight:bold">for</span> td in records_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>)]
+    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">dict</span>(<span style="color:#fff;font-weight:bold">zip</span>(rheader, rbody))
+
+
+<span style="color:#fff;font-weight:bold">def</span> chance_records(chance_table):
+    chheader_raw = [th.text <span style="color:#fff;font-weight:bold">for</span> th in chance_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;th&#39;</span>)]
+    chheader = [chheader_raw[<span style="color:#ff0;font-weight:bold">0</span>][:CHANCE_STR_DIVIDER] + h <span style="color:#fff;font-weight:bold">for</span> h in chheader_raw[EXCEPT_HEAD_CONTENT:]]
+
+    chbody = [td.text <span style="color:#fff;font-weight:bold">for</span> td in chance_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>)]
+    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">dict</span>(<span style="color:#fff;font-weight:bold">zip</span>(chheader, chbody))
+
+
+<span style="color:#fff;font-weight:bold">def</span> records_by_rl(rl_table, dump_val):
+    <span style="color:#0ff;font-weight:bold">&#34;&#34;&#34;
+</span><span style="color:#0ff;font-weight:bold">    dump_val: remove top contentof
+</span><span style="color:#0ff;font-weight:bold">            pitcher: 1 (&#39;打者&#39;)
+</span><span style="color:#0ff;font-weight:bold">            hitter: 2 (&#39;投手&#39;, &#39;打席&#39;)
+</span><span style="color:#0ff;font-weight:bold">    &#34;&#34;&#34;</span>
+    rl_header = [th.text <span style="color:#fff;font-weight:bold">for</span> th in rl_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;th&#39;</span>)][dump_val:]
+    r_header = [<span style="color:#0ff;font-weight:bold">&#39;対右&#39;</span> + h <span style="color:#fff;font-weight:bold">for</span> h in rl_header]
+    l_header = [<span style="color:#0ff;font-weight:bold">&#39;対左&#39;</span> + h <span style="color:#fff;font-weight:bold">for</span> h in rl_header]
+
+    rl_trs = rl_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;tr&#39;</span>)[EXCEPT_TITLE_HEADER:]
+    rl_records = {}
+    <span style="color:#fff;font-weight:bold">for</span> rl_tr in rl_trs:
+        rl_body = [td.text <span style="color:#fff;font-weight:bold">for</span> td in rl_tr.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>)]
+        <span style="color:#fff;font-weight:bold">if</span> <span style="color:#0ff;font-weight:bold">&#39;右&#39;</span> in rl_body[<span style="color:#ff0;font-weight:bold">0</span>]:
+            rl_records[<span style="color:#0ff;font-weight:bold">&#39;対右&#39;</span>] = <span style="color:#fff;font-weight:bold">dict</span>(<span style="color:#fff;font-weight:bold">zip</span>(rl_header, rl_body[dump_val:]))
+        <span style="color:#fff;font-weight:bold">elif</span> <span style="color:#0ff;font-weight:bold">&#39;左&#39;</span> in rl_body[<span style="color:#ff0;font-weight:bold">0</span>]:
+            rl_records[<span style="color:#0ff;font-weight:bold">&#39;対左&#39;</span>] = <span style="color:#fff;font-weight:bold">dict</span>(<span style="color:#fff;font-weight:bold">zip</span>(rl_header, rl_body[dump_val:]))
+
+    <span style="color:#fff;font-weight:bold">return</span> rl_records
+
+
+<span style="color:#fff;font-weight:bold">def</span> records_by_count_or_runner(table_by):
+    header = [th.text <span style="color:#fff;font-weight:bold">for</span> th in table_by.find_all(<span style="color:#0ff;font-weight:bold">&#39;th&#39;</span>)][EXCEPT_HEAD_CONTENT:]
+
+    body_tr = table_by.find_all(<span style="color:#0ff;font-weight:bold">&#39;tr&#39;</span>)[EXCEPT_TITLE_HEADER:]
+    records_by_count_or_runner = {}
+    <span style="color:#fff;font-weight:bold">for</span> tr in body_tr:
+        body = [td.text <span style="color:#fff;font-weight:bold">for</span> td in tr.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>)]
+        records_by_count_or_runner[body[<span style="color:#ff0;font-weight:bold">0</span>]] = <span style="color:#fff;font-weight:bold">dict</span>(<span style="color:#fff;font-weight:bold">zip</span>(header, body[EXCEPT_HEAD_CONTENT:]))
+    <span style="color:#fff;font-weight:bold">return</span> records_by_count_or_runner
+
+
+<span style="color:#fff;font-weight:bold">def</span> append_team_pitcher_array(link_tail_list):
+    team_pitcher_list = []
+    <span style="color:#fff;font-weight:bold">for</span> ptail in link_tail_list:
+
+        personal_link = BASEURL + ptail
+        personal_soup = request_soup(personal_link)
+
+        personal_dict = basic_information(personal_soup)
+
+        tables = personal_soup.find_all(<span style="color:#0ff;font-weight:bold">&#39;table&#39;</span>)
+        records_table, rl_table = confirm_pitcher_tables(tables)
+
+        records = dict_records(records_table)
+
+        <span style="color:#fff;font-weight:bold">if</span> rl_table:
+            records_rl = records_by_rl(rl_table, PITCHER_DUMP_VAL)
+            records.update(records_rl)
+
+        personal_dict[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>] = records
+
+        team_pitcher_list.append(personal_dict)
+
+    <span style="color:#fff;font-weight:bold">return</span> team_pitcher_list
+
+
+<span style="color:#fff;font-weight:bold">def</span> append_team_hitter_array(link_tail_list):
+    team_hitter_list = []
+    <span style="color:#fff;font-weight:bold">for</span> htail in link_tail_list:
+
+        personal_link = BASEURL + htail
+        personal_soup = request_soup(personal_link)
+
+        personal_dict = basic_information(personal_soup)
+
+        tables = personal_soup.find_all(<span style="color:#0ff;font-weight:bold">&#39;table&#39;</span>)
+        records_table, chance_table, rl_table, count_table, runner_table = confirm_hitter_tables(tables)
+
+        records = dict_records(records_table)
+
+        <span style="color:#fff;font-weight:bold">if</span> chance_table:
+            ch_records = chance_records(chance_table)
+            records.update(ch_records)
+
+        <span style="color:#fff;font-weight:bold">if</span> rl_table:
+            records_rl = records_by_rl(rl_table, HITTER_DUMP_VAL)
+            records.update(records_rl)
+
+        <span style="color:#fff;font-weight:bold">if</span> count_table:
+            records_by_count = records_by_count_or_runner(count_table)
+            records.update({<span style="color:#0ff;font-weight:bold">&#39;カウント&#39;</span>: records_by_count})
+
+        <span style="color:#fff;font-weight:bold">if</span> runner_table:
+            records_by_runner = records_by_count_or_runner(runner_table)
+            records.update({<span style="color:#0ff;font-weight:bold">&#39;走者&#39;</span>: records_by_runner})
+
+        personal_dict[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>] = records
+
+        team_hitter_list.append(personal_dict)
+
+    <span style="color:#fff;font-weight:bold">return</span> team_hitter_list
+
+
+<span style="color:#fff;font-weight:bold">def</span> append_records_array():
+    pitcher_list = []
+    hitter_list = []
+    <span style="color:#fff;font-weight:bold">for</span> i in TEAM_NUM_LIST:
+
+        purl = BASEURL + <span style="color:#0ff;font-weight:bold">&#39;npb/teams/&#39;</span> + <span style="color:#fff;font-weight:bold">str</span>(i) + <span style="color:#0ff;font-weight:bold">&#39;/memberlist?type=p&#39;</span>
+        hurl = BASEURL + <span style="color:#0ff;font-weight:bold">&#39;npb/teams/&#39;</span> + <span style="color:#fff;font-weight:bold">str</span>(i) + <span style="color:#0ff;font-weight:bold">&#39;/memberlist?type=b&#39;</span>
+
+        pit_link_tail_list = link_tail_list(purl)
+        hit_link_tail_list = link_tail_list(hurl)
+
+        team_pitcher_list = append_team_pitcher_array(pit_link_tail_list)
+        pitcher_list.extend(team_pitcher_list)
+
+        team_hitter_list = append_team_hitter_array(hit_link_tail_list)
+        hitter_list.extend(team_hitter_list)
+
+    <span style="color:#fff;font-weight:bold">return</span> pitcher_list, hitter_list
+
+
+pitcher_list, hitter_list = append_records_array()
+
+<span style="color:#fff;font-weight:bold">with</span> <span style="color:#fff;font-weight:bold">open</span>(<span style="color:#0ff;font-weight:bold">&#39;pitchers.json&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;w&#39;</span>) <span style="color:#fff;font-weight:bold">as</span> pf:
+    json.dump({<span style="color:#0ff;font-weight:bold">&#39;Pitcher&#39;</span>: pitcher_list}, pf, indent=<span style="color:#ff0;font-weight:bold">2</span>, ensure_ascii=False)
+
+<span style="color:#fff;font-weight:bold">with</span> <span style="color:#fff;font-weight:bold">open</span>(<span style="color:#0ff;font-weight:bold">&#39;hitters.json&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;w&#39;</span>) <span style="color:#fff;font-weight:bold">as</span> hf:
+    json.dump({<span style="color:#0ff;font-weight:bold">&#39;Hitter&#39;</span>: hitter_list}, hf, indent=<span style="color:#ff0;font-weight:bold">2</span>, ensure_ascii=False)</code></pre></div>
 <hr />
 
-<h3 id="新外国人獲得">新外国人獲得</h3>
-
-<p>2014年オフ以降に新外国人として獲得した選手の合計数、平均年齢をチームごとに計算。</p>
-
-<p>ただし年齢は正確ではなく、獲得年から生誕年を引いただけの簡易的な疑似年齢。</p>
-
-<p>※ 一度対談し帰国した外国人選手を再度獲得するケース（2016オフC.マギーなど）は含めない。</p>
-
-<ul>
-<li>頻度
-
-<ul>
-<li>判断基準
-
-<ul>
-<li>獲得選手数の上位4チームを「積極的」、下位4チームを「消極的」、残りを「おまかせ」に</li>
-</ul></li>
-</ul></li>
-<li>獲得方針
-
-<ul>
-<li>判断基準
-
-<ul>
-<li>獲得選手の平均年齢上位4チームを「ベテラン中心」、下位4チームを「若手中心」、残りを「おまかせ」に</li>
-</ul></li>
-</ul></li>
-<li>重視特徴
-
-<ul>
-<li>単純な計算で判断しづらいので一律「おまかせ」に</li>
-</ul></li>
-</ul>
-
-<h4 id="データソース-1">データソース</h4>
-
-<ul>
-<li>Wikipediaを見ながらjsonで書きました</li>
-<li><a href="https://github.com/ted027/Scripts/blob/master/other/foreign_player.json">https://github.com/ted027/Scripts/blob/master/other/foreign_player.json</a></li>
-</ul>
-
-<hr />
-
-<h3 id="ドラフト">ドラフト</h3>
-
-<p>2017年以降にドラフトで獲得した選手の平均年齢をチームごとに計算。</p>
-
-<ul>
-<li>獲得方針
-
-<ul>
-<li>判断基準
-
-<ul>
-<li>獲得選手の平均年齢上位4チームを「即戦力重視」、下位4チームを「将来性重視」、残りを「おまかせ」に</li>
-<li>「一芸重視」は単純な計算で判断しづらいので扱わない</li>
-</ul></li>
-</ul></li>
-<li>重視特徴
-
-<ul>
-<li>単純な計算で判断しづらいので一律「おまかせ」に</li>
-</ul></li>
-</ul>
-
-<h4 id="データソース-2">データソース</h4>
-
-<ul>
-<li><a href="https://www.sanspo.com/baseball/draft/18/draft_table.html">サンスポ ドラフト特集</a>(2017〜2018)</li>
-<li>2年分しか見れなかったので、いつか余裕があれば3年前以前もどこかから取って計算に入れたい</li>
-</ul>
-
-<hr />
-
-<h3 id="fa交渉">FA交渉</h3>
-
-<p>2009年オフ以降にFAで獲得した選手に関して、選手の合計数、平均年齢、平均の翌年推定年俸をチームごとに計算。</p>
-
-<ul>
-<li>自チームの選手に対して
-
-<ul>
-<li>判断基準
-
-<ul>
-<li>今日日、日本ハムも西武も広島も、残留交渉は行っていそうです。ゲーム的にも、パワプロ2018では残留交渉でFA交渉枠を消費しないので、一律「残留交渉する」でいいと思います。</li>
-</ul></li>
-</ul></li>
-<li>他チームの選手に対して
-
-<ul>
-<li>判断基準
-
-<ul>
-<li>獲得した選手合計数の上位4チームを「積極的」、下位4チームを「消極的」、残りを「おまかせ」に</li>
-</ul></li>
-</ul></li>
-<li>獲得方針
-
-<ul>
-<li>判断基準
-
-<ul>
-<li>獲得した選手の平均翌年推定年俸の平均、上位4チームを「目玉選手重視」、下位4チームを「単独交渉重視」、残りを「おまかせ」に</li>
-<li>獲得した選手の平均年齢、上位4チームを「経験重視」、下位4チームを「若さ重視」、残りを「おまかせ」に</li>
-<li>複数条件に当てはまる場合、優先度は
-
-<ul>
-<li>目玉選手重視/単独交渉重視 &gt; 経験重視/若さ重視 &gt; おまかせ</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li>人数
-
-<ul>
-<li>判断基準
-
-<ul>
-<li>年平均の獲得した選手数が0.7人より多いチームを「複数人」、0.2人より少ないチームを「一人」、残りを「おまかせ」に</li>
-</ul></li>
-</ul></li>
-</ul>
-
-<h4 id="データソース-3">データソース</h4>
-
-<ul>
-<li><a href="https://www.gurazeni.com/">ここ</a>やWikipediaを見ながらjsonで書きました</li>
-<li><a href="https://github.com/ted027/Scripts/blob/master/other/free_agent_player.json">https://github.com/ted027/Scripts/blob/master/other/free_agent_player.json</a></li>
-</ul>
-
-<hr />
-
-
-<figure >
-    
-        <img src="/img/penant-add-g.png"
-             />
-        
-    
-</figure>
-
-
-<hr />
-
-<h3 id="契約更改">契約更改</h3>
-
-<ul>
-<li>解雇方針
-
-<ul>
-<li>各所で言われているが、「おまかせ」だと<code>能力も成績もいいベテランが平気で首を切られ、それを獲得していけば普通に優勝できる</code>ようになってしまう</li>
-<li>一律「能力重視」にして功労者にやさしい世界にしてあげましょう</li>
-</ul></li>
-</ul>
-
-<hr />
-
-<h3 id="ポスティング">ポスティング</h3>
-
-<p>歴代で獲得した米国帰国選手の合計数をチームごとに計算。</p>
-
-<p>※ 米国から独立リーグ等を経てNPBに復帰した選手（藤川球児など）も含む。</p>
-
-<p>※ 日本球界を経ずに米国に渡り帰国した選手（マイケル中村、多田野数人など）は含めない。</p>
-
-<ul>
-<li>承認
-
-<ul>
-<li>判断基準
-
-<ul>
-<li>正直なところ誰が拒否されたかは分からないので、承認しないことを公言している巨人とソフトバンクのみ「承認しない」、残りは「おまかせ」に</li>
-<li>承認ケースの多いヤクルトあたりは「承認する」にしてもいいかも</li>
-<li>上でも書いた<a href="http://disummer.blog.fc2.com/blog-entry-3.html">参考のサイト</a>では、金子千尋選手のFA取得時、各球団の交渉姿勢から判断していました。これも面白い。</li>
-</ul></li>
-</ul></li>
-<li>獲得方針
-
-<ul>
-<li>判断基準
-
-<ul>
-<li>歴代で獲得した米国帰国選手の合計数上位4チームを「積極的」、下位4チームを「消極的」、残りを「おまかせ」に</li>
-</ul></li>
-</ul></li>
-</ul>
-
-<h4 id="データソース-4">データソース</h4>
-
-<ul>
-<li>Wikipediaを見ながらjsonで書きました</li>
-<li><a href="https://github.com/ted027/Scripts/blob/master/other/returned_player.json">https://github.com/ted027/Scripts/blob/master/other/returned_player.json</a></li>
-</ul>
-
-<hr />
-
-<h3 id="自由契約選手獲得">自由契約選手獲得</h3>
-
-<p>2016年オフ以降に自由契約から獲得した選手の平均年齢をチームごとに計算。</p>
-
-<p>ただし年齢は正確ではなく、獲得年から生誕年を引いただけの簡易的な疑似年齢。</p>
-
-<p>※ 自由契約したチームと再契約したケース（2018オフ上原浩治など）は含めない。</p>
-
-<p>※ 外国人選手（2018オフO.ガルシア、B.レアードなど）は含めない。</p>
-
-<ul>
-<li>獲得方針
-
-<ul>
-<li>判断基準
-
-<ul>
-<li>由契約からの獲得選手の平均年齢上位4チームを「経験重視」、下位4チームを「のびしろ重視」、残りを「おまかせ」に</li>
-<li>「一芸重視」「器用さ重視」は単純な計算で判断しづらいので扱わない</li>
-</ul></li>
-</ul></li>
-</ul>
-
-<h4 id="データソース-5">データソース</h4>
-
-<ul>
-<li><a href="https://www.nikkansports.com/baseball/news/201809280000378.html">日刊スポーツ移籍情報</a>やWikipediaを見ながらjsonで書きました</li>
-<li><a href="https://github.com/ted027/Scripts/blob/master/other/unregistered_player.json">https://github.com/ted027/Scripts/blob/master/other/unregistered_player.json</a></li>
-</ul>
-
-<hr />
-
-<h3 id="その他細かい判断や計算など">その他細かい判断や計算など</h3>
-
-<ul>
-<li>基本的に育成選手は計算に含めない。パワプロで育成選手は扱わないため</li>
-<li>ただし育成から支配下登録された外国人選手は「新外国人選手」として計算に含む</li>
-<li>データ数が0で平均が取れない場合、上位4/下位4の判断から除外し、設定は「おまかせ」にする</li>
-<li>上位4位と5位/下位4と5位が同数の場合、上位4位/下位4位も「おまかせ」に吸収する
-
-<ul>
-<li>その場合、上位3位と4位/下位3と4位が同数の場合…で繰り返し</li>
-</ul></li>
-</ul>
-
-<hr />
-
-<h3 id="以上の計算をしてくれたやつ">以上の計算をしてくれたやつ</h3>
-
-<ul>
-<li><a href="https://github.com/ted027/Scripts/blob/master/python_/addition.py">https://github.com/ted027/Scripts/blob/master/python_/addition.py</a></li>
-</ul>
-
+<h3 id="結果">結果</h3>
+
+<p>以下のような<code>JSON</code>ファイルで保存される。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="font-weight:bold">&#34;Pitcher&#34;</span>: [
+    {
+      <span style="font-weight:bold">&#34;Name&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;山口 俊&#34;</span>,
+      <span style="font-weight:bold">&#34;Team&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;読売ジャイアンツ&#34;</span>,
+      <span style="font-weight:bold">&#34;Records&#34;</span>: {
+        <span style="font-weight:bold">&#34;防御率&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;3.60&#34;</span>,
+        <span style="font-weight:bold">&#34;登板&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;2&#34;</span>,
+        <span style="font-weight:bold">&#34;先発&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;2&#34;</span>,
+        <span style="font-weight:bold">&#34;完投&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
+        <span style="font-weight:bold">&#34;完封&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
+        <span style="font-weight:bold">&#34;無四球&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
+        <span style="font-weight:bold">&#34;QS&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
+        <span style="font-weight:bold">&#34;交代完了&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
+        <span style="font-weight:bold">&#34;勝利&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
+        <span style="font-weight:bold">&#34;敗戦&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;1&#34;</span>,
+        <span style="font-weight:bold">&#34;ホールド&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
+        <span style="font-weight:bold">&#34;HP&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
+        <span style="font-weight:bold">&#34;セーブ&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
+        <span style="font-weight:bold">&#34;勝率&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;.000&#34;</span>,
+        <span style="font-weight:bold">&#34;投球回&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;10&#34;</span>,
+        <span style="font-weight:bold">&#34;打者&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;35&#34;</span>,
+        <span style="font-weight:bold">&#34;被安打&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;7&#34;</span>,
+        <span style="font-weight:bold">&#34;被本塁打&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;2&#34;</span>,
+        <span style="font-weight:bold">&#34;奪三振&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;9&#34;</span>,
+        <span style="font-weight:bold">&#34;奪三振率&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;8.10&#34;</span>,
+        <span style="font-weight:bold">&#34;与四球&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;2&#34;</span>,
+        <span style="font-weight:bold">&#34;与死球&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
+        <span style="font-weight:bold">&#34;暴投&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
+        <span style="font-weight:bold">&#34;ボーク&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
+        <span style="font-weight:bold">&#34;失点&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;4&#34;</span>,
+        <span style="font-weight:bold">&#34;自責点&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;4&#34;</span>,
+        <span style="font-weight:bold">&#34;被打率&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;.212&#34;</span>,
+        <span style="font-weight:bold">&#34;K/BB&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;4.50&#34;</span>,
+        <span style="font-weight:bold">&#34;WHIP&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0.90&#34;</span>,
+        <span style="color:#f00">...</span></code></pre></div>
 <hr />
 
 <h3 id="おわり">おわり</h3>
 
-<p>自動化したいといいつつ手で書いてばかりだった。</p>
+<p>MLBはオープンデータがある程度提供されているが、日本だとそういうのは無さそうです。</p>
 
-<p>間違いがあるかもしれないので、もし気づいた方はそっと教えてくれるとありがたいです。</p>
+<p>Webサイトのちょっとした仕様変更とかで動かなくなりそうなので、定期的に取るならメンテナンスが大変。</p>
 
 <hr />
 
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
-            href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E3%2582%25B3%25E3%2583%258A%25E3%2583%259F%25E3%2583%2587%25E3%2582%25B8%25E3%2582%25BF%25E3%2583%25AB%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%2586%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588-%25E5%25AE%259F%25E6%25B3%2581%25E3%2583%2591%25E3%2583%25AF%25E3%2583%2595%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%25832018-PS4%25E3%2580%2590Amazon-co-jp%25E9%2599%2590%25E5%25AE%259A%25E3%2580%2591%25E3%2582%25AA%25E3%2583%25AA%25E3%2582%25B8%25E3%2583%258A%25E3%2583%25AB%25E5%25A3%2581%25E7%25B4%2599-%25E9%2585%258D%25E4%25BF%25A1%2Fdp%2FB07KJNWQFL"
-            target="_blank" rel="nofollow"><img
-                src="https://images-fe.ssl-images-amazon.com/images/I/51LFkDMGvoL._SL160_.jpg"
-                style="border: none;" /></a><img
-            src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" width="1"
-            height="1" style="border:none;"></div>
+            href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E9%2580%2580%25E5%25B1%2588%25E3%2581%25AA%25E3%2581%2593%25E3%2581%25A8%25E3%2581%25AFPython%25E3%2581%25AB%25E3%2582%2584%25E3%2582%2589%25E3%2581%259B%25E3%2582%2588%25E3%2581%2586-%25E2%2580%2595%25E3%2583%258E%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259E%25E3%2583%25BC%25E3%2581%25AB%25E3%2582%2582%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%25E5%2587%25A6%25E7%2590%2586%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0-Al-Sweigart%2Fdp%2F487311778X"
+            rel="nofollow" target="_blank"><img
+                src="https://images-fe.ssl-images-amazon.com/images/I/51hk%2B5bKNrL._SL160_.jpg"
+                style="border: none;" /></a><img height="1"
+            src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
+            style="border:none;" width="1" /></div>
     <div class="kaerebalink-info" style="line-height:120%;zoom: 1;overflow: hidden;">
         <div class="kaerebalink-name" style="margin-bottom:10px;line-height:120%"><a
-                href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E3%2582%25B3%25E3%2583%258A%25E3%2583%259F%25E3%2583%2587%25E3%2582%25B8%25E3%2582%25BF%25E3%2583%25AB%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%2586%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588-%25E5%25AE%259F%25E6%25B3%2581%25E3%2583%2591%25E3%2583%25AF%25E3%2583%2595%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%25832018-PS4%25E3%2580%2590Amazon-co-jp%25E9%2599%2590%25E5%25AE%259A%25E3%2580%2591%25E3%2582%25AA%25E3%2583%25AA%25E3%2582%25B8%25E3%2583%258A%25E3%2583%25AB%25E5%25A3%2581%25E7%25B4%2599-%25E9%2585%258D%25E4%25BF%25A1%2Fdp%2FB07KJNWQFL"
-                target="_blank" rel="nofollow">実況パワフルプロ野球2018 -【Amazon.co.jp限定】</a><img
-                src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" width="1"
-                height="1" style="border:none;">
+                href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E9%2580%2580%25E5%25B1%2588%25E3%2581%25AA%25E3%2581%2593%25E3%2581%25A8%25E3%2581%25AFPython%25E3%2581%25AB%25E3%2582%2584%25E3%2582%2589%25E3%2581%259B%25E3%2582%2588%25E3%2581%2586-%25E2%2580%2595%25E3%2583%258E%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259E%25E3%2583%25BC%25E3%2581%25AB%25E3%2582%2582%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%25E5%2587%25A6%25E7%2590%2586%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0-Al-Sweigart%2Fdp%2F487311778X"
+                rel="nofollow" target="_blank">退屈なことはPythonにやらせよう ―ノンプログラマーにもできる自動化処理プログラミング</a><img height="1"
+                src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
+                style="border:none;" width="1" />
+
         </div>
         <div class="kaerebalink-detail" style="margin-bottom:5px;"></div>
         <div class="kaerebalink-link1" style="margin-top:10px;">
             <div class="shoplinkamazon"
                 style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1414800&p_id=170&pc_id=185&pl_id=4062&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3D%25E5%25AE%259F%25E6%25B3%2581%25E3%2583%2591%25E3%2583%25AF%25E3%2583%2595%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%25832018%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
-                    target="_blank" rel="nofollow">Amazonで調べる</a><img
-                    src="//i.moshimo.com/af/i/impression?a_id=1414800&p_id=170&pc_id=185&pl_id=4062" width="1"
-                    height="1" style="border:none;"></div>
+                <a href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;s_v=b5Rz2P0601xu&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3Dpython%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
+                    rel="nofollow" target="_blank">Amazonで調べる</a><img height="1"
+                    src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
+                    style="border:none;" width="1" /></div>
             <div class="shoplinkrakuten"
                 style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1414727&p_id=54&pc_id=54&pl_id=616&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%25AE%259F%25E6%25B3%2581%25E3%2583%2591%25E3%2583%25AF%25E3%2583%2595%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%25832018%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
-                    target="_blank" rel="nofollow">楽天市場で調べる</a><img
-                    src="//i.moshimo.com/af/i/impression?a_id=1414727&p_id=54&pc_id=54&pl_id=616" width="1" height="1"
-                    style="border:none;"></div>
+                <a href="//af.moshimo.com/af/c/click?a_id=1414727&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;s_v=b5Rz2P0601xu&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2Fpython%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
+                    rel="nofollow" target="_blank">楽天市場で調べる</a><img height="1"
+                    src="//i.moshimo.com/af/i/impression?a_id=1414727&amp;p_id=54&amp;pc_id=54&amp;pl_id=616"
+                    style="border:none;" width="1" /></div>
+
             <div class="shoplinkyahoo"
                 style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502&s_v=b5Rz2P0601xu&url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3D%25E5%25AE%259F%25E6%25B3%2581%25E3%2583%2591%25E3%2583%25AF%25E3%2583%2595%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%25832018"
-                    target="_blank" rel="nofollow">Yahooショッピングで調べる</a><img
-                    src="//i.moshimo.com/af/i/impression?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502" width="1"
-                    height="1" style="border:none;"></div>
+                <a href="//af.moshimo.com/af/c/click?a_id=1418766&amp;p_id=1225&amp;pc_id=1925&amp;pl_id=18502&amp;s_v=b5Rz2P0601xu&amp;url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3Dpython"
+                    rel="nofollow" target="_blank">Yahooショッピングで調べる</a><img height="1"
+                    src="//i.moshimo.com/af/i/impression?a_id=1418766&amp;p_id=1225&amp;pc_id=1925&amp;pl_id=18502"
+                    style="border:none;" width="1" /></div>
             <div class="shoplinkseven"
                 style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3D%25E5%25AE%259F%25E6%25B3%2581%25E3%2583%2591%25E3%2583%25AF%25E3%2583%2595%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%25832018%26searchKeywordFlg%3D1"
+                <a href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3Dpython%26searchKeywordFlg%3D1"
                     target="_blank"
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
@@ -504,9 +472,9 @@ if (!doNotTrack) {
 <div class="post__tags tags clearfix">
 	<svg class="tags__icon icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="/tags/%E3%83%91%E3%83%AF%E3%83%97%E3%83%AD2018/" rel="tag">パワプロ2018</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/%E3%83%9A%E3%83%8A%E3%83%B3%E3%83%88/" rel="tag">ペナント</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/%E8%A3%9C%E5%BC%B7%E6%80%9D%E8%80%83/" rel="tag">補強思考</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83/" rel="tag">プロ野球</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/python/" rel="tag">Python</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/%E3%82%B9%E3%82%AF%E3%83%AC%E3%82%A4%E3%83%94%E3%83%B3%E3%82%B0/" rel="tag">スクレイピング</a></li>
 	</ul>
 </div>
 	</article>
@@ -516,19 +484,19 @@ if (!doNotTrack) {
 <section class="section sns_parent">
   <div class="container sns_section">
       <div class="sns_button twitter">
-        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpenant-add-descript%2f&text=%e3%83%91%e3%83%af%e3%83%97%e3%83%ad%20%e3%83%9a%e3%83%8a%e3%83%b3%e3%83%88%e8%a3%9c%e5%bc%b7%e6%80%9d%e8%80%83%e8%a8%ad%e5%ae%9a%e3%81%ae%e6%9d%a1%e4%bb%b6%e5%88%a4%e6%96%ad" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f&text=Python%e3%81%a7%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e3%81%ae%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e4%b8%80%e8%a6%a7%e3%82%92JSON%e3%81%ab%e3%81%97%e3%81%a6%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
       </div>
       <div class="sns_button line">
-        <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpenant-add-descript%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
+        <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
       </div>
       <div class="sns_button facebook">
-        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fpenant-add-descript%2f&t=%e3%83%91%e3%83%af%e3%83%97%e3%83%ad%20%e3%83%9a%e3%83%8a%e3%83%b3%e3%83%88%e8%a3%9c%e5%bc%b7%e6%80%9d%e8%80%83%e8%a8%ad%e5%ae%9a%e3%81%ae%e6%9d%a1%e4%bb%b6%e5%88%a4%e6%96%ad" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f&t=Python%e3%81%a7%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e3%81%ae%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e4%b8%80%e8%a6%a7%e3%82%92JSON%e3%81%ab%e3%81%97%e3%81%a6%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
       </div>
       <div class="sns_button hatena">
-        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fpenant-add-descript%2f&title=%e3%83%91%e3%83%af%e3%83%97%e3%83%ad%20%e3%83%9a%e3%83%8a%e3%83%b3%e3%83%88%e8%a3%9c%e5%bc%b7%e6%80%9d%e8%80%83%e8%a8%ad%e5%ae%9a%e3%81%ae%e6%9d%a1%e4%bb%b6%e5%88%a4%e6%96%ad" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f&title=Python%e3%81%a7%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e3%81%ae%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e4%b8%80%e8%a6%a7%e3%82%92JSON%e3%81%ab%e3%81%97%e3%81%a6%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
       </div>
       <div class="sns_button pocket">
-        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpenant-add-descript%2f&title=%e3%83%91%e3%83%af%e3%83%97%e3%83%ad%20%e3%83%9a%e3%83%8a%e3%83%b3%e3%83%88%e8%a3%9c%e5%bc%b7%e6%80%9d%e8%80%83%e8%a8%ad%e5%ae%9a%e3%81%ae%e6%9d%a1%e4%bb%b6%e5%88%a4%e6%96%ad" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f&title=Python%e3%81%a7%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e3%81%ae%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e4%b8%80%e8%a6%a7%e3%82%92JSON%e3%81%ab%e3%81%97%e3%81%a6%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
       </div>
   </div>
 </section>
@@ -548,10 +516,7 @@ if (!doNotTrack) {
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/post/penant-add/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">パワプロ ペナントの補強思考設定（2019年4月時点）</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/post/docker-var/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Dockerでコマンド実行結果を変数に入れられなくて困った話</p></a>
+		<a class="post-nav__link" href="/post/python-score/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Pythonでプロ野球スコア速報を取得する</p></a>
 	</div>
 </nav>
 
