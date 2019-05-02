@@ -4,22 +4,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Pythonでプロ野球の個人成績一覧をJSONにして取得する - 行けたら行く</title>
+	<title>個人成績 - 行けたら行く</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta property="og:title" content="Pythonでプロ野球の個人成績一覧をJSONにして取得する" />
-<meta property="og:description" content="スコア速報と同じく、Pythonでスクレイピングして各チーム最新の個人成績を取得したい。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.ted027.com/post/python-personal-records/" />
-<meta property="article:published_time" content="2019-05-02T12:11:56&#43;09:00"/>
-<meta property="article:modified_time" content="2019-05-02T12:11:56&#43;09:00"/>
+	<meta property="og:title" content="個人成績" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.ted027.com/tags/%E5%80%8B%E4%BA%BA%E6%88%90%E7%B8%BE/" />
+
+<meta property="og:updated_time" content="2019-05-02T12:11:56&#43;09:00"/>
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Pythonでプロ野球の個人成績一覧をJSONにして取得する"/>
-<meta name="twitter:description" content="スコア速報と同じく、Pythonでスクレイピングして各チーム最新の個人成績を取得したい。"/>
+<meta name="twitter:title" content="個人成績"/>
+<meta name="twitter:description" content=""/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="alternate" type="application/rss+xml" href="/tags/%E5%80%8B%E4%BA%BA%E6%88%90%E7%B8%BE/index.xml" title="行けたら行く">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
 	<link rel="stylesheet" href="/css/style.css">
@@ -61,11 +62,17 @@ if (!doNotTrack) {
 		<div class="wrapper flex">
 			<div class="primary">
 			
-<main class="main" role="main">
-	<article class="post">
-		<header class="post__header">
-			<h1 class="post__title">Pythonでプロ野球の個人成績一覧をJSONにして取得する</h1>
-			<div class="post__meta meta">
+<main class="main list" role="main">
+	<header class="main__header">
+		<h1 class="main__title">個人成績</h1>
+	</header><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/post/python-personal-records/" rel="bookmark">
+			Pythonでプロ野球の個人成績一覧をJSONにして取得する
+			</a>
+		</h3>
+		<div class="list__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
 	<time class="meta__text" datetime="2019-05-02T12:11:56">2019-05-02</time>
@@ -76,476 +83,17 @@ if (!doNotTrack) {
 	<span class="meta__text"><a class="meta__link" href="/categories/%e9%87%8e%e7%90%83" rel="category">野球</a></span>
 </div>
 </div>
-			<br/>
-			
-
-<section class="section sns_parent">
-  <div class="container sns_section">
-      <div class="sns_button twitter">
-        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f&text=Python%e3%81%a7%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e3%81%ae%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e4%b8%80%e8%a6%a7%e3%82%92JSON%e3%81%ab%e3%81%97%e3%81%a6%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
-      </div>
-      <div class="sns_button line">
-        <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
-      </div>
-      <div class="sns_button facebook">
-        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f&t=Python%e3%81%a7%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e3%81%ae%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e4%b8%80%e8%a6%a7%e3%82%92JSON%e3%81%ab%e3%81%97%e3%81%a6%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
-      </div>
-      <div class="sns_button hatena">
-        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f&title=Python%e3%81%a7%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e3%81%ae%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e4%b8%80%e8%a6%a7%e3%82%92JSON%e3%81%ab%e3%81%97%e3%81%a6%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
-      </div>
-      <div class="sns_button pocket">
-        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f&title=Python%e3%81%a7%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e3%81%ae%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e4%b8%80%e8%a6%a7%e3%82%92JSON%e3%81%ab%e3%81%97%e3%81%a6%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
-      </div>
-  </div>
-</section>
-
-			<br/>
-		</header><div class="content post__content clearfix">
-			<p>スコア速報と同じく、Pythonでスクレイピングして各チーム最新の個人成績を取得したい。</p>
-
-<hr />
-
-<div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
-    <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
-            href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FPython%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2588%2586%25E6%259E%2590%25E5%2585%25A5%25E9%2596%2580-%25E7%25AC%25AC2%25E7%2589%2588-%25E2%2580%2595NumPy%25E3%2580%2581pandas%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2587%25A6%25E7%2590%2586-Wes-McKinney%2Fdp%2F487311845X"
-            rel="nofollow" target="_blank"><img
-                src="https://images-fe.ssl-images-amazon.com/images/I/51NjGkPfTQL._SL160_.jpg"
-                style="border: none;" /></a><img height="1"
-            src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
-            style="border:none;" width="1" /></div>
-    <div class="kaerebalink-info" style="line-height:120%;zoom: 1;overflow: hidden;">
-        <div class="kaerebalink-name" style="margin-bottom:10px;line-height:120%"><a
-                href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FPython%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2588%2586%25E6%259E%2590%25E5%2585%25A5%25E9%2596%2580-%25E7%25AC%25AC2%25E7%2589%2588-%25E2%2580%2595NumPy%25E3%2580%2581pandas%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2587%25A6%25E7%2590%2586-Wes-McKinney%2Fdp%2F487311845X"
-                rel="nofollow" target="_blank">Pythonによるデータ分析入門 第2版 ―NumPy、pandasを使ったデータ処理</a><img height="1"
-                src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
-                style="border:none;" width="1" />
-
-        </div>
-        <div class="kaerebalink-detail" style="margin-bottom:5px;"></div>
-        <div class="kaerebalink-link1" style="margin-top:10px;">
-            <div class="shoplinkamazon"
-                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;s_v=b5Rz2P0601xu&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3DPython%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
-                    rel="nofollow" target="_blank">Amazonで調べる</a><img height="1"
-                    src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
-                    style="border:none;" width="1" /></div>
-            <div class="shoplinkrakuten"
-                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1414727&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;s_v=b5Rz2P0601xu&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FPython%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
-                    rel="nofollow" target="_blank">楽天市場で調べる</a><img height="1"
-                    src="//i.moshimo.com/af/i/impression?a_id=1414727&amp;p_id=54&amp;pc_id=54&amp;pl_id=616"
-                    style="border:none;" width="1" /></div>
-
-            <div class="shoplinkyahoo"
-                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1418766&amp;p_id=1225&amp;pc_id=1925&amp;pl_id=18502&amp;s_v=b5Rz2P0601xu&amp;url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3DPython"
-                    rel="nofollow" target="_blank">Yahooショッピングで調べる</a><img height="1"
-                    src="//i.moshimo.com/af/i/impression?a_id=1418766&amp;p_id=1225&amp;pc_id=1925&amp;pl_id=18502"
-                    style="border:none;" width="1" /></div>
-            <div class="shoplinkseven"
-                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3DPython%26searchKeywordFlg%3D1"
-                    target="_blank"
-                    rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
-                        </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
-        </div>
-
-<hr />
-
-<h3 id="やること">やること</h3>
-
-<p>プロ野球の個人成績を見れるサイトのhtmlから要素を引っこ抜き、個人成績ページから適当に情報をつまんでJSONにまとめる。</p>
-
-<hr />
-
-<h3 id="書いてみる">書いてみる</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python:records.py" data-lang="python:records.py"><span style="color:#fff;font-weight:bold">import</span> requests
-<span style="color:#fff;font-weight:bold">import</span> json
-<span style="color:#fff;font-weight:bold">from</span> bs4 <span style="color:#fff;font-weight:bold">import</span> BeautifulSoup
-
-BASEURL = <span style="color:#0ff;font-weight:bold">&#39;https://baseball.yahoo.co.jp/&#39;</span>
-
-NAME_HI = -<span style="color:#ff0;font-weight:bold">1</span>
-TEAM_H1 = -<span style="color:#ff0;font-weight:bold">2</span>
-
-EXCEPT_TITLE = <span style="color:#ff0;font-weight:bold">1</span>
-EXCEPT_TITLE_HEADER = <span style="color:#ff0;font-weight:bold">2</span>
-
-EXCEPT_HEAD_CONTENT = <span style="color:#ff0;font-weight:bold">1</span>
-
-CHANCE_STR_DIVIDER = <span style="color:#ff0;font-weight:bold">4</span>
-
-PITCHER_DUMP_VAL = <span style="color:#ff0;font-weight:bold">1</span>
-HITTER_DUMP_VAL = <span style="color:#ff0;font-weight:bold">2</span>
-
-TEAM_NUM_LIST = [<span style="color:#ff0;font-weight:bold">376</span> <span style="color:#fff;font-weight:bold">if</span> i == <span style="color:#ff0;font-weight:bold">10</span> <span style="color:#fff;font-weight:bold">else</span> i <span style="color:#fff;font-weight:bold">for</span> i in <span style="color:#fff;font-weight:bold">list</span>(<span style="color:#fff;font-weight:bold">range</span>(<span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#ff0;font-weight:bold">13</span>))]
-
-
-<span style="color:#fff;font-weight:bold">def</span> request_soup(url):
-    res = requests.get(url)
-    res.raise_for_status()
-    <span style="color:#fff;font-weight:bold">return</span> BeautifulSoup(res.content, <span style="color:#0ff;font-weight:bold">&#34;html.parser&#34;</span>)
-
-
-<span style="color:#fff;font-weight:bold">def</span> link_tail_list(url):
-    soup = request_soup(url)
-    table = soup.find(<span style="color:#0ff;font-weight:bold">&#34;table&#34;</span>)
-    td_player_list = table.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>, class_=<span style="color:#0ff;font-weight:bold">&#39;lt yjM&#39;</span>)
-    <span style="color:#fff;font-weight:bold">return</span> [pl.find(<span style="color:#0ff;font-weight:bold">&#39;a&#39;</span>).get(<span style="color:#0ff;font-weight:bold">&#39;href&#39;</span>) <span style="color:#fff;font-weight:bold">for</span> pl in td_player_list]
-
-
-<span style="color:#fff;font-weight:bold">def</span> basic_information(personal_soup):
-    name = personal_soup.find_all(<span style="color:#0ff;font-weight:bold">&#39;h1&#39;</span>)[NAME_HI].text.split(<span style="color:#0ff;font-weight:bold">&#39;（&#39;</span>)[<span style="color:#ff0;font-weight:bold">0</span>]
-    team = personal_soup.find_all(<span style="color:#0ff;font-weight:bold">&#39;h1&#39;</span>)[TEAM_H1].text
-    <span style="color:#fff;font-weight:bold">return</span> {<span style="color:#0ff;font-weight:bold">&#39;Name&#39;</span>: name, <span style="color:#0ff;font-weight:bold">&#39;Team&#39;</span>: team}
-
-
-<span style="color:#fff;font-weight:bold">def</span> confirm_pitcher_tables(tables):
-    <span style="color:#0ff;font-weight:bold">&#34;&#34;&#34;
-</span><span style="color:#0ff;font-weight:bold">    return basic and right/left records
-</span><span style="color:#0ff;font-weight:bold">    &#34;&#34;&#34;</span>
-    records_table = rl_table = None
-    <span style="color:#fff;font-weight:bold">for</span> table in tables:
-        table_type = table.find(<span style="color:#0ff;font-weight:bold">&#39;tr&#39;</span>).text.replace(<span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold">&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;&#39;</span>)
-        <span style="color:#fff;font-weight:bold">if</span> <span style="color:#0ff;font-weight:bold">&#39;投手成績&#39;</span> in table_type:
-            records_table = table
-        <span style="color:#fff;font-weight:bold">elif</span> <span style="color:#0ff;font-weight:bold">&#39;左右打者別成績&#39;</span> in table_type:
-            rl_table = table
-    <span style="color:#fff;font-weight:bold">return</span> records_table, rl_table
-
-
-<span style="color:#fff;font-weight:bold">def</span> confirm_hitter_tables(tables):
-    <span style="color:#0ff;font-weight:bold">&#34;&#34;&#34;
-</span><span style="color:#0ff;font-weight:bold">    return basic, chance, right/left, count, runner records
-</span><span style="color:#0ff;font-weight:bold">    &#34;&#34;&#34;</span>
-    records_table = chance_table = rl_table = count_table = runner_table = None
-    <span style="color:#fff;font-weight:bold">for</span> table in tables:
-        table_type = table.find(<span style="color:#0ff;font-weight:bold">&#39;tr&#39;</span>).text.replace(<span style="color:#0ff;font-weight:bold">&#39;</span><span style="color:#0ff;font-weight:bold">\n</span><span style="color:#0ff;font-weight:bold">&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;&#39;</span>)
-        <span style="color:#fff;font-weight:bold">if</span> <span style="color:#0ff;font-weight:bold">&#39;打者成績&#39;</span> in table_type:
-            records_table = table
-        <span style="color:#fff;font-weight:bold">elif</span> <span style="color:#0ff;font-weight:bold">&#39;得点圏成績&#39;</span> in table_type:
-            chance_table = table
-        <span style="color:#fff;font-weight:bold">elif</span> <span style="color:#0ff;font-weight:bold">&#39;左右投手別成績&#39;</span> in table_type:
-            rl_table = table
-        <span style="color:#fff;font-weight:bold">elif</span> <span style="color:#0ff;font-weight:bold">&#39;カウント別成績&#39;</span> in table_type:
-            count_table = table
-        <span style="color:#fff;font-weight:bold">elif</span> <span style="color:#0ff;font-weight:bold">&#39;塁状況別成績&#39;</span> in table_type:
-            runner_table = table
-    <span style="color:#fff;font-weight:bold">return</span> records_table, chance_table, rl_table, count_table, runner_table
-
-
-<span style="color:#fff;font-weight:bold">def</span> dict_records(records_table):
-    rheader = [th.text <span style="color:#fff;font-weight:bold">for</span> th in records_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;th&#39;</span>)[EXCEPT_TITLE:]]
-    rbody = [td.text <span style="color:#fff;font-weight:bold">for</span> td in records_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>)]
-    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">dict</span>(<span style="color:#fff;font-weight:bold">zip</span>(rheader, rbody))
-
-
-<span style="color:#fff;font-weight:bold">def</span> chance_records(chance_table):
-    chheader_raw = [th.text <span style="color:#fff;font-weight:bold">for</span> th in chance_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;th&#39;</span>)]
-    chheader = [chheader_raw[<span style="color:#ff0;font-weight:bold">0</span>][:CHANCE_STR_DIVIDER] + h <span style="color:#fff;font-weight:bold">for</span> h in chheader_raw[EXCEPT_HEAD_CONTENT:]]
-
-    chbody = [td.text <span style="color:#fff;font-weight:bold">for</span> td in chance_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>)]
-    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">dict</span>(<span style="color:#fff;font-weight:bold">zip</span>(chheader, chbody))
-
-
-<span style="color:#fff;font-weight:bold">def</span> records_by_rl(rl_table, dump_val):
-    <span style="color:#0ff;font-weight:bold">&#34;&#34;&#34;
-</span><span style="color:#0ff;font-weight:bold">    dump_val: remove top contentof
-</span><span style="color:#0ff;font-weight:bold">            pitcher: 1 (&#39;打者&#39;)
-</span><span style="color:#0ff;font-weight:bold">            hitter: 2 (&#39;投手&#39;, &#39;打席&#39;)
-</span><span style="color:#0ff;font-weight:bold">    &#34;&#34;&#34;</span>
-    rl_header = [th.text <span style="color:#fff;font-weight:bold">for</span> th in rl_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;th&#39;</span>)][dump_val:]
-    r_header = [<span style="color:#0ff;font-weight:bold">&#39;対右&#39;</span> + h <span style="color:#fff;font-weight:bold">for</span> h in rl_header]
-    l_header = [<span style="color:#0ff;font-weight:bold">&#39;対左&#39;</span> + h <span style="color:#fff;font-weight:bold">for</span> h in rl_header]
-
-    rl_trs = rl_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;tr&#39;</span>)[EXCEPT_TITLE_HEADER:]
-    rl_records = {}
-    <span style="color:#fff;font-weight:bold">for</span> rl_tr in rl_trs:
-        rl_body = [td.text <span style="color:#fff;font-weight:bold">for</span> td in rl_tr.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>)]
-        <span style="color:#fff;font-weight:bold">if</span> <span style="color:#0ff;font-weight:bold">&#39;右&#39;</span> in rl_body[<span style="color:#ff0;font-weight:bold">0</span>]:
-            rl_records[<span style="color:#0ff;font-weight:bold">&#39;対右&#39;</span>] = <span style="color:#fff;font-weight:bold">dict</span>(<span style="color:#fff;font-weight:bold">zip</span>(rl_header, rl_body[dump_val:]))
-        <span style="color:#fff;font-weight:bold">elif</span> <span style="color:#0ff;font-weight:bold">&#39;左&#39;</span> in rl_body[<span style="color:#ff0;font-weight:bold">0</span>]:
-            rl_records[<span style="color:#0ff;font-weight:bold">&#39;対左&#39;</span>] = <span style="color:#fff;font-weight:bold">dict</span>(<span style="color:#fff;font-weight:bold">zip</span>(rl_header, rl_body[dump_val:]))
-
-    <span style="color:#fff;font-weight:bold">return</span> rl_records
-
-
-<span style="color:#fff;font-weight:bold">def</span> records_by_count_or_runner(table_by):
-    header = [th.text <span style="color:#fff;font-weight:bold">for</span> th in table_by.find_all(<span style="color:#0ff;font-weight:bold">&#39;th&#39;</span>)][EXCEPT_HEAD_CONTENT:]
-
-    body_tr = table_by.find_all(<span style="color:#0ff;font-weight:bold">&#39;tr&#39;</span>)[EXCEPT_TITLE_HEADER:]
-    records_by_count_or_runner = {}
-    <span style="color:#fff;font-weight:bold">for</span> tr in body_tr:
-        body = [td.text <span style="color:#fff;font-weight:bold">for</span> td in tr.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>)]
-        records_by_count_or_runner[body[<span style="color:#ff0;font-weight:bold">0</span>]] = <span style="color:#fff;font-weight:bold">dict</span>(<span style="color:#fff;font-weight:bold">zip</span>(header, body[EXCEPT_HEAD_CONTENT:]))
-    <span style="color:#fff;font-weight:bold">return</span> records_by_count_or_runner
-
-
-<span style="color:#fff;font-weight:bold">def</span> append_team_pitcher_array(link_tail_list):
-    team_pitcher_list = []
-    <span style="color:#fff;font-weight:bold">for</span> ptail in link_tail_list:
-
-        personal_link = BASEURL + ptail
-        personal_soup = request_soup(personal_link)
-
-        personal_dict = basic_information(personal_soup)
-
-        tables = personal_soup.find_all(<span style="color:#0ff;font-weight:bold">&#39;table&#39;</span>)
-        records_table, rl_table = confirm_pitcher_tables(tables)
-
-        records = dict_records(records_table)
-
-        <span style="color:#fff;font-weight:bold">if</span> rl_table:
-            records_rl = records_by_rl(rl_table, PITCHER_DUMP_VAL)
-            records.update(records_rl)
-
-        personal_dict[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>] = records
-
-        team_pitcher_list.append(personal_dict)
-
-    <span style="color:#fff;font-weight:bold">return</span> team_pitcher_list
-
-
-<span style="color:#fff;font-weight:bold">def</span> append_team_hitter_array(link_tail_list):
-    team_hitter_list = []
-    <span style="color:#fff;font-weight:bold">for</span> htail in link_tail_list:
-
-        personal_link = BASEURL + htail
-        personal_soup = request_soup(personal_link)
-
-        personal_dict = basic_information(personal_soup)
-
-        tables = personal_soup.find_all(<span style="color:#0ff;font-weight:bold">&#39;table&#39;</span>)
-        records_table, chance_table, rl_table, count_table, runner_table = confirm_hitter_tables(tables)
-
-        records = dict_records(records_table)
-
-        <span style="color:#fff;font-weight:bold">if</span> chance_table:
-            ch_records = chance_records(chance_table)
-            records.update(ch_records)
-
-        <span style="color:#fff;font-weight:bold">if</span> rl_table:
-            records_rl = records_by_rl(rl_table, HITTER_DUMP_VAL)
-            records.update(records_rl)
-
-        <span style="color:#fff;font-weight:bold">if</span> count_table:
-            records_by_count = records_by_count_or_runner(count_table)
-            records.update({<span style="color:#0ff;font-weight:bold">&#39;カウント&#39;</span>: records_by_count})
-
-        <span style="color:#fff;font-weight:bold">if</span> runner_table:
-            records_by_runner = records_by_count_or_runner(runner_table)
-            records.update({<span style="color:#0ff;font-weight:bold">&#39;走者&#39;</span>: records_by_runner})
-
-        personal_dict[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>] = records
-
-        team_hitter_list.append(personal_dict)
-
-    <span style="color:#fff;font-weight:bold">return</span> team_hitter_list
-
-
-<span style="color:#fff;font-weight:bold">def</span> append_records_array():
-    pitcher_list = []
-    hitter_list = []
-    <span style="color:#fff;font-weight:bold">for</span> i in TEAM_NUM_LIST:
-
-        purl = BASEURL + <span style="color:#0ff;font-weight:bold">&#39;npb/teams/&#39;</span> + <span style="color:#fff;font-weight:bold">str</span>(i) + <span style="color:#0ff;font-weight:bold">&#39;/memberlist?type=p&#39;</span>
-        hurl = BASEURL + <span style="color:#0ff;font-weight:bold">&#39;npb/teams/&#39;</span> + <span style="color:#fff;font-weight:bold">str</span>(i) + <span style="color:#0ff;font-weight:bold">&#39;/memberlist?type=b&#39;</span>
-
-        pit_link_tail_list = link_tail_list(purl)
-        hit_link_tail_list = link_tail_list(hurl)
-
-        team_pitcher_list = append_team_pitcher_array(pit_link_tail_list)
-        pitcher_list.extend(team_pitcher_list)
-
-        team_hitter_list = append_team_hitter_array(hit_link_tail_list)
-        hitter_list.extend(team_hitter_list)
-
-    <span style="color:#fff;font-weight:bold">return</span> pitcher_list, hitter_list
-
-
-pitcher_list, hitter_list = append_records_array()
-
-<span style="color:#fff;font-weight:bold">with</span> <span style="color:#fff;font-weight:bold">open</span>(<span style="color:#0ff;font-weight:bold">&#39;pitchers.json&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;w&#39;</span>) <span style="color:#fff;font-weight:bold">as</span> pf:
-    json.dump({<span style="color:#0ff;font-weight:bold">&#39;Pitcher&#39;</span>: pitcher_list}, pf, indent=<span style="color:#ff0;font-weight:bold">2</span>, ensure_ascii=False)
-
-<span style="color:#fff;font-weight:bold">with</span> <span style="color:#fff;font-weight:bold">open</span>(<span style="color:#0ff;font-weight:bold">&#39;hitters.json&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;w&#39;</span>) <span style="color:#fff;font-weight:bold">as</span> hf:
-    json.dump({<span style="color:#0ff;font-weight:bold">&#39;Hitter&#39;</span>: hitter_list}, hf, indent=<span style="color:#ff0;font-weight:bold">2</span>, ensure_ascii=False)</code></pre></div>
-<hr />
-
-<h3 id="結果">結果</h3>
-
-<p>以下のような<code>JSON</code>ファイルで保存される。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="font-weight:bold">&#34;Pitcher&#34;</span>: [
-    {
-      <span style="font-weight:bold">&#34;Name&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;山口 俊&#34;</span>,
-      <span style="font-weight:bold">&#34;Team&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;読売ジャイアンツ&#34;</span>,
-      <span style="font-weight:bold">&#34;Records&#34;</span>: {
-        <span style="font-weight:bold">&#34;防御率&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;3.60&#34;</span>,
-        <span style="font-weight:bold">&#34;登板&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;2&#34;</span>,
-        <span style="font-weight:bold">&#34;先発&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;2&#34;</span>,
-        <span style="font-weight:bold">&#34;完投&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
-        <span style="font-weight:bold">&#34;完封&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
-        <span style="font-weight:bold">&#34;無四球&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
-        <span style="font-weight:bold">&#34;QS&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
-        <span style="font-weight:bold">&#34;交代完了&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
-        <span style="font-weight:bold">&#34;勝利&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
-        <span style="font-weight:bold">&#34;敗戦&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;1&#34;</span>,
-        <span style="font-weight:bold">&#34;ホールド&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
-        <span style="font-weight:bold">&#34;HP&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
-        <span style="font-weight:bold">&#34;セーブ&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
-        <span style="font-weight:bold">&#34;勝率&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;.000&#34;</span>,
-        <span style="font-weight:bold">&#34;投球回&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;10&#34;</span>,
-        <span style="font-weight:bold">&#34;打者&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;35&#34;</span>,
-        <span style="font-weight:bold">&#34;被安打&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;7&#34;</span>,
-        <span style="font-weight:bold">&#34;被本塁打&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;2&#34;</span>,
-        <span style="font-weight:bold">&#34;奪三振&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;9&#34;</span>,
-        <span style="font-weight:bold">&#34;奪三振率&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;8.10&#34;</span>,
-        <span style="font-weight:bold">&#34;与四球&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;2&#34;</span>,
-        <span style="font-weight:bold">&#34;与死球&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
-        <span style="font-weight:bold">&#34;暴投&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
-        <span style="font-weight:bold">&#34;ボーク&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0&#34;</span>,
-        <span style="font-weight:bold">&#34;失点&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;4&#34;</span>,
-        <span style="font-weight:bold">&#34;自責点&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;4&#34;</span>,
-        <span style="font-weight:bold">&#34;被打率&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;.212&#34;</span>,
-        <span style="font-weight:bold">&#34;K/BB&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;4.50&#34;</span>,
-        <span style="font-weight:bold">&#34;WHIP&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0.90&#34;</span>,
-        <span style="color:#f00">...</span></code></pre></div>
-<hr />
-
-<h3 id="おわり">おわり</h3>
-
-<p>MLBはオープンデータがある程度提供されているが、日本だとそういうのは無さそうです。</p>
-
-<p>Webサイトのちょっとした仕様変更とかで動かなくなりそうなので、定期的に取るならメンテナンスが大変。</p>
-
-<hr />
-
-<div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
-    <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
-            href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E9%2580%2580%25E5%25B1%2588%25E3%2581%25AA%25E3%2581%2593%25E3%2581%25A8%25E3%2581%25AFPython%25E3%2581%25AB%25E3%2582%2584%25E3%2582%2589%25E3%2581%259B%25E3%2582%2588%25E3%2581%2586-%25E2%2580%2595%25E3%2583%258E%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259E%25E3%2583%25BC%25E3%2581%25AB%25E3%2582%2582%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%25E5%2587%25A6%25E7%2590%2586%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0-Al-Sweigart%2Fdp%2F487311778X"
-            rel="nofollow" target="_blank"><img
-                src="https://images-fe.ssl-images-amazon.com/images/I/51hk%2B5bKNrL._SL160_.jpg"
-                style="border: none;" /></a><img height="1"
-            src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
-            style="border:none;" width="1" /></div>
-    <div class="kaerebalink-info" style="line-height:120%;zoom: 1;overflow: hidden;">
-        <div class="kaerebalink-name" style="margin-bottom:10px;line-height:120%"><a
-                href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E9%2580%2580%25E5%25B1%2588%25E3%2581%25AA%25E3%2581%2593%25E3%2581%25A8%25E3%2581%25AFPython%25E3%2581%25AB%25E3%2582%2584%25E3%2582%2589%25E3%2581%259B%25E3%2582%2588%25E3%2581%2586-%25E2%2580%2595%25E3%2583%258E%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259E%25E3%2583%25BC%25E3%2581%25AB%25E3%2582%2582%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%25E5%2587%25A6%25E7%2590%2586%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0-Al-Sweigart%2Fdp%2F487311778X"
-                rel="nofollow" target="_blank">退屈なことはPythonにやらせよう ―ノンプログラマーにもできる自動化処理プログラミング</a><img height="1"
-                src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
-                style="border:none;" width="1" />
-
-        </div>
-        <div class="kaerebalink-detail" style="margin-bottom:5px;"></div>
-        <div class="kaerebalink-link1" style="margin-top:10px;">
-            <div class="shoplinkamazon"
-                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;s_v=b5Rz2P0601xu&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3Dpython%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
-                    rel="nofollow" target="_blank">Amazonで調べる</a><img height="1"
-                    src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
-                    style="border:none;" width="1" /></div>
-            <div class="shoplinkrakuten"
-                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1414727&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;s_v=b5Rz2P0601xu&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2Fpython%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
-                    rel="nofollow" target="_blank">楽天市場で調べる</a><img height="1"
-                    src="//i.moshimo.com/af/i/impression?a_id=1414727&amp;p_id=54&amp;pc_id=54&amp;pl_id=616"
-                    style="border:none;" width="1" /></div>
-
-            <div class="shoplinkyahoo"
-                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1418766&amp;p_id=1225&amp;pc_id=1925&amp;pl_id=18502&amp;s_v=b5Rz2P0601xu&amp;url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3Dpython"
-                    rel="nofollow" target="_blank">Yahooショッピングで調べる</a><img height="1"
-                    src="//i.moshimo.com/af/i/impression?a_id=1418766&amp;p_id=1225&amp;pc_id=1925&amp;pl_id=18502"
-                    style="border:none;" width="1" /></div>
-            <div class="shoplinkseven"
-                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3Dpython%26searchKeywordFlg%3D1"
-                    target="_blank"
-                    rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
-                        </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
-        </div>
-
-<hr />
-		</div>
-		
-<div class="post__tags tags clearfix">
-	<svg class="tags__icon icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
-	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="/tags/%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83/" rel="tag">プロ野球</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/python/" rel="tag">Python</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/%E5%80%8B%E4%BA%BA%E6%88%90%E7%B8%BE/" rel="tag">個人成績</a></li>
-	</ul>
-</div>
-	</article>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>スコア速報と同じく、Pythonでスクレイピングして各チーム最新の個人成績を取得したい。</p>
+	</div>
+</article>
 </main>
 
 
-<section class="section sns_parent">
-  <div class="container sns_section">
-      <div class="sns_button twitter">
-        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f&text=Python%e3%81%a7%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e3%81%ae%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e4%b8%80%e8%a6%a7%e3%82%92JSON%e3%81%ab%e3%81%97%e3%81%a6%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
-      </div>
-      <div class="sns_button line">
-        <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
-      </div>
-      <div class="sns_button facebook">
-        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f&t=Python%e3%81%a7%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e3%81%ae%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e4%b8%80%e8%a6%a7%e3%82%92JSON%e3%81%ab%e3%81%97%e3%81%a6%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
-      </div>
-      <div class="sns_button hatena">
-        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f&title=Python%e3%81%a7%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e3%81%ae%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e4%b8%80%e8%a6%a7%e3%82%92JSON%e3%81%ab%e3%81%97%e3%81%a6%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
-      </div>
-      <div class="sns_button pocket">
-        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-personal-records%2f&title=Python%e3%81%a7%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e3%81%ae%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e4%b8%80%e8%a6%a7%e3%82%92JSON%e3%81%ab%e3%81%97%e3%81%a6%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
-      </div>
-  </div>
-</section>
-
-
-<div class="authorbox clearfix">
-	<figure class="authorbox__avatar">
-		<img alt="imait avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
-	</figure>
-	<div class="authorbox__header">
-		<span class="authorbox__name">About imait</span>
-	</div>
-	<div class="authorbox__description">
-		横浜あたりでクラウドサービスをせこせこ開発しているエンジニァーです。
-	</div>
-</div>
-
-<nav class="post-nav flex">
-	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/post/python-score/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Pythonでプロ野球スコア速報を取得する</p></a>
-	</div>
-</nav>
-
-<section class="comments">
-	<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "ted027-com" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
-
-
 			</div>
-			<aside class="sidebar"><div class="widget">
+			
+<aside class="sidebar"><div class="widget">
         <h4 class="widget__title"></h4>
         <div class="widget__content">
                 <a href="https://t.afi-b.com/visit.php?guid=ON&a=99886h-V336937n&p=J690746r" target="_blank"
