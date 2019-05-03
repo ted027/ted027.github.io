@@ -6,10 +6,19 @@
     <description>Recent content in Python on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 02 May 2019 12:11:56 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 04 May 2019 00:08:02 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JSONで取得した成績にQS率,K/BB,WHIP(,他)を追加する</title>
+      <link>https://www.ted027.com/post/sabr-1/</link>
+      <pubDate>Sat, 04 May 2019 00:08:02 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/sabr-1/</guid>
+      <description>&lt;p&gt;以前取得したプロ野球の個人成績に、簡単な計算で算出できる指標をいくつか追加する。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Pythonでプロ野球の個人成績一覧をJSONにして取得する</title>

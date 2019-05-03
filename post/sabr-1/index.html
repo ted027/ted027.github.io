@@ -4,23 +4,22 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tags - 行けたら行く</title>
+	<title>JSONで取得した成績にQS率,K/BB,WHIP(,他)を追加する - 行けたら行く</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta property="og:title" content="Tags" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.ted027.com/tags/" />
-
-<meta property="og:updated_time" content="2019-05-04T00:08:02&#43;09:00"/>
+	<meta property="og:title" content="JSONで取得した成績にQS率,K/BB,WHIP(,他)を追加する" />
+<meta property="og:description" content="以前取得したプロ野球の個人成績に、簡単な計算で算出できる指標をいくつか追加する。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ted027.com/post/sabr-1/" />
+<meta property="article:published_time" content="2019-05-04T00:08:02&#43;09:00"/>
+<meta property="article:modified_time" content="2019-05-04T00:08:02&#43;09:00"/>
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="JSONで取得した成績にQS率,K/BB,WHIP(,他)を追加する"/>
+<meta name="twitter:description" content="以前取得したプロ野球の個人成績に、簡単な計算で算出できる指標をいくつか追加する。"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="alternate" type="application/rss+xml" href="/tags/index.xml" title="行けたら行く">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
 	<link rel="stylesheet" href="/css/style.css">
@@ -61,55 +60,378 @@ if (!doNotTrack) {
 		<div class="wrapper flex">
 			<div class="primary">
 			
-<main class="main list" role="main">
-	<header class="main__header">
-		<h1 class="main__title">Tags</h1>
-	</header><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/tags/%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E6%AC%84/" rel="bookmark">
-			コメント欄
-			</a>
-		</h3>
-		<div class="list__meta meta">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">JSONで取得した成績にQS率,K/BB,WHIP(,他)を追加する</h1>
+			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-04-16T08:23:08">2019-04-16</time>
+	<time class="meta__text" datetime="2019-05-04T00:08:02">2019-05-04</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/%e9%87%8e%e7%90%83" rel="category">野球</a></span>
 </div>
 </div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
+			<br/>
+			
+
+<section class="section sns_parent">
+  <div class="container sns_section">
+      <div class="sns_button twitter">
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-1%2f&text=JSON%e3%81%a7%e5%8f%96%e5%be%97%e3%81%97%e3%81%9f%e6%88%90%e7%b8%be%e3%81%abQS%e7%8e%87%2cK%2fBB%2cWHIP%28%2c%e4%bb%96%29%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="sns_button line">
+        <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-1%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
+      </div>
+      <div class="sns_button facebook">
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-1%2f&t=JSON%e3%81%a7%e5%8f%96%e5%be%97%e3%81%97%e3%81%9f%e6%88%90%e7%b8%be%e3%81%abQS%e7%8e%87%2cK%2fBB%2cWHIP%28%2c%e4%bb%96%29%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
+      </div>
+      <div class="sns_button hatena">
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-1%2f&title=JSON%e3%81%a7%e5%8f%96%e5%be%97%e3%81%97%e3%81%9f%e6%88%90%e7%b8%be%e3%81%abQS%e7%8e%87%2cK%2fBB%2cWHIP%28%2c%e4%bb%96%29%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
+      </div>
+      <div class="sns_button pocket">
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-1%2f&title=JSON%e3%81%a7%e5%8f%96%e5%be%97%e3%81%97%e3%81%9f%e6%88%90%e7%b8%be%e3%81%abQS%e7%8e%87%2cK%2fBB%2cWHIP%28%2c%e4%bb%96%29%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
+      </div>
+  </div>
+</section>
+
+			<br/>
+		</header><div class="content post__content clearfix">
+			<p>以前取得したプロ野球の個人成績に、簡単な計算で算出できる指標をいくつか追加する。</p>
+
+<hr />
+
+<div class="wide__area">
+    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+20MWKY+461Y+669JL" target="_blank" rel="nofollow">
+        <img border="0" width="728" height="90" alt=""
+            src="https://www25.a8.net/svt/bgt?aid=190503911122&wid=001&eno=01&mid=s00000019447001037000&mc=1"></a>
+    <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=35F5RB+20MWKY+461Y+669JL" alt="">
+</div>
+<div class="narrow__area">
+    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+20MWKY+461Y+62MDD" target="_blank" rel="nofollow">
+        <img border="0" width="300" height="250" alt=""
+            src="https://www25.a8.net/svt/bgt?aid=190503911122&wid=001&eno=01&mid=s00000019447001020000&mc=1"></a>
+    <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=35F5RB+20MWKY+461Y+62MDD" alt="">
+</div>
+
+<hr />
+
+<div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
+    <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
+            href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FPS4-%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%2583%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25AA%25E3%2583%2583%25E3%2583%25842019-%25E3%2580%2590%25E5%25BA%2597%25E8%2588%2597%25E9%2599%2590%25E5%25AE%259A%25E6%2597%25A9%25E6%259C%259F%25E8%25B3%25BC%25E5%2585%25A5%25E7%2589%25B9%25E5%2585%25B8%25E3%2580%2591%25E6%25B5%25B7%25E5%25A4%2596%25E7%25A7%25BB%25E7%25B1%258D%25E9%2581%25B8%25E6%2589%258B%25E5%2585%2588%25E8%25A1%258C%25E5%2585%25A5%25E6%2589%258BDLC-%25E3%2580%2590Amazon-co-jp%25E9%2599%2590%25E5%25AE%259A%25E3%2580%2591%25E3%2582%25AA%25E3%2583%25AA%25E3%2582%25B8%25E3%2583%258A%25E3%2583%25ABPC-%25E3%2582%25B9%25E3%2583%259E%25E3%2583%259B%25E5%25A3%2581%25E7%25B4%2599%2Fdp%2FB07MVQLCR1"
+            target="_blank" rel="nofollow"><img
+                src="https://images-fe.ssl-images-amazon.com/images/I/51Nufh5pvYL._SL160_.jpg"
+                style="border: none;" /></a><img
+            src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" width="1"
+            height="1" style="border:none;"></div>
+    <div class="kaerebalink-info" style="line-height:120%;zoom: 1;overflow: hidden;">
+        <div class="kaerebalink-name" style="margin-bottom:10px;line-height:120%"><a
+                href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FPS4-%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%2583%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25AA%25E3%2583%2583%25E3%2583%25842019-%25E3%2580%2590%25E5%25BA%2597%25E8%2588%2597%25E9%2599%2590%25E5%25AE%259A%25E6%2597%25A9%25E6%259C%259F%25E8%25B3%25BC%25E5%2585%25A5%25E7%2589%25B9%25E5%2585%25B8%25E3%2580%2591%25E6%25B5%25B7%25E5%25A4%2596%25E7%25A7%25BB%25E7%25B1%258D%25E9%2581%25B8%25E6%2589%258B%25E5%2585%2588%25E8%25A1%258C%25E5%2585%25A5%25E6%2589%258BDLC-%25E3%2580%2590Amazon-co-jp%25E9%2599%2590%25E5%25AE%259A%25E3%2580%2591%25E3%2582%25AA%25E3%2583%25AA%25E3%2582%25B8%25E3%2583%258A%25E3%2583%25ABPC-%25E3%2582%25B9%25E3%2583%259E%25E3%2583%259B%25E5%25A3%2581%25E7%25B4%2599%2Fdp%2FB07MVQLCR1"
+                target="_blank" rel="nofollow">プロ野球スピリッツ2019 【店舗限定早期購入特典】海外移籍選手先行入手DLC 配信
+                【Amazon.co.jp限定】</a><img
+                src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" width="1"
+                height="1" style="border:none;">
+        </div>
+        <div class="kaerebalink-detail" style="margin-bottom:5px;"></div>
+        <div class="kaerebalink-link1" style="margin-top:10px;">
+            <div class="shoplinkamazon"
+                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
+                <a href="//af.moshimo.com/af/c/click?a_id=1414800&p_id=170&pc_id=185&pl_id=4062&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3D%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%2583%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25AA%25E3%2583%2583%25E3%2583%25842019%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
+                    target="_blank" rel="nofollow">Amazonで調べる</a><img
+                    src="//i.moshimo.com/af/i/impression?a_id=1414800&p_id=170&pc_id=185&pl_id=4062" width="1"
+                    height="1" style="border:none;"></div>
+            <div class="shoplinkrakuten"
+                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
+                <a href="//af.moshimo.com/af/c/click?a_id=1414727&p_id=54&pc_id=54&pl_id=616&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%2583%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25AA%25E3%2583%2583%25E3%2583%25842019%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
+                    target="_blank" rel="nofollow">楽天市場で調べる</a><img
+                    src="//i.moshimo.com/af/i/impression?a_id=1414727&p_id=54&pc_id=54&pl_id=616" width="1" height="1"
+                    style="border:none;"></div>
+            <div class="shoplinkyahoo"
+                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
+                <a href="//af.moshimo.com/af/c/click?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502&s_v=b5Rz2P0601xu&url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3D%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%2583%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25AA%25E3%2583%2583%25E3%2583%25842019"
+                    target="_blank" rel="nofollow">Yahooショッピングで調べる</a><img
+                    src="//i.moshimo.com/af/i/impression?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502" width="1"
+                    height="1" style="border:none;"></div>
+            <div class="shoplinkseven"
+                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
+                <a href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3D%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%2583%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25AA%25E3%2583%2583%25E3%2583%25842019%26searchKeywordFlg%3D1"
+                    target="_blank"
+                    rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
+                        </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
+        </div>
+
+<hr />
+
+<p>今回追加するのはごくごく簡単な指標6つ。</p>
+
+<p>というか3つは既に取れているので実施3つ</p>
+
+<hr />
+
+<h3 id="指標の説明">指標の説明</h3>
+
+<ul>
+<li>QS率
+
+<ul>
+<li>QS / 先発登板</li>
+<li>先発投手の安定感</li>
+<li>高いほどいい</li>
+</ul></li>
+<li>K/BB
+
+<ul>
+<li>奪三振 / 与四球</li>
+<li>投手の三振奪取力と制球力の総合指標</li>
+<li>高いほどいい</li>
+</ul></li>
+<li>K/9
+
+<ul>
+<li>奪三振 * 9 / 投球回</li>
+<li>9イニングあたり何奪三振とるか（奪三振率）</li>
+<li>高いほどいい</li>
+</ul></li>
+<li>BB/9
+
+<ul>
+<li>与四球 * 9 / 投球回</li>
+<li>9イニングあたり何四球与えるか</li>
+<li>低いほどいい</li>
+</ul></li>
+<li>HR/9
+
+<ul>
+<li>被本塁打 * 9 / 投球回</li>
+<li>9イニングあたり何本塁打打たれるか</li>
+<li>低いほどいい</li>
+</ul></li>
+<li>WHIP
+
+<ul>
+<li>(与四球 + 被安打) / 投球回</li>
+<li>1イニングあたり何人（安打と四球の）走者を出すか</li>
+<li>低いほどいい</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h3 id="実装">実装</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py:sabr.py" data-lang="py:sabr.py"><span style="color:#fff;font-weight:bold">def</span> _return_outcounts(innings):
+    <span style="color:#fff;font-weight:bold">if</span> innings == <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>:
+        <span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">0</span>
+    dec_innings, int_innings = modf(innings)
+    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">3</span> * int_innings + <span style="color:#ff0;font-weight:bold">10</span> * dec_innings
+
+
+<span style="color:#fff;font-weight:bold">def</span> qs_rate(pitcher):
+    start = pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;先発&#39;</span>]
+    <span style="color:#fff;font-weight:bold">if</span> start == <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>:
+        qsrate = <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>
+    <span style="color:#fff;font-weight:bold">elif</span> start == <span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>:
+        qsrate = <span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>
+    <span style="color:#fff;font-weight:bold">else</span>:
+        qsrate = pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;QS&#39;</span>] * <span style="color:#ff0;font-weight:bold">100.0</span> / start
+    pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;QS率&#39;</span>] = qsrate
+
+
+<span style="color:#fff;font-weight:bold">def</span> k_per_bb(pitcher):
+    bb = pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;与四球&#39;</span>]
+    <span style="color:#fff;font-weight:bold">if</span> not bb or bb == <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>:
+        k_per_bb = <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>
+    <span style="color:#fff;font-weight:bold">else</span>:
+        k_per_bb = pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;奪三振&#39;</span>] + <span style="color:#ff0;font-weight:bold">1.0</span> / bb
+    pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;K/BB&#39;</span>] = k_per_bb
+
+
+<span style="color:#fff;font-weight:bold">def</span> k_per_nine(pitcher):
+    innings = pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;投球回&#39;</span>]
+    outcounts = _return_outcounts(innings)
+    <span style="color:#fff;font-weight:bold">if</span> not outcounts:
+        k_per_n = <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>
+    <span style="color:#fff;font-weight:bold">else</span>:
+        k_per_n = pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;奪三振&#39;</span>] * <span style="color:#ff0;font-weight:bold">27</span> * <span style="color:#ff0;font-weight:bold">1.0</span> / outcounts
+    pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;K/9&#39;</span>] = k_per_n
+
+
+<span style="color:#fff;font-weight:bold">def</span> bb_per_nine(pitcher):
+    innings = pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;投球回&#39;</span>]
+    outcounts = _return_outcounts(innings)
+    <span style="color:#fff;font-weight:bold">if</span> not outcounts:
+        bb_per_n = <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>
+    <span style="color:#fff;font-weight:bold">else</span>:
+        bb_per_n = pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;与四球&#39;</span>] * <span style="color:#ff0;font-weight:bold">27</span> * <span style="color:#ff0;font-weight:bold">1.0</span> / outcounts
+    pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;BB/9&#39;</span>] = bb_per_n
+
+
+<span style="color:#fff;font-weight:bold">def</span> hr_per_nine(pitcher):
+    innings = pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;投球回&#39;</span>]
+    outcounts = _return_outcounts(innings)
+    <span style="color:#fff;font-weight:bold">if</span> not outcounts:
+        hr_per_n = <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>
+    <span style="color:#fff;font-weight:bold">else</span>:
+        hr_per_n = pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;被本塁打&#39;</span>] * <span style="color:#ff0;font-weight:bold">27</span> * <span style="color:#ff0;font-weight:bold">1.0</span> / outcounts
+    pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;HR/9&#39;</span>] = hr_per_n
+
+
+<span style="color:#fff;font-weight:bold">def</span> whip(pitcher):
+    innings = pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;投球回&#39;</span>]
+    outcounts = _return_outcounts(innings)
+    <span style="color:#fff;font-weight:bold">if</span> not outcounts:
+        whip = <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>
+    <span style="color:#fff;font-weight:bold">else</span>:
+        whip = pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;与四球&#39;</span>] + pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;被安打&#39;</span>] / outcounts
+    pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;WHIP&#39;</span>] = whip</code></pre></div>
+<hr />
+
+<h3 id="おわり">おわり</h3>
+
+<p>特に特筆すべきこともない実装ですが、今後ぽつぽつと指標は追加していきたい。</p>
+
+<hr />
+
+<div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
+    <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
+            href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E3%2580%2590PS4%25E3%2580%2591MLB-The-Show-19-%25E8%258B%25B1%25E8%25AA%259E%25E7%2589%2588%2Fdp%2FB07N8YZ3QJ"
+            target="_blank" rel="nofollow"><img
+                src="https://images-fe.ssl-images-amazon.com/images/I/516lcsxQbCL._SL160_.jpg"
+                style="border: none;" /></a><img
+            src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" width="1"
+            height="1" style="border:none;"></div>
+    <div class="kaerebalink-info" style="line-height:120%;zoom: 1;overflow: hidden;">
+        <div class="kaerebalink-name" style="margin-bottom:10px;line-height:120%"><a
+                href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E3%2580%2590PS4%25E3%2580%2591MLB-The-Show-19-%25E8%258B%25B1%25E8%25AA%259E%25E7%2589%2588%2Fdp%2FB07N8YZ3QJ"
+                target="_blank" rel="nofollow">MLB The Show 19(エムエルビーザショウ19)〈Sony〉</a><img
+                src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" width="1"
+                height="1" style="border:none;">
+        </div>
+        <div class="kaerebalink-detail" style="margin-bottom:5px;"></div>
+        <div class="kaerebalink-link1" style="margin-top:10px;">
+            <div class="shoplinkamazon"
+                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
+                <a href="//af.moshimo.com/af/c/click?a_id=1414800&p_id=170&pc_id=185&pl_id=4062&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3Dmlb%2520the%2520show%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
+                    target="_blank" rel="nofollow">Amazonで調べる</a><img
+                    src="//i.moshimo.com/af/i/impression?a_id=1414800&p_id=170&pc_id=185&pl_id=4062" width="1"
+                    height="1" style="border:none;"></div>
+            <div class="shoplinkrakuten"
+                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
+                <a href="//af.moshimo.com/af/c/click?a_id=1414727&p_id=54&pc_id=54&pl_id=616&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2Fmlb%2520the%2520show%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
+                    target="_blank" rel="nofollow">楽天市場で調べる</a><img
+                    src="//i.moshimo.com/af/i/impression?a_id=1414727&p_id=54&pc_id=54&pl_id=616" width="1" height="1"
+                    style="border:none;"></div>
+            <div class="shoplinkyahoo"
+                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
+                <a href="//af.moshimo.com/af/c/click?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502&s_v=b5Rz2P0601xu&url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3Dmlb%2520the%2520show"
+                    target="_blank" rel="nofollow">Yahooショッピングで調べる</a><img
+                    src="//i.moshimo.com/af/i/impression?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502" width="1"
+                    height="1" style="border:none;"></div>
+            <div class="shoplinkseven"
+                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
+                <a href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3Dmlb%2520the%2520show%26searchKeywordFlg%3D1"
+                    target="_blank"
+                    rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
+                        </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
+        </div>
+
+<hr />
+
+<div class="wide__area">
+    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+20MWKY+461Y+669JL" target="_blank" rel="nofollow">
+        <img border="0" width="728" height="90" alt=""
+            src="https://www25.a8.net/svt/bgt?aid=190503911122&wid=001&eno=01&mid=s00000019447001037000&mc=1"></a>
+    <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=35F5RB+20MWKY+461Y+669JL" alt="">
+</div>
+<div class="narrow__area">
+    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+20MWKY+461Y+62MDD" target="_blank" rel="nofollow">
+        <img border="0" width="300" height="250" alt=""
+            src="https://www25.a8.net/svt/bgt?aid=190503911122&wid=001&eno=01&mid=s00000019447001020000&mc=1"></a>
+    <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=35F5RB+20MWKY+461Y+62MDD" alt="">
+</div>
+
+<hr />
+		</div>
 		
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/tags/todo/" rel="bookmark">
-			todo
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-04-15T18:07:43">2019-04-15</time>
+<div class="post__tags tags clearfix">
+	<svg class="tags__icon icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83/" rel="tag">プロ野球</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/python/" rel="tag">Python</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9/" rel="tag">セイバーメトリクス</a></li>
+	</ul>
 </div>
-</div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		
-	</div>
-</article>
+	</article>
 </main>
 
-<div class="pagination">
-	<a class="pagination__item pagination__item--prev btn" href="/tags/page/5/">«</a>
-	<span class="pagination__item pagination__item--current">6/6</span>
+
+<section class="section sns_parent">
+  <div class="container sns_section">
+      <div class="sns_button twitter">
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-1%2f&text=JSON%e3%81%a7%e5%8f%96%e5%be%97%e3%81%97%e3%81%9f%e6%88%90%e7%b8%be%e3%81%abQS%e7%8e%87%2cK%2fBB%2cWHIP%28%2c%e4%bb%96%29%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="sns_button line">
+        <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-1%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
+      </div>
+      <div class="sns_button facebook">
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-1%2f&t=JSON%e3%81%a7%e5%8f%96%e5%be%97%e3%81%97%e3%81%9f%e6%88%90%e7%b8%be%e3%81%abQS%e7%8e%87%2cK%2fBB%2cWHIP%28%2c%e4%bb%96%29%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
+      </div>
+      <div class="sns_button hatena">
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-1%2f&title=JSON%e3%81%a7%e5%8f%96%e5%be%97%e3%81%97%e3%81%9f%e6%88%90%e7%b8%be%e3%81%abQS%e7%8e%87%2cK%2fBB%2cWHIP%28%2c%e4%bb%96%29%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
+      </div>
+      <div class="sns_button pocket">
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-1%2f&title=JSON%e3%81%a7%e5%8f%96%e5%be%97%e3%81%97%e3%81%9f%e6%88%90%e7%b8%be%e3%81%abQS%e7%8e%87%2cK%2fBB%2cWHIP%28%2c%e4%bb%96%29%e3%82%92%e8%bf%bd%e5%8a%a0%e3%81%99%e3%82%8b" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
+      </div>
+  </div>
+</section>
+
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="imait avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About imait</span>
+	</div>
+	<div class="authorbox__description">
+		横浜あたりでクラウドサービスをせこせこ開発しているエンジニァーです。
+	</div>
 </div>
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/post/docker-win/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Docker for Windowsを導入する</p></a>
+	</div>
+</nav>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "ted027-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
 
 
 			</div>
-			
-<aside class="sidebar"><div class="widget">
+			<aside class="sidebar"><div class="widget">
         <h4 class="widget__title"></h4>
         <div class="widget__content">
                 <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+609HT" target="_blank" rel="nofollow">
