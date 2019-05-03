@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wondows on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/wondows/</link>
+    <description>Recent content in Wondows on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 03 May 2019 14:08:37 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/tags/wondows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docker for Windowsを導入する</title>
+      <link>https://www.ted027.com/post/docker-win/</link>
+      <pubDate>Fri, 03 May 2019 14:08:37 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/docker-win/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

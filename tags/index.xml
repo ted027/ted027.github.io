@@ -6,10 +6,37 @@
     <description>Recent content in Tags on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 02 May 2019 12:11:56 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 03 May 2019 14:08:37 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Docker</title>
+      <link>https://www.ted027.com/tags/docker/</link>
+      <pubDate>Fri, 03 May 2019 14:08:37 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker for Windows</title>
+      <link>https://www.ted027.com/tags/docker-for-windows/</link>
+      <pubDate>Fri, 03 May 2019 14:08:37 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/docker-for-windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wondows</title>
+      <link>https://www.ted027.com/tags/wondows/</link>
+      <pubDate>Fri, 03 May 2019 14:08:37 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/wondows/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Python</title>
@@ -134,15 +161,6 @@
       <pubDate>Sun, 28 Apr 2019 21:43:13 +0900</pubDate>
       
       <guid>https://www.ted027.com/tags/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>https://www.ted027.com/tags/docker/</link>
-      <pubDate>Fri, 26 Apr 2019 16:05:19 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/tags/docker/</guid>
       <description></description>
     </item>
     
