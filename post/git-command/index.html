@@ -207,15 +207,17 @@ $ git merge origin/{branch_name}    <span style="color:#007f7f"># リモート�
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git reset .             <span style="color:#007f7f"># カレントディレクトリ以下の更新のaddを取り消し</span>
 $ git reset {file.name}   <span style="color:#007f7f"># 特定ファイルの更新のaddを取り消し</span></code></pre></div>
 <ul>
-<li>commitを取り消す</li>
+<li>commitを取り消す
+
+<ul>
+<li><code>commit id</code>でなく、<code>HEAD~{n}</code>で、n個前のcommitを指定することもできる。</li>
+</ul></li>
 </ul>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git reset --hard HEAD^    <span style="color:#007f7f"># 直前のコミットを取り消し、ワークディレクトリも書き換える</span>
 $ git reset --soft HEAD^    <span style="color:#007f7f"># 直前のコミットを取り消す、ワークディレクトリはそのまま</span>
 
 $ git reset --hard {commit_id}    <span style="color:#007f7f"># 特定のコミットを取り消し、ワークディレクトリも書き換える</span>
 $ git reset --soft {commit_id}    <span style="color:#007f7f"># 特定のコミットを取り消す、ワークディレクトリはそのまま</span></code></pre></div>
-<p><code>commit id</code>でなく、<code>HEAD~{n}</code>で、n個前のcommitを指定することもできる。</p>
-
 <ul>
 <li>pushを取り消す</li>
 </ul>
@@ -251,10 +253,12 @@ $ git stash clear               <span style="color:#007f7f"># 全stashを削除<
 </ul>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git commit --amend <span style="color:#0ff;font-weight:bold">&#34;new commit message&#34;</span></code></pre></div>
 <ul>
-<li>ファイルをgit管理から外す</li>
-</ul>
+<li><p>ファイルをgit管理から外す</p>
 
-<p>一度git管理したファイルは.gitignoreに追加しただけではgit管理から外れないので、これをする必要がある。</p>
+<ul>
+<li>一度git管理したファイルは.gitignoreに追加しただけではgit管理から外れないので、<code>git rm</code>で明示的にgit管理から外す必要がある。</li>
+</ul></li>
+</ul>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git rm -f {file.name}</code></pre></div>
 <ul>
 <li>ブランチを比較する</li>
