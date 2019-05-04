@@ -6,10 +6,19 @@
     <description>Recent content on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 04 May 2019 00:08:02 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 04 May 2019 13:18:18 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Gitでよく使うコマンド集</title>
+      <link>https://www.ted027.com/post/git-command/</link>
+      <pubDate>Sat, 04 May 2019 13:18:18 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/git-command/</guid>
+      <description>&lt;p&gt;コマンドでのgit管理で基本的なもの、よく使うものをまとめた。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>JSONで取得した成績にQS率,K/BB,WHIP(,他)を追加する</title>
