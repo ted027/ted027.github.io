@@ -179,21 +179,14 @@ if (!doNotTrack) {
 
 NAME_HI = -<span style="color:#ff0;font-weight:bold">1</span>
 TEAM_H1 = -<span style="color:#ff0;font-weight:bold">2</span>
-
 EXCEPT_TITLE = <span style="color:#ff0;font-weight:bold">1</span>
 EXCEPT_TITLE_HEADER = <span style="color:#ff0;font-weight:bold">2</span>
-
 EXCEPT_HEAD_CONTENT = <span style="color:#ff0;font-weight:bold">1</span>
-
 CHANCE_STR_DIVIDER = <span style="color:#ff0;font-weight:bold">3</span>
-
 PITCHER_DUMP_VAL = <span style="color:#ff0;font-weight:bold">1</span>
 HITTER_DUMP_VAL = <span style="color:#ff0;font-weight:bold">2</span>
 
-TEAM_NUM_LIST = [<span style="color:#ff0;font-weight:bold">376</span> <span style="color:#fff;font-weight:bold">if</span> i == <span style="color:#ff0;font-weight:bold">10</span> <span style="color:#fff;font-weight:bold">else</span> i <span style="color:#fff;font-weight:bold">for</span> i in <span style="color:#fff;font-weight:bold">list</span>(<span style="color:#fff;font-weight:bold">range</span>(<span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#ff0;font-weight:bold">13</span>))]
-
-BASEURL = <span style="color:#0ff;font-weight:bold">&#39;https://baseball.yahoo.co.jp/&#39;</span>
-
+...
 
 <span style="color:#fff;font-weight:bold">def</span> request_soup(url):
     res = requests.get(url)
@@ -206,6 +199,12 @@ BASEURL = <span style="color:#0ff;font-weight:bold">&#39;https://baseball.yahoo.
     table = soup.find(<span style="color:#0ff;font-weight:bold">&#39;table&#39;</span>)
     td_player_list = table.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>, class_=<span style="color:#0ff;font-weight:bold">&#39;lt yjM&#39;</span>)
     <span style="color:#fff;font-weight:bold">return</span> [pl.find(<span style="color:#0ff;font-weight:bold">&#39;a&#39;</span>).get(<span style="color:#0ff;font-weight:bold">&#39;href&#39;</span>) <span style="color:#fff;font-weight:bold">for</span> pl in td_player_list]
+
+
+<span style="color:#fff;font-weight:bold">def</span> full_val(str_val):
+    <span style="color:#fff;font-weight:bold">if</span> str_val == <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>:
+        <span style="color:#fff;font-weight:bold">return</span> <span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>
+    <span style="color:#fff;font-weight:bold">return</span> str_val
 
 
 <span style="color:#fff;font-weight:bold">def</span> basic_information(personal_soup):
@@ -250,15 +249,18 @@ BASEURL = <span style="color:#0ff;font-weight:bold">&#39;https://baseball.yahoo.
 
 <span style="color:#fff;font-weight:bold">def</span> dict_records(records_table):
     rheader = [th.text <span style="color:#fff;font-weight:bold">for</span> th in records_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;th&#39;</span>)[EXCEPT_TITLE:]]
-    rbody = [td.text <span style="color:#fff;font-weight:bold">for</span> td in records_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>)]
+    rbody = [full_val(td.text) <span style="color:#fff;font-weight:bold">for</span> td in records_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>)]
     <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">dict</span>(<span style="color:#fff;font-weight:bold">zip</span>(rheader, rbody))
 
 
 <span style="color:#fff;font-weight:bold">def</span> chance_records(chance_table):
     chheader_raw = [th.text <span style="color:#fff;font-weight:bold">for</span> th in chance_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;th&#39;</span>)]
-    chheader = [chheader_raw[<span style="color:#ff0;font-weight:bold">0</span>][:CHANCE_STR_DIVIDER] + h <span style="color:#fff;font-weight:bold">for</span> h in chheader_raw[EXCEPT_HEAD_CONTENT:]]
+    chheader = [
+        chheader_raw[<span style="color:#ff0;font-weight:bold">0</span>][:CHANCE_STR_DIVIDER] + h
+        <span style="color:#fff;font-weight:bold">for</span> h in chheader_raw[EXCEPT_HEAD_CONTENT:]
+    ]
 
-    chbody = [td.text <span style="color:#fff;font-weight:bold">for</span> td in chance_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>)]
+    chbody = [full_val(td.text) <span style="color:#fff;font-weight:bold">for</span> td in chance_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>)]
     <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">dict</span>(<span style="color:#fff;font-weight:bold">zip</span>(chheader, chbody))
 
 
@@ -273,11 +275,12 @@ BASEURL = <span style="color:#0ff;font-weight:bold">&#39;https://baseball.yahoo.
     rl_trs = rl_table.find_all(<span style="color:#0ff;font-weight:bold">&#39;tr&#39;</span>)[EXCEPT_TITLE_HEADER:]
     rl_records = {}
     <span style="color:#fff;font-weight:bold">for</span> rl_tr in rl_trs:
-        rl_body = [td.text <span style="color:#fff;font-weight:bold">for</span> td in rl_tr.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>)]
-        <span style="color:#fff;font-weight:bold">if</span> <span style="color:#0ff;font-weight:bold">&#39;右&#39;</span> in rl_body[<span style="color:#ff0;font-weight:bold">0</span>]:
-            rl_records[<span style="color:#0ff;font-weight:bold">&#39;対右&#39;</span>] = <span style="color:#fff;font-weight:bold">dict</span>(<span style="color:#fff;font-weight:bold">zip</span>(rl_header, rl_body[dump_val:]))
-        <span style="color:#fff;font-weight:bold">elif</span> <span style="color:#0ff;font-weight:bold">&#39;左&#39;</span> in rl_body[<span style="color:#ff0;font-weight:bold">0</span>]:
-            rl_records[<span style="color:#0ff;font-weight:bold">&#39;対左&#39;</span>] = <span style="color:#fff;font-weight:bold">dict</span>(<span style="color:#fff;font-weight:bold">zip</span>(rl_header, rl_body[dump_val:]))
+        rl_text = rl_tr.find(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>).text
+        rl_body = [full_val(td.text) <span style="color:#fff;font-weight:bold">for</span> td in rl_tr.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>)[dump_val:]]
+        <span style="color:#fff;font-weight:bold">if</span> <span style="color:#0ff;font-weight:bold">&#39;右&#39;</span> in rl_text:
+            rl_records[<span style="color:#0ff;font-weight:bold">&#39;対右&#39;</span>] = <span style="color:#fff;font-weight:bold">dict</span>(<span style="color:#fff;font-weight:bold">zip</span>(rl_header, rl_body))
+        <span style="color:#fff;font-weight:bold">elif</span> <span style="color:#0ff;font-weight:bold">&#39;左&#39;</span> in rl_text:
+            rl_records[<span style="color:#0ff;font-weight:bold">&#39;対左&#39;</span>] = <span style="color:#fff;font-weight:bold">dict</span>(<span style="color:#fff;font-weight:bold">zip</span>(rl_header, rl_body))
 
     <span style="color:#fff;font-weight:bold">return</span> rl_records
 
@@ -288,8 +291,11 @@ BASEURL = <span style="color:#0ff;font-weight:bold">&#39;https://baseball.yahoo.
     body_tr = table_by.find_all(<span style="color:#0ff;font-weight:bold">&#39;tr&#39;</span>)[EXCEPT_TITLE_HEADER:]
     records_by_count_or_runner = {}
     <span style="color:#fff;font-weight:bold">for</span> tr in body_tr:
-        body = [td.text <span style="color:#fff;font-weight:bold">for</span> td in tr.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>)]
-        records_by_count_or_runner[body[<span style="color:#ff0;font-weight:bold">0</span>]] = <span style="color:#fff;font-weight:bold">dict</span>(<span style="color:#fff;font-weight:bold">zip</span>(header, body[EXCEPT_HEAD_CONTENT:]))
+        situation = tr.find(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>).text
+        body = [
+            full_val(td.text) <span style="color:#fff;font-weight:bold">for</span> td in tr.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>)[EXCEPT_HEAD_CONTENT:]
+        ]
+        records_by_count_or_runner[situation] = <span style="color:#fff;font-weight:bold">dict</span>(<span style="color:#fff;font-weight:bold">zip</span>(header, body))
     <span style="color:#fff;font-weight:bold">return</span> records_by_count_or_runner
 
 
@@ -328,7 +334,8 @@ BASEURL = <span style="color:#0ff;font-weight:bold">&#39;https://baseball.yahoo.
         personal_dict = basic_information(personal_soup)
 
         tables = personal_soup.find_all(<span style="color:#0ff;font-weight:bold">&#39;table&#39;</span>)
-        records_table, chance_table, rl_table, count_table, runner_table = confirm_hitter_tables(tables)
+        records_table, chance_table, rl_table, count_table, runner_table = confirm_hitter_tables(
+            tables)
 
         records = dict_records(records_table)
 

@@ -256,8 +256,7 @@ Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.69&#39;</span>)</code><
 <span style="color:#fff;font-weight:bold">def</span> whip(pitcher):
     ...
     <span style="color:#fff;font-weight:bold">else</span>:
-        raw_whip = (_int_records(
-            pitcher, <span style="color:#0ff;font-weight:bold">&#39;与四球&#39;</span>) + _int_records(pitcher, <span style="color:#0ff;font-weight:bold">&#39;被安打&#39;</span>)) * <span style="color:#ff0;font-weight:bold">3</span> / outcounts
+        raw_whip = (<span style="color:#fff;font-weight:bold">int</span>(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;与四球&#39;</span>]) + <span style="color:#fff;font-weight:bold">int</span>(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;被安打&#39;</span>]) * <span style="color:#ff0;font-weight:bold">3</span> / outcounts
         whip = _digits_under_one(raw_whip, <span style="color:#ff0;font-weight:bold">2</span>)
     pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;WHIP&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(whip)
 ...
