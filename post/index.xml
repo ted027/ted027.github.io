@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 04 May 2019 22:25:17 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 05 May 2019 11:47:48 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pythonでの四捨五入、有効数字の扱い</title>
+      <link>https://www.ted027.com/post/python-digit/</link>
+      <pubDate>Sun, 05 May 2019 11:47:48 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/python-digit/</guid>
+      <description>&lt;p&gt;指定の桁で四捨五入する。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>JSONで取得したプロ野球個人成績にwOBA,BB/Kを追加する</title>

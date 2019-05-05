@@ -4,7 +4,54 @@
   
   <url>
     <loc>https://www.ted027.com/categories/</loc>
-    <lastmod>2019-05-04T22:25:17+09:00</lastmod>
+    <lastmod>2019-05-05T11:47:48+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/</loc>
+    <lastmod>2019-05-05T11:47:48+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/python/</loc>
+    <lastmod>2019-05-05T11:47:48+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/python-digit/</loc>
+    <lastmod>2019-05-05T11:47:48+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/</loc>
+    <lastmod>2019-05-05T11:47:48+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/decimal/</loc>
+    <lastmod>2019-05-05T11:47:48+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/round/</loc>
+    <lastmod>2019-05-05T11:47:48+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/%E6%9C%89%E5%8A%B9%E6%95%B0%E5%AD%97/</loc>
+    <lastmod>2019-05-05T11:47:48+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/</loc>
+    <lastmod>2019-05-05T11:47:48+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -14,19 +61,7 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/post/</loc>
-    <lastmod>2019-05-04T22:25:17+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/tags/python/</loc>
-    <lastmod>2019-05-04T22:25:17+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/</loc>
     <lastmod>2019-05-04T22:25:17+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -44,25 +79,19 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/</loc>
-    <lastmod>2019-05-04T22:25:17+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/categories/%E9%87%8E%E7%90%83/</loc>
     <lastmod>2019-05-04T22:25:17+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/git/</loc>
+    <loc>https://www.ted027.com/tags/git/</loc>
     <lastmod>2019-05-04T13:18:18+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.ted027.com/tags/git/</loc>
+    <loc>https://www.ted027.com/categories/git/</loc>
     <lastmod>2019-05-04T13:18:18+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -84,13 +113,13 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/docker/</loc>
+    <loc>https://www.ted027.com/tags/docker/</loc>
     <lastmod>2019-05-03T14:08:37+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.ted027.com/tags/docker/</loc>
+    <loc>https://www.ted027.com/categories/docker/</loc>
     <lastmod>2019-05-03T14:08:37+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -135,12 +164,6 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/python/</loc>
-    <lastmod>2019-04-30T22:39:20+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/post/python-library/</loc>
     <lastmod>2019-04-30T22:39:20+09:00</lastmod>
   </url>
@@ -181,13 +204,13 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/scratch/</loc>
+    <loc>https://www.ted027.com/tags/scratch/</loc>
     <lastmod>2019-04-29T23:14:58+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.ted027.com/tags/scratch/</loc>
+    <loc>https://www.ted027.com/categories/scratch/</loc>
     <lastmod>2019-04-29T23:14:58+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -320,13 +343,13 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/plantuml/</loc>
+    <loc>https://www.ted027.com/tags/plantuml/</loc>
     <lastmod>2019-04-25T17:02:54+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.ted027.com/tags/plantuml/</loc>
+    <loc>https://www.ted027.com/categories/plantuml/</loc>
     <lastmod>2019-04-25T17:02:54+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -547,13 +570,13 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/todo/</loc>
+    <loc>https://www.ted027.com/tags/todo/</loc>
     <lastmod>2019-04-15T18:07:43+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.ted027.com/tags/todo/</loc>
+    <loc>https://www.ted027.com/categories/todo/</loc>
     <lastmod>2019-04-15T18:07:43+09:00</lastmod>
     <priority>0</priority>
   </url>
