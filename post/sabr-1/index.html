@@ -230,11 +230,7 @@ if (!doNotTrack) {
 <hr />
 
 <h3 id="実装">実装</h3>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py:sabr.py" data-lang="py:sabr.py"><span style="color:#fff;font-weight:bold">def</span> _int_records(player, item):
-    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">int</span>(player[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][item])
-
-
-<span style="color:#fff;font-weight:bold">def</span> _return_outcounts(innings):
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py:sabr.py" data-lang="py:sabr.py"><span style="color:#fff;font-weight:bold">def</span> _return_outcounts(innings):
     <span style="color:#fff;font-weight:bold">if</span> innings == <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>:
         <span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">0</span>
     dec_innings, int_innings = modf(innings)
@@ -255,7 +251,7 @@ if (!doNotTrack) {
     <span style="color:#fff;font-weight:bold">elif</span> start == <span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>:
         qsrate = <span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>
     <span style="color:#fff;font-weight:bold">else</span>:
-        qsrate = _int_records(pitcher, <span style="color:#0ff;font-weight:bold">&#39;QS&#39;</span>) * <span style="color:#ff0;font-weight:bold">100.0</span> / <span style="color:#fff;font-weight:bold">int</span>(start)
+        qsrate = <span style="color:#fff;font-weight:bold">int</span>(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;QS&#39;</span>]) * <span style="color:#ff0;font-weight:bold">100.0</span> / <span style="color:#fff;font-weight:bold">int</span>(start)
     pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;QS率&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(qsrate)
 
 
@@ -264,7 +260,7 @@ if (!doNotTrack) {
     <span style="color:#fff;font-weight:bold">if</span> bb == <span style="color:#0ff;font-weight:bold">&#39;0&#39;</span> or bb == <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>:
         k_per_bb = <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>
     <span style="color:#fff;font-weight:bold">else</span>:
-        k_per_bb = _int_records(pitcher, <span style="color:#0ff;font-weight:bold">&#39;奪三振&#39;</span>) * <span style="color:#ff0;font-weight:bold">1.0</span> / <span style="color:#fff;font-weight:bold">int</span>(bb)
+        k_per_bb = <span style="color:#fff;font-weight:bold">int</span>(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;奪三振&#39;</span>]) * <span style="color:#ff0;font-weight:bold">1.0</span> / <span style="color:#fff;font-weight:bold">int</span>(bb)
     pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;K/BB&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(k_per_bb)
 
 
@@ -274,8 +270,7 @@ if (!doNotTrack) {
     <span style="color:#fff;font-weight:bold">if</span> not outcounts:
         k_per_n = <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>
     <span style="color:#fff;font-weight:bold">else</span>:
-        k_per_n = _int_records(pitcher,
-                                <span style="color:#0ff;font-weight:bold">&#39;奪三振&#39;</span>) * FULL_OUTCOUNTS * <span style="color:#ff0;font-weight:bold">1.0</span> / outcounts
+        k_per_n = <span style="color:#fff;font-weight:bold">int</span>(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;奪三振&#39;</span>]) * FULL_OUTCOUNTS * <span style="color:#ff0;font-weight:bold">1.0</span> / outcounts
     pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;K/9&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(k_per_n)
 
 
@@ -285,8 +280,7 @@ if (!doNotTrack) {
     <span style="color:#fff;font-weight:bold">if</span> not outcounts:
         bb_per_n = <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>
     <span style="color:#fff;font-weight:bold">else</span>:
-        bb_per_n = _int_records(pitcher,
-                                <span style="color:#0ff;font-weight:bold">&#39;与四球&#39;</span>) * FULL_OUTCOUNTS * <span style="color:#ff0;font-weight:bold">1.0</span> / outcounts
+        bb_per_n = <span style="color:#fff;font-weight:bold">int</span>(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;与四球&#39;</span>]) * FULL_OUTCOUNTS * <span style="color:#ff0;font-weight:bold">1.0</span> / outcounts
     pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;BB/9&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(bb_per_n)
 
 
@@ -296,8 +290,7 @@ if (!doNotTrack) {
     <span style="color:#fff;font-weight:bold">if</span> not outcounts:
         hr_per_n = <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>
     <span style="color:#fff;font-weight:bold">else</span>:
-        hr_per_n = _int_records(pitcher,
-                                <span style="color:#0ff;font-weight:bold">&#39;被本塁打&#39;</span>) * FULL_OUTCOUNTS * <span style="color:#ff0;font-weight:bold">1.0</span> / outcounts
+        hr_per_n = <span style="color:#fff;font-weight:bold">int</span>(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;被本塁打&#39;</span>]) * FULL_OUTCOUNTS * <span style="color:#ff0;font-weight:bold">1.0</span> / outcounts
     pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;HR/9&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(hr_per_n)
 
 
@@ -307,8 +300,7 @@ if (!doNotTrack) {
     <span style="color:#fff;font-weight:bold">if</span> not outcounts:
         whip = <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>
     <span style="color:#fff;font-weight:bold">else</span>:
-        whip = (_int_records(
-            pitcher, <span style="color:#0ff;font-weight:bold">&#39;与四球&#39;</span>) + _int_records(pitcher, <span style="color:#0ff;font-weight:bold">&#39;被安打&#39;</span>)) * <span style="color:#ff0;font-weight:bold">3</span> / outcounts
+        whip = (<span style="color:#fff;font-weight:bold">int</span>(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;与四球&#39;</span>]) + <span style="color:#fff;font-weight:bold">int</span>(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;被安打&#39;</span>]) * <span style="color:#ff0;font-weight:bold">3</span> / outcounts
     pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;WHIP&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(whip)</code></pre></div>
 <hr />
 
@@ -918,5 +910,7 @@ if (!doNotTrack) {
 	</div>
 </footer>
 	</div>
-<script async defer src="/js/menu.js"></script></body>
+<script async defer src="/js/menu.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
 </html>
