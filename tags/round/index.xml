@@ -17,7 +17,7 @@
       <pubDate>Sun, 05 May 2019 11:47:48 +0900</pubDate>
       
       <guid>https://www.ted027.com/post/python-digit/</guid>
-      <description>&lt;p&gt;指定の桁で四捨五入する。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Pythonのdecimal.quantizeを使って任意の桁で四捨五入する。&lt;/p&gt;</description>
     </item>
     
   </channel>

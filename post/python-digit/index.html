@@ -8,7 +8,7 @@
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<meta property="og:title" content="Pythonで有効数字を指定し四捨五入する" />
-<meta property="og:description" content="指定の桁で四捨五入する。" />
+<meta property="og:description" content="Pythonのdecimal.quantizeを使って任意の桁で四捨五入する。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.ted027.com/post/python-digit/" />
 <meta property="article:published_time" content="2019-05-05T11:47:48&#43;09:00"/>
@@ -16,7 +16,7 @@
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Pythonで有効数字を指定し四捨五入する"/>
-<meta name="twitter:description" content="指定の桁で四捨五入する。"/>
+<meta name="twitter:description" content="Pythonのdecimal.quantizeを使って任意の桁で四捨五入する。"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -100,7 +100,7 @@ if (!doNotTrack) {
 
 			<br/>
 		</header><div class="content post__content clearfix">
-			<p>指定の桁で四捨五入する。</p>
+			<p>Pythonのdecimal.quantizeを使って任意の桁で四捨五入する。</p>
 
 <hr />
 
@@ -223,7 +223,7 @@ if (!doNotTrack) {
 
 <h3 id="decimal-quantize-で丸める">decimal.quantize()で丸める</h3>
 
-<p>decimalモジュールのquantizeメソッドを使って丸めを行うことができる。</p>
+<p>decimalモジュールのquantizeを使っても数値の丸めを行うことができる。</p>
 
 <p>この際、引数に<code>ROUND_HALF_UP</code>を指定すると、0.5 → 1とする一般的な四捨五入となる。</p>
 
