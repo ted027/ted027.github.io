@@ -181,7 +181,7 @@ if (!doNotTrack) {
 
 <h4 id="qs率">QS率</h4>
 
-<p>$$\frac{QS}{先発登板}$$</p>
+<p>$\frac{QS}{先発登板}$</p>
 
 <ul>
 <li>先発投手の安定感</li>
@@ -190,7 +190,7 @@ if (!doNotTrack) {
 
 <h4 id="k-bb">K/BB</h4>
 
-<p>$$\frac{奪三振}{与四球}$$</p>
+<p>$\frac{奪三振}{与四球}$</p>
 
 <ul>
 <li>投手の三振奪取力と制球力の総合指標</li>
@@ -199,7 +199,7 @@ if (!doNotTrack) {
 
 <h4 id="k-9">K/9</h4>
 
-<p>$$奪三振 * \frac{9}{投球回}$$</p>
+<p>$奪三振 * \frac{9}{投球回}$</p>
 
 <ul>
 <li>9イニングあたり何奪三振とるか（奪三振率）</li>
@@ -208,7 +208,7 @@ if (!doNotTrack) {
 
 <h4 id="bb-9">BB/9</h4>
 
-<p>$$与四球 * \frac{9}{投球回}$$</p>
+<p>$与四球 * \frac{9}{投球回}$</p>
 
 <ul>
 <li>9イニングあたり何四球与えるか</li>
@@ -217,7 +217,7 @@ if (!doNotTrack) {
 
 <h4 id="hr-9">HR/9</h4>
 
-<p>$$被本塁打 * \frac{9}{投球回}$$</p>
+<p>$被本塁打 * \frac{9}{投球回}$</p>
 
 <ul>
 <li>9イニングあたり何本塁打打たれるか</li>
@@ -226,7 +226,7 @@ if (!doNotTrack) {
 
 <h4 id="whip">WHIP</h4>
 
-<p>$$\frac{与四球 + 被安打}{投球回}$$</p>
+<p>$\frac{与四球 + 被安打}{投球回}$</p>
 
 <ul>
 <li>1イニングあたり何人（安打と四球の）走者を出すか</li>
@@ -917,6 +917,15 @@ if (!doNotTrack) {
 </footer>
 	</div>
 <script async defer src="/js/menu.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    async></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$']]
+      }
+    });
+    </script>
 </body>
 </html>
