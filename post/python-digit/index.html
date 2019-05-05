@@ -4,10 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Pythonでの四捨五入、有効数字の扱い - 行けたら行く</title>
+	<title>Pythonで有効数字を指定し四捨五入する - 行けたら行く</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta property="og:title" content="Pythonでの四捨五入、有効数字の扱い" />
+	<meta property="og:title" content="Pythonで有効数字を指定し四捨五入する" />
 <meta property="og:description" content="指定の桁で四捨五入する。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.ted027.com/post/python-digit/" />
@@ -15,7 +15,7 @@
 <meta property="article:modified_time" content="2019-05-05T11:47:48&#43;09:00"/>
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Pythonでの四捨五入、有効数字の扱い"/>
+<meta name="twitter:title" content="Pythonで有効数字を指定し四捨五入する"/>
 <meta name="twitter:description" content="指定の桁で四捨五入する。"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -63,7 +63,7 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Pythonでの四捨五入、有効数字の扱い</h1>
+			<h1 class="post__title">Pythonで有効数字を指定し四捨五入する</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
@@ -81,19 +81,19 @@ if (!doNotTrack) {
 <section class="section sns_parent">
   <div class="container sns_section">
       <div class="sns_button twitter">
-        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-digit%2f&text=Python%e3%81%a7%e3%81%ae%e5%9b%9b%e6%8d%a8%e4%ba%94%e5%85%a5%e3%80%81%e6%9c%89%e5%8a%b9%e6%95%b0%e5%ad%97%e3%81%ae%e6%89%b1%e3%81%84" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-digit%2f&text=Python%e3%81%a7%e6%9c%89%e5%8a%b9%e6%95%b0%e5%ad%97%e3%82%92%e6%8c%87%e5%ae%9a%e3%81%97%e5%9b%9b%e6%8d%a8%e4%ba%94%e5%85%a5%e3%81%99%e3%82%8b" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
       </div>
       <div class="sns_button line">
         <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-digit%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
       </div>
       <div class="sns_button facebook">
-        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-digit%2f&t=Python%e3%81%a7%e3%81%ae%e5%9b%9b%e6%8d%a8%e4%ba%94%e5%85%a5%e3%80%81%e6%9c%89%e5%8a%b9%e6%95%b0%e5%ad%97%e3%81%ae%e6%89%b1%e3%81%84" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-digit%2f&t=Python%e3%81%a7%e6%9c%89%e5%8a%b9%e6%95%b0%e5%ad%97%e3%82%92%e6%8c%87%e5%ae%9a%e3%81%97%e5%9b%9b%e6%8d%a8%e4%ba%94%e5%85%a5%e3%81%99%e3%82%8b" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
       </div>
       <div class="sns_button hatena">
-        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-digit%2f&title=Python%e3%81%a7%e3%81%ae%e5%9b%9b%e6%8d%a8%e4%ba%94%e5%85%a5%e3%80%81%e6%9c%89%e5%8a%b9%e6%95%b0%e5%ad%97%e3%81%ae%e6%89%b1%e3%81%84" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-digit%2f&title=Python%e3%81%a7%e6%9c%89%e5%8a%b9%e6%95%b0%e5%ad%97%e3%82%92%e6%8c%87%e5%ae%9a%e3%81%97%e5%9b%9b%e6%8d%a8%e4%ba%94%e5%85%a5%e3%81%99%e3%82%8b" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
       </div>
       <div class="sns_button pocket">
-        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-digit%2f&title=Python%e3%81%a7%e3%81%ae%e5%9b%9b%e6%8d%a8%e4%ba%94%e5%85%a5%e3%80%81%e6%9c%89%e5%8a%b9%e6%95%b0%e5%ad%97%e3%81%ae%e6%89%b1%e3%81%84" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-digit%2f&title=Python%e3%81%a7%e6%9c%89%e5%8a%b9%e6%95%b0%e5%ad%97%e3%82%92%e6%8c%87%e5%ae%9a%e3%81%97%e5%9b%9b%e6%8d%a8%e4%ba%94%e5%85%a5%e3%81%99%e3%82%8b" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
       </div>
   </div>
 </section>
@@ -174,7 +174,7 @@ if (!doNotTrack) {
 <li><p><a href="https://www.ted027.com/post/sabr-2">[参考記事]JSONで取得したプロ野球個人成績にwOBA,BB/Kを追加する</a></p></li>
 </ul>
 
-<p>この時、有効数字や小数点以下の桁数を気にせず計算結果を格納している。</p>
+<p>この際、有効数字や小数点以下の桁数を気にせず計算結果を格納している。</p>
 
 <p>これを成績表記でよく見る桁数にしたい。</p>
 
@@ -195,7 +195,7 @@ if (!doNotTrack) {
 <p>引数なしで使うと整数に丸める。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">&gt;&gt;&gt; <span style="color:#fff;font-weight:bold">round</span>(whip)
 <span style="color:#ff0;font-weight:bold">1</span></code></pre></div>
-<p>引数<code>x</code>をつけると、10^-xの桁で丸める。</p>
+<p>引数<code>x</code>をつけると、$10^{-x}$の桁に丸める。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">&gt;&gt;&gt; <span style="color:#fff;font-weight:bold">round</span>(whip, <span style="color:#ff0;font-weight:bold">2</span>)
 <span style="color:#ff0;font-weight:bold">0.69</span></code></pre></div>
 <p>これで見慣れた<code>WHIP</code>の表記になる。</p>
@@ -348,19 +348,19 @@ Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.69&#39;</span>)</code><
 <section class="section sns_parent">
   <div class="container sns_section">
       <div class="sns_button twitter">
-        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-digit%2f&text=Python%e3%81%a7%e3%81%ae%e5%9b%9b%e6%8d%a8%e4%ba%94%e5%85%a5%e3%80%81%e6%9c%89%e5%8a%b9%e6%95%b0%e5%ad%97%e3%81%ae%e6%89%b1%e3%81%84" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-digit%2f&text=Python%e3%81%a7%e6%9c%89%e5%8a%b9%e6%95%b0%e5%ad%97%e3%82%92%e6%8c%87%e5%ae%9a%e3%81%97%e5%9b%9b%e6%8d%a8%e4%ba%94%e5%85%a5%e3%81%99%e3%82%8b" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
       </div>
       <div class="sns_button line">
         <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-digit%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
       </div>
       <div class="sns_button facebook">
-        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-digit%2f&t=Python%e3%81%a7%e3%81%ae%e5%9b%9b%e6%8d%a8%e4%ba%94%e5%85%a5%e3%80%81%e6%9c%89%e5%8a%b9%e6%95%b0%e5%ad%97%e3%81%ae%e6%89%b1%e3%81%84" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-digit%2f&t=Python%e3%81%a7%e6%9c%89%e5%8a%b9%e6%95%b0%e5%ad%97%e3%82%92%e6%8c%87%e5%ae%9a%e3%81%97%e5%9b%9b%e6%8d%a8%e4%ba%94%e5%85%a5%e3%81%99%e3%82%8b" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
       </div>
       <div class="sns_button hatena">
-        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-digit%2f&title=Python%e3%81%a7%e3%81%ae%e5%9b%9b%e6%8d%a8%e4%ba%94%e5%85%a5%e3%80%81%e6%9c%89%e5%8a%b9%e6%95%b0%e5%ad%97%e3%81%ae%e6%89%b1%e3%81%84" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-digit%2f&title=Python%e3%81%a7%e6%9c%89%e5%8a%b9%e6%95%b0%e5%ad%97%e3%82%92%e6%8c%87%e5%ae%9a%e3%81%97%e5%9b%9b%e6%8d%a8%e4%ba%94%e5%85%a5%e3%81%99%e3%82%8b" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
       </div>
       <div class="sns_button pocket">
-        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-digit%2f&title=Python%e3%81%a7%e3%81%ae%e5%9b%9b%e6%8d%a8%e4%ba%94%e5%85%a5%e3%80%81%e6%9c%89%e5%8a%b9%e6%95%b0%e5%ad%97%e3%81%ae%e6%89%b1%e3%81%84" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-digit%2f&title=Python%e3%81%a7%e6%9c%89%e5%8a%b9%e6%95%b0%e5%ad%97%e3%82%92%e6%8c%87%e5%ae%9a%e3%81%97%e5%9b%9b%e6%8d%a8%e4%ba%94%e5%85%a5%e3%81%99%e3%82%8b" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
       </div>
   </div>
 </section>
@@ -530,7 +530,7 @@ Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.69&#39;</span>)</code><
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/python-digit/">Pythonでの四捨五入、有効数字の扱い</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/python-digit/">Pythonで有効数字を指定し四捨五入する</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-2/">JSONで取得したプロ野球個人成績にwOBA,BB/Kを追加する</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/git-command/">Gitでよく使うコマンド集</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-1/">JSONで取得したプロ野球個人成績にQS率,K/BB,WHIP(,他)を追加する</a></li>
