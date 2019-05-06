@@ -216,125 +216,121 @@ if (!doNotTrack) {
 <li>高いほどいい</li>
 </ul>
 
-<h4 id="k-bb">K/BB</h4>
+<hr />
 
-<p>$\frac{奪三振}{与四球}$</p>
+<h4 id="k-bb">K/BB</h4>
 
 <ul>
 <li>投手の三振奪取力と制球力の総合指標</li>
 <li>高いほどいい</li>
 </ul>
 
-<h4 id="k-9">K/9</h4>
+<p>$\frac{奪三振}{与四球}$</p>
 
-<p>$奪三振 * \frac{9}{投球回}$</p>
+<hr />
+
+<h4 id="k-9">K/9</h4>
 
 <ul>
 <li>9イニングあたり何奪三振とるか（奪三振率）</li>
-<li>高いほどいい</li>
 </ul>
+
+<p>$奪三振 * \frac{9}{投球回}$</p>
+
+<hr />
 
 <h4 id="bb-9">BB/9</h4>
 
-<p>$与四球 * \frac{9}{投球回}$</p>
-
 <ul>
 <li>9イニングあたり何四球与えるか</li>
-<li>低いほどいい</li>
 </ul>
+
+<p>$与四球 * \frac{9}{投球回}$</p>
+
+<hr />
 
 <h4 id="hr-9">HR/9</h4>
 
-<p>$被本塁打 * \frac{9}{投球回}$</p>
-
 <ul>
 <li>9イニングあたり何本塁打打たれるか</li>
-<li>低いほどいい</li>
 </ul>
+
+<p>$被本塁打 * \frac{9}{投球回}$</p>
+
+<hr />
 
 <h4 id="whip">WHIP</h4>
 
-<p>$\frac{与四球 + 被安打}{投球回}$</p>
-
 <ul>
 <li>1イニングあたり何人（安打と四球の）走者を出すか</li>
-<li>低いほどいい</li>
 </ul>
+
+<p>$\frac{与四球 + 被安打}{投球回}$</p>
 
 <hr />
 
 <h3 id="実装">実装</h3>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py:sabr.py" data-lang="py:sabr.py"><span style="color:#fff;font-weight:bold">def</span> _return_outcounts(innings):
-    <span style="color:#fff;font-weight:bold">if</span> innings == <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>:
-        <span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">0</span>
-    dec_innings, int_innings = modf(innings)
+    int_innings = <span style="color:#fff;font-weight:bold">int</span>(innings)
+    dec_innings = innings - int_innings
     <span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">3</span> * int_innings + <span style="color:#ff0;font-weight:bold">10</span> * dec_innings
 
 
-<span style="color:#fff;font-weight:bold">def</span> _return_outcounts(innings):
-    <span style="color:#fff;font-weight:bold">if</span> innings == <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>:
-        <span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">0</span>
-    dec_innings, int_innings = modf(<span style="color:#fff;font-weight:bold">float</span>(innings))
-    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">int</span>(<span style="color:#ff0;font-weight:bold">3</span> * int_innings + <span style="color:#ff0;font-weight:bold">10</span> * dec_innings)
-
-
 <span style="color:#fff;font-weight:bold">def</span> qs_rate(pitcher):
-    start = pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;先発&#39;</span>]
-    <span style="color:#fff;font-weight:bold">if</span> start == <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>:
-        qsrate = <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>
-    <span style="color:#fff;font-weight:bold">elif</span> start == <span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>:
-        qsrate = <span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>
+    start = Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;先発&#39;</span>])
+    <span style="color:#fff;font-weight:bold">if</span> not start:
+        qsrate = -<span style="color:#ff0;font-weight:bold">1</span>
     <span style="color:#fff;font-weight:bold">else</span>:
-        qsrate = <span style="color:#fff;font-weight:bold">int</span>(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;QS&#39;</span>]) * <span style="color:#ff0;font-weight:bold">100.0</span> / <span style="color:#fff;font-weight:bold">int</span>(start)
+        qsrate = Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;QS&#39;</span>]) * <span style="color:#ff0;font-weight:bold">100.0</span> / start
     pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;QS率&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(qsrate)
 
 
 <span style="color:#fff;font-weight:bold">def</span> k_per_bb(pitcher):
-    bb = pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;与四球&#39;</span>]
-    <span style="color:#fff;font-weight:bold">if</span> bb == <span style="color:#0ff;font-weight:bold">&#39;0&#39;</span> or bb == <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>:
-        k_per_bb = <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>
+    bb = Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;与四球&#39;</span>])
+    <span style="color:#fff;font-weight:bold">if</span> not bb:
+        k_per_bb = -<span style="color:#ff0;font-weight:bold">1</span>
     <span style="color:#fff;font-weight:bold">else</span>:
-        k_per_bb = <span style="color:#fff;font-weight:bold">int</span>(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;奪三振&#39;</span>]) * <span style="color:#ff0;font-weight:bold">1.0</span> / <span style="color:#fff;font-weight:bold">int</span>(bb)
+        k_per_bb = Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;奪三振&#39;</span>]) * <span style="color:#ff0;font-weight:bold">1.0</span> / bb
     pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;K/BB&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(k_per_bb)
 
 
 <span style="color:#fff;font-weight:bold">def</span> k_per_nine(pitcher):
-    innings = pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;投球回&#39;</span>]
+    innings = Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;投球回&#39;</span>])
     outcounts = _return_outcounts(innings)
     <span style="color:#fff;font-weight:bold">if</span> not outcounts:
-        k_per_n = <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>
+        k_per_n = -<span style="color:#ff0;font-weight:bold">1</span>
     <span style="color:#fff;font-weight:bold">else</span>:
-        k_per_n = <span style="color:#fff;font-weight:bold">int</span>(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;奪三振&#39;</span>]) * FULL_OUTCOUNTS * <span style="color:#ff0;font-weight:bold">1.0</span> / outcounts
+        k_per_n = Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;奪三振&#39;</span>]) * FULL_OUTCOUNTS * <span style="color:#ff0;font-weight:bold">1.0</span> / outcounts
     pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;K/9&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(k_per_n)
 
 
 <span style="color:#fff;font-weight:bold">def</span> bb_per_nine(pitcher):
-    innings = pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;投球回&#39;</span>]
+    innings = Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;投球回&#39;</span>])
     outcounts = _return_outcounts(innings)
     <span style="color:#fff;font-weight:bold">if</span> not outcounts:
-        bb_per_n = <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>
+        bb_per_n = -<span style="color:#ff0;font-weight:bold">1</span>
     <span style="color:#fff;font-weight:bold">else</span>:
-        bb_per_n = <span style="color:#fff;font-weight:bold">int</span>(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;与四球&#39;</span>]) * FULL_OUTCOUNTS * <span style="color:#ff0;font-weight:bold">1.0</span> / outcounts
+        bb_per_n = Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;与四球&#39;</span>]) * FULL_OUTCOUNTS * <span style="color:#ff0;font-weight:bold">1.0</span> / outcounts
     pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;BB/9&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(bb_per_n)
 
 
 <span style="color:#fff;font-weight:bold">def</span> hr_per_nine(pitcher):
-    innings = pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;投球回&#39;</span>]
+    innings = Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;投球回&#39;</span>])
     outcounts = _return_outcounts(innings)
     <span style="color:#fff;font-weight:bold">if</span> not outcounts:
-        hr_per_n = <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>
+        hr_per_n = -<span style="color:#ff0;font-weight:bold">1</span>
     <span style="color:#fff;font-weight:bold">else</span>:
-        hr_per_n = <span style="color:#fff;font-weight:bold">int</span>(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;被本塁打&#39;</span>]) * FULL_OUTCOUNTS * <span style="color:#ff0;font-weight:bold">1.0</span> / outcounts
+        hr_per_n = Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;被本塁打&#39;</span>]) * FULL_OUTCOUNTS * <span style="color:#ff0;font-weight:bold">1.0</span> / outcounts
     pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;HR/9&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(hr_per_n)
 
 
 <span style="color:#fff;font-weight:bold">def</span> whip(pitcher):
-    innings = pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;投球回&#39;</span>]
+    innings = Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;投球回&#39;</span>])
     outcounts = _return_outcounts(innings)
     <span style="color:#fff;font-weight:bold">if</span> not outcounts:
-        whip = <span style="color:#0ff;font-weight:bold">&#39;-&#39;</span>
+        whip = -<span style="color:#ff0;font-weight:bold">1</span>
     <span style="color:#fff;font-weight:bold">else</span>:
-        whip = (<span style="color:#fff;font-weight:bold">int</span>(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;与四球&#39;</span>]) + <span style="color:#fff;font-weight:bold">int</span>(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;被安打&#39;</span>]) * <span style="color:#ff0;font-weight:bold">3</span> / outcounts
+        whip = (Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;与四球&#39;</span>]) + Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;被安打&#39;</span>]) * <span style="color:#ff0;font-weight:bold">3</span> / outcounts
     pitcher[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;WHIP&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(whip)</code></pre></div>
 <hr />
 
@@ -605,11 +601,11 @@ if (!doNotTrack) {
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-5/">【打者総合指標-2】プロ野球個人成績からセイバーメトリクス打者指標を算出する④</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-4/">【選球眼】プロ野球個人成績からセイバーメトリクス打者指標を算出する③</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-3/">【長打力】プロ野球個人成績からセイバーメトリクス打者指標を算出する②</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/python-digit/">Pythonで有効数字を指定し四捨五入する</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-2/">【打者総合指標-1】プロ野球個人成績からセイバーメトリクス打者指標を算出する①</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/git-command/">Gitでよく使うコマンド集</a></li>
 		</ul>
 	</div>
 </div>

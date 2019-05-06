@@ -4,19 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Pythonでライブラリを使う - 行けたら行く</title>
+	<title>【打者総合指標-2】プロ野球個人成績からセイバーメトリクス打者指標を算出する④ - 行けたら行く</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta property="og:title" content="Pythonでライブラリを使う" />
-<meta property="og:description" content="" />
+	<meta property="og:title" content="【打者総合指標-2】プロ野球個人成績からセイバーメトリクス打者指標を算出する④" />
+<meta property="og:description" content="打者の総合指標RCとXRを追加する。感覚的にはwOBAに近く、同じくらいメジャーな印象。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.ted027.com/post/python-library/" />
-<meta property="article:published_time" content="2019-04-30T22:39:20&#43;09:00"/>
-<meta property="article:modified_time" content="2019-04-30T22:39:20&#43;09:00"/>
+<meta property="og:url" content="https://www.ted027.com/post/sabr-5/" />
+<meta property="article:published_time" content="2019-05-06T15:08:58&#43;09:00"/>
+<meta property="article:modified_time" content="2019-05-06T15:08:58&#43;09:00"/>
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Pythonでライブラリを使う"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="【打者総合指標-2】プロ野球個人成績からセイバーメトリクス打者指標を算出する④"/>
+<meta name="twitter:description" content="打者の総合指標RCとXRを追加する。感覚的にはwOBAに近く、同じくらいメジャーな印象。"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -91,16 +91,16 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Pythonでライブラリを使う</h1>
+			<h1 class="post__title">【打者総合指標-2】プロ野球個人成績からセイバーメトリクス打者指標を算出する④</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2019-04-30T22:39:20">2019-04-30</time>
+	<time class="meta__text" datetime="2019-05-06T15:08:58">2019-05-06</time>
 </div>
 
 <div class="meta__item-categories meta__item">
 	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/python" rel="category">Python</a></span>
+	<span class="meta__text"><a class="meta__link" href="/categories/%e9%87%8e%e7%90%83" rel="category">野球</a></span>
 </div>
 </div>
 			<br/>
@@ -109,170 +109,308 @@ if (!doNotTrack) {
 <section class="section sns_parent">
   <div class="container sns_section">
       <div class="sns_button twitter">
-        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-library%2f&text=Python%e3%81%a7%e3%83%a9%e3%82%a4%e3%83%96%e3%83%a9%e3%83%aa%e3%82%92%e4%bd%bf%e3%81%86" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-5%2f&text=%e3%80%90%e6%89%93%e8%80%85%e7%b7%8f%e5%90%88%e6%8c%87%e6%a8%99-2%e3%80%91%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a3" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
       </div>
       <div class="sns_button line">
-        <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-library%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
+        <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-5%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
       </div>
       <div class="sns_button facebook">
-        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-library%2f&t=Python%e3%81%a7%e3%83%a9%e3%82%a4%e3%83%96%e3%83%a9%e3%83%aa%e3%82%92%e4%bd%bf%e3%81%86" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-5%2f&t=%e3%80%90%e6%89%93%e8%80%85%e7%b7%8f%e5%90%88%e6%8c%87%e6%a8%99-2%e3%80%91%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a3" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
       </div>
       <div class="sns_button hatena">
-        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-library%2f&title=Python%e3%81%a7%e3%83%a9%e3%82%a4%e3%83%96%e3%83%a9%e3%83%aa%e3%82%92%e4%bd%bf%e3%81%86" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-5%2f&title=%e3%80%90%e6%89%93%e8%80%85%e7%b7%8f%e5%90%88%e6%8c%87%e6%a8%99-2%e3%80%91%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a3" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
       </div>
       <div class="sns_button pocket">
-        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-library%2f&title=Python%e3%81%a7%e3%83%a9%e3%82%a4%e3%83%96%e3%83%a9%e3%83%aa%e3%82%92%e4%bd%bf%e3%81%86" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-5%2f&title=%e3%80%90%e6%89%93%e8%80%85%e7%b7%8f%e5%90%88%e6%8c%87%e6%a8%99-2%e3%80%91%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a3" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
       </div>
   </div>
 </section>
 
 			<br/>
 		</header><div class="content post__content clearfix">
-			<hr />
+			<p>打者の総合指標RCとXRを追加する。感覚的にはwOBAに近く、同じくらいメジャーな印象。</p>
+
+<hr />
 
 <div class="wide__area">
-    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+5Z6WX" target="_blank" rel="nofollow">
+    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+20MWKY+461Y+669JL" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
-            src="https://www26.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001004000&mc=1"></a>
-    <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+5Z6WX" alt="">
+            src="https://www25.a8.net/svt/bgt?aid=190503911122&wid=001&eno=01&mid=s00000019447001037000&mc=1"></a>
+    <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=35F5RB+20MWKY+461Y+669JL" alt="">
 </div>
 <div class="narrow__area">
-    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+614CX" target="_blank" rel="nofollow">
+    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+20MWKY+461Y+62MDD" target="_blank" rel="nofollow">
         <img border="0" width="300" height="250" alt=""
-            src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001013000&mc=1"></a>
-    <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+614CX" alt="">
+            src="https://www25.a8.net/svt/bgt?aid=190503911122&wid=001&eno=01&mid=s00000019447001020000&mc=1"></a>
+    <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=35F5RB+20MWKY+461Y+62MDD" alt="">
 </div>
 
 <hr />
 
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
-            href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E7%258B%25AC%25E5%25AD%25A6%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259E%25E3%2583%25BC-Python%25E8%25A8%2580%25E8%25AA%259E%25E3%2581%25AE%25E5%259F%25BA%25E6%259C%25AC%25E3%2581%258B%25E3%2582%2589%25E4%25BB%2595%25E4%25BA%258B%25E3%2581%25AE%25E3%2582%2584%25E3%2582%258A%25E6%2596%25B9%25E3%2581%25BE%25E3%2581%25A7-%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25BB%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25BD%25E3%2583%2595%2Fdp%2F4822292274"
-            rel="nofollow" target="_blank"><img
-                src="https://images-fe.ssl-images-amazon.com/images/I/51bSKnQ20lL._SL160_.jpg"
-                style="border: none;" /></a><img height="1"
-            src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
-            style="border:none;" width="1" /></div>
+            href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FPS4-%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%2583%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25AA%25E3%2583%2583%25E3%2583%25842019-%25E3%2580%2590%25E5%25BA%2597%25E8%2588%2597%25E9%2599%2590%25E5%25AE%259A%25E6%2597%25A9%25E6%259C%259F%25E8%25B3%25BC%25E5%2585%25A5%25E7%2589%25B9%25E5%2585%25B8%25E3%2580%2591%25E6%25B5%25B7%25E5%25A4%2596%25E7%25A7%25BB%25E7%25B1%258D%25E9%2581%25B8%25E6%2589%258B%25E5%2585%2588%25E8%25A1%258C%25E5%2585%25A5%25E6%2589%258BDLC-%25E3%2580%2590Amazon-co-jp%25E9%2599%2590%25E5%25AE%259A%25E3%2580%2591%25E3%2582%25AA%25E3%2583%25AA%25E3%2582%25B8%25E3%2583%258A%25E3%2583%25ABPC-%25E3%2582%25B9%25E3%2583%259E%25E3%2583%259B%25E5%25A3%2581%25E7%25B4%2599%2Fdp%2FB07MVQLCR1"
+            target="_blank" rel="nofollow"><img
+                src="https://images-fe.ssl-images-amazon.com/images/I/51Nufh5pvYL._SL160_.jpg"
+                style="border: none;" /></a><img
+            src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" width="1"
+            height="1" style="border:none;"></div>
     <div class="kaerebalink-info" style="line-height:120%;zoom: 1;overflow: hidden;">
         <div class="kaerebalink-name" style="margin-bottom:10px;line-height:120%"><a
-                href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E7%258B%25AC%25E5%25AD%25A6%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259E%25E3%2583%25BC-Python%25E8%25A8%2580%25E8%25AA%259E%25E3%2581%25AE%25E5%259F%25BA%25E6%259C%25AC%25E3%2581%258B%25E3%2582%2589%25E4%25BB%2595%25E4%25BA%258B%25E3%2581%25AE%25E3%2582%2584%25E3%2582%258A%25E6%2596%25B9%25E3%2581%25BE%25E3%2581%25A7-%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25BB%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25BD%25E3%2583%2595%2Fdp%2F4822292274"
-                rel="nofollow" target="_blank">独学プログラマー Python言語の基本から仕事のやり方まで</a><img height="1"
-                src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
-                style="border:none;" width="1" />
-
+                href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FPS4-%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%2583%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25AA%25E3%2583%2583%25E3%2583%25842019-%25E3%2580%2590%25E5%25BA%2597%25E8%2588%2597%25E9%2599%2590%25E5%25AE%259A%25E6%2597%25A9%25E6%259C%259F%25E8%25B3%25BC%25E5%2585%25A5%25E7%2589%25B9%25E5%2585%25B8%25E3%2580%2591%25E6%25B5%25B7%25E5%25A4%2596%25E7%25A7%25BB%25E7%25B1%258D%25E9%2581%25B8%25E6%2589%258B%25E5%2585%2588%25E8%25A1%258C%25E5%2585%25A5%25E6%2589%258BDLC-%25E3%2580%2590Amazon-co-jp%25E9%2599%2590%25E5%25AE%259A%25E3%2580%2591%25E3%2582%25AA%25E3%2583%25AA%25E3%2582%25B8%25E3%2583%258A%25E3%2583%25ABPC-%25E3%2582%25B9%25E3%2583%259E%25E3%2583%259B%25E5%25A3%2581%25E7%25B4%2599%2Fdp%2FB07MVQLCR1"
+                target="_blank" rel="nofollow">プロ野球スピリッツ2019 【店舗限定早期購入特典】海外移籍選手先行入手DLC 配信
+                【Amazon.co.jp限定】</a><img
+                src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" width="1"
+                height="1" style="border:none;">
         </div>
         <div class="kaerebalink-detail" style="margin-bottom:5px;"></div>
         <div class="kaerebalink-link1" style="margin-top:10px;">
             <div class="shoplinkamazon"
                 style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;s_v=b5Rz2P0601xu&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3Dpython%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
-                    rel="nofollow" target="_blank">Amazonで調べる</a><img height="1"
-                    src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
-                    style="border:none;" width="1" /></div>
+                <a href="//af.moshimo.com/af/c/click?a_id=1414800&p_id=170&pc_id=185&pl_id=4062&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3D%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%2583%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25AA%25E3%2583%2583%25E3%2583%25842019%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
+                    target="_blank" rel="nofollow">Amazonで調べる</a><img
+                    src="//i.moshimo.com/af/i/impression?a_id=1414800&p_id=170&pc_id=185&pl_id=4062" width="1"
+                    height="1" style="border:none;"></div>
             <div class="shoplinkrakuten"
                 style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1414727&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;s_v=b5Rz2P0601xu&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2Fpython%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
-                    rel="nofollow" target="_blank">楽天市場で調べる</a><img height="1"
-                    src="//i.moshimo.com/af/i/impression?a_id=1414727&amp;p_id=54&amp;pc_id=54&amp;pl_id=616"
-                    style="border:none;" width="1" /></div>
-
+                <a href="//af.moshimo.com/af/c/click?a_id=1414727&p_id=54&pc_id=54&pl_id=616&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%2583%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25AA%25E3%2583%2583%25E3%2583%25842019%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
+                    target="_blank" rel="nofollow">楽天市場で調べる</a><img
+                    src="//i.moshimo.com/af/i/impression?a_id=1414727&p_id=54&pc_id=54&pl_id=616" width="1" height="1"
+                    style="border:none;"></div>
             <div class="shoplinkyahoo"
                 style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1418766&amp;p_id=1225&amp;pc_id=1925&amp;pl_id=18502&amp;s_v=b5Rz2P0601xu&amp;url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3Dpython"
-                    rel="nofollow" target="_blank">Yahooショッピングで調べる</a><img height="1"
-                    src="//i.moshimo.com/af/i/impression?a_id=1418766&amp;p_id=1225&amp;pc_id=1925&amp;pl_id=18502"
-                    style="border:none;" width="1" /></div>
+                <a href="//af.moshimo.com/af/c/click?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502&s_v=b5Rz2P0601xu&url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3D%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%2583%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25AA%25E3%2583%2583%25E3%2583%25842019"
+                    target="_blank" rel="nofollow">Yahooショッピングで調べる</a><img
+                    src="//i.moshimo.com/af/i/impression?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502" width="1"
+                    height="1" style="border:none;"></div>
             <div class="shoplinkseven"
                 style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3Dpython%26searchKeywordFlg%3D1"
+                <a href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3D%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%2583%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25AA%25E3%2583%2583%25E3%2583%25842019%26searchKeywordFlg%3D1"
                     target="_blank"
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
 
 <hr />
-
-<p>豊富なライブラリはPythonの特徴のひとつ。一から自分で組まなくても、色々なことを実現してくれる関数が用意されています。</p>
-
-<hr />
-
-<h3 id="標準ライブラリを使う">標準ライブラリを使う</h3>
-
-<p>Pythonの標準ライブラリにあるものは、Pythonで</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">import</span> {library_name}</code></pre></div>
-<p>を実行するだけで使うことができます。</p>
-
-<p>標準ライブラリ一覧は以下。</p>
 
 <ul>
-<li><a href="https://docs.python.org/ja/3/library/index.html">https://docs.python.org/ja/3/library/index.html</a></li>
+<li><p><a href="https://www.ted027.com/post/python-personal-records">[参考記事]Pythonでプロ野球の個人成績一覧をJSONにして取得する</a></p></li>
+
+<li><p><a href="https://www.ted027.com/post/sabr-2">[参考記事]【打者総合指標-1】プロ野球個人成績からセイバーメトリクス打者指標を算出する①</a></p></li>
+
+<li><p><a href="https://www.ted027.com/post/sabr-4">[参考記事]【選球眼】プロ野球個人成績からセイバーメトリクス打者指標を算出する③</a></p></li>
 </ul>
 
-<p>例えば、時刻を扱う<code>datetime</code>ライブラリを使って、以下のように現在時刻を取得できます。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python:date.py" data-lang="python:date.py"><span style="color:#fff;font-weight:bold">from</span> datetime <span style="color:#fff;font-weight:bold">import</span> datetime
-datetime.now().strftime(<span style="color:#0ff;font-weight:bold">&#34;%Y/%m/</span><span style="color:#0ff;font-weight:bold">%d</span><span style="color:#0ff;font-weight:bold"> %H:%M:%S&#34;</span>)</code></pre></div>
 <hr />
 
-<h3 id="pypiからライブラリをインストールして使う">PyPIからライブラリをインストールして使う</h3>
+<h3 id="追加する指標">追加する指標</h3>
 
-<p>標準ライブラリ以外にも、<a href="https://pypi.python.org/pypi">PyPI（Python Package Index）</a>からライブラリをインストールして使うことができます。</p>
+<h4 id="rc-runs-created">RC (Runs Created)</h4>
 
-<p>Windowsであれば、コマンドプロンプトで<code>python -m pip install</code>を実行し、ライブラリをインストールします。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ python -m pip install {library_name}</code></pre></div>
-<p>Linuxなら以下。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ pip install {library_name}</code></pre></div>
-<p>その後、Pythonで<code>import</code>して使います。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">import</span> {library_name}</code></pre></div>
-<p>例えば、httpリクエストを行う<code>requests</code>と、htmlをパースして扱う<code>BeautifulSoup4(bs4)</code>を使ってWebサイトの情報を取得することができます。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ python -m pip install requests bs4</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python:request.py" data-lang="python:request.py"><span style="color:#fff;font-weight:bold">import</span> requests
-<span style="color:#fff;font-weight:bold">import</span> bs4
+<ul>
+<li>打者の得点貢献度</li>
+<li>積み上げ式、合計何点分の貢献をしたか</li>
+</ul>
 
-url = <span style="color:#0ff;font-weight:bold">&#34;https://www.yahoo.co.jp&#34;</span>
-res = requests.get(url)
-res.raise_for_status()
-soup = bs4.BeautifulSoup(res.content, <span style="color:#0ff;font-weight:bold">&#34;html.parser&#34;</span>)</code></pre></div>
+<p>選手の得点を生み出す能力を評価する指標。「当該選手が何点分貢献したか」を表す指標で、チームの全打者のRCを足すと、チームの総得点とほぼ同じになるように作られている。打席数が多いほど数字も大きくなる。</p>
+
+<p>以前取り上げた打撃総合指標<a href="https://www.ted027.com/post/sabr-2"><code>wOBA</code></a>との違いは、盗塁や盗塁死といった走塁能力も苦慮している点や、犠打や犠飛、併殺や三振といった打席結果にも細かくポイントが振られている点。</p>
+
+<h5 id="計算式">計算式</h5>
+
+<p>$(2.4 * C + A) * (3 * C + B）/ (9 * C) - 0.9 * C\\<br />
+\\<br />
+A = 安打 + 四球 + 死球 - 盗塁死 - 併殺打\\<br />
+B = 塁打 + 0.26 * (四球 + 死球) + 0.53 * (犠飛 + 犠打)\\\ + 0.64 * 盗塁 - 0.03 * 三振\\<br />
+C = 打数 + 四球 + 死球 + 犠飛 + 犠打$</p>
+
+<hr />
+
+<h4 id="rc27-runs-created-per-27-outs">RC27 (Runs Created per 27 outs)</h4>
+
+<ul>
+<li>打者の得点貢献度</li>
+<li>当該打者のみで一試合したら何点取れるか</li>
+</ul>
+
+<p><code>RC</code>は打席数に伴い増加するため、打席数の異なる選手同士を比較できない。</p>
+
+<p>そこで、当該選手が27アウトを献上するまでに稼ぐ<code>RC</code>を算出したものがこの指標。</p>
+
+<p>「当該選手だけで一試合戦った場合に何点取れるか」を表す指標だが、マイナスになる可能性がある点は指標の欠陥として指摘されている。</p>
+
+<h5 id="計算式-1">計算式</h5>
+
+<p>$RC * \frac{27}{打数 - 安打 + 犠打 + 犠飛 + 盗塁死 + 併殺打}$</p>
+
+<hr />
+
+<h4 id="xr-extrapolated-runs">XR (eXtrapolated Runs)</h4>
+
+<ul>
+<li>打者の得点貢献度</li>
+<li>積み上げ式、合計何点分の貢献をしたか</li>
+</ul>
+
+<p>RCの改良版。計算式は異なるが、指標の意味合いとしては同じ。</p>
+
+<h5 id="計算式-2">計算式</h5>
+
+<p>$0.5 * 単打 + 0.72 * 二塁打 + 1.04 * 三塁打 + 1.44 * 本塁打\\\ + 0.34 * （四球 + 死球 - 故意四球）
+     + 0.25 * 故意四球\\\ + 0.18 * 盗塁 - 0.32 * 盗塁死 - 0.09 * (打数 - 安打 - 三振)\\\ - 0.098 * 三振
+     - 0.37 * 併殺打 + 0.37 * 犠飛 + 0.04 * 犠打$</p>
+
+<hr />
+
+<h4 id="xr27-extrapolated-runs-per-27-outs">XR27 (eXtrapolated Runs per 27 outs)</h4>
+
+<ul>
+<li>打者の得点貢献度</li>
+<li>当該打者のみで一試合したら何点取れるか</li>
+</ul>
+
+<p>こちらもRC27と同様、当該選手が27アウトを献上するまでに稼ぐ<code>XR</code>を表す。</p>
+
+<h5 id="計算式-3">計算式</h5>
+
+<p>$XR * \frac{27}{打数 - 安打 + 犠打 + 犠飛 + 盗塁死 + 併殺打}$</p>
+
+<hr />
+
+<h3 id="実装">実装</h3>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py:sabr.py" data-lang="py:sabr.py">XR_SINGLE = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.5&#39;</span>)
+XR_DOUBLE = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.72&#39;</span>)
+XR_TRIPLE = Decimal(<span style="color:#0ff;font-weight:bold">&#39;1.04&#39;</span>)
+XR_HR = Decimal(<span style="color:#0ff;font-weight:bold">&#39;1.44&#39;</span>)
+XR_BB = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.34&#39;</span>)
+XR_IBB = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.25&#39;</span>)
+XR_STEAL = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.18&#39;</span>)
+XR_FAILED_STEAL = Decimal(<span style="color:#0ff;font-weight:bold">&#39;-0.32&#39;</span>)
+XR_OUT = Decimal(<span style="color:#0ff;font-weight:bold">&#39;-0.09&#39;</span>)
+XR_STRIKE_OUT = Decimal(<span style="color:#0ff;font-weight:bold">&#39;-0.098&#39;</span>)
+XR_DOUBLE_PLAY = Decimal(<span style="color:#0ff;font-weight:bold">&#39;-0.37&#39;</span>)
+XR_SAC_FLY = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.37&#39;</span>)
+XR_SAC_BUNT = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.04&#39;</span>)
+
+
+<span style="color:#fff;font-weight:bold">def</span> rc_basic(hitter):
+    opportunity = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;打数&#39;</span>]) + Decimal(
+        hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;四球&#39;</span>]) + Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;死球&#39;</span>]) + Decimal(
+            hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;犠打&#39;</span>]) + Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;犠飛&#39;</span>])
+    <span style="color:#fff;font-weight:bold">if</span> not opportunity:
+        rc = IGNORE_VALIE
+    <span style="color:#fff;font-weight:bold">else</span>:
+        on_base = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;安打&#39;</span>]) + Decimal(
+            hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;四球&#39;</span>]) + Decimal(
+                hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;死球&#39;</span>]) - Decimal(
+                    hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;盗塁死&#39;</span>]) - Decimal(
+                        hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;併殺打&#39;</span>])
+        advance_base = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;塁打&#39;</span>]) + <span style="color:#ff0;font-weight:bold">0.26</span> * (
+            Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;四球&#39;</span>]) + Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;死球&#39;</span>])
+        ) + <span style="color:#ff0;font-weight:bold">0.53</span> * (Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;犠飛&#39;</span>]) +
+                    Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;犠打&#39;</span>])) + <span style="color:#ff0;font-weight:bold">0.64</span> * Decimal(
+                        hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;盗塁&#39;</span>]) - <span style="color:#ff0;font-weight:bold">0.03</span> * Decimal(
+                            hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;三振&#39;</span>])
+        raw_rc = ((on_base + <span style="color:#ff0;font-weight:bold">2.4</span> * opportunity) *
+                  (advance_base + <span style="color:#ff0;font-weight:bold">3</span> * opportunity) /
+                  (<span style="color:#ff0;font-weight:bold">9</span> * opportunity)) - <span style="color:#ff0;font-weight:bold">0.9</span> * opportunity
+        rc = _digits_under_one(raw_rc, <span style="color:#ff0;font-weight:bold">2</span>)
+    hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;RC&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(rc)
+
+
+<span style="color:#fff;font-weight:bold">def</span> rc_27(hitter, raw_rc):
+    total_out = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;打数&#39;</span>]) - Decimal(
+        hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;安打&#39;</span>]) + Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;犠打&#39;</span>]) + Decimal(
+            hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;犠飛&#39;</span>]) + Decimal(
+                hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;盗塁死&#39;</span>]) + Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;併殺打&#39;</span>])
+    <span style="color:#fff;font-weight:bold">if</span> not total_out:
+        rc_27 = IGNORE_VALIE
+    <span style="color:#fff;font-weight:bold">else</span>:
+        raw_rc_27 = raw_rc * <span style="color:#ff0;font-weight:bold">27</span> / total_out
+        rc_27 = _digits_under_one(raw_rc_27, <span style="color:#ff0;font-weight:bold">2</span>)
+    hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;RC27&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(rc_27)
+
+
+<span style="color:#fff;font-weight:bold">def</span> xr_basic(hitter):
+    raw_xr = XR_SINGLE * _single(hitter) + XR_DOUBLE * Decimal(
+        hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;二塁打&#39;</span>]
+    ) + XR_TRIPLE * Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;三塁打&#39;</span>]) + XR_HR * Decimal(
+        hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;本塁打&#39;</span>]) + XR_BB * (
+            Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;四球&#39;</span>]) + Decimal(
+                hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;死球&#39;</span>]) - Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;故意四球&#39;</span>])
+        ) + XR_IBB * Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;故意四球&#39;</span>]) + XR_STEAL * Decimal(
+            hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;盗塁&#39;</span>]
+        ) + XR_FAILED_STEAL * Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;盗塁死&#39;</span>]) + XR_OUT * (
+            Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;打数&#39;</span>])
+            - Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;安打&#39;</span>]) -
+            Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;三振&#39;</span>])) + XR_STRIKE_OUT * Decimal(
+                hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;三振&#39;</span>]) + XR_DOUBLE_PLAY * Decimal(
+                    hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;併殺打&#39;</span>]) + XR_SAC_FLY * Decimal(
+                        hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;犠飛&#39;</span>]) + XR_SAC_BUNT * Decimal(
+                            hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;犠打&#39;</span>])
+    xr = _digits_under_one(raw_xr, <span style="color:#ff0;font-weight:bold">2</span>)
+    hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;XR&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(xr)
+
+
+<span style="color:#fff;font-weight:bold">def</span> xr_27(hitter, raw_xr):
+    total_out = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;打数&#39;</span>]) - Decimal(
+        hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;安打&#39;</span>]) + Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;犠打&#39;</span>]) + Decimal(
+            hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;犠飛&#39;</span>]) + Decimal(
+                hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;盗塁死&#39;</span>]) + Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;併殺打&#39;</span>])
+    <span style="color:#fff;font-weight:bold">if</span> not total_out:
+        xr_27 = IGNORE_VALIE
+    <span style="color:#fff;font-weight:bold">else</span>:
+        raw_xr_27 = xr * <span style="color:#ff0;font-weight:bold">27</span> / total_out
+        xr_27 = _digits_under_one(raw_xr_27, <span style="color:#ff0;font-weight:bold">2</span>)
+    hitter[<span style="color:#0ff;font-weight:bold">&#39;Records&#39;</span>][<span style="color:#0ff;font-weight:bold">&#39;XR27&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(xr_27)</code></pre></div>
+<hr />
+
+<h3 id="おわり">おわり</h3>
+
+<p>犠打の得点貢献がめちゃめちゃ低い。</p>
+
+<p>こちらもリーグ平均と比較しての応用指標があるので、それはまた今度。</p>
+
 <hr />
 
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
-            href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E9%2580%2580%25E5%25B1%2588%25E3%2581%25AA%25E3%2581%2593%25E3%2581%25A8%25E3%2581%25AFPython%25E3%2581%25AB%25E3%2582%2584%25E3%2582%2589%25E3%2581%259B%25E3%2582%2588%25E3%2581%2586-%25E2%2580%2595%25E3%2583%258E%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259E%25E3%2583%25BC%25E3%2581%25AB%25E3%2582%2582%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%25E5%2587%25A6%25E7%2590%2586%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0-Al-Sweigart%2Fdp%2F487311778X"
-            rel="nofollow" target="_blank"><img
-                src="https://images-fe.ssl-images-amazon.com/images/I/51hk%2B5bKNrL._SL160_.jpg"
-                style="border: none;" /></a><img height="1"
-            src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
-            style="border:none;" width="1" /></div>
+            href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E3%2582%25B3%25E3%2583%258A%25E3%2583%259F%25E3%2583%2587%25E3%2582%25B8%25E3%2582%25BF%25E3%2583%25AB%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%2586%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588-%25E5%25AE%259F%25E6%25B3%2581%25E3%2583%2591%25E3%2583%25AF%25E3%2583%2595%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%25832018-PS4%25E3%2580%2590Amazon-co-jp%25E9%2599%2590%25E5%25AE%259A%25E3%2580%2591%25E3%2582%25AA%25E3%2583%25AA%25E3%2582%25B8%25E3%2583%258A%25E3%2583%25AB%25E5%25A3%2581%25E7%25B4%2599-%25E9%2585%258D%25E4%25BF%25A1%2Fdp%2FB07KJNWQFL"
+            target="_blank" rel="nofollow"><img
+                src="https://images-fe.ssl-images-amazon.com/images/I/51LFkDMGvoL._SL160_.jpg"
+                style="border: none;" /></a><img
+            src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" width="1"
+            height="1" style="border:none;"></div>
     <div class="kaerebalink-info" style="line-height:120%;zoom: 1;overflow: hidden;">
         <div class="kaerebalink-name" style="margin-bottom:10px;line-height:120%"><a
-                href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E9%2580%2580%25E5%25B1%2588%25E3%2581%25AA%25E3%2581%2593%25E3%2581%25A8%25E3%2581%25AFPython%25E3%2581%25AB%25E3%2582%2584%25E3%2582%2589%25E3%2581%259B%25E3%2582%2588%25E3%2581%2586-%25E2%2580%2595%25E3%2583%258E%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259E%25E3%2583%25BC%25E3%2581%25AB%25E3%2582%2582%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%25E5%2587%25A6%25E7%2590%2586%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0-Al-Sweigart%2Fdp%2F487311778X"
-                rel="nofollow" target="_blank">退屈なことはPythonにやらせよう ―ノンプログラマーにもできる自動化処理プログラミング</a><img height="1"
-                src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
-                style="border:none;" width="1" />
-
+                href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E3%2582%25B3%25E3%2583%258A%25E3%2583%259F%25E3%2583%2587%25E3%2582%25B8%25E3%2582%25BF%25E3%2583%25AB%25E3%2582%25A8%25E3%2583%25B3%25E3%2582%25BF%25E3%2583%2586%25E3%2582%25A4%25E3%2583%25B3%25E3%2583%25A1%25E3%2583%25B3%25E3%2583%2588-%25E5%25AE%259F%25E6%25B3%2581%25E3%2583%2591%25E3%2583%25AF%25E3%2583%2595%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%25832018-PS4%25E3%2580%2590Amazon-co-jp%25E9%2599%2590%25E5%25AE%259A%25E3%2580%2591%25E3%2582%25AA%25E3%2583%25AA%25E3%2582%25B8%25E3%2583%258A%25E3%2583%25AB%25E5%25A3%2581%25E7%25B4%2599-%25E9%2585%258D%25E4%25BF%25A1%2Fdp%2FB07KJNWQFL"
+                target="_blank" rel="nofollow">実況パワフルプロ野球2018 -【Amazon.co.jp限定】</a><img
+                src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062" width="1"
+                height="1" style="border:none;">
         </div>
         <div class="kaerebalink-detail" style="margin-bottom:5px;"></div>
         <div class="kaerebalink-link1" style="margin-top:10px;">
             <div class="shoplinkamazon"
                 style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;s_v=b5Rz2P0601xu&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3Dpython%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
-                    rel="nofollow" target="_blank">Amazonで調べる</a><img height="1"
-                    src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
-                    style="border:none;" width="1" /></div>
+                <a href="//af.moshimo.com/af/c/click?a_id=1414800&p_id=170&pc_id=185&pl_id=4062&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3D%25E5%25AE%259F%25E6%25B3%2581%25E3%2583%2591%25E3%2583%25AF%25E3%2583%2595%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%25832018%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
+                    target="_blank" rel="nofollow">Amazonで調べる</a><img
+                    src="//i.moshimo.com/af/i/impression?a_id=1414800&p_id=170&pc_id=185&pl_id=4062" width="1"
+                    height="1" style="border:none;"></div>
             <div class="shoplinkrakuten"
                 style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1414727&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;s_v=b5Rz2P0601xu&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2Fpython%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
-                    rel="nofollow" target="_blank">楽天市場で調べる</a><img height="1"
-                    src="//i.moshimo.com/af/i/impression?a_id=1414727&amp;p_id=54&amp;pc_id=54&amp;pl_id=616"
-                    style="border:none;" width="1" /></div>
-
+                <a href="//af.moshimo.com/af/c/click?a_id=1414727&p_id=54&pc_id=54&pl_id=616&s_v=b5Rz2P0601xu&url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E5%25AE%259F%25E6%25B3%2581%25E3%2583%2591%25E3%2583%25AF%25E3%2583%2595%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%25832018%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
+                    target="_blank" rel="nofollow">楽天市場で調べる</a><img
+                    src="//i.moshimo.com/af/i/impression?a_id=1414727&p_id=54&pc_id=54&pl_id=616" width="1" height="1"
+                    style="border:none;"></div>
             <div class="shoplinkyahoo"
                 style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1418766&amp;p_id=1225&amp;pc_id=1925&amp;pl_id=18502&amp;s_v=b5Rz2P0601xu&amp;url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3Dpython"
-                    rel="nofollow" target="_blank">Yahooショッピングで調べる</a><img height="1"
-                    src="//i.moshimo.com/af/i/impression?a_id=1418766&amp;p_id=1225&amp;pc_id=1925&amp;pl_id=18502"
-                    style="border:none;" width="1" /></div>
+                <a href="//af.moshimo.com/af/c/click?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502&s_v=b5Rz2P0601xu&url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3D%25E5%25AE%259F%25E6%25B3%2581%25E3%2583%2591%25E3%2583%25AF%25E3%2583%2595%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%25832018"
+                    target="_blank" rel="nofollow">Yahooショッピングで調べる</a><img
+                    src="//i.moshimo.com/af/i/impression?a_id=1418766&p_id=1225&pc_id=1925&pl_id=18502" width="1"
+                    height="1" style="border:none;"></div>
             <div class="shoplinkseven"
                 style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
-                <a href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3Dpython%26searchKeywordFlg%3D1"
+                <a href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3D%25E5%25AE%259F%25E6%25B3%2581%25E3%2583%2591%25E3%2583%25AF%25E3%2583%2595%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E9%2587%258E%25E7%2590%25832018%26searchKeywordFlg%3D1"
                     target="_blank"
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
@@ -281,16 +419,16 @@ soup = bs4.BeautifulSoup(res.content, <span style="color:#0ff;font-weight:bold">
 <hr />
 
 <div class="wide__area">
-    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7O95GY+3TVC+TUVZL" target="_blank" rel="nofollow">
+    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+20MWKY+461Y+669JL" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
-            src="https://www26.a8.net/svt/bgt?aid=190503911464&wid=001&eno=01&mid=s00000017868005015000&mc=1"></a>
-    <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=35F5RB+7O95GY+3TVC+TUVZL" alt="">
+            src="https://www25.a8.net/svt/bgt?aid=190503911122&wid=001&eno=01&mid=s00000019447001037000&mc=1"></a>
+    <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=35F5RB+20MWKY+461Y+669JL" alt="">
 </div>
 <div class="narrow__area">
-    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7O95GY+3TVC+TTLOX" target="_blank" rel="nofollow">
+    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+20MWKY+461Y+62MDD" target="_blank" rel="nofollow">
         <img border="0" width="300" height="250" alt=""
-            src="https://www28.a8.net/svt/bgt?aid=190503911464&wid=001&eno=01&mid=s00000017868005009000&mc=1"></a>
-    <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=35F5RB+7O95GY+3TVC+TTLOX" alt="">
+            src="https://www25.a8.net/svt/bgt?aid=190503911122&wid=001&eno=01&mid=s00000019447001020000&mc=1"></a>
+    <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=35F5RB+20MWKY+461Y+62MDD" alt="">
 </div>
 
 <hr />
@@ -299,10 +437,10 @@ soup = bs4.BeautifulSoup(res.content, <span style="color:#0ff;font-weight:bold">
 <div class="post__tags tags clearfix">
 	<svg class="tags__icon icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/%E6%89%93%E8%80%85%E6%8C%87%E6%A8%99/" rel="tag">打者指標</a></li>
 		<li class="tags__item"><a class="tags__link btn" href="/tags/python/" rel="tag">Python</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA/" rel="tag">ライブラリ</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/pip/" rel="tag">pip</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB/" rel="tag">モジュール</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9/" rel="tag">セイバーメトリクス</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/%E5%BE%97%E7%82%B9%E8%83%BD%E5%8A%9B/" rel="tag">得点能力</a></li>
 	</ul>
 </div>
 	</article>
@@ -312,19 +450,19 @@ soup = bs4.BeautifulSoup(res.content, <span style="color:#0ff;font-weight:bold">
 <section class="section sns_parent">
   <div class="container sns_section">
       <div class="sns_button twitter">
-        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-library%2f&text=Python%e3%81%a7%e3%83%a9%e3%82%a4%e3%83%96%e3%83%a9%e3%83%aa%e3%82%92%e4%bd%bf%e3%81%86" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-5%2f&text=%e3%80%90%e6%89%93%e8%80%85%e7%b7%8f%e5%90%88%e6%8c%87%e6%a8%99-2%e3%80%91%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a3" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
       </div>
       <div class="sns_button line">
-        <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-library%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
+        <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-5%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
       </div>
       <div class="sns_button facebook">
-        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-library%2f&t=Python%e3%81%a7%e3%83%a9%e3%82%a4%e3%83%96%e3%83%a9%e3%83%aa%e3%82%92%e4%bd%bf%e3%81%86" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-5%2f&t=%e3%80%90%e6%89%93%e8%80%85%e7%b7%8f%e5%90%88%e6%8c%87%e6%a8%99-2%e3%80%91%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a3" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
       </div>
       <div class="sns_button hatena">
-        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-library%2f&title=Python%e3%81%a7%e3%83%a9%e3%82%a4%e3%83%96%e3%83%a9%e3%83%aa%e3%82%92%e4%bd%bf%e3%81%86" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-5%2f&title=%e3%80%90%e6%89%93%e8%80%85%e7%b7%8f%e5%90%88%e6%8c%87%e6%a8%99-2%e3%80%91%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a3" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
       </div>
       <div class="sns_button pocket">
-        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fpython-library%2f&title=Python%e3%81%a7%e3%83%a9%e3%82%a4%e3%83%96%e3%83%a9%e3%83%aa%e3%82%92%e4%bd%bf%e3%81%86" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-5%2f&title=%e3%80%90%e6%89%93%e8%80%85%e7%b7%8f%e5%90%88%e6%8c%87%e6%a8%99-2%e3%80%91%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a3" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
       </div>
   </div>
 </section>
@@ -344,10 +482,7 @@ soup = bs4.BeautifulSoup(res.content, <span style="color:#0ff;font-weight:bold">
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/post/python-win/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Pythonの導入とコマンド実行（Windows環境）</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/post/python-score/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Pythonでプロ野球スコア速報を取得する</p></a>
+		<a class="post-nav__link" href="/post/sabr-4/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">【選球眼】プロ野球個人成績からセイバーメトリクス打者指標を算出する③</p></a>
 	</div>
 </nav>
 

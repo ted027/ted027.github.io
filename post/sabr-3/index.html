@@ -203,29 +203,25 @@ if (!doNotTrack) {
 
 <hr />
 
-<h3 id="指標の説明">指標の説明</h3>
+<h3 id="追加する指標">追加する指標</h3>
 
 <h4 id="isop-iso-isolated-power">IsoP/ISO (Isolated Power)</h4>
 
-<p>同様に長打力を評価する指標として<code>長打率</code>があるが、打率が高く長打が少ない打者であっても<code>長打率</code>は高くなるため、必ずしも長打力を測る指針にはならない。</p>
+<ul>
+<li>打者の純粋な長打力</li>
+</ul>
 
-<p>一方<code>IsoP(ISO)</code>では、単打を完全に除外するため、純粋に長打を打つ能力を測ることができる。</p>
+<p>長打力を評価する指標として<code>長打率</code>があるが、打率が高く長打が少ない打者であっても<code>長打率</code>は高くなるため、必ずしも長打力を測る指針にはならない。</p>
 
-<hr />
+<p>そこで、単打を完全に除外して<code>長打率</code>と同様の計算をすることで、長打によって塁打を稼ぐ能力を表したものが<code>IsoP(ISO)</code>。</p>
 
-<h3 id="追加する指標">追加する指標</h3>
-
-<h4 id="isop">IsoP</h4>
+<h5 id="計算式">計算式</h5>
 
 <p>$長打率 - 打率$</p>
 
 <p>$(二塁打 + 三塁打 * 2 + 本塁打 * 3）/ 打数$</p>
 
 <p>※ 上と下の式は同じ意味を表す</p>
-
-<ul>
-<li>打者の純粋な長打力</li>
-</ul>
 
 <hr />
 
@@ -514,11 +510,11 @@ if (!doNotTrack) {
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-5/">【打者総合指標-2】プロ野球個人成績からセイバーメトリクス打者指標を算出する④</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-4/">【選球眼】プロ野球個人成績からセイバーメトリクス打者指標を算出する③</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-3/">【長打力】プロ野球個人成績からセイバーメトリクス打者指標を算出する②</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/python-digit/">Pythonで有効数字を指定し四捨五入する</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-2/">【打者総合指標-1】プロ野球個人成績からセイバーメトリクス打者指標を算出する①</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/git-command/">Gitでよく使うコマンド集</a></li>
 		</ul>
 	</div>
 </div>

@@ -6,10 +6,19 @@
     <description>Recent content in Python on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 06 May 2019 14:38:38 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 06 May 2019 15:08:58 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>【打者総合指標-2】プロ野球個人成績からセイバーメトリクス打者指標を算出する④</title>
+      <link>https://www.ted027.com/post/sabr-5/</link>
+      <pubDate>Mon, 06 May 2019 15:08:58 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/sabr-5/</guid>
+      <description>&lt;p&gt;打者の総合指標RCとXRを追加する。感覚的にはwOBAに近く、同じくらいメジャーな印象。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>【選球眼】プロ野球個人成績からセイバーメトリクス打者指標を算出する③</title>
