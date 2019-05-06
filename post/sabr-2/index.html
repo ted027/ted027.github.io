@@ -203,7 +203,7 @@ if (!doNotTrack) {
 
 <hr />
 
-<h3 id="指標の説明">指標の説明</h3>
+<h3 id="追加する指標">追加する指標</h3>
 
 <h4 id="woba-weighted-on-base-average">wOBA (weighted On-Base Average)</h4>
 
@@ -215,25 +215,7 @@ if (!doNotTrack) {
 
 <p>そのため係数はリーグやシーズンによって異なるが、今回は<a href="https://1point02.jp/op/gnav/glossary/gls_explanation.aspx?eid=20004">DELTA Inc.</a>で紹介されているNPB版の式を利用する。</p>
 
-<h4 id="standard-woba">Standard wOBA</h4>
-
-<p>「シーズンやリーグごとに係数を変えても影響は微々たるもの」として、上記係数を固定したバージョンの<code>wOBA</code>。</p>
-
-<p>打席結果のみ考慮するBasic版と、盗塁を加味するSpeed版がある。</p>
-
-<p>なお、</p>
-
-<p><code>失策出塁に関してはデータの入手が難しいため、手に入らない場合は無視してもよいとしている。</code>(Wikipedia)</p>
-
-<p>この記述に甘え、今回は失策出塁を無視させていただく。</p>
-
-<hr />
-
-<h3 id="追加する指標">追加する指標</h3>
-
-<h4 id="woba">wOBA</h4>
-
-<p>${0.692 * (四球 - 故意四球) + 0.73 * 死球\\\ + 0.865 * 単打 + 1.334 * 二塁打\\\ + 1.725 * 三塁打 + 2.065 * 本塁打}\\\ / (打数 + 四球 - 故意四球 + 死球 + 犠飛)$</p>
+<p>$${0.692 * (四球 - 故意四球) + 0.73 * 死球\\\ + 0.865 * 単打 + 1.334 * 二塁打\\\ + 1.725 * 三塁打 + 2.065 * 本塁打}\\\ / (打数 + 四球 - 故意四球 + 死球 + 犠飛)$$</p>
 
 <ul>
 <li>打者の得点貢献能力</li>
@@ -242,7 +224,11 @@ if (!doNotTrack) {
 
 <h4 id="woba-basic">wOBA(Basic)</h4>
 
-<p>${0.7 * (四球 + 死球 - 故意四球) + 0.9 * 単打\\\ + 1.3 * (二塁打 + 三塁打) + 2.0 * 本塁打}\\\ / (打席 - 故意四球 - 犠打)$</p>
+<p>「シーズンやリーグごとに係数を変えても影響は微々たるもの」として、上記係数を固定した<code>Standard wOBA</code>。</p>
+
+<p>打席結果のみ考慮するBasic版。</p>
+
+<p>$${0.7 * (四球 + 死球 - 故意四球) + 0.9 * 単打\\\ + 1.3 * (二塁打 + 三塁打) + 2.0 * 本塁打}\\\ / (打席 - 故意四球 - 犠打)$$</p>
 
 <ul>
 <li>係数を固定したwOBA</li>
@@ -251,12 +237,24 @@ if (!doNotTrack) {
 
 <h4 id="woba-speed">wOBA(Speed)</h4>
 
-<p>$(0.7 * (四球 + 死球 - 故意四球) + 0.9 * 単打\\\ + 1.25 * 二塁打 + 1.6 * 三塁打\\\ + 2.0 * 本塁打 + 0.25 * 盗塁 - 0.5 * 盗塁死)\\\ / (打席 - 故意四球 - 犠打)$</p>
+<p>「シーズンやリーグごとに係数を変えても影響は微々たるもの」として、上記係数を固定したバージョンの<code>wOBA</code>。</p>
+
+<p>盗塁を加味するSpeed版。</p>
+
+<p>$$(0.7 * (四球 + 死球 - 故意四球) + 0.9 * 単打\\\ + 1.25 * 二塁打 + 1.6 * 三塁打\\\ + 2.0 * 本塁打 + 0.25 * 盗塁 - 0.5 * 盗塁死)\\\ / (打席 - 故意四球 - 犠打)$$</p>
 
 <ul>
 <li>係数を固定したwOBA</li>
 <li>打席結果と盗塁の成否を考慮する</li>
 </ul>
+
+<hr />
+
+<p>なお、</p>
+
+<p><code>失策出塁に関してはデータの入手が難しいため、手に入らない場合は無視してもよいとしている。</code>(Wikipedia)</p>
+
+<p>この記述に甘え、今回は失策出塁を無視させていただく。</p>
 
 <hr />
 
@@ -394,7 +392,7 @@ WOBA_HR = <span style="color:#ff0;font-weight:bold">2.065</span>
 <div class="post__tags tags clearfix">
 	<svg class="tags__icon icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="/tags/%E6%89%93%E8%80%85/" rel="tag">打者</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/%E6%89%93%E8%80%85%E6%8C%87%E6%A8%99/" rel="tag">打者指標</a></li>
 		<li class="tags__item"><a class="tags__link btn" href="/tags/python/" rel="tag">Python</a></li>
 		<li class="tags__item"><a class="tags__link btn" href="/tags/%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9/" rel="tag">セイバーメトリクス</a></li>
 		<li class="tags__item"><a class="tags__link btn" href="/tags/%E5%BE%97%E7%82%B9%E8%83%BD%E5%8A%9B/" rel="tag">得点能力</a></li>
