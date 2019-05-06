@@ -6,27 +6,45 @@
     <description>Recent content in 野球 on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 04 May 2019 22:25:17 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 06 May 2019 14:38:38 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/categories/%E9%87%8E%E7%90%83/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>JSONで取得したプロ野球個人成績にwOBA,BB/Kを追加する</title>
+      <title>【選球眼】プロ野球個人成績からセイバーメトリクス打者指標を算出する③</title>
+      <link>https://www.ted027.com/post/sabr-4/</link>
+      <pubDate>Mon, 06 May 2019 14:38:38 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/sabr-4/</guid>
+      <description>&lt;p&gt;打者の選球眼を表すとされるBB/K, BB%, IsoDを追加。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>【長打力】プロ野球個人成績からセイバーメトリクス打者指標を算出する②</title>
+      <link>https://www.ted027.com/post/sabr-3/</link>
+      <pubDate>Mon, 06 May 2019 14:02:41 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/sabr-3/</guid>
+      <description>&lt;p&gt;打者の長打力を表すIsoPを算出し追加する。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>【打者総合指標-1】プロ野球個人成績からセイバーメトリクス打者指標を算出する①</title>
       <link>https://www.ted027.com/post/sabr-2/</link>
       <pubDate>Sat, 04 May 2019 22:25:17 +0900</pubDate>
       
       <guid>https://www.ted027.com/post/sabr-2/</guid>
-      <description>&lt;p&gt;打者の得点への貢献度を表すwOBA、選球眼を表すBB/Kを算出し追加する。&lt;/p&gt;</description>
+      <description>&lt;p&gt;打者の得点への貢献度を表すwOBAを算出し追加する。&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>JSONで取得したプロ野球個人成績にQS率,K/BB,WHIP(,他)を追加する</title>
+      <title>【投手指標】プロ野球個人成績からセイバーメトリクス投手指標を算出する①</title>
       <link>https://www.ted027.com/post/sabr-1/</link>
       <pubDate>Sat, 04 May 2019 00:08:02 +0900</pubDate>
       
       <guid>https://www.ted027.com/post/sabr-1/</guid>
-      <description>&lt;p&gt;以前取得したプロ野球の個人成績に、簡単な計算で算出できる指標をいくつか追加する。&lt;/p&gt;</description>
+      <description>&lt;p&gt;以前取得したプロ野球の個人成績に、簡単な計算で算出できる投手指標をいくつか追加する。&lt;/p&gt;</description>
     </item>
     
     <item>
