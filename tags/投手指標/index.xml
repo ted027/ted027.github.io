@@ -6,10 +6,19 @@
     <description>Recent content in 投手指標 on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 04 May 2019 00:08:02 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 09 May 2019 10:19:58 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/%E6%8A%95%E6%89%8B%E6%8C%87%E6%A8%99/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>【投手指標】プロ野球個人成績からセイバーメトリクス投手指標を算出する②</title>
+      <link>https://www.ted027.com/post/sabr-6/</link>
+      <pubDate>Thu, 09 May 2019 10:19:58 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/sabr-6/</guid>
+      <description>&lt;p&gt;リーグ合計成績を算出して、投手指標FIPを算出してみる。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>【投手指標】プロ野球個人成績からセイバーメトリクス投手指標を算出する①</title>
