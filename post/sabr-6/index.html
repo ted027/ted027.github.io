@@ -335,13 +335,12 @@ $</p>
     <span style="color:#fff;font-weight:bold">with</span> <span style="color:#fff;font-weight:bold">open</span>(<span style="color:#0ff;font-weight:bold">&#39;league_hitters.json&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;w&#39;</span>) <span style="color:#fff;font-weight:bold">as</span> hf:
         json.dump(league_hitter_dic, hf, indent=<span style="color:#ff0;font-weight:bold">2</span>, ensure_ascii=False)</code></pre></div>
 <p>打率や防御率のような割合指標は、当然足し合わせると意味不明な値になるので、後から計算して更新。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py:league.py" data-lang="py:league.py"><span style="color:#fff;font-weight:bold">import</span> json
-<span style="color:#fff;font-weight:bold">from</span> decimal <span style="color:#fff;font-weight:bold">import</span> Decimal
-<span style="color:#fff;font-weight:bold">from</span> common <span style="color:#fff;font-weight:bold">import</span> digit_under_one, return_outcounts, FULL_OUTCOUNTS, ZERO_VALIE, IGNORE_VALIE
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py:league.py" data-lang="py:league.py">...
+<span style="color:#fff;font-weight:bold">from</span> common <span style="color:#fff;font-weight:bold">import</span> digits_under_one, return_outcounts, FULL_OUTCOUNTS, ZERO_VALUE, IGNORE_VALUE
 
 <span style="color:#fff;font-weight:bold">def</span> fix_rate_common(dic, decimal_nume, decimal_deno):
     <span style="color:#fff;font-weight:bold">if</span> not decimal_deno:
-        <span style="color:#fff;font-weight:bold">return</span> ZERO_VALIE
+        <span style="color:#fff;font-weight:bold">return</span> ZERO_VALUE
     <span style="color:#fff;font-weight:bold">return</span> decimal_nume / decimal_deno
 
 
@@ -374,7 +373,7 @@ $</p>
     innings = Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;投球回&#39;</span>])
     outcounts = return_outcounts(innings)
     <span style="color:#fff;font-weight:bold">if</span> not outcounts:
-        fip_efira = ZERO_VALIE
+        fip_efira = ZERO_VALUE
     <span style="color:#fff;font-weight:bold">else</span>:
         fip_efira = (Decimal(<span style="color:#0ff;font-weight:bold">&#39;13&#39;</span>) * Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;被本塁打&#39;</span>]) + Decimal(<span style="color:#0ff;font-weight:bold">&#39;3&#39;</span>) *
                     (Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;与四球&#39;</span>]) + Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;与死球&#39;</span>]) -
