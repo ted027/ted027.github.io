@@ -298,10 +298,10 @@ if (!doNotTrack) {
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py:sabr.py" data-lang="py:sabr.py"><span style="color:#fff;font-weight:bold">def</span> iso_p(hitter):
     atbat = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;打数&#39;</span>])
     <span style="color:#fff;font-weight:bold">if</span> not atbat:
-        iso_p = -<span style="color:#ff0;font-weight:bold">1</span>
+        iso_p = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>)
     <span style="color:#fff;font-weight:bold">else</span>:
-        numerator = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;二塁打&#39;</span>]) + <span style="color:#ff0;font-weight:bold">2</span> * Decimal(
-            hitter[<span style="color:#0ff;font-weight:bold">&#39;三塁打&#39;</span>]) + <span style="color:#ff0;font-weight:bold">3</span> * Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;本塁打&#39;</span>])
+        numerator = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;二塁打&#39;</span>]) + Decimal(<span style="color:#0ff;font-weight:bold">&#39;2&#39;</span>) * Decimal(
+            hitter[<span style="color:#0ff;font-weight:bold">&#39;三塁打&#39;</span>]) + Decimal(<span style="color:#0ff;font-weight:bold">&#39;3&#39;</span>) * Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;本塁打&#39;</span>])
         raw_iso_p = numerator / atbat
         iso_p = _digits_under_one(raw_iso_p, <span style="color:#ff0;font-weight:bold">3</span>)
     hitter[<span style="color:#0ff;font-weight:bold">&#39;IsoP&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(iso_p)</code></pre></div>
