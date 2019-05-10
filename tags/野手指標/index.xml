@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>得点能力 on 行けたら行く</title>
-    <link>https://www.ted027.com/tags/%E5%BE%97%E7%82%B9%E8%83%BD%E5%8A%9B/</link>
-    <description>Recent content in 得点能力 on 行けたら行く</description>
+    <title>野手指標 on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/%E9%87%8E%E6%89%8B%E6%8C%87%E6%A8%99/</link>
+    <description>Recent content in 野手指標 on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 07 May 2019 00:08:58 +0900</lastBuildDate>
     
-	<atom:link href="https://www.ted027.com/tags/%E5%BE%97%E7%82%B9%E8%83%BD%E5%8A%9B/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.ted027.com/tags/%E9%87%8E%E6%89%8B%E6%8C%87%E6%A8%99/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,6 +18,24 @@
       
       <guid>https://www.ted027.com/post/sabr-5/</guid>
       <description>&lt;p&gt;打者の総合指標RCとXRを追加する。感覚的にはwOBAに近く、同じくらいメジャーな印象。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>【BB/K, BB%, IsoD】NPB(2019)セイバーメトリクス野手指標の算出③</title>
+      <link>https://www.ted027.com/post/sabr-4/</link>
+      <pubDate>Mon, 06 May 2019 14:38:38 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/sabr-4/</guid>
+      <description>&lt;p&gt;打者の選球眼を表すとされるBB/K, BB%, IsoDを追加。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>【IsoP】NPB(2019)セイバーメトリクス野手指標の算出②</title>
+      <link>https://www.ted027.com/post/sabr-3/</link>
+      <pubDate>Mon, 06 May 2019 14:02:41 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/sabr-3/</guid>
+      <description>&lt;p&gt;打者の長打力を表すIsoPを算出し追加する。&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -4,10 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>【打者総合指標:wOBA】NPB個人成績からセイバーメトリクス打者指標を算出する① - 行けたら行く</title>
+	<title>【wOBA】NPB(2019)セイバーメトリクス野手指標の算出① - 行けたら行く</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta property="og:title" content="【打者総合指標:wOBA】NPB個人成績からセイバーメトリクス打者指標を算出する①" />
+	<meta property="og:title" content="【wOBA】NPB(2019)セイバーメトリクス野手指標の算出①" />
 <meta property="og:description" content="打者の得点への貢献度を表すwOBAを算出し追加する。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.ted027.com/post/sabr-2/" />
@@ -15,7 +15,7 @@
 <meta property="article:modified_time" content="2019-05-04T22:25:17&#43;09:00"/>
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="【打者総合指標:wOBA】NPB個人成績からセイバーメトリクス打者指標を算出する①"/>
+<meta name="twitter:title" content="【wOBA】NPB(2019)セイバーメトリクス野手指標の算出①"/>
 <meta name="twitter:description" content="打者の得点への貢献度を表すwOBAを算出し追加する。"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -89,7 +89,7 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">【打者総合指標:wOBA】NPB個人成績からセイバーメトリクス打者指標を算出する①</h1>
+			<h1 class="post__title">【wOBA】NPB(2019)セイバーメトリクス野手指標の算出①</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
@@ -107,19 +107,19 @@ if (!doNotTrack) {
 <section class="section sns_parent">
   <div class="container sns_section">
       <div class="sns_button twitter">
-        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-2%2f&text=%e3%80%90%e6%89%93%e8%80%85%e7%b7%8f%e5%90%88%e6%8c%87%e6%a8%99%3awOBA%e3%80%91NPB%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a0" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-2%2f&text=%e3%80%90wOBA%e3%80%91NPB%282019%29%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e9%87%8e%e6%89%8b%e6%8c%87%e6%a8%99%e3%81%ae%e7%ae%97%e5%87%ba%e2%91%a0" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
       </div>
       <div class="sns_button line">
         <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-2%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
       </div>
       <div class="sns_button facebook">
-        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-2%2f&t=%e3%80%90%e6%89%93%e8%80%85%e7%b7%8f%e5%90%88%e6%8c%87%e6%a8%99%3awOBA%e3%80%91NPB%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a0" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-2%2f&t=%e3%80%90wOBA%e3%80%91NPB%282019%29%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e9%87%8e%e6%89%8b%e6%8c%87%e6%a8%99%e3%81%ae%e7%ae%97%e5%87%ba%e2%91%a0" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
       </div>
       <div class="sns_button hatena">
-        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-2%2f&title=%e3%80%90%e6%89%93%e8%80%85%e7%b7%8f%e5%90%88%e6%8c%87%e6%a8%99%3awOBA%e3%80%91NPB%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a0" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-2%2f&title=%e3%80%90wOBA%e3%80%91NPB%282019%29%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e9%87%8e%e6%89%8b%e6%8c%87%e6%a8%99%e3%81%ae%e7%ae%97%e5%87%ba%e2%91%a0" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
       </div>
       <div class="sns_button pocket">
-        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-2%2f&title=%e3%80%90%e6%89%93%e8%80%85%e7%b7%8f%e5%90%88%e6%8c%87%e6%a8%99%3awOBA%e3%80%91NPB%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a0" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-2%2f&title=%e3%80%90wOBA%e3%80%91NPB%282019%29%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e9%87%8e%e6%89%8b%e6%8c%87%e6%a8%99%e3%81%ae%e7%ae%97%e5%87%ba%e2%91%a0" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
       </div>
   </div>
 </section>
@@ -194,9 +194,9 @@ if (!doNotTrack) {
 <ul>
 <li><p><a href="https://www.ted027.com/post/python-personal-records">[参考記事]Pythonでプロ野球の個人成績一覧をJSONにして取得する</a></p></li>
 
-<li><p><a href="https://www.ted027.com/post/sabr-3">[参考記事]【長打力】プロ野球個人成績からセイバーメトリクス打者指標を算出する②</a></p></li>
+<li><p><a href="https://www.ted027.com/post/sabr-3">[参考記事]【IsoP】NPB(2019)セイバーメトリクス野手指標の算出②</a></p></li>
 
-<li><p><a href="https://www.ted027.com/post/sabr-5">[参考記事]【打者総合指標-2】プロ野球個人成績からセイバーメトリクス打者指標を算出する④</a></p></li>
+<li><p><a href="https://www.ted027.com/post/sabr-5">[参考記事]【RC, RC27, XR, XR27】NPB(2019)セイバーメトリクス野手指標の算出④</a></p></li>
 </ul>
 
 <hr />
@@ -467,7 +467,7 @@ WOBA_HR = <span style="color:#ff0;font-weight:bold">2.065</span>
 <div class="post__tags tags clearfix">
 	<svg class="tags__icon icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="/tags/%E6%89%93%E8%80%85%E6%8C%87%E6%A8%99/" rel="tag">打者指標</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/%E9%87%8E%E6%89%8B%E6%8C%87%E6%A8%99/" rel="tag">野手指標</a></li>
 		<li class="tags__item"><a class="tags__link btn" href="/tags/python/" rel="tag">Python</a></li>
 		<li class="tags__item"><a class="tags__link btn" href="/tags/%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9/" rel="tag">セイバーメトリクス</a></li>
 		<li class="tags__item"><a class="tags__link btn" href="/tags/%E5%BE%97%E7%82%B9%E8%83%BD%E5%8A%9B/" rel="tag">得点能力</a></li>
@@ -480,19 +480,19 @@ WOBA_HR = <span style="color:#ff0;font-weight:bold">2.065</span>
 <section class="section sns_parent">
   <div class="container sns_section">
       <div class="sns_button twitter">
-        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-2%2f&text=%e3%80%90%e6%89%93%e8%80%85%e7%b7%8f%e5%90%88%e6%8c%87%e6%a8%99%3awOBA%e3%80%91NPB%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a0" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-2%2f&text=%e3%80%90wOBA%e3%80%91NPB%282019%29%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e9%87%8e%e6%89%8b%e6%8c%87%e6%a8%99%e3%81%ae%e7%ae%97%e5%87%ba%e2%91%a0" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
       </div>
       <div class="sns_button line">
         <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-2%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
       </div>
       <div class="sns_button facebook">
-        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-2%2f&t=%e3%80%90%e6%89%93%e8%80%85%e7%b7%8f%e5%90%88%e6%8c%87%e6%a8%99%3awOBA%e3%80%91NPB%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a0" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-2%2f&t=%e3%80%90wOBA%e3%80%91NPB%282019%29%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e9%87%8e%e6%89%8b%e6%8c%87%e6%a8%99%e3%81%ae%e7%ae%97%e5%87%ba%e2%91%a0" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
       </div>
       <div class="sns_button hatena">
-        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-2%2f&title=%e3%80%90%e6%89%93%e8%80%85%e7%b7%8f%e5%90%88%e6%8c%87%e6%a8%99%3awOBA%e3%80%91NPB%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a0" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-2%2f&title=%e3%80%90wOBA%e3%80%91NPB%282019%29%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e9%87%8e%e6%89%8b%e6%8c%87%e6%a8%99%e3%81%ae%e7%ae%97%e5%87%ba%e2%91%a0" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
       </div>
       <div class="sns_button pocket">
-        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-2%2f&title=%e3%80%90%e6%89%93%e8%80%85%e7%b7%8f%e5%90%88%e6%8c%87%e6%a8%99%3awOBA%e3%80%91NPB%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a0" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-2%2f&title=%e3%80%90wOBA%e3%80%91NPB%282019%29%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e9%87%8e%e6%89%8b%e6%8c%87%e6%a8%99%e3%81%ae%e7%ae%97%e5%87%ba%e2%91%a0" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
       </div>
   </div>
 </section>
@@ -672,11 +672,11 @@ WOBA_HR = <span style="color:#ff0;font-weight:bold">2.065</span>
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/sabr-6/">【投手指標:FIP】NPB個人成績からセイバーメトリクス投手指標を算出する②</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-6/">【FIP】NPB(2019)セイバーメトリクス投手指標の算出②</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/echo/">育児に便利なグッズ紹介 〜Amazon Echo〜</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/sabr-5/">【打者総合指標:RC,XR】NPB個人成績からセイバーメトリクス打者指標を算出する④</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/sabr-4/">【選球眼:BB/K,BB%,IsoD】NPB個人成績からセイバーメトリクス打者指標を算出する③</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/sabr-3/">【長打力:IsoP】NPB個人成績からセイバーメトリクス打者指標を算出する②</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-5/">【RC, RC27, XR, XR27】NPB(2019)セイバーメトリクス野手指標の算出④</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-4/">【BB/K, BB%, IsoD】NPB(2019)セイバーメトリクス野手指標の算出③</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-3/">【IsoP】NPB(2019)セイバーメトリクス野手指標の算出②</a></li>
 		</ul>
 	</div>
 </div>
