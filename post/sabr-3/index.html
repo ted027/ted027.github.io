@@ -4,10 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>【長打力】プロ野球個人成績からセイバーメトリクス打者指標を算出する② - 行けたら行く</title>
+	<title>【長打力:IsoP】NPB個人成績からセイバーメトリクス打者指標を算出する② - 行けたら行く</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta property="og:title" content="【長打力】プロ野球個人成績からセイバーメトリクス打者指標を算出する②" />
+	<meta property="og:title" content="【長打力:IsoP】NPB個人成績からセイバーメトリクス打者指標を算出する②" />
 <meta property="og:description" content="打者の長打力を表すIsoPを算出し追加する。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.ted027.com/post/sabr-3/" />
@@ -15,7 +15,7 @@
 <meta property="article:modified_time" content="2019-05-06T14:02:41&#43;09:00"/>
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="【長打力】プロ野球個人成績からセイバーメトリクス打者指標を算出する②"/>
+<meta name="twitter:title" content="【長打力:IsoP】NPB個人成績からセイバーメトリクス打者指標を算出する②"/>
 <meta name="twitter:description" content="打者の長打力を表すIsoPを算出し追加する。"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -89,7 +89,7 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">【長打力】プロ野球個人成績からセイバーメトリクス打者指標を算出する②</h1>
+			<h1 class="post__title">【長打力:IsoP】NPB個人成績からセイバーメトリクス打者指標を算出する②</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
@@ -107,19 +107,19 @@ if (!doNotTrack) {
 <section class="section sns_parent">
   <div class="container sns_section">
       <div class="sns_button twitter">
-        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-3%2f&text=%e3%80%90%e9%95%b7%e6%89%93%e5%8a%9b%e3%80%91%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a1" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-3%2f&text=%e3%80%90%e9%95%b7%e6%89%93%e5%8a%9b%3aIsoP%e3%80%91NPB%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a1" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
       </div>
       <div class="sns_button line">
         <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-3%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
       </div>
       <div class="sns_button facebook">
-        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-3%2f&t=%e3%80%90%e9%95%b7%e6%89%93%e5%8a%9b%e3%80%91%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a1" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-3%2f&t=%e3%80%90%e9%95%b7%e6%89%93%e5%8a%9b%3aIsoP%e3%80%91NPB%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a1" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
       </div>
       <div class="sns_button hatena">
-        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-3%2f&title=%e3%80%90%e9%95%b7%e6%89%93%e5%8a%9b%e3%80%91%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a1" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-3%2f&title=%e3%80%90%e9%95%b7%e6%89%93%e5%8a%9b%3aIsoP%e3%80%91NPB%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a1" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
       </div>
       <div class="sns_button pocket">
-        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-3%2f&title=%e3%80%90%e9%95%b7%e6%89%93%e5%8a%9b%e3%80%91%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a1" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-3%2f&title=%e3%80%90%e9%95%b7%e6%89%93%e5%8a%9b%3aIsoP%e3%80%91NPB%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a1" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
       </div>
   </div>
 </section>
@@ -460,19 +460,19 @@ if (!doNotTrack) {
 <section class="section sns_parent">
   <div class="container sns_section">
       <div class="sns_button twitter">
-        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-3%2f&text=%e3%80%90%e9%95%b7%e6%89%93%e5%8a%9b%e3%80%91%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a1" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-3%2f&text=%e3%80%90%e9%95%b7%e6%89%93%e5%8a%9b%3aIsoP%e3%80%91NPB%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a1" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
       </div>
       <div class="sns_button line">
         <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-3%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
       </div>
       <div class="sns_button facebook">
-        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-3%2f&t=%e3%80%90%e9%95%b7%e6%89%93%e5%8a%9b%e3%80%91%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a1" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-3%2f&t=%e3%80%90%e9%95%b7%e6%89%93%e5%8a%9b%3aIsoP%e3%80%91NPB%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a1" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
       </div>
       <div class="sns_button hatena">
-        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-3%2f&title=%e3%80%90%e9%95%b7%e6%89%93%e5%8a%9b%e3%80%91%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a1" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-3%2f&title=%e3%80%90%e9%95%b7%e6%89%93%e5%8a%9b%3aIsoP%e3%80%91NPB%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a1" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
       </div>
       <div class="sns_button pocket">
-        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-3%2f&title=%e3%80%90%e9%95%b7%e6%89%93%e5%8a%9b%e3%80%91%e3%83%97%e3%83%ad%e9%87%8e%e7%90%83%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a1" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fsabr-3%2f&title=%e3%80%90%e9%95%b7%e6%89%93%e5%8a%9b%3aIsoP%e3%80%91NPB%e5%80%8b%e4%ba%ba%e6%88%90%e7%b8%be%e3%81%8b%e3%82%89%e3%82%bb%e3%82%a4%e3%83%90%e3%83%bc%e3%83%a1%e3%83%88%e3%83%aa%e3%82%af%e3%82%b9%e6%89%93%e8%80%85%e6%8c%87%e6%a8%99%e3%82%92%e7%ae%97%e5%87%ba%e3%81%99%e3%82%8b%e2%91%a1" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
       </div>
   </div>
 </section>
@@ -495,7 +495,7 @@ if (!doNotTrack) {
 		<a class="post-nav__link" href="/post/python-digit/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Pythonで有効数字を指定し四捨五入する</p></a>
 	</div>
 	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/post/sabr-4/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">【選球眼】プロ野球個人成績からセイバーメトリクス打者指標を算出する③</p></a>
+		<a class="post-nav__link" href="/post/sabr-4/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">【選球眼:BB/K,BB%,IsoD】NPB個人成績からセイバーメトリクス打者指標を算出する③</p></a>
 	</div>
 </nav>
 
@@ -652,11 +652,11 @@ if (!doNotTrack) {
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/sabr-6/">【投手指標】プロ野球個人成績からセイバーメトリクス投手指標を算出する②</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-6/">【投手指標:FIP】NPB個人成績からセイバーメトリクス投手指標を算出する②</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/echo/">育児に便利なグッズ紹介 〜Amazon Echo〜</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/sabr-5/">【打者総合指標-2】プロ野球個人成績からセイバーメトリクス打者指標を算出する④</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/sabr-4/">【選球眼】プロ野球個人成績からセイバーメトリクス打者指標を算出する③</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/sabr-3/">【長打力】プロ野球個人成績からセイバーメトリクス打者指標を算出する②</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-5/">【打者総合指標:RC,XR】NPB個人成績からセイバーメトリクス打者指標を算出する④</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-4/">【選球眼:BB/K,BB%,IsoD】NPB個人成績からセイバーメトリクス打者指標を算出する③</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-3/">【長打力:IsoP】NPB個人成績からセイバーメトリクス打者指標を算出する②</a></li>
 		</ul>
 	</div>
 </div>
