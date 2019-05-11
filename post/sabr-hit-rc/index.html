@@ -341,20 +341,7 @@ XR_SAC_BUNT = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.04&#39;</
                   (advance_base + Decimal(<span style="color:#0ff;font-weight:bold">&#39;3&#39;</span>) * opportunity) /
                   (Decimal(<span style="color:#0ff;font-weight:bold">&#39;9&#39;</span>) * opportunity)) - Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.9&#39;</span>) * opportunity
         rc = _digits_under_one(raw_rc, <span style="color:#ff0;font-weight:bold">2</span>)
-    hitter[<span style="color:#0ff;font-weight:bold">&#39;RC&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(rc)
-
-
-<span style="color:#fff;font-weight:bold">def</span> rc_27(hitter, raw_rc):
-    total_out = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;打数&#39;</span>]) - Decimal(
-        hitter[<span style="color:#0ff;font-weight:bold">&#39;安打&#39;</span>]) + Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;犠打&#39;</span>]) + Decimal(
-            hitter[<span style="color:#0ff;font-weight:bold">&#39;犠飛&#39;</span>]) + Decimal(
-                hitter[<span style="color:#0ff;font-weight:bold">&#39;盗塁死&#39;</span>]) + Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;併殺打&#39;</span>])
-    <span style="color:#fff;font-weight:bold">if</span> not total_out:
-        rc_27 = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>)
-    <span style="color:#fff;font-weight:bold">else</span>:
-        raw_rc_27 = raw_rc * FULL_OUTCOUNTS / total_out
-        rc_27 = _digits_under_one(raw_rc_27, <span style="color:#ff0;font-weight:bold">2</span>)
-    hitter[<span style="color:#0ff;font-weight:bold">&#39;RC27&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(rc_27)
+    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(rc)
 
 
 <span style="color:#fff;font-weight:bold">def</span> xr_basic(hitter):
@@ -375,20 +362,20 @@ XR_SAC_BUNT = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.04&#39;</
                         hitter[<span style="color:#0ff;font-weight:bold">&#39;犠飛&#39;</span>]) + XR_SAC_BUNT * Decimal(
                             hitter[<span style="color:#0ff;font-weight:bold">&#39;犠打&#39;</span>])
     xr = _digits_under_one(raw_xr, <span style="color:#ff0;font-weight:bold">2</span>)
-    hitter[<span style="color:#0ff;font-weight:bold">&#39;XR&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(xr)
+    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(xr)
 
 
-<span style="color:#fff;font-weight:bold">def</span> xr_27(hitter, raw_xr):
+<span style="color:#fff;font-weight:bold">def</span> rc_xr_27(hitter, rc_xr):
     total_out = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;打数&#39;</span>]) - Decimal(
         hitter[<span style="color:#0ff;font-weight:bold">&#39;安打&#39;</span>]) + Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;犠打&#39;</span>]) + Decimal(
             hitter[<span style="color:#0ff;font-weight:bold">&#39;犠飛&#39;</span>]) + Decimal(
                 hitter[<span style="color:#0ff;font-weight:bold">&#39;盗塁死&#39;</span>]) + Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;併殺打&#39;</span>])
     <span style="color:#fff;font-weight:bold">if</span> not total_out:
-        xr_27 = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>)
+        rc_xr_27 = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>)
     <span style="color:#fff;font-weight:bold">else</span>:
-        raw_xr_27 = xr * FULL_OUTCOUNTS / total_out
-        xr_27 = _digits_under_one(raw_xr_27, <span style="color:#ff0;font-weight:bold">2</span>)
-    hitter[<span style="color:#0ff;font-weight:bold">&#39;XR27&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(xr_27)</code></pre></div>
+        raw_rc_xr_27 = rc_xr * FULL_OUTCOUNTS / total_out
+        rc_xr_27 = _digits_under_one(raw_rc_xr_27, <span style="color:#ff0;font-weight:bold">2</span>)
+    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(rc_xr_27)</code></pre></div>
 <hr />
 
 <h3 id="おわり">おわり</h3>
@@ -399,14 +386,16 @@ XR_SAC_BUNT = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.04&#39;</
 
 <p>こちらもリーグ平均と比較しての応用指標があるので、それはまた今度。</p>
 
+<ul>
+<li><a href="https://www.ted027.com/post/sabr-hit-rcaa">[参考記事]【【RCWIN, XRWIN】NPB(2019)セイバーメトリクス野手指標の算出⑥</a></li>
+</ul>
+
 <hr />
 
 <ul>
 <li><p><a href="https://www.ted027.com/post/python-personal-records">[参考記事]Pythonでプロ野球の個人成績一覧をJSONにして取得する</a></p></li>
 
 <li><p><a href="https://www.ted027.com/post/sabr-hit-woba">[参考記事]【wOBA】NPB(2019)セイバーメトリクス野手指標の算出①</a></p></li>
-
-<li><p><a href="https://www.ted027.com/post/sabr-hit-bb-k">[参考記事]【BB/K, BB%, IsoD】NPB(2019)セイバーメトリクス野手指標の算出③</a></p></li>
 </ul>
 
 <hr />
@@ -747,11 +736,11 @@ XR_SAC_BUNT = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.04&#39;</
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-hit-rcaa/">【RCWIN, XRWIN】NPB(2019)セイバーメトリクス野手指標の算出⑥</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-run-wsb/">【wSB】NPB(2019)セイバーメトリクス走塁指標の算出</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-hit-wraa/">【wRAA, wRC】NPB(2019)セイバーメトリクス野手指標の算出⑤</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-list/">セイバーメトリクス 指標一覧</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-pitch-fip/">【FIP】NPB(2019)セイバーメトリクス投手指標の算出②</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/echo/">育児に便利なグッズ紹介 〜Amazon Echo〜</a></li>
 		</ul>
 	</div>
 </div>

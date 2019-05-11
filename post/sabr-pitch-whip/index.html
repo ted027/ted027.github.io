@@ -301,7 +301,7 @@ if (!doNotTrack) {
         qsrate = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>)
     <span style="color:#fff;font-weight:bold">else</span>:
         qsrate = Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;QS&#39;</span>]) * Decimal(<span style="color:#0ff;font-weight:bold">&#39;100&#39;</span>) / start
-    pitcher[<span style="color:#0ff;font-weight:bold">&#39;QS率&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(qsrate)
+    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(qsrate)
 
 
 <span style="color:#fff;font-weight:bold">def</span> k_per_bb(pitcher):
@@ -310,7 +310,7 @@ if (!doNotTrack) {
         k_per_bb = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>)
     <span style="color:#fff;font-weight:bold">else</span>:
         k_per_bb = Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;奪三振&#39;</span>]) / bb
-    pitcher[<span style="color:#0ff;font-weight:bold">&#39;K/BB&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(k_per_bb)
+    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(k_per_bb)
 
 
 <span style="color:#fff;font-weight:bold">def</span> k_per_nine(pitcher):
@@ -320,7 +320,7 @@ if (!doNotTrack) {
         k_per_n = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>)
     <span style="color:#fff;font-weight:bold">else</span>:
         k_per_n = Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;奪三振&#39;</span>]) * FULL_OUTCOUNTS / outcounts
-    pitcher[<span style="color:#0ff;font-weight:bold">&#39;K/9&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(k_per_n)
+    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(k_per_n)
 
 
 <span style="color:#fff;font-weight:bold">def</span> bb_per_nine(pitcher):
@@ -330,7 +330,7 @@ if (!doNotTrack) {
         bb_per_n = Decimal(<span style="color:#0ff;font-weight:bold">&#39;-1&#39;</span>)
     <span style="color:#fff;font-weight:bold">else</span>:
         bb_per_n = Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;与四球&#39;</span>]) * FULL_OUTCOUNTS / outcounts
-    pitcher[<span style="color:#0ff;font-weight:bold">&#39;BB/9&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(bb_per_n)
+    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(bb_per_n)
 
 
 <span style="color:#fff;font-weight:bold">def</span> hr_per_nine(pitcher):
@@ -340,7 +340,7 @@ if (!doNotTrack) {
         hr_per_n = Decimal(<span style="color:#0ff;font-weight:bold">&#39;-1&#39;</span>)
     <span style="color:#fff;font-weight:bold">else</span>:
         hr_per_n = Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;被本塁打&#39;</span>]) * FULL_OUTCOUNTS / outcounts
-    pitcher[<span style="color:#0ff;font-weight:bold">&#39;HR/9&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(hr_per_n)
+    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(hr_per_n)
 
 
 <span style="color:#fff;font-weight:bold">def</span> whip(pitcher):
@@ -350,7 +350,7 @@ if (!doNotTrack) {
         whip = Decimal(<span style="color:#0ff;font-weight:bold">&#39;-1&#39;</span>)
     <span style="color:#fff;font-weight:bold">else</span>:
         whip = (Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;与四球&#39;</span>]) + Decimal(pitcher[<span style="color:#0ff;font-weight:bold">&#39;被安打&#39;</span>]) * Decimal(<span style="color:#0ff;font-weight:bold">&#39;3&#39;</span>) / outcounts
-    pitcher[<span style="color:#0ff;font-weight:bold">&#39;WHIP&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(whip)</code></pre></div>
+    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(whip)</code></pre></div>
 <hr />
 
 <h3 id="おわり">おわり</h3>
@@ -369,130 +369,64 @@ if (!doNotTrack) {
 
 <hr />
 
-<div
-	class="kaerebalink-box"
-	style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;"
->
-	<div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;">
-		<a
-			href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E5%258B%259D%25E3%2581%25A6%25E3%2582%258B%25E9%2587%258E%25E7%2590%2583%25E3%2581%25AE%25E7%25B5%25B1%25E8%25A8%2588%25E5%25AD%25A6%25E2%2580%2595%25E2%2580%2595%25E3%2582%25BB%25E3%2582%25A4%25E3%2583%2590%25E3%2583%25BC%25E3%2583%25A1%25E3%2583%2588%25E3%2583%25AA%25E3%2582%25AF%25E3%2582%25B9-%25E5%25B2%25A9%25E6%25B3%25A2%25E7%25A7%2591%25E5%25AD%25A6%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2583%25BC-%25E9%25B3%25A5%25E8%25B6%258A-%25E8%25A6%258F%25E5%25A4%25AE%2Fdp%2F400029623X"
-			rel="nofollow"
-			target="_blank"
-			><img
-				src="https://images-fe.ssl-images-amazon.com/images/I/41NT4i7raPL._SL160_.jpg"
-				style="border: none;"/></a
-		><img
-			height="1"
-			src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
-			style="border:none;"
-			width="1"
-		/>
-	</div>
-	<div
-		class="kaerebalink-info"
-		style="line-height:120%;zoom: 1;overflow: hidden;"
-	>
-		<div
-			class="kaerebalink-name"
-			style="margin-bottom:10px;line-height:120%"
-		>
-			<a
-				href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E5%258B%259D%25E3%2581%25A6%25E3%2582%258B%25E9%2587%258E%25E7%2590%2583%25E3%2581%25AE%25E7%25B5%25B1%25E8%25A8%2588%25E5%25AD%25A6%25E2%2580%2595%25E2%2580%2595%25E3%2582%25BB%25E3%2582%25A4%25E3%2583%2590%25E3%2583%25BC%25E3%2583%25A1%25E3%2583%2588%25E3%2583%25AA%25E3%2582%25AF%25E3%2582%25B9-%25E5%25B2%25A9%25E6%25B3%25A2%25E7%25A7%2591%25E5%25AD%25A6%25E3%2583%25A9%25E3%2582%25A4%25E3%2583%2596%25E3%2583%25A9%25E3%2583%25AA%25E3%2583%25BC-%25E9%25B3%25A5%25E8%25B6%258A-%25E8%25A6%258F%25E5%25A4%25AE%2Fdp%2F400029623X"
-				rel="nofollow"
-				target="_blank"
-				>勝てる野球の統計学――セイバーメトリクス
-				(岩波科学ライブラリー)</a
-			><img
-				height="1"
-				src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
-				style="border:none;"
-				width="1"
-			/>
-		</div>
-		<div class="kaerebalink-detail" style="margin-bottom:5px;"></div>
-		<div class="kaerebalink-link1" style="margin-top:10px;">
-			<div
-				class="shoplinkamazon"
-				style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"
-			>
-				<a
-					href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;s_v=b5Rz2P0601xu&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3D%25E3%2582%25BB%25E3%2582%25A4%25E3%2583%2590%25E3%2583%25BC%25E3%2583%25A1%25E3%2583%2588%25E3%2583%25AA%25E3%2582%25AF%25E3%2582%25B9%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
-					rel="nofollow"
-					target="_blank"
-					>Amazon</a
-				><img
-					height="1"
-					src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
-					style="border:none;"
-					width="1"
-				/>
-			</div>
-			<div
-				class="shoplinkrakuten"
-				style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"
-			>
-				<a
-					href="//af.moshimo.com/af/c/click?a_id=1414727&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;s_v=b5Rz2P0601xu&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25BB%25E3%2582%25A4%25E3%2583%2590%25E3%2583%25BC%25E3%2583%25A1%25E3%2583%2588%25E3%2583%25AA%25E3%2582%25AF%25E3%2582%25B9%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
-					rel="nofollow"
-					target="_blank"
-					>楽天市場</a
-				><img
-					height="1"
-					src="//i.moshimo.com/af/i/impression?a_id=1414727&amp;p_id=54&amp;pc_id=54&amp;pl_id=616"
-					style="border:none;"
-					width="1"
-				/>
-			</div>
+<div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
+    <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
+            href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FPython%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2588%2586%25E6%259E%2590%25E5%2585%25A5%25E9%2596%2580-%25E7%25AC%25AC2%25E7%2589%2588-%25E2%2580%2595NumPy%25E3%2580%2581pandas%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2587%25A6%25E7%2590%2586-Wes-McKinney%2Fdp%2F487311845X"
+            rel="nofollow" target="_blank"><img
+                src="https://images-fe.ssl-images-amazon.com/images/I/51NjGkPfTQL._SL160_.jpg"
+                style="border: none;" /></a><img height="1"
+            src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
+            style="border:none;" width="1" /></div>
+    <div class="kaerebalink-info" style="line-height:120%;zoom: 1;overflow: hidden;">
+        <div class="kaerebalink-name" style="margin-bottom:10px;line-height:120%"><a
+                href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FPython%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2588%2586%25E6%259E%2590%25E5%2585%25A5%25E9%2596%2580-%25E7%25AC%25AC2%25E7%2589%2588-%25E2%2580%2595NumPy%25E3%2580%2581pandas%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%259F%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E5%2587%25A6%25E7%2590%2586-Wes-McKinney%2Fdp%2F487311845X"
+                rel="nofollow" target="_blank">Pythonによるデータ分析入門 第2版 ―NumPy、pandasを使ったデータ処理</a><img height="1"
+                src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
+                style="border:none;" width="1" />
 
-			<div
-				class="shoplinkyahoo"
-				style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"
-			>
-				<a
-					href="//af.moshimo.com/af/c/click?a_id=1418766&amp;p_id=1225&amp;pc_id=1925&amp;pl_id=18502&amp;s_v=b5Rz2P0601xu&amp;url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3D%25E3%2582%25BB%25E3%2582%25A4%25E3%2583%2590%25E3%2583%25BC%25E3%2583%25A1%25E3%2583%2588%25E3%2583%25AA%25E3%2582%25AF%25E3%2582%25B9"
-					rel="nofollow"
-					target="_blank"
-					>Yahooショッピング</a
-				><img
-					height="1"
-					src="//i.moshimo.com/af/i/impression?a_id=1418766&amp;p_id=1225&amp;pc_id=1925&amp;pl_id=18502"
-					style="border:none;"
-					width="1"
-				/>
-			</div>
-			<div
-				class="shoplinkseven"
-				style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;"
-			>
-				<a
-					href="//af.moshimo.com/af/c/click?a_id=1414728&amp;p_id=932&amp;pc_id=1188&amp;pl_id=12456&amp;s_v=b5Rz2P0601xu&amp;url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3D%25E3%2582%25BB%25E3%2582%25A4%25E3%2583%2590%25E3%2583%25BC%25E3%2583%25A1%25E3%2583%2588%25E3%2583%25AA%25E3%2582%25AF%25E3%2582%25B9%26searchKeywordFlg%3D1"
-					rel="nofollow"
-					target="_blank"
-					><img
-						height="1"
-						src="//i.moshimo.com/af/i/impression?a_id=1414728&amp;p_id=932&amp;pc_id=1188&amp;pl_id=12456"
-						style="border:none;"
-						width="1"
-					/>7net</a
-				>
-			</div>
-		</div>
-	</div>
-	<div class="booklink-footer" style="clear: left"></div>
-</div>
+        </div>
+        <div class="kaerebalink-detail" style="margin-bottom:5px;"></div>
+        <div class="kaerebalink-link1" style="margin-top:10px;">
+            <div class="shoplinkamazon"
+                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 0 no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
+                <a href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;s_v=b5Rz2P0601xu&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2Fgp%2Fsearch%3Fkeywords%3DPython%26__mk_ja_JP%3D%25E3%2582%25AB%25E3%2582%25BF%25E3%2582%25AB%25E3%2583%258A"
+                    rel="nofollow" target="_blank">Amazonで調べる</a><img height="1"
+                    src="//i.moshimo.com/af/i/impression?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062"
+                    style="border:none;" width="1" /></div>
+            <div class="shoplinkrakuten"
+                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -50px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
+                <a href="//af.moshimo.com/af/c/click?a_id=1414727&amp;p_id=54&amp;pc_id=54&amp;pl_id=616&amp;s_v=b5Rz2P0601xu&amp;url=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2FPython%2F-%2Ff.1-p.1-s.1-sf.0-st.A-v.2%3Fx%3D0"
+                    rel="nofollow" target="_blank">楽天市場で調べる</a><img height="1"
+                    src="//i.moshimo.com/af/i/impression?a_id=1414727&amp;p_id=54&amp;pc_id=54&amp;pl_id=616"
+                    style="border:none;" width="1" /></div>
 
+            <div class="shoplinkyahoo"
+                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -150px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
+                <a href="//af.moshimo.com/af/c/click?a_id=1418766&amp;p_id=1225&amp;pc_id=1925&amp;pl_id=18502&amp;s_v=b5Rz2P0601xu&amp;url=http%3A%2F%2Fsearch.shopping.yahoo.co.jp%2Fsearch%3Fp%3DPython"
+                    rel="nofollow" target="_blank">Yahooショッピングで調べる</a><img height="1"
+                    src="//i.moshimo.com/af/i/impression?a_id=1418766&amp;p_id=1225&amp;pc_id=1925&amp;pl_id=18502"
+                    style="border:none;" width="1" /></div>
+            <div class="shoplinkseven"
+                style="margin-right:5px;background: url('//img.yomereba.com/tam_k_01.gif') 0 -100px no-repeat;padding: 2px 0 2px 18px;white-space: nowrap;">
+                <a href="//af.moshimo.com/af/c/click?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456&s_v=b5Rz2P0601xu&url=http%3A%2F%2F7net.omni7.jp%2Fsearch%2F%3Fkeyword%3DPython%26searchKeywordFlg%3D1"
+                    target="_blank"
+                    rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
+                        </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
+        </div>
 
 <hr />
 
 <div class="wide__area">
-    <a href="https://px.a8.net/svt/ejp?a8mat=35F4ZJ+1IRWFM+491Q+686ZL" target="_blank" rel="nofollow">
-        <img border="0" width="728" height="90" alt="" src="https://www24.a8.net/svt/bgt?aid=190502911092&wid=001&eno=01&mid=s00000019835001046000&mc=1"></a>
-        <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=35F4ZJ+1IRWFM+491Q+686ZL" alt="">
+    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6O1Z5" target="_blank" rel="nofollow">
+        <img border="0" width="728" height="90" alt=""
+            src="https://www23.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001120000&mc=1"></a>
+    <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6O1Z5" alt="">
 </div>
 <div class="narrow__area">
-    <a href="https://px.a8.net/svt/ejp?a8mat=35F4ZJ+1IRWFM+491Q+661TT" target="_blank" rel="nofollow">
-        <img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=190502911092&wid=001&eno=01&mid=s00000019835001036000&mc=1"></a>
-        <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=35F4ZJ+1IRWFM+491Q+661TT" alt="">
+    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6NU9D" target="_blank" rel="nofollow">
+        <img border="0" width="300" height="250" alt=""
+            src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001119000&mc=1"></a>
+    <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6NU9D" alt="">
 </div>
 
 <hr />
@@ -705,11 +639,11 @@ if (!doNotTrack) {
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-hit-rcaa/">【RCWIN, XRWIN】NPB(2019)セイバーメトリクス野手指標の算出⑥</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-run-wsb/">【wSB】NPB(2019)セイバーメトリクス走塁指標の算出</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-hit-wraa/">【wRAA, wRC】NPB(2019)セイバーメトリクス野手指標の算出⑤</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-list/">セイバーメトリクス 指標一覧</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-pitch-fip/">【FIP】NPB(2019)セイバーメトリクス投手指標の算出②</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/echo/">育児に便利なグッズ紹介 〜Amazon Echo〜</a></li>
 		</ul>
 	</div>
 </div>

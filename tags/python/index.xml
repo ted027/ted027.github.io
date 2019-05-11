@@ -6,10 +6,19 @@
     <description>Recent content in Python on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 11 May 2019 10:44:53 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 11 May 2019 14:17:38 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>【RCWIN, XRWIN】NPB(2019)セイバーメトリクス野手指標の算出⑥</title>
+      <link>https://www.ted027.com/post/sabr-hit-rcaa/</link>
+      <pubDate>Sat, 11 May 2019 14:17:38 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/sabr-hit-rcaa/</guid>
+      <description>&lt;p&gt;得点力指標RC, XRに、リーグ平均と比較する観点を加味した、RCAA, RCWIN, XRAA, XRWINを算出する。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>【wSB】NPB(2019)セイバーメトリクス走塁指標の算出</title>
