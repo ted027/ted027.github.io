@@ -247,8 +247,8 @@ FAILED_STEAL_SCORE = Decimal(<span style="color:#0ff;font-weight:bold">&#39;-0.3
 
 
 <span style="color:#fff;font-weight:bold">def</span> wsb(hitter, league):
-    steal_chance, steal_score = _wsb_part(hitter)
-    league_steal_chance, league_steal_score = _wsb_part(league)
+    steal_score, steal_chance = _wsb_part(hitter)
+    league_steal_score, league_steal_chance = _wsb_part(league)
     <span style="color:#fff;font-weight:bold">if</span> not league_steal_chance:
         wsb = IGNORE_VALUE
     <span style="color:#fff;font-weight:bold">else</span>:
