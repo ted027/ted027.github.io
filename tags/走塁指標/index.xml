@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>走塁指標 on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/%E8%B5%B0%E5%A1%81%E6%8C%87%E6%A8%99/</link>
+    <description>Recent content in 走塁指標 on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 11 May 2019 10:44:53 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/tags/%E8%B5%B0%E5%A1%81%E6%8C%87%E6%A8%99/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>【wSB】NPB(2019)セイバーメトリクス走塁指標の算出</title>
+      <link>https://www.ted027.com/post/sabr-run-wsb/</link>
+      <pubDate>Sat, 11 May 2019 10:44:53 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/sabr-run-wsb/</guid>
+      <description>&lt;p&gt;盗塁に関しての走塁能力を評価するwSBを算出する。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

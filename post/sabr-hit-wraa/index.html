@@ -137,11 +137,11 @@ if (!doNotTrack) {
 <ul>
 <li><a href="#追加する指標">追加する指標</a>
 <ul>
-<li><a href="#wraa-weighted-runs-above-average">wRAA (Weighted Runs Above Average)</a>
+<li><a href="#wraa-weighted-runs-above-average">wRAA (weighted Runs Above Average)</a>
 <ul>
 <li><a href="#計算式">計算式</a></li>
 </ul></li>
-<li><a href="#wrc-weighted-runs-created">wRC (Weighted Runs Created)</a>
+<li><a href="#wrc-weighted-runs-created">wRC (weighted Runs Created)</a>
 <ul>
 <li><a href="#計算式-1">計算式</a></li>
 </ul></li>
@@ -224,7 +224,7 @@ if (!doNotTrack) {
 
 <p>いずれも<a href="https://www.ted027.com/post/sabr-hit-woba#woba-weighted-on-base-average"><code>wOBA</code></a>の応用指標。</p>
 
-<h4 id="wraa-weighted-runs-above-average">wRAA (Weighted Runs Above Average)</h4>
+<h4 id="wraa-weighted-runs-above-average">wRAA (weighted Runs Above Average)</h4>
 
 <ul>
 <li>打者の得点貢献度</li>
@@ -242,7 +242,7 @@ $wOBAscale = 1.24(NPB)$</p>
 
 <hr />
 
-<h4 id="wrc-weighted-runs-created">wRC (Weighted Runs Created)</h4>
+<h4 id="wrc-weighted-runs-created">wRC (weighted Runs Created)</h4>
 
 <ul>
 <li>打者の得点貢献度</li>
@@ -260,18 +260,12 @@ $wOBAscale = 1.24(NPB)$</p>
 
 
 <span style="color:#fff;font-weight:bold">def</span> wraa(hitter, league):
-    <span style="color:#0ff;font-weight:bold">&#34;&#34;&#34;
-</span><span style="color:#0ff;font-weight:bold">    wRAA = (対象打者のwOBA - リーグwOBA) ÷ wOBAscale × 打席数
-</span><span style="color:#0ff;font-weight:bold">    &#34;&#34;&#34;</span>
     raw_wraa = (Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;wOBA&#39;</span>]) - Decimal(league[<span style="color:#0ff;font-weight:bold">&#39;wOBA&#39;</span>])) / WOBA_SCALE * Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;打席&#39;</span>])
     wraa = digits_under_one(raw_wraa, <span style="color:#ff0;font-weight:bold">3</span>)
     hitter[<span style="color:#0ff;font-weight:bold">&#39;wRAA&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(wraa)
 
 
 <span style="color:#fff;font-weight:bold">def</span> wrc(hitter, league):
-    <span style="color:#0ff;font-weight:bold">&#34;&#34;&#34;
-</span><span style="color:#0ff;font-weight:bold">    wRC = wRAA + (リーグ総得点数 / リーグ総打席数) × 打席数
-</span><span style="color:#0ff;font-weight:bold">    &#34;&#34;&#34;</span>
     raw_wrc = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;wRAA&#39;</span>]) + (Decimal(league[<span style="color:#0ff;font-weight:bold">&#39;得点&#39;</span>]) / Decimal(league[<span style="color:#0ff;font-weight:bold">&#39;打席&#39;</span>])) * Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;打席&#39;</span>])
     wrc = digits_under_one(raw_wrc, <span style="color:#ff0;font-weight:bold">3</span>)
     hitter[<span style="color:#0ff;font-weight:bold">&#39;wRC&#39;</span>] = <span style="color:#fff;font-weight:bold">str</span>(wrc)</code></pre></div>
@@ -473,6 +467,9 @@ $wOBAscale = 1.24(NPB)$</p>
 	<div class="post-nav__item post-nav__item--prev">
 		<a class="post-nav__link" href="/post/sabr-list/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">セイバーメトリクス 指標一覧</p></a>
 	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/post/sabr-run-wsb/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">【wSB】NPB(2019)セイバーメトリクス走塁指標の算出</p></a>
+	</div>
 </nav>
 
 <section class="comments">
@@ -628,11 +625,11 @@ $wOBAscale = 1.24(NPB)$</p>
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-run-wsb/">【wSB】NPB(2019)セイバーメトリクス走塁指標の算出</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-hit-wraa/">【wRAA, wRC】NPB(2019)セイバーメトリクス野手指標の算出⑤</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-list/">セイバーメトリクス 指標一覧</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-pitch-fip/">【FIP】NPB(2019)セイバーメトリクス投手指標の算出②</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/echo/">育児に便利なグッズ紹介 〜Amazon Echo〜</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/sabr-hit-rc/">【RC, RC27, XR, XR27】NPB(2019)セイバーメトリクス野手指標の算出④</a></li>
 		</ul>
 	</div>
 </div>

@@ -140,6 +140,7 @@ if (!doNotTrack) {
 <li><a href="#得点能力">得点能力</a></li>
 <li><a href="#長打力">長打力</a></li>
 <li><a href="#選球眼">選球眼</a></li>
+<li><a href="#走塁力">走塁力</a></li>
 <li><a href="#守備力">守備力</a></li>
 </ul></li>
 <li><a href="#投手指標">投手指標</a></li>
@@ -215,7 +216,7 @@ if (!doNotTrack) {
 
 <hr />
 
-<p>ざっくり概念だけまとめました。</p>
+<p>ざっくり概念だけまとめました。厳密には違う、等ありますがご容赦ください。</p>
 
 <p>リンクがある指標はリンク先でもう少し詳しい説明があったりなかったり。</p>
 
@@ -227,61 +228,60 @@ if (!doNotTrack) {
 <li><p><a href="https://www.ted027.com/post/sabr-hit-woba#woba-weighted-on-base-average">wOBA (weighted On-Base Average)</a></p>
 
 <ul>
-<li>打者の1打席あたり得点力を、出塁率と同スケールで表現</li>
-<li>四死球、単打〜本塁打に各々の得点価値をかけて足し合わせ、打席で割る</li>
-<li>厳密には、故意四球・犠打・打撃妨害は除くため打席ではない</li>
+<li>1打席あたり得点力</li>
+<li><code>出塁率</code>と同スケール（平均.320程度）に換算された値</li>
+<li>四死球、単打〜本塁打に各々の得点価値をかけて足し合わせ、打席(ほぼ)で割る</li>
 </ul></li>
 
 <li><p><a href="https://www.ted027.com/post/sabr-hit-wraa#wraa-weighted-runs-above-average">wRAA (Weighted Runs Above Average)</a></p>
 
 <ul>
-<li>打者の得点貢献の突出度</li>
-<li>リーグ平均の打者が同じ打席数立った場合と比べて、何点多く貢献したか</li>
+<li>リーグ平均の打者が同じ打席数立った場合と比べて、何点多く取ったか</li>
 <li><a href="#woba-weighted-on-base-average"><code>wOBA</code></a>ベースで、リーグ平均との得点差に打席数をかける</li>
 </ul></li>
 
 <li><p><a href="https://www.ted027.com/post/sabr-hit-wraa#wrc-weighted-runs-created">wRC (Weighted Runs Created)</a></p>
 
 <ul>
-<li>打者の得点貢献、何点分貢献したか</li>
-<li>リーグ平均得点力をベースに、<a href="#wraa-weighted-runs-above-average"><code>wRAA</code></a>と合わせて何点分貢献したか</li>
+<li>累積で何点取ったか（何点分貢献したか）</li>
+<li>リーグ平均攻撃力をベースに、<a href="#wraa-weighted-runs-above-average"><code>wRAA</code></a>と合計し貢献得点数を算出</li>
 </ul></li>
 
 <li><p>wRC+ (Weighted Runs Created Plus)</p>
 
 <ul>
-<li>打者の1打席あたり得点の傑出度</li>
-<li>平均に対するパーセントで表現</li>
+<li>1打席あたり得点力の傑出度（パーセント）</li>
+<li>平均的打者が100</li>
 <li>打席あたりの<a href="#wrc-weighted-runs-created"><code>wRC</code></a>にパークファクター補正を加え、リーグ平均と比較する</li>
 </ul></li>
 
 <li><p><a href="https://www.ted027.com/post/sabr-hit-rc#rc-runs-created">RC (Runs Created)</a></p>
 
 <ul>
-<li>打者の得点貢献度、積み上げ式で何点分貢献したか</li>
+<li>累積で何点取ったか（何点分貢献したか）</li>
 <li><a href="#woba-weighted-on-base-average"><code>wOBA</code></a>系指標との違いは、盗塁、盗塁死、三振、併殺等の結果にも得点価値が振られている点</li>
 </ul></li>
 
 <li><p><a href="https://www.ted027.com/post/sabr-hit-rc#rc27-runs-created-per-27-outs">RC27 (Runs Created per 27 outs)</a></p>
 
 <ul>
-<li>打者が27アウト取られる間に<a href="#rc-runs-created"><code>RC</code></a>をどれだけ稼ぐか</li>
-<li>すなわち、この打者だけで一試合した時に何点取れるか、を意味する指標</li>
+<li>この打者だけで一試合した時に何点取れるか</li>
+<li>正確には、打者が27アウト取られる間に<a href="#rc-runs-created"><code>RC</code></a>をどれだけ稼ぐか</li>
 <li>ただしマイナスになることがあり、この指標の欠点ともいわれている</li>
 </ul></li>
 
 <li><p><a href="https://www.ted027.com/post/sabr-hit-rc#xr-extrapolated-runs">XR (eXtrapolated Runs)</a></p>
 
 <ul>
-<li>打者の得点貢献度、積み上げ式で何点分貢献したか</li>
+<li>累積で何点取ったか（何点分貢献したか）</li>
 <li><a href="#rc-runs-created"><code>RC</code></a>の改良版、計算式が異なるが、ほぼ同じ意味合いの指標</li>
 </ul></li>
 
 <li><p><a href="https://www.ted027.com/post/sabr-hit-rc#xr-extrapolated-runs-per-27-outs">XR27 (eXtrapolated Runs per 27 outs)</a></p>
 
 <ul>
-<li>打者が27アウト取られる間に<a href="#xr-extrapolated-runs"><code>XR</code></a>をどれだけ稼ぐか</li>
-<li>すなわち、この打者だけで一試合した時に何点取れるか、を意味する指標</li>
+<li>この打者だけで一試合した時に何点取れるか</li>
+<li>正確には、打者が27アウト取られる間に<a href="#xr-extrapolated-runs"><code>XR</code></a>をどれだけ稼ぐか</li>
 <li>ただしマイナスになることがあり、この指標の欠点ともいわれている</li>
 </ul></li>
 </ul>
@@ -292,7 +292,7 @@ if (!doNotTrack) {
 <li><a href="https://www.ted027.com/post/sabr-hit-isop#isop-iso-isolated-power">IsoP/ISO (Isolated Power)</a>
 
 <ul>
-<li>打者の純粋な長打力</li>
+<li>長打力、二塁打以上を打つ力</li>
 <li>長打率から打率を引くことで、長打によって稼いだ（二塁より先の）塁打のみを評価する</li>
 </ul></li>
 </ul>
@@ -303,8 +303,8 @@ if (!doNotTrack) {
 <li><p><a href="https://www.ted027.com/post/sabr-hit-bb-k#bb-k">BB/K</a></p>
 
 <ul>
-<li>四球 / 三振</li>
 <li>打者のストライクゾーン管理能力</li>
+<li>四球 / 三振</li>
 </ul></li>
 
 <li><p><a href="https://www.ted027.com/post/sabr-hit-bb-k#bb%-walk-rate">BB%</a></p>
@@ -320,6 +320,17 @@ if (!doNotTrack) {
 <li>打席自制心</li>
 <li>出塁率から打率を引き、四死球で出塁した割合を求める</li>
 <li>故意四球や死球も含むため、<code>BB%</code>の下位互換との声も</li>
+</ul></li>
+</ul>
+
+<h4 id="走塁力">走塁力</h4>
+
+<ul>
+<li><a href="https://www.ted027.com/post/sabr-run-wsb#wsb-weighted-stolen-base-runs">wSB (weighted Stolen Base runs)</a>
+
+<ul>
+<li>リーグ平均の走者と比べて、盗塁によって何点多く取ったか</li>
+<li>盗塁および盗塁死に対して得点価値をかけ、リーグ合計の盗塁および盗塁死との差を出す</li>
 </ul></li>
 </ul>
 
@@ -381,7 +392,7 @@ if (!doNotTrack) {
 <li><p><a href="https://www.ted027.com/post/sabr-pitch-fip#fip-fielding-independent-pitching">FIP (Fielding Independent Pitching)</a></p>
 
 <ul>
-<li>被本塁打、与四死球、奪三振だけを評価した擬似的な防御率</li>
+<li>被本塁打、与四死球、奪三振だけで評価した擬似的な防御率</li>
 <li>リーグ平均防御率のうち、上記三部門で構成される(と思われる)部分だけ個人の数値に置き換える</li>
 <li>長期（例えば通算）でみれば防御率と近い値になるといわれている</li>
 </ul></li>
@@ -751,11 +762,11 @@ if (!doNotTrack) {
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-run-wsb/">【wSB】NPB(2019)セイバーメトリクス走塁指標の算出</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-hit-wraa/">【wRAA, wRC】NPB(2019)セイバーメトリクス野手指標の算出⑤</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-list/">セイバーメトリクス 指標一覧</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/sabr-pitch-fip/">【FIP】NPB(2019)セイバーメトリクス投手指標の算出②</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/echo/">育児に便利なグッズ紹介 〜Amazon Echo〜</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/sabr-hit-rc/">【RC, RC27, XR, XR27】NPB(2019)セイバーメトリクス野手指標の算出④</a></li>
 		</ul>
 	</div>
 </div>
