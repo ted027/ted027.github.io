@@ -137,11 +137,13 @@ if (!doNotTrack) {
 <ul>
 <li><a href="#野手指標">野手指標</a>
 <ul>
-<li><a href="#得点能力">得点能力</a></li>
+<li><a href="#打撃総合">打撃総合</a></li>
+<li><a href="#攻撃総合">攻撃総合</a></li>
 <li><a href="#長打力">長打力</a></li>
 <li><a href="#選球眼">選球眼</a></li>
 <li><a href="#走塁力">走塁力</a></li>
 <li><a href="#守備力">守備力</a></li>
+<li><a href="#野手総合">野手総合</a></li>
 </ul></li>
 <li><a href="#投手指標">投手指標</a></li>
 </ul></li>
@@ -222,7 +224,7 @@ if (!doNotTrack) {
 
 <h3 id="野手指標">野手指標</h3>
 
-<h4 id="得点能力">得点能力</h4>
+<h4 id="打撃総合">打撃総合</h4>
 
 <ul>
 <li><p><a href="https://www.ted027.com/post/sabr-hit-woba#woba-weighted-on-base-average">wOBA (weighted On-Base Average)</a></p>
@@ -254,7 +256,11 @@ if (!doNotTrack) {
 <li>平均的打者が100</li>
 <li>打席あたりの<a href="#wrc-weighted-runs-created"><code>wRC</code></a>にパークファクター補正を加え、リーグ平均と比較する</li>
 </ul></li>
+</ul>
 
+<h4 id="攻撃総合">攻撃総合</h4>
+
+<ul>
 <li><p><a href="https://www.ted027.com/post/sabr-hit-rc#rc-runs-created">RC (Runs Created)</a></p>
 
 <ul>
@@ -326,11 +332,18 @@ if (!doNotTrack) {
 <h4 id="走塁力">走塁力</h4>
 
 <ul>
-<li><a href="https://www.ted027.com/post/sabr-run-wsb#wsb-weighted-stolen-base-runs">wSB (weighted Stolen Base runs)</a>
+<li><p><a href="https://www.ted027.com/post/sabr-run-wsb#wsb-weighted-stolen-base-runs">wSB (weighted Stolen Base runs)</a></p>
 
 <ul>
 <li>リーグ平均の走者と比べて、盗塁によって何点多く取ったか</li>
 <li>盗塁および盗塁死に対して得点価値をかけ、リーグ合計の盗塁および盗塁死との差を出す</li>
+</ul></li>
+
+<li><p>UBR (Ultimate Base Run)</p>
+
+<ul>
+<li>リーグ平均の走者と比べて、盗塁以外の走塁によって何点多く取ったか</li>
+<li>走者時の安打やゴロでの進塁、併殺回避などを評価</li>
 </ul></li>
 </ul>
 
@@ -347,12 +360,23 @@ if (!doNotTrack) {
 </ul></li>
 </ul>
 
-<hr />
+<h4 id="野手総合">野手総合</h4>
+
+<ul>
+<li>WAR (Wins Above Replacement)
+
+<ul>
+<li>代替選手と比べ、何勝多く上積みしたか</li>
+<li>代替選手は、二軍からの昇格やトレードにより簡単に獲得できるレベルの選手</li>
+<li>算出方法は複数存在するが、基本的に打撃指標<code>wRAA</code>, 走塁指標<code>wSB</code>, <code>UBR</code>, 守備指標&rsquo;UZR&rsquo;に、パークファクターや守備位置補正を加味して算出される
+&mdash;</li>
+</ul></li>
+</ul>
 
 <h3 id="投手指標">投手指標</h3>
 
 <ul>
-<li><p><a href="https://www.ted027.com/post/sabr-pitch-whip#whip">WHIP</a></p>
+<li><p><a href="https://www.ted027.com/post/sabr-pitch-whip#whip">WHIP (Walks plus Hits per Inning Pitched)</a></p>
 
 <ul>
 <li>1イニングあたり何人（安打と四球の）走者を出すか</li>
@@ -404,13 +428,21 @@ if (!doNotTrack) {
 <li>投球回が増えれば、フライボールあたりの本塁打はほぼ収束する、という考えに基づく</li>
 </ul></li>
 
-<li><p>BABIP</p>
+<li><p>BABIP (Batting Average on Balls In Play)</p>
 
 <ul>
 <li>フェアゾーン内に飛んだ打球が安打になる確率</li>
 <li>長期的に見れば.300程度に収束するとされ、大きく乖離する場合「運が良い/悪い」といえる</li>
 <li>もちろん運だけではなく、投手能力が低い場合、フィールド内に安打性の打球を打たれる機会が増え、<code>BABIP</code>が高くなる</li>
 <li>打者の場合、俊足であれば<code>BABIP</code>が高くなりがちであったり、打球傾向が偏る場合、シフトによって<code>BABIP</code>を低く抑えることができるなど、投手ほど収束しないとされる</li>
+</ul></li>
+
+<li><p>WAR (Wins Above Replacement)</p>
+
+<ul>
+<li>代替選手と比べ、何勝多く上積みしたか</li>
+<li>代替選手は、二軍からの昇格やトレードにより簡単に獲得できるレベルの選手</li>
+<li>算出方法は複数存在するが、<a href="#fip-fielding-independent-pitching"><code>FIP</code></a>や、チームの守備指標を加味した<code>失点率</code>、パークファクターなどから算出される</li>
 </ul></li>
 </ul>
 
