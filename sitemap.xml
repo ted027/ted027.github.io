@@ -4,13 +4,54 @@
   
   <url>
     <loc>https://www.ted027.com/categories/</loc>
-    <lastmod>2019-05-11T14:17:38+09:00</lastmod>
+    <lastmod>2019-05-12T23:38:22+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ted027.com/post/</loc>
-    <lastmod>2019-05-11T14:17:38+09:00</lastmod>
+    <lastmod>2019-05-12T23:38:22+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/</loc>
+    <lastmod>2019-05-12T23:38:22+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/sabr-list-pitch/</loc>
+    <lastmod>2019-05-12T23:38:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9/</loc>
+    <lastmod>2019-05-12T23:38:22+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/%E6%8A%95%E6%89%8B%E6%8C%87%E6%A8%99/</loc>
+    <lastmod>2019-05-12T23:38:22+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/%E6%8C%87%E6%A8%99/</loc>
+    <lastmod>2019-05-12T23:38:22+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/</loc>
+    <lastmod>2019-05-12T23:38:22+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/%E9%87%8E%E7%90%83/</loc>
+    <lastmod>2019-05-12T23:38:22+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -21,20 +62,8 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/tags/</loc>
-    <lastmod>2019-05-11T14:17:38+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/post/sabr-hit-rcaa/</loc>
     <lastmod>2019-05-11T14:17:38+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9/</loc>
-    <lastmod>2019-05-11T14:17:38+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -44,19 +73,7 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/</loc>
-    <lastmod>2019-05-11T14:17:38+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/tags/%E9%87%8E%E6%89%8B%E6%8C%87%E6%A8%99/</loc>
-    <lastmod>2019-05-11T14:17:38+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/categories/%E9%87%8E%E7%90%83/</loc>
     <lastmod>2019-05-11T14:17:38+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -78,14 +95,8 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/post/sabr-list/</loc>
+    <loc>https://www.ted027.com/post/sabr-list-hit/</loc>
     <lastmod>2019-05-10T20:44:40+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/%E6%8C%87%E6%A8%99/</loc>
-    <lastmod>2019-05-10T20:44:40+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -95,12 +106,6 @@
   
   <url>
     <loc>https://www.ted027.com/tags/%E3%83%AA%E3%83%BC%E3%82%B0%E5%90%88%E8%A8%88%E6%88%90%E7%B8%BE/</loc>
-    <lastmod>2019-05-09T10:19:58+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/%E6%8A%95%E6%89%8B%E6%8C%87%E6%A8%99/</loc>
     <lastmod>2019-05-09T10:19:58+09:00</lastmod>
     <priority>0</priority>
   </url>

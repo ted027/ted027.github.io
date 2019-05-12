@@ -6,18 +6,27 @@
     <description>Recent content in 指標 on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 10 May 2019 20:44:40 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 12 May 2019 23:38:22 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/%E6%8C%87%E6%A8%99/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>セイバーメトリクス 指標一覧</title>
-      <link>https://www.ted027.com/post/sabr-list/</link>
+      <title>【投手指標】セイバーメトリクス指標一覧</title>
+      <link>https://www.ted027.com/post/sabr-list-pitch/</link>
+      <pubDate>Sun, 12 May 2019 23:38:22 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/sabr-list-pitch/</guid>
+      <description>&lt;p&gt;よく使われるセイバーメトリクスの投手指標一覧をざっくりまとめました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>【野手指標】セイバーメトリクス指標一覧</title>
+      <link>https://www.ted027.com/post/sabr-list-hit/</link>
       <pubDate>Fri, 10 May 2019 20:44:40 +0900</pubDate>
       
-      <guid>https://www.ted027.com/post/sabr-list/</guid>
-      <description>&lt;p&gt;よく使われるセイバーメトリクスの指標一覧をざっくりまとめました。&lt;/p&gt;</description>
+      <guid>https://www.ted027.com/post/sabr-list-hit/</guid>
+      <description>&lt;p&gt;よく使われるセイバーメトリクスの野手指標一覧をざっくりまとめました。&lt;/p&gt;</description>
     </item>
     
   </channel>
