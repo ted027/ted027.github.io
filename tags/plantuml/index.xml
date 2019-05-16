@@ -6,10 +6,19 @@
     <description>Recent content in PlantUML on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 25 Apr 2019 17:02:54 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 16 May 2019 23:08:58 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/plantuml/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PlantUMLでいろんなアイコンを使ったシステム構成図を作る</title>
+      <link>https://www.ted027.com/post/puml-various/</link>
+      <pubDate>Thu, 16 May 2019 23:08:58 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/puml-various/</guid>
+      <description>&lt;p&gt;PlantUMLで図を作るとき、各種サービスやその他色々なアイコンを入れ込むことができる。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>PlantUMLでAWSアイコンを使ったシステム構成図を作る</title>

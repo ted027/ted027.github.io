@@ -6,10 +6,19 @@
     <description>Recent content in Categories on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 15 May 2019 22:06:08 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 16 May 2019 23:08:58 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PlantUML</title>
+      <link>https://www.ted027.com/categories/plantuml/</link>
+      <pubDate>Thu, 16 May 2019 23:08:58 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/categories/plantuml/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Python</title>
@@ -98,15 +107,6 @@
       <pubDate>Fri, 26 Apr 2019 07:32:32 +0900</pubDate>
       
       <guid>https://www.ted027.com/categories/gnu-make/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PlantUML</title>
-      <link>https://www.ted027.com/categories/plantuml/</link>
-      <pubDate>Thu, 25 Apr 2019 17:02:54 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/categories/plantuml/</guid>
       <description></description>
     </item>
     
