@@ -6,10 +6,28 @@
     <description>Recent content in Tags on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 16 May 2019 23:08:58 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 18 May 2019 16:05:36 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>pip</title>
+      <link>https://www.ted027.com/tags/pip/</link>
+      <pubDate>Sat, 18 May 2019 16:05:36 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/pip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>psycopg2</title>
+      <link>https://www.ted027.com/tags/psycopg2/</link>
+      <pubDate>Sat, 18 May 2019 16:05:36 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/psycopg2/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>PlantUML</title>
@@ -314,15 +332,6 @@
       <pubDate>Wed, 01 May 2019 14:14:13 +0900</pubDate>
       
       <guid>https://www.ted027.com/tags/%E3%82%B9%E3%82%B3%E3%82%A2%E9%80%9F%E5%A0%B1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pip</title>
-      <link>https://www.ted027.com/tags/pip/</link>
-      <pubDate>Tue, 30 Apr 2019 22:39:20 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/tags/pip/</guid>
       <description></description>
     </item>
     

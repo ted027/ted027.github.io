@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>psycopg2 on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/psycopg2/</link>
+    <description>Recent content in psycopg2 on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 18 May 2019 16:05:36 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/tags/psycopg2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>pip install時の「“python setup.py egg_info” failed ...」エラー</title>
+      <link>https://www.ted027.com/post/python-psycopg2/</link>
+      <pubDate>Sat, 18 May 2019 16:05:36 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/python-psycopg2/</guid>
+      <description>&lt;p&gt;Pythonでpip installしようとした時、表題のエラーで躓くことがあった。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
