@@ -6,7 +6,7 @@
     <description>Recent content on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 18 May 2019 16:05:36 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 18 May 2019 22:05:36 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>pip install時の「“python setup.py egg_info” failed ...」エラー</title>
       <link>https://www.ted027.com/post/python-psycopg2/</link>
-      <pubDate>Sat, 18 May 2019 16:05:36 +0900</pubDate>
+      <pubDate>Sat, 18 May 2019 22:05:36 +0900</pubDate>
       
       <guid>https://www.ted027.com/post/python-psycopg2/</guid>
       <description>&lt;p&gt;Pythonでpip installしようとした時、表題のエラーで躓くことがあった。&lt;/p&gt;</description>
