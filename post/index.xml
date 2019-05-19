@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 18 May 2019 22:05:36 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 19 May 2019 14:28:24 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>規定打席, 規定投球回の到達/未到達を追加</title>
+      <link>https://www.ted027.com/post/python-bb-regulation/</link>
+      <pubDate>Sun, 19 May 2019 14:28:24 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/python-bb-regulation/</guid>
+      <description>&lt;p&gt;以前取得したプロ野球の個人成績とチーム成績から、各人が規定打席/投球回に到達しているかを算出し、成績に書き加える。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>pip install時の「“python setup.py egg_info” failed ...」エラー</title>

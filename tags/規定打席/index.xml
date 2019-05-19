@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>規定打席 on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/%E8%A6%8F%E5%AE%9A%E6%89%93%E5%B8%AD/</link>
+    <description>Recent content in 規定打席 on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 19 May 2019 14:28:24 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/tags/%E8%A6%8F%E5%AE%9A%E6%89%93%E5%B8%AD/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>規定打席, 規定投球回の到達/未到達を追加</title>
+      <link>https://www.ted027.com/post/python-bb-regulation/</link>
+      <pubDate>Sun, 19 May 2019 14:28:24 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/python-bb-regulation/</guid>
+      <description>&lt;p&gt;以前取得したプロ野球の個人成績とチーム成績から、各人が規定打席/投球回に到達しているかを算出し、成績に書き加える。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
