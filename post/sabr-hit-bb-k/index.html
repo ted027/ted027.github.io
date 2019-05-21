@@ -139,6 +139,7 @@ if (!doNotTrack) {
 <ul>
 <li><a href="#bb-k">BB/K</a></li>
 <li><a href="#bb-walk-rate">BB% (Walk rate)</a></li>
+<li><a href="#k-k-rate">K% (K rate)</a></li>
 <li><a href="#isod-isolated-discipline">IsoD (Isolated Discipline)</a></li>
 </ul></li>
 <li><a href="#実装">実装</a></li>
@@ -235,10 +236,22 @@ if (!doNotTrack) {
 <ul>
 <li>打席自制心</li>
 <li>選球眼が良い選手が高くなる傾向</li>
+<li>早打ちの選手は低くなる傾向</li>
 <li>長打力も関係するため、必ずしも選球眼と比例するわけではない</li>
 </ul>
 
 <p>$\frac{四球}{打席}$</p>
+
+<hr />
+
+<h4 id="k-k-rate">K% (K rate)</h4>
+
+<ul>
+<li>ミート力 + 選球眼</li>
+<li>早打ちの選手は低くなる傾向</li>
+</ul>
+
+<p>$\frac{三振}{打席}$</p>
 
 <hr />
 
@@ -257,23 +270,33 @@ if (!doNotTrack) {
 
 <h3 id="実装">実装</h3>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py:sabr.py" data-lang="py:sabr.py"><span style="color:#fff;font-weight:bold">def</span> bb_per_k(hitter):
+    bb = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;四球&#39;</span>])
     k = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;三振&#39;</span>])
-    <span style="color:#fff;font-weight:bold">if</span> not k:
-        bb_per_k = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>)
-    <span style="color:#fff;font-weight:bold">else</span>:
-        raw_bb_per_k = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;四球&#39;</span>]) / k
-        bb_per_k = _digits_under_one(raw_bb_per_k, <span style="color:#ff0;font-weight:bold">2</span>)
+    <span style="color:#fff;font-weight:bold">if</span> not bb:
+        <span style="color:#fff;font-weight:bold">return</span> <span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>
+    <span style="color:#fff;font-weight:bold">elif</span> not k:
+        <span style="color:#fff;font-weight:bold">return</span> <span style="color:#0ff;font-weight:bold">&#39;99.99&#39;</span>
+    raw_bb_per_k = bb / k
+    bb_per_k = digits_under_one(raw_bb_per_k, <span style="color:#ff0;font-weight:bold">2</span>)
     <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(bb_per_k)
 
 
 <span style="color:#fff;font-weight:bold">def</span> bb_percent(hitter):
     apperance = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;打席&#39;</span>])
     <span style="color:#fff;font-weight:bold">if</span> not apperance:
-        bb_percent = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>)
-    <span style="color:#fff;font-weight:bold">else</span>:
-        raw_bb_percent = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;四球&#39;</span>]) / apperance
-        bb_percent = _digits_under_one(raw_bb_percent, <span style="color:#ff0;font-weight:bold">3</span>)
+        <span style="color:#fff;font-weight:bold">return</span> <span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>
+    raw_bb_percent = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;四球&#39;</span>]) / apperance
+    bb_percent = digits_under_one(raw_bb_percent, <span style="color:#ff0;font-weight:bold">3</span>)
     <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(bb_percent)
+
+
+<span style="color:#fff;font-weight:bold">def</span> k_percent(hitter):
+    apperance = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;打席&#39;</span>])
+    <span style="color:#fff;font-weight:bold">if</span> not apperance:
+        <span style="color:#fff;font-weight:bold">return</span> <span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>
+    raw_k_percent = Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;三振&#39;</span>]) / apperance
+    k_percent = digits_under_one(raw_k_percent, <span style="color:#ff0;font-weight:bold">3</span>)
+    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(k_percent)
 
 
 <span style="color:#fff;font-weight:bold">def</span> iso_d(hitter):
