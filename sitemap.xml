@@ -3,20 +3,49 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.ted027.com/categories/aws/</loc>
+    <lastmod>2019-05-21T16:52:42+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/aws-autoscalling-suspend/</loc>
+    <lastmod>2019-05-21T16:52:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/autoscalling/</loc>
+    <lastmod>2019-05-21T16:52:42+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ted027.com/categories/</loc>
-    <lastmod>2019-05-20T12:38:55+09:00</lastmod>
+    <lastmod>2019-05-21T16:52:42+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ted027.com/post/</loc>
-    <lastmod>2019-05-20T12:38:55+09:00</lastmod>
+    <lastmod>2019-05-21T16:52:42+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ted027.com/tags/</loc>
-    <lastmod>2019-05-20T12:38:55+09:00</lastmod>
+    <lastmod>2019-05-21T16:52:42+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/suspend/</loc>
+    <lastmod>2019-05-21T16:52:42+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/</loc>
+    <lastmod>2019-05-21T16:52:42+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -39,12 +68,6 @@
   
   <url>
     <loc>https://www.ted027.com/categories/%E8%82%B2%E5%85%90/</loc>
-    <lastmod>2019-05-20T12:38:55+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/</loc>
     <lastmod>2019-05-20T12:38:55+09:00</lastmod>
     <priority>0</priority>
   </url>
