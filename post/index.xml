@@ -6,10 +6,28 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 21 May 2019 20:49:54 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 22 May 2019 13:15:37 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>【後半】パークファクターの算出で大いに躓く②</title>
+      <link>https://www.ted027.com/post/sabr-hit-parkfactor-2/</link>
+      <pubDate>Wed, 22 May 2019 13:15:37 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/sabr-hit-parkfactor-2/</guid>
+      <description>&lt;p&gt;前半からの続き。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>【前半】パークファクターの算出で大いに躓く①</title>
+      <link>https://www.ted027.com/post/sabr-hit-parkfactor-1/</link>
+      <pubDate>Wed, 22 May 2019 11:46:00 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/sabr-hit-parkfactor-1/</guid>
+      <description>&lt;p&gt;「東京ドームは本塁打が出やすい」「ナゴヤドームは点が入りにくい」といったふんわりした感覚を数値化したものがパークファクター。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>ドメインプロテクション設定の必要性</title>
