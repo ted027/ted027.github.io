@@ -213,7 +213,7 @@ if (!doNotTrack) {
 <h3 id="やったこと">やったこと</h3>
 
 <p><code>AWS::AutoScaling::AutoScalingGroup</code>のCloudformationスタックを立て、EC2 Instanceを管理。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">aws cloudformation create-stack --stack-name MyStackName --template-body file://mytemplate.yml</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml:mytemplate.yml" data-lang="yml:mytemplate.yml">...
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">aws cloudformation create-stack --stack-name MyStackName --template-body file://mytemplate.yml</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">...
 Resources:
   AutoScalingGroupJmeter:
     Type: AWS::AutoScaling::AutoScalingGroup
@@ -235,6 +235,8 @@ Resources:
 
 <p>suspend-processesを実行する際、特にプロセスを指定しなかったので、全てのプロセスがsuspendされた。</p>
 
+<hr />
+
 
 <figure >
     
@@ -244,6 +246,8 @@ Resources:
     
 </figure>
 
+
+<hr />
 
 <p>このためTerminateもsuspendされてしまい、削除に失敗。</p>
 
