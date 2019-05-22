@@ -8,7 +8,7 @@
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<meta property="og:title" content="【後半】パークファクターの算出で大いに躓く②" />
-<meta property="og:description" content="前半からの続き。" />
+<meta property="og:description" content="前半からの続き。今回で実際にパークファクター（風の参考値）を算出する。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.ted027.com/post/sabr-hit-parkfactor-2/" />
 <meta property="article:published_time" content="2019-05-22T13:15:37+09:00" />
@@ -16,7 +16,7 @@
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="【後半】パークファクターの算出で大いに躓く②"/>
-<meta name="twitter:description" content="前半からの続き。"/>
+<meta name="twitter:description" content="前半からの続き。今回で実際にパークファクター（風の参考値）を算出する。"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -156,7 +156,7 @@ if (!doNotTrack) {
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<p>前半からの続き。</p>
+			<p>前半からの続き。今回で実際にパークファクター（風の参考値）を算出する。</p>
 
 <hr />
 
@@ -233,13 +233,13 @@ if (!doNotTrack) {
 
 <p>東京ドームのパークファクターであれば、巨人の東京ドームでの成績、及び東京ドーム以外での成績、を用いて計算します。（ホームでの成績、ビジターでの成績ではない）</p>
 
-<p>$\frac{本拠地球場での得点 + 失点 \div 本拠地球場での試合数}{本拠地以外の球場での得点 + 失点 \div 本拠地以外の球場での試合数}$</p>
+<p>$\frac{本拠地での得点 + 失点 \div 本拠地での試合数}{本拠地以外での得点 + 失点 \div 本拠地以外での試合数}$</p>
 
 <hr />
 
 <h4 id="本塁打パークファクター">本塁打パークファクター</h4>
 
-<p>$\frac{本拠地球場での本塁打 + 被本塁打 \div 本拠地球場での試合数}{本拠地以外の球場での本塁打 + 被本塁打 \div 本拠地以外の球場での試合数}$</p>
+<p>$\frac{本拠地での本塁打 + 被本塁打 \div 本拠地での試合数}{本拠地以外での本塁打 + 被本塁打 \div 本拠地以外での試合数}$</p>
 
 <hr />
 
@@ -411,6 +411,14 @@ if (!doNotTrack) {
 <p>色々妥協してしまったが、それらしい値を出すことはできた。</p>
 
 <p>次はこれを使って<code>wRC+</code>を算出したい。やはり参考値にはなってしまうけど。</p>
+
+<hr />
+
+<ul>
+<li><p><a href="https://www.ted027.com/post/python-personal-records">[参考記事]Pythonでプロ野球の個人成績一覧をJSONにして取得する</a></p></li>
+
+<li><p><a href="https://www.ted027.com/post/sabr-hit-woba">[参考記事]【wOBA】NPB(2019)セイバーメトリクス野手指標の算出①</a></p></li>
+</ul>
 
 <hr />
 
