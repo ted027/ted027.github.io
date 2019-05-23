@@ -6,26 +6,35 @@
     <description>Recent content in セイバーメトリクス on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 22 May 2019 13:15:37 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 23 May 2019 21:52:45 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>【wRC&#43;】NPB(2019)セイバーメトリクス野手指標の算出⑦</title>
+      <link>https://www.ted027.com/post/sabr-hit-wrc-plus/</link>
+      <pubDate>Thu, 23 May 2019 21:52:45 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/sabr-hit-wrc-plus/</guid>
+      <description>&lt;p&gt;wRCにパークファクターを加味し、リーグ平均と比較して打者の価値を表現するwRC+を算出する。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>【後半】パークファクターの算出で大いに躓く②</title>
-      <link>https://www.ted027.com/post/sabr-hit-parkfactor-2/</link>
+      <link>https://www.ted027.com/post/sabr-parkfactor-2/</link>
       <pubDate>Wed, 22 May 2019 13:15:37 +0900</pubDate>
       
-      <guid>https://www.ted027.com/post/sabr-hit-parkfactor-2/</guid>
-      <description>&lt;p&gt;前半からの続き。今回で実際にパークファクター（風の参考値）を算出する。&lt;/p&gt;</description>
+      <guid>https://www.ted027.com/post/sabr-parkfactor-2/</guid>
+      <description>&lt;p&gt;前半からの続き。今回で実際にパークファクター（参考値）を算出する。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>【前半】パークファクターの算出で大いに躓く①</title>
-      <link>https://www.ted027.com/post/sabr-hit-parkfactor-1/</link>
+      <link>https://www.ted027.com/post/sabr-parkfactor-1/</link>
       <pubDate>Wed, 22 May 2019 11:46:00 +0900</pubDate>
       
-      <guid>https://www.ted027.com/post/sabr-hit-parkfactor-1/</guid>
+      <guid>https://www.ted027.com/post/sabr-parkfactor-1/</guid>
       <description>&lt;p&gt;「東京ドームは本塁打が出やすい」「ナゴヤドームは点が入りにくい」を数値化したものがパークファクター。&lt;/p&gt;</description>
     </item>
     
