@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 23 May 2019 21:52:45 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 26 May 2019 14:27:01 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CircleCIで定期実行</title>
+      <link>https://www.ted027.com/post/circleci-cron/</link>
+      <pubDate>Sun, 26 May 2019 14:27:01 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/circleci-cron/</guid>
+      <description>&lt;p&gt;CircleCIでジョブをcron設定し定期実行する。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>【wRC&#43;】NPB(2019)セイバーメトリクス野手指標の算出⑦</title>
