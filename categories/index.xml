@@ -6,10 +6,19 @@
     <description>Recent content in Categories on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 26 May 2019 14:27:01 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 29 May 2019 22:47:01 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript</title>
+      <link>https://www.ted027.com/categories/javascript/</link>
+      <pubDate>Wed, 29 May 2019 22:47:01 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/categories/javascript/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>CI</title>
