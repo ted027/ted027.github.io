@@ -6,10 +6,19 @@
     <description>Recent content in 連想配列 on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 29 May 2019 22:47:01 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 01 Jun 2019 01:28:45 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/%E9%80%A3%E6%83%B3%E9%85%8D%E5%88%97/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScriptで複数の配列に対しforループ</title>
+      <link>https://www.ted027.com/post/js-loop/</link>
+      <pubDate>Sat, 01 Jun 2019 01:28:45 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/js-loop/</guid>
+      <description>&lt;p&gt;JavaScriptで配列を二つ見ながらループしたかった。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>JavaScriptで連想配列の長さを取得する</title>
