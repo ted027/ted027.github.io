@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 01 Jun 2019 01:28:45 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 03 Jun 2019 12:35:52 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>セイバーメトリクス指標をそこそこ含むプロ野球成績表を作った</title>
+      <link>https://www.ted027.com/post/npb-records/</link>
+      <pubDate>Mon, 03 Jun 2019 12:35:52 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/npb-records/</guid>
+      <description>&lt;p&gt;当ブログトップから、プロ野球の成績表ページを見れるようにしました。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>JavaScriptで複数の配列に対しforループ</title>
