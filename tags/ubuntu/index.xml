@@ -20,34 +20,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>OSをUbuntu 18.04 LTSにした際にやったこと</title>
-      <link>https://www.ted027.com/post/ubuntu/</link>
-      <pubDate>Sun, 21 Apr 2019 22:52:31 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/post/ubuntu/</guid>
-      <description>&lt;p&gt;新しいノートPC購入を機に、OSをUbuntu 18.04 LTSにした際の備忘録。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Ubuntu 18.04にKindleをインストールした</title>
-      <link>https://www.ted027.com/post/ubuntu-kindle/</link>
-      <pubDate>Tue, 16 Apr 2019 22:34:09 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/post/ubuntu-kindle/</guid>
-      <description>&lt;p&gt;UbuntuにKindleをインストールしようとして苦労したのでメモ。&lt;/p&gt;
-
-&lt;p&gt;Ubuntu用のKindle for PCクライアントは無いので、ちょっと手間を掛けてWineというWindowsエミュレータを使ってWindows版をインストールする。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Hugo &#43; GitHub Pagesでブログを作った話</title>
-      <link>https://www.ted027.com/post/hugo/</link>
-      <pubDate>Mon, 15 Apr 2019 11:20:46 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/post/hugo/</guid>
-      <description>&lt;p&gt;Hugo + GitHub Pagesを使ってブログを作った。&lt;/p&gt;</description>
-    </item>
-    
   </channel>
 </rss>

@@ -155,23 +155,5 @@
       <description>&lt;p&gt;昨年書いた、Pythonでプロ野球のスコア速報を取得するスクリプト。&lt;/p&gt;</description>
     </item>
     
-    <item>
-      <title>Pythonでライブラリを使う</title>
-      <link>https://www.ted027.com/post/python-library/</link>
-      <pubDate>Tue, 30 Apr 2019 22:39:20 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/post/python-library/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pythonの導入とコマンド実行（Windows環境）</title>
-      <link>https://www.ted027.com/post/python-win/</link>
-      <pubDate>Tue, 30 Apr 2019 20:37:26 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/post/python-win/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

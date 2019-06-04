@@ -359,7 +359,7 @@
       <pubDate>Fri, 26 Apr 2019 16:05:19 +0900</pubDate>
       
       <guid>https://www.ted027.com/post/jenkins-docker/</guid>
-      <description>&lt;p&gt;Jenkins PipelineジョブのDocker仕様で便利〜と思って使ってたら軽く躓いた話。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Jenkins PipelineジョブでDockerfileベースのイメージを使っていたら軽く躓いた話。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -442,7 +442,7 @@
       <guid>https://www.ted027.com/post/penant-add/</guid>
       <description>&lt;p&gt;実況パワフルプロ野球のペナントモードで、各球団の補強思考を設定できる。&lt;/p&gt;
 
-&lt;p&gt;Pythonで近年の移籍情報を取得して、各球団の補強実績に即した設定を算出したい。&lt;/p&gt;</description>
+&lt;p&gt;Pythonで近年の移籍情報を取得して、各球団の補強実績に即した設定を算出したかった。&lt;/p&gt;</description>
     </item>
     
     <item>
