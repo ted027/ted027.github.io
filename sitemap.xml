@@ -4,19 +4,54 @@
   
   <url>
     <loc>https://www.ted027.com/categories/</loc>
-    <lastmod>2019-06-03T12:35:52+09:00</lastmod>
+    <lastmod>2019-06-04T12:33:53+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/jessie-apt-fail/</loc>
+    <lastmod>2019-06-04T12:33:53+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/docker/</loc>
+    <lastmod>2019-06-04T12:33:53+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/docker/</loc>
+    <lastmod>2019-06-04T12:33:53+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/linux/</loc>
+    <lastmod>2019-06-04T12:33:53+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ted027.com/post/</loc>
-    <lastmod>2019-06-03T12:35:52+09:00</lastmod>
+    <lastmod>2019-06-04T12:33:53+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ted027.com/tags/</loc>
-    <lastmod>2019-06-03T12:35:52+09:00</lastmod>
+    <lastmod>2019-06-04T12:33:53+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/apt/</loc>
+    <lastmod>2019-06-04T12:33:53+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/</loc>
+    <lastmod>2019-06-04T12:33:53+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -33,12 +68,6 @@
   
   <url>
     <loc>https://www.ted027.com/tags/%E3%83%97%E3%83%AD%E9%87%8E%E7%90%83/</loc>
-    <lastmod>2019-06-03T12:35:52+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/</loc>
     <lastmod>2019-06-03T12:35:52+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -513,18 +542,6 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/docker/</loc>
-    <lastmod>2019-05-03T14:08:37+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/docker/</loc>
-    <lastmod>2019-05-03T14:08:37+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/tags/docker-for-windows/</loc>
     <lastmod>2019-05-03T14:08:37+09:00</lastmod>
     <priority>0</priority>
@@ -651,12 +668,6 @@
   <url>
     <loc>https://www.ted027.com/tags/pipeline/</loc>
     <lastmod>2019-04-26T16:05:19+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/linux/</loc>
-    <lastmod>2019-04-26T14:23:28+09:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>apt on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/apt/</link>
+    <description>Recent content in apt on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 04 Jun 2019 12:33:53 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/tags/apt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Debian(Jessie)のdocker imageでapt updateがこける</title>
+      <link>https://www.ted027.com/post/jessie-apt-fail/</link>
+      <pubDate>Tue, 04 Jun 2019 12:33:53 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/jessie-apt-fail/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

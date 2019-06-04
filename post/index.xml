@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 03 Jun 2019 12:35:52 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 04 Jun 2019 12:33:53 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Debian(Jessie)のdocker imageでapt updateがこける</title>
+      <link>https://www.ted027.com/post/jessie-apt-fail/</link>
+      <pubDate>Tue, 04 Jun 2019 12:33:53 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/jessie-apt-fail/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>セイバーメトリクス指標をそこそこ含むプロ野球成績表を作った</title>
