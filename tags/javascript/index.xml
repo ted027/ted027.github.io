@@ -1,32 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JavaScript on 行けたら行く</title>
+    <title>Javascript on 行けたら行く</title>
     <link>https://www.ted027.com/tags/javascript/</link>
-    <description>Recent content in JavaScript on 行けたら行く</description>
+    <description>Recent content in Javascript on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 01 Jun 2019 01:28:45 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 06 Jun 2019 12:34:11 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>JavaScriptで複数の配列に対しforループ</title>
-      <link>https://www.ted027.com/post/js-loop/</link>
-      <pubDate>Sat, 01 Jun 2019 01:28:45 +0900</pubDate>
+      <title>ReactのInternetExplorer対応</title>
+      <link>https://www.ted027.com/post/react-ie/</link>
+      <pubDate>Thu, 06 Jun 2019 12:34:11 +0900</pubDate>
       
-      <guid>https://www.ted027.com/post/js-loop/</guid>
-      <description>&lt;p&gt;JavaScriptで配列を二つ見ながらループしたかった。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>JavaScriptで連想配列の長さを取得する</title>
-      <link>https://www.ted027.com/post/js-length/</link>
-      <pubDate>Wed, 29 May 2019 22:47:01 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/post/js-length/</guid>
-      <description></description>
+      <guid>https://www.ted027.com/post/react-ie/</guid>
+      <description>&lt;p&gt;Reactで作ったページがIEで表示できなかった。&lt;/p&gt;</description>
     </item>
     
   </channel>

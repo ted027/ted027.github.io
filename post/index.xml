@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 04 Jun 2019 12:33:53 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 06 Jun 2019 12:34:11 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ReactのInternetExplorer対応</title>
+      <link>https://www.ted027.com/post/react-ie/</link>
+      <pubDate>Thu, 06 Jun 2019 12:34:11 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/react-ie/</guid>
+      <description>&lt;p&gt;Reactで作ったページがIEで表示できなかった。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Debian(Jessie)のdocker imageでapt updateがこける</title>
