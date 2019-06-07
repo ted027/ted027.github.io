@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>UML on 行けたら行く</title>
+    <link>https://www.ted027.com/categories/uml/</link>
+    <description>Recent content in UML on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 16 May 2019 23:08:58 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/categories/uml/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PlantUMLでいろんなアイコンを使ったシステム構成図を作る</title>
+      <link>https://www.ted027.com/post/puml-various/</link>
+      <pubDate>Thu, 16 May 2019 23:08:58 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/puml-various/</guid>
+      <description>&lt;p&gt;PlantUMLで図を作るとき、各種サービスやその他色々なアイコンを入れ込むことができる。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PlantUMLでAWSアイコンを使ったシステム構成図を作る</title>
+      <link>https://www.ted027.com/post/puml-aws/</link>
+      <pubDate>Thu, 25 Apr 2019 17:02:54 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/puml-aws/</guid>
+      <description>&lt;p&gt;公開されているAWS Simple Iconsのpumlファイルをincludeすることで、PlantUMLで簡単に図に導入できる。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PlantUML &#43; Visual Studio Codeを導入する（Ubuntu環境）</title>
+      <link>https://www.ted027.com/post/puml-ubu/</link>
+      <pubDate>Thu, 25 Apr 2019 09:33:57 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/puml-ubu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PlantUML &#43; Visual Studio Codeを導入する（Windows環境）</title>
+      <link>https://www.ted027.com/post/puml-win/</link>
+      <pubDate>Thu, 25 Apr 2019 09:33:57 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/puml-win/</guid>
+      <description>&lt;p&gt;PlantUMLは、構成や関連を言語で記載しUML図を作成できるコンポーネント。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

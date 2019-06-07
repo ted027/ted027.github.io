@@ -165,6 +165,15 @@
     </item>
     
     <item>
+      <title>ドメイン</title>
+      <link>https://www.ted027.com/tags/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3/</link>
+      <pubDate>Tue, 21 May 2019 20:49:54 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>ドメインプロテクション</title>
       <link>https://www.ted027.com/tags/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%97%E3%83%AD%E3%83%86%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3/</link>
       <pubDate>Tue, 21 May 2019 20:49:54 +0900</pubDate>
@@ -224,6 +233,15 @@
       <pubDate>Sat, 18 May 2019 22:05:36 +0900</pubDate>
       
       <guid>https://www.ted027.com/tags/pip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PlantUML</title>
+      <link>https://www.ted027.com/tags/plantuml/</link>
+      <pubDate>Thu, 16 May 2019 23:08:58 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/plantuml/</guid>
       <description></description>
     </item>
     
@@ -471,15 +489,6 @@
     </item>
     
     <item>
-      <title>ドメイン</title>
-      <link>https://www.ted027.com/tags/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3/</link>
-      <pubDate>Sun, 28 Apr 2019 21:43:13 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/tags/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Docker</title>
       <link>https://www.ted027.com/tags/docker/</link>
       <pubDate>Fri, 26 Apr 2019 16:05:19 +0900</pubDate>
@@ -539,15 +548,6 @@
       <pubDate>Thu, 25 Apr 2019 17:02:54 +0900</pubDate>
       
       <guid>https://www.ted027.com/tags/aws/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PlantUML</title>
-      <link>https://www.ted027.com/tags/plantuml/</link>
-      <pubDate>Thu, 25 Apr 2019 09:33:57 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/tags/plantuml/</guid>
       <description></description>
     </item>
     
@@ -615,15 +615,6 @@
     </item>
     
     <item>
-      <title>CI</title>
-      <link>https://www.ted027.com/tags/ci/</link>
-      <pubDate>Fri, 19 Apr 2019 22:53:43 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/tags/ci/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Hugo</title>
       <link>https://www.ted027.com/tags/hugo/</link>
       <pubDate>Fri, 19 Apr 2019 22:53:43 +0900</pubDate>
@@ -642,11 +633,11 @@
     </item>
     
     <item>
-      <title>仮想端末</title>
-      <link>https://www.ted027.com/tags/%E4%BB%AE%E6%83%B3%E7%AB%AF%E6%9C%AB/</link>
+      <title>terminal</title>
+      <link>https://www.ted027.com/tags/terminal/</link>
       <pubDate>Fri, 19 Apr 2019 12:41:06 +0900</pubDate>
       
-      <guid>https://www.ted027.com/tags/%E4%BB%AE%E6%83%B3%E7%AB%AF%E6%9C%AB/</guid>
+      <guid>https://www.ted027.com/tags/terminal/</guid>
       <description></description>
     </item>
     

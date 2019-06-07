@@ -20,5 +20,14 @@
       <description>&lt;p&gt;CircleCIでジョブをcron設定し定期実行する。&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>CircleCIでHugoのビルドを自動化した話</title>
+      <link>https://www.ted027.com/post/circleci/</link>
+      <pubDate>Fri, 19 Apr 2019 22:53:43 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/circleci/</guid>
+      <description>&lt;p&gt;Hugoのビルドとブログの更新を自動で行うようにした。&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

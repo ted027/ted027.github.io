@@ -204,7 +204,13 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3/</loc>
+    <loc>https://www.ted027.com/categories/blog/</loc>
+    <lastmod>2019-05-21T20:49:54+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3/</loc>
     <lastmod>2019-05-21T20:49:54+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -295,7 +301,7 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/plantuml/</loc>
+    <loc>https://www.ted027.com/tags/plantuml/</loc>
     <lastmod>2019-05-16T23:08:58+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -303,6 +309,12 @@
   <url>
     <loc>https://www.ted027.com/post/puml-various/</loc>
     <lastmod>2019-05-16T23:08:58+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/uml/</loc>
+    <lastmod>2019-05-16T23:08:58+09:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -589,12 +601,6 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/blog/</loc>
-    <lastmod>2019-04-28T21:43:13+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/tags/github-pages/</loc>
     <lastmod>2019-04-28T21:43:13+09:00</lastmod>
     <priority>0</priority>
@@ -603,12 +609,6 @@
   <url>
     <loc>https://www.ted027.com/post/domain/</loc>
     <lastmod>2019-04-28T21:43:13+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/%E3%83%89%E3%83%A1%E3%82%A4%E3%83%B3/</loc>
-    <lastmod>2019-04-28T21:43:13+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -692,12 +692,6 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/tags/plantuml/</loc>
-    <lastmod>2019-04-25T09:33:57+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/post/puml-ubu/</loc>
     <lastmod>2019-04-25T09:33:57+09:00</lastmod>
   </url>
@@ -770,6 +764,12 @@
   </url>
   
   <url>
+    <loc>https://www.ted027.com/categories/linux/</loc>
+    <lastmod>2019-04-21T22:52:31+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://www.ted027.com/tags/os/</loc>
     <lastmod>2019-04-21T22:52:31+09:00</lastmod>
     <priority>0</priority>
@@ -778,18 +778,6 @@
   <url>
     <loc>https://www.ted027.com/post/ubuntu/</loc>
     <lastmod>2019-04-21T22:52:31+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/categories/ubuntu/</loc>
-    <lastmod>2019-04-21T22:52:31+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/ci/</loc>
-    <lastmod>2019-04-19T22:53:43+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -810,7 +798,7 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/tags/%E4%BB%AE%E6%83%B3%E7%AB%AF%E6%9C%AB/</loc>
+    <loc>https://www.ted027.com/tags/terminal/</loc>
     <lastmod>2019-04-19T12:41:06+09:00</lastmod>
     <priority>0</priority>
   </url>
