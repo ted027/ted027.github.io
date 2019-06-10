@@ -6,10 +6,19 @@
     <description>Recent content in Javascript on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 06 Jun 2019 12:34:11 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 10 Jun 2019 12:32:18 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Material-UIのテーマカラーを変える</title>
+      <link>https://www.ted027.com/post/react-mui-theme/</link>
+      <pubDate>Mon, 10 Jun 2019 12:32:18 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/react-mui-theme/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ReactのInternetExplorer対応</title>

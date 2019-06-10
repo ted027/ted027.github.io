@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 07 Jun 2019 22:19:54 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 10 Jun 2019 12:32:18 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Material-UIのテーマカラーを変える</title>
+      <link>https://www.ted027.com/post/react-mui-theme/</link>
+      <pubDate>Mon, 10 Jun 2019 12:32:18 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/react-mui-theme/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Github Pages 独自ドメインの証明書エラー</title>
@@ -165,7 +174,7 @@
     </item>
     
     <item>
-      <title>BABIPは本当に運を表す指標なのか？</title>
+      <title>BABIPは本当に運を表す指標なのか</title>
       <link>https://www.ted027.com/post/sabr-babip/</link>
       <pubDate>Tue, 14 May 2019 17:24:52 +0900</pubDate>
       
