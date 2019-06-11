@@ -6,10 +6,19 @@
     <description>Recent content in 野球 on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 03 Jun 2019 12:35:52 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 11 Jun 2019 20:28:56 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/categories/%E9%87%8E%E7%90%83/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>「パークファクター補正をかけた○○」の計算の仕方</title>
+      <link>https://www.ted027.com/post/sabr-parkfactor-correct/</link>
+      <pubDate>Tue, 11 Jun 2019 20:28:56 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/sabr-parkfactor-correct/</guid>
+      <description>&lt;p&gt;指標の説明で「パークファクター補正をかけたwRAA」とか言われても、どうかければいいんだ…と思って調べた。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>セイバーメトリクス指標をそこそこ含むプロ野球成績表を作った</title>
