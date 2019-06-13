@@ -331,15 +331,14 @@ XR_SAC_BUNT = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.04&#39;</
                 Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;犠打&#39;</span>])) + Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.64&#39;</span> * Decimal(
                     hitter[<span style="color:#0ff;font-weight:bold">&#39;盗塁&#39;</span>]) - Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.03&#39;</span>) * Decimal(
                         hitter[<span style="color:#0ff;font-weight:bold">&#39;三振&#39;</span>])
-    raw_rc = ((on_base + Decimal(<span style="color:#0ff;font-weight:bold">&#39;2.4&#39;</span>) * opportunity) *
+    rc = ((on_base + Decimal(<span style="color:#0ff;font-weight:bold">&#39;2.4&#39;</span>) * opportunity) *
                 (advance_base + Decimal(<span style="color:#0ff;font-weight:bold">&#39;3&#39;</span>) * opportunity) /
                 (Decimal(<span style="color:#0ff;font-weight:bold">&#39;9&#39;</span>) * opportunity)) - Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.9&#39;</span>) * opportunity
-    rc = _digits_under_one(raw_rc, <span style="color:#ff0;font-weight:bold">2</span>)
     <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(rc)
 
 
 <span style="color:#fff;font-weight:bold">def</span> xr_basic(hitter):
-    raw_xr = XR_SINGLE * _single(hitter) + XR_DOUBLE * Decimal(
+    xr = XR_SINGLE * _single(hitter) + XR_DOUBLE * Decimal(
         hitter[<span style="color:#0ff;font-weight:bold">&#39;二塁打&#39;</span>]
     ) + XR_TRIPLE * Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;三塁打&#39;</span>]) + XR_HR * Decimal(
         hitter[<span style="color:#0ff;font-weight:bold">&#39;本塁打&#39;</span>]) + XR_BB * (
@@ -355,7 +354,6 @@ XR_SAC_BUNT = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.04&#39;</
                     hitter[<span style="color:#0ff;font-weight:bold">&#39;併殺打&#39;</span>]) + XR_SAC_FLY * Decimal(
                         hitter[<span style="color:#0ff;font-weight:bold">&#39;犠飛&#39;</span>]) + XR_SAC_BUNT * Decimal(
                             hitter[<span style="color:#0ff;font-weight:bold">&#39;犠打&#39;</span>])
-    xr = _digits_under_one(raw_xr, <span style="color:#ff0;font-weight:bold">2</span>)
     <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(xr)
 
 
@@ -366,8 +364,7 @@ XR_SAC_BUNT = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.04&#39;</
                 hitter[<span style="color:#0ff;font-weight:bold">&#39;盗塁死&#39;</span>]) + Decimal(hitter[<span style="color:#0ff;font-weight:bold">&#39;併殺打&#39;</span>])
     <span style="color:#fff;font-weight:bold">if</span> not total_out:
         <span style="color:#fff;font-weight:bold">return</span> <span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>
-    raw_rc_xr_27 = rc_xr * FULL_OUTCOUNTS / total_out
-    rc_xr_27 = _digits_under_one(raw_rc_xr_27, <span style="color:#ff0;font-weight:bold">2</span>)
+    rc_xr_27 = rc_xr * FULL_OUTCOUNTS / total_out
     <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(rc_xr_27)</code></pre></div>
 <hr />
 
@@ -653,13 +650,13 @@ XR_SAC_BUNT = Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.04&#39;</
 	<h4 class="widget__title">最新記事</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/sabr-other/">1. ワンナウツ契約年俸、小松式ドネーション、アダム・ダン率の算出</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/sabr-parkfactor-correct/">2. 「パークファクター補正をかけた○○」の算出</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/react-mui-theme/">3. Material-UIのテーマカラーを変える</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/domain-certificate/">4. Github Pages 独自ドメインの証明書エラー</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/react-ie/">5. ReactのInternetExplorer対応</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/jessie-apt-fail/">6. Debian(Jessie)のdocker imageでapt updateがこける</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/npb-records/">7. セイバーメトリクス指標をそこそこ含むプロ野球成績表を作った</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-hit-ops-plus/">1. 【OPS&#43;】NPB(2019)セイバーメトリクス野手指標の算出⑧</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-other/">2. ワンナウツ契約年俸、小松式ドネーション、アダム・ダン率の算出</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-parkfactor-correct/">3. 「パークファクター補正をかけた○○」の算出</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/react-mui-theme/">4. Material-UIのテーマカラーを変える</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/domain-certificate/">5. Github Pages 独自ドメインの証明書エラー</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/react-ie/">6. ReactのInternetExplorer対応</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/jessie-apt-fail/">7. Debian(Jessie)のdocker imageでapt updateがこける</a></li>
 		</ul>
 	</div>
 </div>

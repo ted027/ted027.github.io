@@ -6,10 +6,19 @@
     <description>Recent content in セイバーメトリクス on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 11 Jun 2019 20:28:56 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 13 Jun 2019 18:15:39 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>【OPS&#43;】NPB(2019)セイバーメトリクス野手指標の算出⑧</title>
+      <link>https://www.ted027.com/post/sabr-hit-ops-plus/</link>
+      <pubDate>Thu, 13 Jun 2019 18:15:39 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/sabr-hit-ops-plus/</guid>
+      <description>&lt;p&gt;リーグ平均と比較したOPSにパークファクター補正を加えたOPS+を算出する。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>「パークファクター補正をかけた○○」の算出</title>

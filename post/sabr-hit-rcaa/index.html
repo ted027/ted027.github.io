@@ -309,8 +309,7 @@ if (!doNotTrack) {
     league_on_base = Decimal(league[<span style="color:#0ff;font-weight:bold">&#39;打席&#39;</span>])
     <span style="color:#fff;font-weight:bold">if</span> not league_on_base:
         <span style="color:#fff;font-weight:bold">return</span> <span style="color:#ff0;font-weight:bold">0</span>, Decimal(<span style="color:#0ff;font-weight:bold">&#39;0&#39;</span>)
-    raw_rc_xr_plus = rc_xr - league_rc_xr / league_on_base * on_base
-    rc_xr_plus = digits_under_one(raw_rc_xr_plus, <span style="color:#ff0;font-weight:bold">2</span>)
+    rc_xr_plus = rc_xr - league_rc_xr / league_on_base * on_base
     <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(rc_xr_plus), raw_rc_xr_plus
 
 
@@ -323,8 +322,7 @@ if (!doNotTrack) {
     runs_per_inning = Decimal(<span style="color:#0ff;font-weight:bold">&#39;3&#39;</span>) * (Decimal(
         league_hitter[<span style="color:#0ff;font-weight:bold">&#39;得点&#39;</span>]) + Decimal(league_pitcher[<span style="color:#0ff;font-weight:bold">&#39;失点&#39;</span>])) / outcounts
     runs_per_win = Decimal(<span style="color:#0ff;font-weight:bold">&#39;10&#39;</span>) * math.sqrt(runs_per_inning)
-    raw_rc_xr_win = rc_xr_plus / runs_per_win
-    rc_xr_win = digits_under_one(raw_rc_xr_win, <span style="color:#ff0;font-weight:bold">2</span>)
+    rc_xr_win = rc_xr_plus / runs_per_win
     <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(rc_xr_win)</code></pre></div>
 <hr />
 
@@ -596,13 +594,13 @@ if (!doNotTrack) {
 	<h4 class="widget__title">最新記事</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/sabr-other/">1. ワンナウツ契約年俸、小松式ドネーション、アダム・ダン率の算出</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/sabr-parkfactor-correct/">2. 「パークファクター補正をかけた○○」の算出</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/react-mui-theme/">3. Material-UIのテーマカラーを変える</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/domain-certificate/">4. Github Pages 独自ドメインの証明書エラー</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/react-ie/">5. ReactのInternetExplorer対応</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/jessie-apt-fail/">6. Debian(Jessie)のdocker imageでapt updateがこける</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/npb-records/">7. セイバーメトリクス指標をそこそこ含むプロ野球成績表を作った</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-hit-ops-plus/">1. 【OPS&#43;】NPB(2019)セイバーメトリクス野手指標の算出⑧</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-other/">2. ワンナウツ契約年俸、小松式ドネーション、アダム・ダン率の算出</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-parkfactor-correct/">3. 「パークファクター補正をかけた○○」の算出</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/react-mui-theme/">4. Material-UIのテーマカラーを変える</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/domain-certificate/">5. Github Pages 独自ドメインの証明書エラー</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/react-ie/">6. ReactのInternetExplorer対応</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/jessie-apt-fail/">7. Debian(Jessie)のdocker imageでapt updateがこける</a></li>
 		</ul>
 	</div>
 </div>

@@ -6,10 +6,19 @@
     <description>Recent content in Python on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 13 Jun 2019 08:24:43 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 13 Jun 2019 18:15:39 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>【OPS&#43;】NPB(2019)セイバーメトリクス野手指標の算出⑧</title>
+      <link>https://www.ted027.com/post/sabr-hit-ops-plus/</link>
+      <pubDate>Thu, 13 Jun 2019 18:15:39 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/sabr-hit-ops-plus/</guid>
+      <description>&lt;p&gt;リーグ平均と比較したOPSにパークファクター補正を加えたOPS+を算出する。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>ワンナウツ契約年俸、小松式ドネーション、アダム・ダン率の算出</title>
