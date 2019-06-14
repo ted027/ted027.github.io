@@ -6,10 +6,19 @@
     <description>Recent content in Categories on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 13 Jun 2019 18:15:39 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 14 Jun 2019 17:55:16 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS</title>
+      <link>https://www.ted027.com/categories/aws/</link>
+      <pubDate>Fri, 14 Jun 2019 17:55:16 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/categories/aws/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>野球</title>
@@ -62,15 +71,6 @@
       <pubDate>Sun, 26 May 2019 14:27:01 +0900</pubDate>
       
       <guid>https://www.ted027.com/categories/ci/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AWS</title>
-      <link>https://www.ted027.com/categories/aws/</link>
-      <pubDate>Tue, 21 May 2019 16:52:42 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/categories/aws/</guid>
       <description></description>
     </item>
     

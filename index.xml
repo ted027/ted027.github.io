@@ -6,10 +6,19 @@
     <description>Recent content on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 13 Jun 2019 18:15:39 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 14 Jun 2019 17:55:16 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS PolicyDocumentでのワイルドカード</title>
+      <link>https://www.ted027.com/post/aws-principal-wildcard/</link>
+      <pubDate>Fri, 14 Jun 2019 17:55:16 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/aws-principal-wildcard/</guid>
+      <description>&lt;p&gt;PolicyDocumentでワイルドカードを使って部分指定しようとしたところ失敗した。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>【OPS&#43;】NPB(2019)セイバーメトリクス野手指標の算出⑧</title>
