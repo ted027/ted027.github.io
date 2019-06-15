@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 14 Jun 2019 17:55:16 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 15 Jun 2019 15:42:54 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reactでレスポンシブ対応</title>
+      <link>https://www.ted027.com/post/react-mediaquery/</link>
+      <pubDate>Sat, 15 Jun 2019 15:42:54 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/react-mediaquery/</guid>
+      <description>&lt;p&gt;Reactでメディアクエリを設定しレスポンシブ対応。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>AWS PolicyDocumentでのワイルドカード</title>
