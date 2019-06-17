@@ -52,7 +52,10 @@ if (!doNotTrack) {
 	
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="/records">プロ野球成績表</a>
+			<a class="menu__link" href="/records/">プロ野球成績表</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/contact/form/">お問い合わせ</a>
 		</li>
 	</ul>
 </nav>
@@ -263,17 +266,16 @@ Error: pg_config executable not found.
 <p>なので、環境によってそれぞれ以下のコマンドでインストールする。</p>
 
 <ul>
-<li>CentOS</li>
+<li><p>CentOS</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ yum install postgresql-devel</code></pre></div></li>
+
+<li><p>Debian/Ubuntu</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ apt-get install libpq-dev</code></pre></div></li>
+
+<li><p>MacOS</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ brew install postgresql</code></pre></div></li>
 </ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ yum install postgresql-devel</code></pre></div>
-<ul>
-<li>Debian/Ubuntu</li>
-</ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ apt-get install libpq-dev</code></pre></div>
-<ul>
-<li>MacOS</li>
-</ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ brew install postgresql</code></pre></div>
+
 <p>自分は<code>Ubuntu</code>環境なので、<code>apt</code>でインストールし、再度<code>psycopg2</code>を入れてみる。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ apt-get install libpq-dev
 
@@ -596,12 +598,6 @@ $ pip install psycopg2</code></pre></div>
 				<span>GitHub</span>
 			</a>
 		</div>
-		<div class="widget-social__item widget__item">
-			<a class="widget-social__link widget__link btn" title="Email" href="mailto:imaitt0207@gmail.com">
-				<svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
-				<span>imaitt0207@gmail.com</span>
-			</a>
-		</div>
 	</div>
 </div><div class="widget">
     <h4 class="widget__title">広告</h4>
@@ -886,7 +882,8 @@ $ pip install psycopg2</code></pre></div>
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2019 <a href="https://www.ted027.com" target="_blank">行けたら行く</a>.
+			&copy; 2019 <a href="/" target="_blank">行けたら行く</a>|
+			<a href="/contact/form/" target="_blank">お問い合わせ</a>
 		</div>
 	</div>
 </footer>
