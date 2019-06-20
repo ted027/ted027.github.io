@@ -6,10 +6,19 @@
     <description>Recent content on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 15 Jun 2019 15:42:54 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 20 Jun 2019 12:49:58 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>【LOB%】NPB(2019)セイバーメトリクス投手指標の算出③</title>
+      <link>https://www.ted027.com/post/sabr-pitch-lob/</link>
+      <pubDate>Thu, 20 Jun 2019 12:49:58 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/sabr-pitch-lob/</guid>
+      <description>&lt;p&gt;LOB%は、投手が塁に出した走者をどれだけ残塁させたかを表す指標。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Reactでのレスポンシブ対応</title>
