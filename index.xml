@@ -6,10 +6,19 @@
     <description>Recent content on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 22 Jun 2019 00:02:07 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 27 Jun 2019 12:38:54 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reactの導入</title>
+      <link>https://www.ted027.com/post/react/</link>
+      <pubDate>Thu, 27 Jun 2019 12:38:54 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/react/</guid>
+      <description>&lt;p&gt;Reactを導入してUIを作る。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>プロ野球成績表にチーム/選手名検索機能を追加</title>

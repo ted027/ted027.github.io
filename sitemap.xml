@@ -4,19 +4,48 @@
   
   <url>
     <loc>https://www.ted027.com/categories/</loc>
-    <lastmod>2019-06-22T00:02:07+09:00</lastmod>
+    <lastmod>2019-06-27T12:38:54+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/javascript/</loc>
+    <lastmod>2019-06-27T12:38:54+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/nodejs/</loc>
+    <lastmod>2019-06-27T12:38:54+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ted027.com/post/</loc>
-    <lastmod>2019-06-22T00:02:07+09:00</lastmod>
+    <lastmod>2019-06-27T12:38:54+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://www.ted027.com/categories/react/</loc>
+    <lastmod>2019-06-27T12:38:54+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/react/</loc>
+    <lastmod>2019-06-27T12:38:54+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ted027.com/tags/</loc>
-    <lastmod>2019-06-22T00:02:07+09:00</lastmod>
+    <lastmod>2019-06-27T12:38:54+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/</loc>
+    <lastmod>2019-06-27T12:38:54+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -38,32 +67,8 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/</loc>
-    <lastmod>2019-06-22T00:02:07+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/categories/%E9%87%8E%E7%90%83/</loc>
     <lastmod>2019-06-22T00:02:07+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/javascript/</loc>
-    <lastmod>2019-06-21T12:38:54+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/nodejs/</loc>
-    <lastmod>2019-06-21T12:38:54+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/categories/react/</loc>
-    <lastmod>2019-06-21T12:38:54+09:00</lastmod>
     <priority>0</priority>
   </url>
   
