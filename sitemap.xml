@@ -3,8 +3,49 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.ted027.com/post/redux-dispatch-error/</loc>
+    <lastmod>2019-06-29T13:47:16+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ted027.com/categories/</loc>
-    <lastmod>2019-06-27T12:38:54+09:00</lastmod>
+    <lastmod>2019-06-29T13:47:16+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/</loc>
+    <lastmod>2019-06-29T13:47:16+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/react/</loc>
+    <lastmod>2019-06-29T13:47:16+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/redux/</loc>
+    <lastmod>2019-06-29T13:47:16+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/</loc>
+    <lastmod>2019-06-29T13:47:16+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</loc>
+    <lastmod>2019-06-29T13:47:16+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/</loc>
+    <lastmod>2019-06-29T13:47:16+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -21,32 +62,8 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/post/</loc>
-    <lastmod>2019-06-27T12:38:54+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/categories/react/</loc>
-    <lastmod>2019-06-27T12:38:54+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/post/react/</loc>
     <lastmod>2019-06-27T12:38:54+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/</loc>
-    <lastmod>2019-06-27T12:38:54+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/</loc>
-    <lastmod>2019-06-27T12:38:54+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -205,12 +222,6 @@
   <url>
     <loc>https://www.ted027.com/post/domain-certificate/</loc>
     <lastmod>2019-06-07T22:19:54+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</loc>
-    <lastmod>2019-06-07T22:19:54+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
