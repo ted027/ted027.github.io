@@ -6,10 +6,19 @@
     <description>Recent content on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 01 Jul 2019 12:27:50 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jul 2019 07:50:12 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ローカルでイーサリウムのネットワークを構築してみる</title>
+      <link>https://www.ted027.com/post/go-ethereum/</link>
+      <pubDate>Tue, 02 Jul 2019 07:50:12 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/go-ethereum/</guid>
+      <description>&lt;p&gt;ローカルにイーサリアムのネットワークを構築して遊んでみる（※本物のイーサリアムをマイニングするわけではないです）。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>&#39;The ECDSA host key has changed&#39;の対処</title>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ブロックチェーン on 行けたら行く</title>
+    <link>https://www.ted027.com/categories/%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3/</link>
+    <description>Recent content in ブロックチェーン on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 02 Jul 2019 07:50:12 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/categories/%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ローカルでイーサリウムのネットワークを構築してみる</title>
+      <link>https://www.ted027.com/post/go-ethereum/</link>
+      <pubDate>Tue, 02 Jul 2019 07:50:12 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/go-ethereum/</guid>
+      <description>&lt;p&gt;ローカルにイーサリアムのネットワークを構築して遊んでみる（※本物のイーサリアムをマイニングするわけではないです）。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
