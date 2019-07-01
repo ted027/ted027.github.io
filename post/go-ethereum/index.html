@@ -211,9 +211,15 @@ if (!doNotTrack) {
 </figure>
 
 
-<p><a href="https://www.ethereum.org">Ethereum</a>
-- github
-  - <a href="https://github.com/ethereum">https://github.com/ethereum</a></p>
+<p><a href="https://www.ethereum.org">Ethereum</a></p>
+
+<ul>
+<li>github
+
+<ul>
+<li><a href="https://github.com/ethereum">https://github.com/ethereum</a></li>
+</ul></li>
+</ul>
 
 <p>今回はGo言語で実装された<code>geth(go ethereum)</code>を使ってみる。</p>
 
@@ -263,7 +269,7 @@ $ make geth</code></pre></div>
 
 <p><code>difficulty</code>はマイニングの難易度。</p>
 
-<p><code>alloc</code>は空<code>{}</code>でもいいが、アカウントと残高を初期設定できる。</p>
+<p><code>alloc</code>でアカウントと残高の初期設定ができる。空<code>{}</code>でもいい。</p>
 
 <hr />
 
