@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ssh on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/ssh/</link>
+    <description>Recent content in ssh on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 01 Jul 2019 12:27:50 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>&#39;The ECDSA host key has changed&#39;の対処</title>
+      <link>https://www.ted027.com/post/ssh-host-change/</link>
+      <pubDate>Mon, 01 Jul 2019 12:27:50 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/ssh-host-change/</guid>
+      <description>&lt;p&gt;sshでリモート側と通信しようとする時に表題のエラーが出ることがある。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

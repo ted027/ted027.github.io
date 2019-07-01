@@ -6,10 +6,19 @@
     <description>Recent content on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 29 Jun 2019 13:47:16 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2019 12:27:50 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>&#39;The ECDSA host key has changed&#39;の対処</title>
+      <link>https://www.ted027.com/post/ssh-host-change/</link>
+      <pubDate>Mon, 01 Jul 2019 12:27:50 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/ssh-host-change/</guid>
+      <description>&lt;p&gt;sshでリモート側と通信しようとする時に表題のエラーが出ることがある。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>&#39;dispatch is not a function&#39;エラーの対処</title>

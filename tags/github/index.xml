@@ -6,10 +6,19 @@
     <description>Recent content in GitHub on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 04 May 2019 13:18:18 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2019 12:27:50 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>&#39;The ECDSA host key has changed&#39;の対処</title>
+      <link>https://www.ted027.com/post/ssh-host-change/</link>
+      <pubDate>Mon, 01 Jul 2019 12:27:50 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/ssh-host-change/</guid>
+      <description>&lt;p&gt;sshでリモート側と通信しようとする時に表題のエラーが出ることがある。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Gitでよく使うコマンド集</title>
