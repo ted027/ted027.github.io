@@ -4,10 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ローカルでイーサリウムのネットワークを構築してみる - 行けたら行く</title>
+	<title>ローカルでイーサリアムのネットワークを構築してみる - 行けたら行く</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta property="og:title" content="ローカルでイーサリウムのネットワークを構築してみる" />
+	<meta property="og:title" content="ローカルでイーサリアムのネットワークを構築してみる" />
 <meta property="og:description" content="ローカルにイーサリアムのネットワークを構築して遊んでみる（※本物のイーサリアムをマイニングするわけではないです）。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.ted027.com/post/go-ethereum/" />
@@ -15,7 +15,7 @@
 <meta property="article:modified_time" content="2019-07-02T07:50:12+09:00" />
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ローカルでイーサリウムのネットワークを構築してみる"/>
+<meta name="twitter:title" content="ローカルでイーサリアムのネットワークを構築してみる"/>
 <meta name="twitter:description" content="ローカルにイーサリアムのネットワークを構築して遊んでみる（※本物のイーサリアムをマイニングするわけではないです）。"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -87,7 +87,7 @@ if (!doNotTrack) {
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">ローカルでイーサリウムのネットワークを構築してみる</h1>
+			<h1 class="post__title">ローカルでイーサリアムのネットワークを構築してみる</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
@@ -105,19 +105,19 @@ if (!doNotTrack) {
 <section class="section sns_parent">
   <div class="container sns_section">
       <div class="sns_button twitter">
-        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fgo-ethereum%2f&text=%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e3%82%a4%e3%83%bc%e3%82%b5%e3%83%aa%e3%82%a6%e3%83%a0%e3%81%ae%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%a6%e3%81%bf%e3%82%8b" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fgo-ethereum%2f&text=%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e3%82%a4%e3%83%bc%e3%82%b5%e3%83%aa%e3%82%a2%e3%83%a0%e3%81%ae%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%a6%e3%81%bf%e3%82%8b" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
       </div>
       <div class="sns_button line">
         <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fgo-ethereum%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
       </div>
       <div class="sns_button facebook">
-        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fgo-ethereum%2f&t=%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e3%82%a4%e3%83%bc%e3%82%b5%e3%83%aa%e3%82%a6%e3%83%a0%e3%81%ae%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%a6%e3%81%bf%e3%82%8b" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fgo-ethereum%2f&t=%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e3%82%a4%e3%83%bc%e3%82%b5%e3%83%aa%e3%82%a2%e3%83%a0%e3%81%ae%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%a6%e3%81%bf%e3%82%8b" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
       </div>
       <div class="sns_button hatena">
-        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fgo-ethereum%2f&title=%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e3%82%a4%e3%83%bc%e3%82%b5%e3%83%aa%e3%82%a6%e3%83%a0%e3%81%ae%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%a6%e3%81%bf%e3%82%8b" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fgo-ethereum%2f&title=%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e3%82%a4%e3%83%bc%e3%82%b5%e3%83%aa%e3%82%a2%e3%83%a0%e3%81%ae%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%a6%e3%81%bf%e3%82%8b" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
       </div>
       <div class="sns_button pocket">
-        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fgo-ethereum%2f&title=%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e3%82%a4%e3%83%bc%e3%82%b5%e3%83%aa%e3%82%a6%e3%83%a0%e3%81%ae%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%a6%e3%81%bf%e3%82%8b" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fgo-ethereum%2f&title=%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e3%82%a4%e3%83%bc%e3%82%b5%e3%83%aa%e3%82%a2%e3%83%a0%e3%81%ae%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%a6%e3%81%bf%e3%82%8b" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
       </div>
   </div>
 </section>
@@ -256,17 +256,18 @@ $ make geth</code></pre></div>
     <span style="font-weight:bold">&#34;eip158Block&#34;</span>: <span style="color:#ff0;font-weight:bold">0</span>
   },
   <span style="font-weight:bold">&#34;alloc&#34;</span>: {
-  <span style="font-weight:bold">&#34;0x0000000000000000000000000000000000000001&#34;</span>: {
-    <span style="font-weight:bold">&#34;balance&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;111111111&#34;</span>
-  },
-  <span style="font-weight:bold">&#34;0x0000000000000000000000000000000000000002&#34;</span>: {
-    <span style="font-weight:bold">&#34;balance&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;222222222&#34;</span>
+    <span style="font-weight:bold">&#34;0x0000000000000000000000000000000000000001&#34;</span>: {
+      <span style="font-weight:bold">&#34;balance&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;111111111&#34;</span>
+    },
+    <span style="font-weight:bold">&#34;0x0000000000000000000000000000000000000002&#34;</span>: {
+      <span style="font-weight:bold">&#34;balance&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;222222222&#34;</span>
+    }
   },
   <span style="font-weight:bold">&#34;coinbase&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0x0000000000000000000000000000000000000000&#34;</span>,
   <span style="font-weight:bold">&#34;difficulty&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0x20000&#34;</span>,
   <span style="font-weight:bold">&#34;extraData&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;&#34;</span>,
   <span style="font-weight:bold">&#34;gasLimit&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0x2fefd8&#34;</span>,
-  <span style="font-weight:bold">&#34;nonce&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0x0000000000000042&#34;</span>,
+  <span style="font-weight:bold">&#34;nonce&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0x0000000000012345&#34;</span>,
   <span style="font-weight:bold">&#34;mixhash&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0x0000000000000000000000000000000000000000000000000000000000000000&#34;</span>,
   <span style="font-weight:bold">&#34;parentHash&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0x0000000000000000000000000000000000000000000000000000000000000000&#34;</span>,
   <span style="font-weight:bold">&#34;timestamp&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0x00&#34;</span>
@@ -275,7 +276,7 @@ $ make geth</code></pre></div>
 
 <p><code>difficulty</code>はマイニングの難易度。</p>
 
-<p><code>alloc</code>でウォレットと残高の初期設定ができる。空<code>{}</code>でもいい。</p>
+<p><code>alloc</code>でウォレットの初期設定ができる。空<code>{}</code>でもいい。</p>
 
 <hr />
 
@@ -292,7 +293,29 @@ $ make geth</code></pre></div>
 <h4 id="作成したブロックを確認">作成したブロックを確認</h4>
 
 <p><code>eth.getBlock([Block Number])</code>で確認できる。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">&gt; eth.getBlock(<span style="color:#ff0;font-weight:bold">0</span>)</code></pre></div>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">&gt; eth.getBlock(<span style="color:#ff0;font-weight:bold">0</span>)
+{
+  difficulty: <span style="color:#ff0;font-weight:bold">131072</span>,
+  extraData: <span style="color:#0ff;font-weight:bold">&#34;0x&#34;</span>,
+  gasLimit: <span style="color:#ff0;font-weight:bold">3141592</span>,
+  gasUsed: <span style="color:#ff0;font-weight:bold">0</span>,
+  hash: <span style="color:#0ff;font-weight:bold">&#34;0x0a34aafeef87619754f3607753cc229b6f2c88c127cc7ddfad3c54e702ad1373&#34;</span>,
+  logsBloom: <span style="color:#0ff;font-weight:bold">&#34;0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000&#34;</span>,
+  miner: <span style="color:#0ff;font-weight:bold">&#34;0x0000000000000000000000000000000000000000&#34;</span>,
+  mixHash: <span style="color:#0ff;font-weight:bold">&#34;0x0000000000000000000000000000000000000000000000000000000000000000&#34;</span>,
+  nonce: <span style="color:#0ff;font-weight:bold">&#34;0x0000000000012345&#34;</span>,
+  number: <span style="color:#ff0;font-weight:bold">0</span>,
+  parentHash: <span style="color:#0ff;font-weight:bold">&#34;0x0000000000000000000000000000000000000000000000000000000000000000&#34;</span>,
+  receiptsRoot: <span style="color:#0ff;font-weight:bold">&#34;0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421&#34;</span>,
+  sha3Uncles: <span style="color:#0ff;font-weight:bold">&#34;0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347&#34;</span>,
+  size: <span style="color:#ff0;font-weight:bold">507</span>,
+  stateRoot: <span style="color:#0ff;font-weight:bold">&#34;0x92683e6af0f8a932e5fe08c870f2ae9d287e39d4518ec544b0be451f1035fd39&#34;</span>,
+  timestamp: <span style="color:#ff0;font-weight:bold">0</span>,
+  totalDifficulty: <span style="color:#ff0;font-weight:bold">131072</span>,
+  transactions: [],
+  transactionsRoot: <span style="color:#0ff;font-weight:bold">&#34;0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421&#34;</span>,
+  uncles: []
+}</code></pre></div>
 <hr />
 
 <p>構築したネットワークで遊ぶのは今度。</p>
@@ -335,19 +358,19 @@ $ make geth</code></pre></div>
 <section class="section sns_parent">
   <div class="container sns_section">
       <div class="sns_button twitter">
-        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fgo-ethereum%2f&text=%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e3%82%a4%e3%83%bc%e3%82%b5%e3%83%aa%e3%82%a6%e3%83%a0%e3%81%ae%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%a6%e3%81%bf%e3%82%8b" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
+        <a href="http://twitter.com/intent/tweet?url=https%3a%2f%2fwww.ted027.com%2fpost%2fgo-ethereum%2f&text=%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e3%82%a4%e3%83%bc%e3%82%b5%e3%83%aa%e3%82%a2%e3%83%a0%e3%81%ae%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%a6%e3%81%bf%e3%82%8b" title="Tweet" rel="nofollow"><i class="fab fa-twitter"></i></a>
       </div>
       <div class="sns_button line">
         <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fwww.ted027.com%2fpost%2fgo-ethereum%2f" title="LINEでシェア" rel="nofollow"><i class="fab fa-line"></i></i></a>
       </div>
       <div class="sns_button facebook">
-        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fgo-ethereum%2f&t=%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e3%82%a4%e3%83%bc%e3%82%b5%e3%83%aa%e3%82%a6%e3%83%a0%e3%81%ae%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%a6%e3%81%bf%e3%82%8b" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
+        <a href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.ted027.com%2fpost%2fgo-ethereum%2f&t=%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e3%82%a4%e3%83%bc%e3%82%b5%e3%83%aa%e3%82%a2%e3%83%a0%e3%81%ae%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%a6%e3%81%bf%e3%82%8b" title="Facebook" rel="nofollow"><i class="fab fa-facebook"></i></a>
       </div>
       <div class="sns_button hatena">
-        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fgo-ethereum%2f&title=%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e3%82%a4%e3%83%bc%e3%82%b5%e3%83%aa%e3%82%a6%e3%83%a0%e3%81%ae%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%a6%e3%81%bf%e3%82%8b" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
+        <a href="http://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fwww.ted027.com%2fpost%2fgo-ethereum%2f&title=%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e3%82%a4%e3%83%bc%e3%82%b5%e3%83%aa%e3%82%a2%e3%83%a0%e3%81%ae%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%a6%e3%81%bf%e3%82%8b" title="hatena" rel="nofollow"><i class="fab fa-hatena"></i></i></a>
       </div>
       <div class="sns_button pocket">
-        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fgo-ethereum%2f&title=%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e3%82%a4%e3%83%bc%e3%82%b5%e3%83%aa%e3%82%a6%e3%83%a0%e3%81%ae%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%a6%e3%81%bf%e3%82%8b" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
+        <a href="http://getpocket.com/edit?url=https%3a%2f%2fwww.ted027.com%2fpost%2fgo-ethereum%2f&title=%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%a7%e3%82%a4%e3%83%bc%e3%82%b5%e3%83%aa%e3%82%a2%e3%83%a0%e3%81%ae%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%82%92%e6%a7%8b%e7%af%89%e3%81%97%e3%81%a6%e3%81%bf%e3%82%8b" title="pocket" rel="nofollow"><i class="fab fa-get-pocket"></i></a>
       </div>
   </div>
 </section>
@@ -519,7 +542,7 @@ $ make geth</code></pre></div>
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item"><a class="widget__link" href="/post/docker-insecure-repo/">1. docker pullで&#39;server HTTP response to HTTPS client&#39;エラーが出たとき</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/go-ethereum/">2. ローカルでイーサリウムのネットワークを構築してみる</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/go-ethereum/">2. ローカルでイーサリアムのネットワークを構築してみる</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/ssh-host-change/">3. &#39;The ECDSA host key has changed&#39;の対処</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/redux-dispatch-error/">4. &#39;dispatch is not a function&#39;エラーの対処</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/react/">5. Reactの導入</a></li>
