@@ -6,10 +6,28 @@
     <description>Recent content in Categories on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 08 Jul 2019 07:49:34 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jul 2019 00:20:29 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>パワプロ</title>
+      <link>https://www.ted027.com/categories/%E3%83%91%E3%83%AF%E3%83%97%E3%83%AD/</link>
+      <pubDate>Wed, 10 Jul 2019 00:20:29 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/categories/%E3%83%91%E3%83%AF%E3%83%97%E3%83%AD/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>野球</title>
+      <link>https://www.ted027.com/categories/%E9%87%8E%E7%90%83/</link>
+      <pubDate>Wed, 10 Jul 2019 00:20:29 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/categories/%E9%87%8E%E7%90%83/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ブロックチェーン</title>
@@ -39,20 +57,11 @@
     </item>
     
     <item>
-      <title>React</title>
+      <title>”React”</title>
       <link>https://www.ted027.com/categories/react/</link>
       <pubDate>Sat, 29 Jun 2019 13:47:16 +0900</pubDate>
       
       <guid>https://www.ted027.com/categories/react/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>野球</title>
-      <link>https://www.ted027.com/categories/%E9%87%8E%E7%90%83/</link>
-      <pubDate>Sat, 22 Jun 2019 00:02:07 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/categories/%E9%87%8E%E7%90%83/</guid>
       <description></description>
     </item>
     
@@ -152,15 +161,6 @@
       <pubDate>Fri, 26 Apr 2019 07:32:32 +0900</pubDate>
       
       <guid>https://www.ted027.com/categories/gnu-make/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>パワプロ</title>
-      <link>https://www.ted027.com/categories/%E3%83%91%E3%83%AF%E3%83%97%E3%83%AD/</link>
-      <pubDate>Tue, 23 Apr 2019 16:19:47 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/categories/%E3%83%91%E3%83%AF%E3%83%97%E3%83%AD/</guid>
       <description></description>
     </item>
     
