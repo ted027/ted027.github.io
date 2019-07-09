@@ -4,55 +4,60 @@
   
   <url>
     <loc>https://www.ted027.com/categories/</loc>
-    <lastmod>2019-07-10T00:20:29+09:00</lastmod>
+    <lastmod>2019-07-10T00:41:48+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ted027.com/post/</loc>
-    <lastmod>2019-07-10T00:20:29+09:00</lastmod>
+    <lastmod>2019-07-10T00:41:48+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ted027.com/tags/</loc>
-    <lastmod>2019-07-10T00:20:29+09:00</lastmod>
+    <lastmod>2019-07-10T00:41:48+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ted027.com/categories/%E3%83%91%E3%83%AF%E3%83%97%E3%83%AD/</loc>
-    <lastmod>2019-07-10T00:20:29+09:00</lastmod>
+    <lastmod>2019-07-10T00:41:48+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ted027.com/tags/%E3%83%91%E3%83%AF%E3%83%97%E3%83%AD2018/</loc>
-    <lastmod>2019-07-10T00:20:29+09:00</lastmod>
+    <lastmod>2019-07-10T00:41:48+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/pawapuro-p-form/</loc>
+    <lastmod>2019-07-10T00:41:48+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0/</loc>
+    <lastmod>2019-07-10T00:41:48+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/</loc>
+    <lastmod>2019-07-10T00:41:48+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/%E9%87%8E%E7%90%83/</loc>
+    <lastmod>2019-07-10T00:41:48+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ted027.com/post/pawapuro-b-form/</loc>
     <lastmod>2019-07-10T00:20:29+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0/</loc>
-    <lastmod>2019-07-10T00:20:29+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/</loc>
-    <lastmod>2019-07-10T00:20:29+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/categories/%E9%87%8E%E7%90%83/</loc>
-    <lastmod>2019-07-10T00:20:29+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -135,13 +140,13 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/tags/redux/</loc>
+    <loc>https://www.ted027.com/categories/react/</loc>
     <lastmod>2019-06-29T13:47:16+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/react/</loc>
+    <loc>https://www.ted027.com/tags/redux/</loc>
     <lastmod>2019-06-29T13:47:16+09:00</lastmod>
     <priority>0</priority>
   </url>
