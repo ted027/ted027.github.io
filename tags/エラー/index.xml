@@ -6,10 +6,19 @@
     <description>Recent content in エラー on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 03 Jul 2019 12:32:12 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jul 2019 01:13:59 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reduxで複数のreducersを使う際のstate初期値設定</title>
+      <link>https://www.ted027.com/post/redux-initialstate/</link>
+      <pubDate>Mon, 15 Jul 2019 01:13:59 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/redux-initialstate/</guid>
+      <description>&lt;p&gt;combineReducersを使うと、Stateの初期設定でエラーが発生した。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>docker pullで&#39;server HTTP response to HTTPS client&#39;エラーが出たとき</title>
