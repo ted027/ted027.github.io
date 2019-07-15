@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Reduxで複数のreducersを使う際のstate初期値設定</title>
+      <title>Reduxで複数のReducerを扱う際のState初期値設定</title>
       <link>https://www.ted027.com/post/redux-initialstate/</link>
       <pubDate>Mon, 15 Jul 2019 01:13:59 +0900</pubDate>
       
