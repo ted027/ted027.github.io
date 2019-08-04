@@ -21,7 +21,7 @@
     </item>
     
     <item>
-      <title>State</title>
+      <title>state</title>
       <link>https://www.ted027.com/tags/state/</link>
       <pubDate>Mon, 15 Jul 2019 01:13:59 +0900</pubDate>
       
@@ -264,20 +264,20 @@
     </item>
     
     <item>
-      <title>Linux</title>
-      <link>https://www.ted027.com/tags/linux/</link>
-      <pubDate>Tue, 04 Jun 2019 12:33:53 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>apt</title>
       <link>https://www.ted027.com/tags/apt/</link>
       <pubDate>Tue, 04 Jun 2019 12:33:53 +0900</pubDate>
       
       <guid>https://www.ted027.com/tags/apt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://www.ted027.com/tags/linux/</link>
+      <pubDate>Tue, 04 Jun 2019 12:33:53 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/linux/</guid>
       <description></description>
     </item>
     
