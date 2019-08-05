@@ -4,13 +4,54 @@
   
   <url>
     <loc>https://www.ted027.com/categories/</loc>
-    <lastmod>2019-07-15T01:13:59+09:00</lastmod>
+    <lastmod>2019-07-30T23:12:34+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/href/</loc>
+    <lastmod>2019-07-30T23:12:34+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/html/</loc>
+    <lastmod>2019-07-30T23:12:34+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/javascript/</loc>
+    <lastmod>2019-07-30T23:12:34+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.ted027.com/post/</loc>
-    <lastmod>2019-07-15T01:13:59+09:00</lastmod>
+    <lastmod>2019-07-30T23:12:34+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/</loc>
+    <lastmod>2019-07-30T23:12:34+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/%E3%82%BF%E3%82%B0/</loc>
+    <lastmod>2019-07-30T23:12:34+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/js-href-void/</loc>
+    <lastmod>2019-07-30T23:12:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/</loc>
+    <lastmod>2019-07-30T23:12:34+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -38,19 +79,7 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/tags/</loc>
-    <lastmod>2019-07-15T01:13:59+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</loc>
-    <lastmod>2019-07-15T01:13:59+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/</loc>
     <lastmod>2019-07-15T01:13:59+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -362,12 +391,6 @@
   <url>
     <loc>https://www.ted027.com/post/npb-records/</loc>
     <lastmod>2019-06-03T12:35:52+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/categories/javascript/</loc>
-    <lastmod>2019-06-01T01:28:45+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

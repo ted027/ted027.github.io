@@ -6,10 +6,19 @@
     <description>Recent content in JavaScript on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 01 Jun 2019 01:28:45 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jul 2019 23:12:34 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>タグのhref属性でリダイレクトを起こさない</title>
+      <link>https://www.ted027.com/post/js-href-void/</link>
+      <pubDate>Tue, 30 Jul 2019 23:12:34 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/js-href-void/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>JavaScriptで複数の配列に対しforループ</title>
