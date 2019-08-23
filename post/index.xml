@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 30 Jul 2019 23:12:34 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 23 Aug 2019 22:52:51 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>パワプロ ペナント補強思考設定を更新しました</title>
+      <link>https://www.ted027.com/post/penant-add-update/</link>
+      <pubDate>Fri, 23 Aug 2019 22:52:51 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/penant-add-update/</guid>
+      <description>&lt;p&gt;補強期間も終わったので、シーズン途中の移籍情報をふまえて更新。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>タグのhref属性でリダイレクトを起こさない</title>
