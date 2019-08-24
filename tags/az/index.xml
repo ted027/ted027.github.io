@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AZ on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/az/</link>
+    <description>Recent content in AZ on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 24 Aug 2019 14:41:46 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/tags/az/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>8/23に起きたAWSのシステムトラブルのこと</title>
+      <link>https://www.ted027.com/post/aws-trouble/</link>
+      <pubDate>Sat, 24 Aug 2019 14:41:46 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/aws-trouble/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
