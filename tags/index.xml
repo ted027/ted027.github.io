@@ -6,10 +6,28 @@
     <description>Recent content in Tags on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 24 Aug 2019 14:41:46 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 03 Sep 2019 20:45:28 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>jq</title>
+      <link>https://www.ted027.com/tags/jq/</link>
+      <pubDate>Tue, 03 Sep 2019 20:45:28 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/jq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>json</title>
+      <link>https://www.ted027.com/tags/json/</link>
+      <pubDate>Tue, 03 Sep 2019 20:45:28 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/json/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>AZ</title>
@@ -102,7 +120,7 @@
     </item>
     
     <item>
-      <title>State</title>
+      <title>state</title>
       <link>https://www.ted027.com/tags/state/</link>
       <pubDate>Mon, 15 Jul 2019 01:13:59 +0900</pubDate>
       
