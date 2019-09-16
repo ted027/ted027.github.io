@@ -143,6 +143,7 @@ if (!doNotTrack) {
 <li><a href="#バージョニング">バージョニング</a></li>
 <li><a href="#認証-認可">認証/認可</a></li>
 <li><a href="#おわり">おわり</a></li>
+<li><a href="#参考">参考</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -173,6 +174,8 @@ if (!doNotTrack) {
 
 <p>URIは簡潔で、かつ何のリソースを指すのかわかりやすい名前にする。</p>
 
+<hr />
+
 <h4 id="メソッドは基本的にcrudに対応する4つ">メソッドは基本的にCRUDに対応する4つ</h4>
 
 <p>主に使うのは上4つ。</p>
@@ -188,27 +191,27 @@ if (!doNotTrack) {
 
 <tbody>
 <tr>
-<td align="center">GET</td>
+<td align="center"><strong>GET</strong></td>
 <td align="center">READ</td>
-<td align="center">リソース取得</td>
+<td align="center"><strong>リソース取得</strong></td>
 </tr>
 
 <tr>
-<td align="center">POST</td>
+<td align="center"><strong>POST</strong></td>
 <td align="center">CREATE</td>
-<td align="center">リソース作成</td>
+<td align="center"><strong>リソース作成</strong></td>
 </tr>
 
 <tr>
-<td align="center">PUT</td>
+<td align="center"><strong>PUT</strong></td>
 <td align="center">UPDATE</td>
-<td align="center">リソース更新 or 作成</td>
+<td align="center"><strong>リソース更新 or 作成</strong></td>
 </tr>
 
 <tr>
+<td align="center"><strong>DELETE</strong></td>
 <td align="center">DELETE</td>
-<td align="center">DELETE</td>
-<td align="center">リソース削除</td>
+<td align="center"><strong>リソース削除</strong></td>
 </tr>
 
 <tr>
@@ -243,6 +246,8 @@ if (!doNotTrack) {
 </tbody>
 </table>
 
+<hr />
+
 <h3 id="uriの階層は親子関係">URIの階層は親子関係</h3>
 
 <p>URIを階層構造にする際は、「コレクション」と「特定の要素」のような関連性を示す。</p>
@@ -251,11 +256,15 @@ if (!doNotTrack) {
 
 <p>ただし、階層はなるべく浅く保ち、複雑になる部分はクエリパラメータで指定させる。</p>
 
+<hr />
+
 <h3 id="postの対象になるuriは複数形">POSTの対象になるURIは複数形</h3>
 
 <p>POSTは、複数個存在するリソースを対象として、新たな一つを新規作成する。特定の一つを指定してPOSTを行うことはしない。</p>
 
 <p>なので、POSTの対象になるURIは名詞の複数形にする。</p>
+
+<hr />
 
 <h3 id="uriに含むidはランダム文字列">URIに含むIDはランダム文字列</h3>
 
@@ -263,11 +272,15 @@ if (!doNotTrack) {
 
 <p>また、あとで変更できなくなるため、IDを意味のある文字列にしない。</p>
 
+<hr />
+
 <h3 id="バージョニング">バージョニング</h3>
 
 <p>階層の最上位や上の方にバージョンを入れておく。</p>
 
 <p>内部処理の変更程度ならバージョンは上げない。振る舞いが保てないほどの変更を入れる場合にバージョンを上げる。</p>
+
+<hr />
 
 <h3 id="認証-認可">認証/認可</h3>
 
@@ -275,9 +288,23 @@ if (!doNotTrack) {
 
 <p>認証プロトコルはOpenIDが有名。</p>
 
+<hr />
+
 <h3 id="おわり">おわり</h3>
 
 <p>以上はあくまで基本方針であり、原理主義的にならないようにする。あくまで使い手が使いやすいよう心がける。</p>
+
+<p>間違いあったらすみません。</p>
+
+<hr />
+
+<h3 id="参考">参考</h3>
+
+<ul>
+<li><a href="https://www.slideshare.net/MonstarLabInc/rest-ful-api">RESTful API設計入門</a></li>
+<li><a href="http://please-sleep.cou929.nu/20130121.html">Web API 設計のベストプラクティス集 ”Web API Design - Crafting Interfaces that Developers Love”</a></li>
+<li><a href="https://qiita.com/shrkw/items/c6123ca25981e44a3d82">RESTfulなWeb APIを設計するときに考えること</a></li>
+</ul>
 
 <hr />
 
