@@ -6,10 +6,28 @@
     <description>Recent content in Tags on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 16 Sep 2019 20:42:03 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 20 Sep 2019 12:43:09 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>datetime</title>
+      <link>https://www.ted027.com/tags/datetime/</link>
+      <pubDate>Fri, 20 Sep 2019 12:43:09 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/datetime/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>タイムゾーン</title>
+      <link>https://www.ted027.com/tags/%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BE%E3%83%BC%E3%83%B3/</link>
+      <pubDate>Fri, 20 Sep 2019 12:43:09 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BE%E3%83%BC%E3%83%B3/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>REST</title>
@@ -174,7 +192,7 @@
     </item>
     
     <item>
-      <title>state</title>
+      <title>State</title>
       <link>https://www.ted027.com/tags/state/</link>
       <pubDate>Mon, 15 Jul 2019 01:13:59 +0900</pubDate>
       

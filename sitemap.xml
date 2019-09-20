@@ -3,17 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.ted027.com/categories/api/</loc>
-    <lastmod>2019-09-16T20:42:03+09:00</lastmod>
+    <loc>https://www.ted027.com/categories/</loc>
+    <lastmod>2019-09-20T12:43:09+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/</loc>
-    <lastmod>2019-09-16T20:42:03+09:00</lastmod>
+    <loc>https://www.ted027.com/tags/datetime/</loc>
+    <lastmod>2019-09-20T12:43:09+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.ted027.com/post/</loc>
+    <lastmod>2019-09-20T12:43:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/python/</loc>
+    <lastmod>2019-09-20T12:43:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/python-datetime/</loc>
+    <lastmod>2019-09-20T12:43:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/</loc>
+    <lastmod>2019-09-20T12:43:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BE%E3%83%BC%E3%83%B3/</loc>
+    <lastmod>2019-09-20T12:43:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/</loc>
+    <lastmod>2019-09-20T12:43:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/api/</loc>
     <lastmod>2019-09-16T20:42:03+09:00</lastmod>
   </url>
   
@@ -28,17 +58,7 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/tags/</loc>
-    <lastmod>2019-09-16T20:42:03+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/tags/webapi/</loc>
-    <lastmod>2019-09-16T20:42:03+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/</loc>
     <lastmod>2019-09-16T20:42:03+09:00</lastmod>
   </url>
   
@@ -569,11 +589,6 @@
   
   <url>
     <loc>https://www.ted027.com/post/python-psycopg2/</loc>
-    <lastmod>2019-05-18T22:05:36+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/categories/python/</loc>
     <lastmod>2019-05-18T22:05:36+09:00</lastmod>
   </url>
   
