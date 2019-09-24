@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>リーダブルコード on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/%E3%83%AA%E3%83%BC%E3%83%80%E3%83%96%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89/</link>
+    <description>Recent content in リーダブルコード on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 24 Sep 2019 12:46:01 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/tags/%E3%83%AA%E3%83%BC%E3%83%80%E3%83%96%E3%83%AB%E3%82%B3%E3%83%BC%E3%83%89/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>『リーダブルコード』を読んで拾った知見まとめ</title>
+      <link>https://www.ted027.com/post/readable-code/</link>
+      <pubDate>Tue, 24 Sep 2019 12:46:01 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/readable-code/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
