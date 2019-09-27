@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on 行けたら行く</title>
@@ -6,10 +6,19 @@
     <description>Recent content in Git on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 01 Jul 2019 12:27:50 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 27 Sep 2019 12:34:38 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/categories/git/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>git cherry-pickいろいろ</title>
+      <link>https://www.ted027.com/post/git-cherry-pick/</link>
+      <pubDate>Fri, 27 Sep 2019 12:34:38 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/git-cherry-pick/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>&#39;The ECDSA host key has changed&#39;の対処</title>
