@@ -6,10 +6,28 @@
     <description>Recent content in Tags on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 27 Sep 2019 12:34:38 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 01 Oct 2019 22:49:17 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>セイバーメトリクス</title>
+      <link>https://www.ted027.com/tags/%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9/</link>
+      <pubDate>Tue, 01 Oct 2019 22:49:17 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>個人タイトル</title>
+      <link>https://www.ted027.com/tags/%E5%80%8B%E4%BA%BA%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB/</link>
+      <pubDate>Tue, 01 Oct 2019 22:49:17 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/%E5%80%8B%E4%BA%BA%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>cherry-pick</title>
@@ -314,15 +332,6 @@
       <pubDate>Thu, 27 Jun 2019 12:38:54 +0900</pubDate>
       
       <guid>https://www.ted027.com/tags/nodejs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>セイバーメトリクス</title>
-      <link>https://www.ted027.com/tags/%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9/</link>
-      <pubDate>Sat, 22 Jun 2019 00:02:07 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/tags/%E3%82%BB%E3%82%A4%E3%83%90%E3%83%BC%E3%83%A1%E3%83%88%E3%83%AA%E3%82%AF%E3%82%B9/</guid>
       <description></description>
     </item>
     
