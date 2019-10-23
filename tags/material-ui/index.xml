@@ -6,10 +6,19 @@
     <description>Recent content in Material-UI on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 10 Jun 2019 12:32:18 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 23 Oct 2019 22:21:41 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/material-ui/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>React&#43;TypeScriptでwithStylesを使う</title>
+      <link>https://www.ted027.com/post/react-ts-withstyles/</link>
+      <pubDate>Wed, 23 Oct 2019 22:21:41 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/react-ts-withstyles/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Material-UIのテーマカラーを変える</title>
