@@ -6,19 +6,10 @@
     <description>Recent content in React on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 23 Oct 2019 22:21:41 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jul 2019 01:13:59 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/categories/react/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>React&#43;TypeScriptでwithStylesを使う</title>
-      <link>https://www.ted027.com/post/react-ts-withstyles/</link>
-      <pubDate>Wed, 23 Oct 2019 22:21:41 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/post/react-ts-withstyles/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Reduxで複数のReducerを扱う際のState初期値設定</title>

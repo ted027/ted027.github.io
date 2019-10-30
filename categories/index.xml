@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>React</title>
-      <link>https://www.ted027.com/categories/react/</link>
+      <title>TypeScript</title>
+      <link>https://www.ted027.com/categories/typescript/</link>
       <pubDate>Wed, 23 Oct 2019 22:21:41 +0900</pubDate>
       
-      <guid>https://www.ted027.com/categories/react/</guid>
+      <guid>https://www.ted027.com/categories/typescript/</guid>
       <description></description>
     </item>
     
@@ -116,6 +116,15 @@
       <pubDate>Tue, 30 Jul 2019 23:12:34 +0900</pubDate>
       
       <guid>https://www.ted027.com/categories/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>https://www.ted027.com/categories/react/</link>
+      <pubDate>Mon, 15 Jul 2019 01:13:59 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/categories/react/</guid>
       <description></description>
     </item>
     

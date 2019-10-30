@@ -23,7 +23,7 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/react/</loc>
+    <loc>https://www.ted027.com/tags/react/</loc>
     <lastmod>2019-10-23T22:21:41+09:00</lastmod>
   </url>
   
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/tags/typescript/</loc>
+    <loc>https://www.ted027.com/categories/typescript/</loc>
     <lastmod>2019-10-23T22:21:41+09:00</lastmod>
   </url>
   
@@ -285,6 +285,11 @@
   <url>
     <loc>https://www.ted027.com/post/js-href-void/</loc>
     <lastmod>2019-07-30T23:12:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/react/</loc>
+    <lastmod>2019-07-15T01:13:59+09:00</lastmod>
   </url>
   
   <url>
