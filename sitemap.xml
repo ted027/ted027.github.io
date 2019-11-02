@@ -288,11 +288,6 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/react/</loc>
-    <lastmod>2019-07-15T01:13:59+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/tags/redux/</loc>
     <lastmod>2019-07-15T01:13:59+09:00</lastmod>
   </url>
@@ -304,6 +299,11 @@
   
   <url>
     <loc>https://www.ted027.com/tags/state/</loc>
+    <lastmod>2019-07-15T01:13:59+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/react/</loc>
     <lastmod>2019-07-15T01:13:59+09:00</lastmod>
   </url>
   
