@@ -205,27 +205,27 @@ if (!doNotTrack) {
 <p>WithStylesを拡張してPropsのインタフェースを作り、コンポーネント作成時に渡す。</p>
 
 <p>としてあげると、<code>withStyles</code>でstyleを反映できます。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#fff;font-weight:bold">import</span> * <span style="color:#fff;font-weight:bold">as</span> React from <span style="color:#0ff;font-weight:bold">&#34;react&#34;</span>;
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#fff;font-weight:bold">import</span> * as React from <span style="color:#0ff;font-weight:bold">&#34;react&#34;</span>;
 ...
 <span style="color:#fff;font-weight:bold">import</span> { Theme } from <span style="color:#0ff;font-weight:bold">&#39;@material-ui/core/styles/createMuiTheme&#39;</span>;
 <span style="color:#fff;font-weight:bold">import</span> withStyles, { WithStyles, StyleRules } from <span style="color:#0ff;font-weight:bold">&#39;@material-ui/core/styles/withStyles&#39;</span>;
 <span style="color:#fff;font-weight:bold">import</span> createStyles from <span style="color:#0ff;font-weight:bold">&#39;@material-ui/core/styles/createStyles&#39;</span>;
 
-<span style="color:#fff;font-weight:bold">const</span> styles = (theme: <span style="color:#fff;font-weight:bold">Theme</span>): StyleRules =&gt; createStyles({
+<span style="color:#fff;font-weight:bold">const</span> styles = (theme: Theme): StyleRules =&gt; createStyles({
   tab: {
-    flexGrow: <span style="color:#fff;font-weight:bold">1</span>,
-    backgroundColor: <span style="color:#fff;font-weight:bold">theme.palette.background.paper</span>,
+    flexGrow: <span style="color:#ff0;font-weight:bold">1</span>,
+    backgroundColor: theme.palette.background.paper,
     color: <span style="color:#0ff;font-weight:bold">&#34;black&#34;</span>,
-    marginTop: <span style="color:#fff;font-weight:bold">48</span>
+    marginTop: <span style="color:#ff0;font-weight:bold">48</span>
   }
 });
 
 <span style="color:#fff;font-weight:bold">interface</span> Props <span style="color:#fff;font-weight:bold">extends</span> WithStyles&lt;<span style="color:#fff;font-weight:bold">typeof</span> styles&gt; {
-  selected: <span style="color:#fff;font-weight:bold">number</span>;
-  onChange: (event: <span style="color:#fff;font-weight:bold">any</span>, selected: <span style="color:#fff;font-weight:bold">number</span>) =&gt; any;
+  selected: number;
+  onChange: (event: any, selected: number) =&gt; any;
 }
 
-<span style="color:#fff;font-weight:bold">const</span> LeagueAppBarWithoutStyles: <span style="color:#fff;font-weight:bold">React.FC</span>&lt;Props&gt; = React.forwardRef((props, ref) =&gt; (
+<span style="color:#fff;font-weight:bold">const</span> LeagueAppBarWithoutStyles: React.FC&lt;Props&gt; = React.forwardRef((props, ref) =&gt; (
   &lt;AppBar className={props.classes.tab} ref={ref}&gt;
     &lt;Tabs
       variant=<span style="color:#0ff;font-weight:bold">&#34;fullWidth&#34;</span>
@@ -242,7 +242,8 @@ if (!doNotTrack) {
   &lt;<span style="color:#f00">/AppBar&gt;</span>
 ));
 
-<span style="color:#fff;font-weight:bold">export</span> <span style="color:#fff;font-weight:bold">const</span> LeagueAppBar = withStyles(styles)(LeagueAppBarWithoutStyles);</code></pre></div>
+<span style="color:#fff;font-weight:bold">export</span> <span style="color:#fff;font-weight:bold">const</span> LeagueAppBar = withStyles(styles)(LeagueAppBarWithoutStyles);
+</code></pre></div>
 <hr />
 
 <div
