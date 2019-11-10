@@ -6,10 +6,28 @@
     <description>Recent content in Tags on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 23 Oct 2019 22:21:41 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 10 Nov 2019 23:29:05 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>エラー</title>
+      <link>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</link>
+      <pubDate>Sun, 10 Nov 2019 23:29:05 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>型</title>
+      <link>https://www.ted027.com/tags/%E5%9E%8B/</link>
+      <pubDate>Sun, 10 Nov 2019 23:29:05 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/%E5%9E%8B/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Javascript</title>
@@ -21,7 +39,7 @@
     </item>
     
     <item>
-      <title>Material-UI</title>
+      <title>material-ui</title>
       <link>https://www.ted027.com/tags/material-ui/</link>
       <pubDate>Wed, 23 Oct 2019 22:21:41 +0900</pubDate>
       
@@ -282,20 +300,11 @@
     </item>
     
     <item>
-      <title>state</title>
+      <title>State</title>
       <link>https://www.ted027.com/tags/state/</link>
       <pubDate>Mon, 15 Jul 2019 01:13:59 +0900</pubDate>
       
       <guid>https://www.ted027.com/tags/state/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>エラー</title>
-      <link>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</link>
-      <pubDate>Mon, 15 Jul 2019 01:13:59 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</guid>
       <description></description>
     </item>
     
