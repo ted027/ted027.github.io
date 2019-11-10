@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Javascript on 行けたら行く</title>
+    <title>JavaScript on 行けたら行く</title>
     <link>https://www.ted027.com/tags/javascript/</link>
-    <description>Recent content in Javascript on 行けたら行く</description>
+    <description>Recent content in JavaScript on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 23 Oct 2019 22:21:41 +0900</lastBuildDate>
@@ -63,15 +63,6 @@
       
       <guid>https://www.ted027.com/post/react-ie/</guid>
       <description>&lt;p&gt;Reactで作ったページがIEで表示できなかった。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>React&#43;TypeScriptでPropTypesを使う</title>
-      <link>https://www.ted027.com/post/react-ts-proptypes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ted027.com/post/react-ts-proptypes/</guid>
-      <description></description>
     </item>
     
   </channel>
