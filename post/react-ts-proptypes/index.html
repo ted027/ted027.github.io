@@ -11,7 +11,8 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.ted027.com/post/react-ts-proptypes/" />
-
+<meta property="article:published_time" content="2019-11-10T12:57:01+09:00" />
+<meta property="article:modified_time" content="2019-11-10T12:57:01+09:00" />
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="React&#43;TypeScriptでPropTypesを使う"/>
@@ -88,6 +89,11 @@ if (!doNotTrack) {
 		<header class="post__header">
 			<h1 class="post__title">React&#43;TypeScriptでPropTypesを使う</h1>
 			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2019-11-10T12:57:01">2019-11-10</time>
+</div>
+
 <div class="meta__item-categories meta__item">
 	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
 	<span class="meta__text"><a class="meta__link" href="/categories/typescript" rel="category">TypeScript</a></span>
@@ -193,6 +199,8 @@ SearchContents.propTypes = {
   handlePopper: PropTypes.func.isRequired
 };
 </code></pre></div>
+<hr />
+
 <h3 id="typescript-proptypes">TypeScript + PropTypes</h3>
 
 <p>TypeScriptでPropTypesを使う場合は書き方が変わる。</p>
@@ -239,9 +247,11 @@ SearchContents.propTypes = {
   }
 }
 </code></pre></div>
+<hr />
+
 <h3 id="typescriptでproptypesは必要か">TypeScriptでPropTypesは必要か</h3>
 
-<p>じゃあ不要じゃん…となるところだが、TypeScriptのIssueに以下のようなものがある。</p>
+<p>じゃあ不要じゃん…となるところだが、TypeScriptのgithubに以下のようなIssueがある。</p>
 
 <ul>
 <li><a href="https://github.com/Microsoft/TypeScript/issues/4833">Support setting React PropTypes using TypeScript types #4833</a></li>
@@ -421,8 +431,11 @@ SearchContents.propTypes = {
 </div>
 
 <nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/post/react-ts-withstyles/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">React&#43;TypeScript&#43;material-uiでwithStylesを使う</p></a>
+	</div>
 	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/post/hugo/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Hugo &#43; GitHub Pagesでブログを作った話</p></a>
+		<a class="post-nav__link" href="/post/ts-typeerror/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">TypeScriptの型割り当てエラー</p></a>
 	</div>
 </nav>
 
@@ -556,9 +569,9 @@ SearchContents.propTypes = {
 			
 			<li class="widget__item"><a class="widget__link" href="/post/penant-add-descript">4. パワプロ ペナント補強思考設定の条件判断</a></li>
 			
-			<li class="widget__item"><a class="widget__link" href="/post/puml-aws">5. PlantUMLでAWSアイコンを使ったシステム構成図を作る</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/python-psycopg2">5. pip install時の「“python setup.py egg_info” failed ...」エラー</a></li>
 			
-			<li class="widget__item"><a class="widget__link" href="/post/python-psycopg2">6. pip install時の「“python setup.py egg_info” failed ...」エラー</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/domain-protection">6. ドメインプロテクション設定の必要性</a></li>
 			
 			<li class="widget__item"><a class="widget__link" href="/post/react-mediaquery">7. Reactでのレスポンシブ対応</a></li>
 			
@@ -570,12 +583,12 @@ SearchContents.propTypes = {
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item"><a class="widget__link" href="/post/ts-typeerror/">1. TypeScriptの型割り当てエラー</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/react-ts-withstyles/">2. React&#43;TypeScript&#43;material-uiでwithStylesを使う</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/ruby-stalin/">3. RubyでO(N)のスターリンソートを実装する</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/sabr-2019-leaders/">4. プロ野球・勝手に個人タイトルを作って表彰する2019</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/git-cherry-pick/">5. git cherry-pickいろいろ</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/readable-code/">6. 『リーダブルコード』個人的まとめ</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/python-datetime/">7. Pythonでの日時取得とタイムゾーン</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/react-ts-proptypes/">2. React&#43;TypeScriptでPropTypesを使う</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/react-ts-withstyles/">3. React&#43;TypeScript&#43;material-uiでwithStylesを使う</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/ruby-stalin/">4. RubyでO(N)のスターリンソートを実装する</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sabr-2019-leaders/">5. プロ野球・勝手に個人タイトルを作って表彰する2019</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/git-cherry-pick/">6. git cherry-pickいろいろ</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/readable-code/">7. 『リーダブルコード』個人的まとめ</a></li>
 		</ul>
 	</div>
 </div>
