@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PropTypes on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/proptypes/</link>
+    <description>Recent content in PropTypes on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 10 Nov 2019 12:57:01 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/tags/proptypes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>React&#43;TypeScriptでPropTypesを使う</title>
+      <link>https://www.ted027.com/post/react-ts-proptypes/</link>
+      <pubDate>Sun, 10 Nov 2019 12:57:01 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/react-ts-proptypes/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,19 @@
     <description>Recent content in エラー on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 15 Jul 2019 01:13:59 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 10 Nov 2019 23:29:05 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TypeScriptの型割り当てエラー</title>
+      <link>https://www.ted027.com/post/ts-typeerror/</link>
+      <pubDate>Sun, 10 Nov 2019 23:29:05 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/ts-typeerror/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Reduxで複数のReducerを扱う際のState初期値設定</title>
