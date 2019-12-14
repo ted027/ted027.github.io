@@ -6,10 +6,19 @@
     <description>Recent content in Python on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 20 Sep 2019 12:43:09 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 14 Dec 2019 21:57:13 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pythonでlistのlistを引き算したかった</title>
+      <link>https://www.ted027.com/post/python-list-sub/</link>
+      <pubDate>Sat, 14 Dec 2019 21:57:13 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/python-list-sub/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Pythonでの日時取得とタイムゾーン</title>

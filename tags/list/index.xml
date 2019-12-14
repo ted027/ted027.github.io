@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>list on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/list/</link>
+    <description>Recent content in list on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 14 Dec 2019 21:57:13 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/tags/list/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pythonでlistのlistを引き算したかった</title>
+      <link>https://www.ted027.com/post/python-list-sub/</link>
+      <pubDate>Sat, 14 Dec 2019 21:57:13 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/python-list-sub/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
