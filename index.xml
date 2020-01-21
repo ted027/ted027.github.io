@@ -6,10 +6,19 @@
     <description>Recent content on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 09 Jan 2020 00:02:05 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jan 2020 12:46:18 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Functional Componentで&#39;missing display name&#39;エラー</title>
+      <link>https://www.ted027.com/post/react-display-name/</link>
+      <pubDate>Tue, 21 Jan 2020 12:46:18 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/react-display-name/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>パワプロで自分が開発者ならやりたいこと12選</title>
