@@ -6,10 +6,37 @@
     <description>Recent content in Tags on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 28 Jan 2020 22:46:34 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 08 Feb 2020 21:36:00 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS</title>
+      <link>https://www.ted027.com/tags/aws/</link>
+      <pubDate>Sat, 08 Feb 2020 21:36:00 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://www.ted027.com/tags/python/</link>
+      <pubDate>Sat, 08 Feb 2020 21:36:00 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>snapshot</title>
+      <link>https://www.ted027.com/tags/snapshot/</link>
+      <pubDate>Sat, 08 Feb 2020 21:36:00 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/snapshot/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>こどもちゃれんじ</title>
@@ -498,15 +525,6 @@
     </item>
     
     <item>
-      <title>Python</title>
-      <link>https://www.ted027.com/tags/python/</link>
-      <pubDate>Thu, 20 Jun 2019 12:49:58 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>投手指標</title>
       <link>https://www.ted027.com/tags/%E6%8A%95%E6%89%8B%E6%8C%87%E6%A8%99/</link>
       <pubDate>Thu, 20 Jun 2019 12:49:58 +0900</pubDate>
@@ -980,15 +998,6 @@
       <pubDate>Fri, 26 Apr 2019 07:32:32 +0900</pubDate>
       
       <guid>https://www.ted027.com/tags/%E4%B8%A6%E5%88%97/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>AWS</title>
-      <link>https://www.ted027.com/tags/aws/</link>
-      <pubDate>Thu, 25 Apr 2019 17:02:54 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/tags/aws/</guid>
       <description></description>
     </item>
     

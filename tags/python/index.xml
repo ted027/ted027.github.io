@@ -6,10 +6,19 @@
     <description>Recent content in Python on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 20 Jun 2019 12:49:58 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 08 Feb 2020 21:36:00 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Elasticsearchのバックアップ/リストア</title>
+      <link>https://www.ted027.com/post/elasticsearch-snapshot/</link>
+      <pubDate>Sat, 08 Feb 2020 21:36:00 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/elasticsearch-snapshot/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>【LOB%】NPB(2019)セイバーメトリクス投手指標の算出③</title>
