@@ -6,10 +6,28 @@
     <description>Recent content in Tags on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 17 Feb 2020 01:21:55 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2020 21:56:24 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>apt</title>
+      <link>https://www.ted027.com/tags/apt/</link>
+      <pubDate>Sun, 01 Mar 2020 21:56:24 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/apt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GPG</title>
+      <link>https://www.ted027.com/tags/gpg/</link>
+      <pubDate>Sun, 01 Mar 2020 21:56:24 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/gpg/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>パワナンバー</title>
@@ -102,7 +120,7 @@
     </item>
     
     <item>
-      <title>JavaScript</title>
+      <title>Javascript</title>
       <link>https://www.ted027.com/tags/javascript/</link>
       <pubDate>Tue, 21 Jan 2020 12:46:18 +0900</pubDate>
       
@@ -480,7 +498,7 @@
     </item>
     
     <item>
-      <title>State</title>
+      <title>state</title>
       <link>https://www.ted027.com/tags/state/</link>
       <pubDate>Mon, 15 Jul 2019 01:13:59 +0900</pubDate>
       
@@ -656,15 +674,6 @@
       <pubDate>Thu, 06 Jun 2019 12:34:11 +0900</pubDate>
       
       <guid>https://www.ted027.com/tags/internetexplorer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>apt</title>
-      <link>https://www.ted027.com/tags/apt/</link>
-      <pubDate>Tue, 04 Jun 2019 12:33:53 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/tags/apt/</guid>
       <description></description>
     </item>
     
