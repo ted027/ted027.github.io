@@ -1,3 +1,9 @@
+/*
+    object-assign
+    (c) Sindre Sorhus
+    @license MIT
+    */
+
 /**
  * A better abstraction over CSS.
  *
@@ -5,12 +11,6 @@
  * @website https://github.com/cssinjs/jss
  * @license MIT
  */
-
-/*
-    object-assign
-    (c) Sindre Sorhus
-    @license MIT
-    */
 
 /*
 object-assign
