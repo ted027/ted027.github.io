@@ -6,10 +6,37 @@
     <description>Recent content in Tags on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 12 Apr 2020 21:10:11 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2020 21:42:58 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CloudFront</title>
+      <link>https://www.ted027.com/tags/cloudfront/</link>
+      <pubDate>Tue, 14 Apr 2020 21:42:58 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/cloudfront/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>S3</title>
+      <link>https://www.ted027.com/tags/s3/</link>
+      <pubDate>Tue, 14 Apr 2020 21:42:58 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/s3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SPA</title>
+      <link>https://www.ted027.com/tags/spa/</link>
+      <pubDate>Tue, 14 Apr 2020 21:42:58 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/spa/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>css</title>
@@ -21,7 +48,7 @@
     </item>
     
     <item>
-      <title>material-ui</title>
+      <title>Material-UI</title>
       <link>https://www.ted027.com/tags/material-ui/</link>
       <pubDate>Sun, 12 Apr 2020 21:10:11 +0900</pubDate>
       
