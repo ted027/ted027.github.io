@@ -211,7 +211,20 @@ if (!doNotTrack) {
 </figure>
 
 
-<p><code>theme.{Parameter}.{Component}</code>で値が取れる模様。</p>
+<hr />
+
+<p>なお、Material UIでコンポーネントのデフォルト<code>z-index</code>は以下のようになっている。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#fff;font-weight:bold">const</span> zIndex = {
+  mobileStepper: <span style="color:#ff0;font-weight:bold">1000</span>,
+  speedDial: <span style="color:#ff0;font-weight:bold">1050</span>,
+  appBar: <span style="color:#ff0;font-weight:bold">1100</span>,
+  drawer: <span style="color:#ff0;font-weight:bold">1200</span>,
+  modal: <span style="color:#ff0;font-weight:bold">1300</span>,
+  snackbar: <span style="color:#ff0;font-weight:bold">1400</span>,
+  tooltip: <span style="color:#ff0;font-weight:bold">1500</span>,
+};
+</code></pre></div>
+<p><a href="https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/styles/zIndex.js">https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/styles/zIndex.js</a></p>
 
 <hr />
 
