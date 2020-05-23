@@ -4,7 +4,47 @@
   
   <url>
     <loc>https://www.ted027.com/categories/aws/</loc>
-    <lastmod>2020-04-14T21:42:58+09:00</lastmod>
+    <lastmod>2020-05-24T00:45:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/</loc>
+    <lastmod>2020-05-24T00:45:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/lambda/</loc>
+    <lastmod>2020-05-24T00:45:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/</loc>
+    <lastmod>2020-05-24T00:45:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/sns/</loc>
+    <lastmod>2020-05-24T00:45:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/sqs/</loc>
+    <lastmod>2020-05-24T00:45:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/</loc>
+    <lastmod>2020-05-24T00:45:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/aws-sns-lambda/</loc>
+    <lastmod>2020-05-24T00:45:19+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/</loc>
+    <lastmod>2020-05-24T00:45:19+09:00</lastmod>
   </url>
   
   <url>
@@ -13,17 +53,7 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/</loc>
-    <lastmod>2020-04-14T21:42:58+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/tags/cloudfront/</loc>
-    <lastmod>2020-04-14T21:42:58+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/post/</loc>
     <lastmod>2020-04-14T21:42:58+09:00</lastmod>
   </url>
   
@@ -34,16 +64,6 @@
   
   <url>
     <loc>https://www.ted027.com/tags/spa/</loc>
-    <lastmod>2020-04-14T21:42:58+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/</loc>
-    <lastmod>2020-04-14T21:42:58+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/</loc>
     <lastmod>2020-04-14T21:42:58+09:00</lastmod>
   </url>
   

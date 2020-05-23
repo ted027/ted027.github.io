@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQS on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/sqs/</link>
+    <description>Recent content in SQS on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 24 May 2020 00:45:19 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/tags/sqs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</title>
+      <link>https://www.ted027.com/post/aws-sns-lambda/</link>
+      <pubDate>Sun, 24 May 2020 00:45:19 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/aws-sns-lambda/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
