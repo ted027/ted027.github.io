@@ -130,27 +130,24 @@ if (!doNotTrack) {
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#超基本知識">超基本知識</a></li>
-<li><a href="#基本知識">基本知識</a></li>
-<li><a href="#何が起きたのか">何が起きたのか</a></li>
-<li><a href="#どうすればよかったのか①-マルチaz対応">どうすればよかったのか① マルチAZ対応</a></li>
-<li><a href="#どうすればよかったのか②-サーバーレス">どうすればよかったのか② サーバーレス</a></li>
-<li><a href="#おわり">おわり</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#超基本知識">超基本知識</a></li>
+        <li><a href="#基本知識">基本知識</a></li>
+        <li><a href="#何が起きたのか">何が起きたのか</a></li>
+        <li><a href="#どうすればよかったのか-マルチaz対応">どうすればよかったのか① マルチAZ対応</a></li>
+        <li><a href="#どうすればよかったのか-サーバーレス">どうすればよかったのか② サーバーレス</a></li>
+        <li><a href="#おわり">おわり</a></li>
+        <li><a href="#参考">参考</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<hr />
-
+			<hr>
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6O1Z5" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -163,108 +160,67 @@ if (!doNotTrack) {
             src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001119000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6NU9D" alt="">
 </div>
-
-<hr />
-
+<hr>
 <p>2019年8月23日、AWSで大規模なシステム障害が起きました。これに伴い複数のゲームやWebサイト、サービス等が一時使えなくなり、結構大きな問題になったようです。</p>
-
 <p>今回はこの問題について、むかつくけど何が起きたのかわからん…という人もなるべくわかるように、そこそこ丁寧に書いてみます。</p>
-
-<hr />
-
+<hr>
 <h3 id="超基本知識">超基本知識</h3>
-
 <p>AWS (Amazon Web Service)とは、Amazonが提供するクラウドコンピューティングサービスです。</p>
-
 <p>普通、ゲームなりWebサイトなりを提供するには、自前でサーバーを用意し、この中でサービスを実行、お客さんにはこのサーバーにアクセスしてもらう必要があります。</p>
-
 <p>しかし、サーバーを管理するのは手間もお金もかかります。そこで、AmazonやGoogleのような会社が土地と計算資源を用意し、細心の注意を払って管理、利用者は利用する計算資源の分だけ料金を負担するのが「クラウドコンピューティング」です。</p>
-
 <p>サービスもただのサーバーやDB、ストレージ等に留まらず、機械学習やらk8sやらブロックチェーンやら、利用者がやりたそうなことを実現しやすいように、多種多様なサービスが展開されています。</p>
-
-<hr />
-
+<hr>
 <h3 id="基本知識">基本知識</h3>
-
 <p>AWSは様々なリージョン（地域）に拠点を持っています。利用者はこのリージョンを決め、その地域のサーバーを利用します。</p>
-
 <p>更にAWSでは、リージョン内に、複数のデータセンター（サーバが置いてあるビル）を持っています。なので、特定のビルで火災や異常が発生した場合でも、他のビルでサーバが生きていれば、サービス自体は提供できるということになります。</p>
-
 <p>で、もう一つ、AZ（アベイラビリティーゾーン）という概念があります。これはデータセンターとイコールではないのですが、何となく近い概念だと思っていただければいいかと思います。詳しくは以下のリンクに書いてあります。</p>
-
 <ul>
 <li><a href="https://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/using-regions-availability-zones.html">リージョンとアベイラビリティーゾーン</a></li>
 </ul>
-
-<hr />
-
+<hr>
 <h3 id="何が起きたのか">何が起きたのか</h3>
-
 <p>どうも東京リージョンのどこかのデータセンターで冷却装置が故障してサーバーが高温になり、深刻なダメージを受けて落ちたようです。これによって特定のAZが一時的に死んでしまい、そこを利用しているサービスが軒並み利用できなくなった、ということみたいですね。</p>
-
 <p>サーバートラブルとしてはごくごく一般的なものですが、数多くのサービスに用いられているAWSで発生したことにより、影響範囲がとても大きくなりました。</p>
-
-<hr />
-
-<h3 id="どうすればよかったのか①-マルチaz対応">どうすればよかったのか① マルチAZ対応</h3>
-
+<hr>
+<h3 id="どうすればよかったのか-マルチaz対応">どうすればよかったのか① マルチAZ対応</h3>
 <p>今回は特定のAZが落ちてしまったということで、「マルチAZ対応」を行っていれば障害は防げたという声があります。</p>
-
 <p>マルチAZというのは、複数のAZでサービスを展開することで、特定のAZで問題が生じてもサービス自体は止めないようにする障害対策です。確かにこうすれば、一つのAZで障害が起きても問題無さそうに見えます。</p>
-
 <p>ただ、今回障害の起きたサービスが、必ずしも単一のAZでサービスを提供していたとは限りません。マルチAZでも、以下のようなケースでは障害が起こりえます。</p>
-
 <ul>
-<li><p>複数AZに処理を分散させているだけで、特定のAZでエラーが起きた場合に異なるAZに接続するような処理がされていない</p></li>
-
-<li><p>障害を考慮したキャパシティ確保をしておらず、利用できるAZが減ることでサービスの負荷に耐え切れなくなる</p></li>
-
-<li><p>複数のAZに処理を振り分けるELB（Elsatic Load Balancer）自体が障害の起きたAZにある</p></li>
+<li>
+<p>複数AZに処理を分散させているだけで、特定のAZでエラーが起きた場合に異なるAZに接続するような処理がされていない</p>
+</li>
+<li>
+<p>障害を考慮したキャパシティ確保をしておらず、利用できるAZが減ることでサービスの負荷に耐え切れなくなる</p>
+</li>
+<li>
+<p>複数のAZに処理を振り分けるELB（Elsatic Load Balancer）自体が障害の起きたAZにある</p>
+</li>
 </ul>
-
-<hr />
-
-<h3 id="どうすればよかったのか②-サーバーレス">どうすればよかったのか② サーバーレス</h3>
-
+<hr>
+<h3 id="どうすればよかったのか-サーバーレス">どうすればよかったのか② サーバーレス</h3>
 <p>今回主に障害が起きたのはEC2(Elastic Compute Cloud)という、「アマゾンが持っているサーバーを借りて、自分で管理して自分で使う」ようなサービスです。</p>
-
 <p>これに対して、「サーバーレス」という概念で提供されるサービス群があります。</p>
-
 <p>「サーバーレス」と言っても本当にサーバーが無くなるわけではなく、「アマゾンが持っているサーバーをアマゾンが管理し、借りて自分が使う」ような感じです。</p>
-
 <p>アマゾンがサーバールームの管理をするだけでなく、OS、容量、障害対策といった管理までしてくれるため、利用者の手間がだいぶ減ります。</p>
-
 <p>そもそもクラウドサービスが「面倒な管理を一手に引き受けて、利用者には製品開発に注力してもらう」というものなので、あるべき方向に進化した姿ともいえます。</p>
-
 <ul>
 <li><a href="https://aws.amazon.com/jp/serverless/">(AWS公式)サーバーレス</a></li>
 </ul>
-
 <p>EC2だと、どこのAZのサーバーを利用するか、複数利用するか、どれくらい領域を確保するか、どう振り分けるかは利用者任せです。障害対策も自分たちで行わないといけません。</p>
-
 <p>一方、サーバーレスで開発を行っておけば、利用者が特別な準備を行わなくても、障害が起きたAZを避ける、必ず複数のAZで実行する、といった障害対策は取ってくれます。もちろん、サーバーレスにしたら障害のことを考えなくていいとか、AZ障害の影響を受けないとか、そういうわけではありませんが。</p>
-
-<hr />
-
+<hr>
 <h3 id="おわり">おわり</h3>
-
 <p>アマゾン側の問題なのは間違いないんですが、全く想像もつかない障害ではなく、想定としてはこういうこともあるよね…っていう障害です。</p>
-
 <p>今回の件でサーバーレスの強さを改めて実感しました。今後より一層そういう方向に進んでいきそうですね。</p>
-
 <p>あと、こういうことがあると「やはりクラウドサービスは信頼ならん、オンプレだ！」みたいな偉い人もいるのでしょうか？オンプレでやっても同じことが起こる確立が上がるだけのように思いますが。</p>
-
-<hr />
-
+<hr>
 <h3 id="参考">参考</h3>
-
 <ul>
 <li><a href="https://japan.zdnet.com/article/35141698/">AWSの障害は冷却装置の故障が原因&ndash;サービスはほぼ復旧</a></li>
 <li><a href="http://gs2.hatenablog.com/entry/2019/08/23/232534">AWSのAZ障害で影響を受けた・受けなかったの設計の違い。サーバレス最高！</a></li>
 </ul>
-
-<hr />
-
+<hr>
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E5%25BE%25B9%25E5%25BA%2595%25E6%2594%25BB%25E7%2595%25A5-AWS%25E8%25AA%258D%25E5%25AE%259A-%25E3%2582%25BD%25E3%2583%25AA%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%25BC%25E3%2582%25AD%25E3%2583%2586%25E3%2582%25AF%25E3%2583%2588-%25E2%2580%2593-%25E3%2582%25A2%25E3%2582%25BD%25E3%2582%25B7%25E3%2582%25A8%25E3%2582%25A4%25E3%2583%2588%25E6%2595%2599%25E7%25A7%2591%25E6%259B%25B8%2Fdp%2F4295005495"
@@ -306,9 +262,7 @@ if (!doNotTrack) {
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-
-<hr />
-
+<hr>
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+5ZEMP" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -321,8 +275,7 @@ if (!doNotTrack) {
             src="https://www25.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001014000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+61C2P" alt="">
 </div>
-
-<hr />
+<hr>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -366,7 +319,7 @@ if (!doNotTrack) {
 		<span class="authorbox__name">About ted027</span>
 	</div>
 	<div class="authorbox__description">
-		筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+		野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 	</div>
 </div>
 
@@ -439,7 +392,7 @@ if (!doNotTrack) {
 			<span class="authorbox__name">ted027</span>
 		</div>
 		<div class="widget-author__description">
-			筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+			野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 		</div>
 	</div>
 </div><div class="widget-search widget">
@@ -574,13 +527,13 @@ if (!doNotTrack) {
 	<h4 class="widget__title">最新記事</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/aws-sns-lambda/">1. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/aws-cloudfront-spa/">2. AWS CloudFrontでSPAを返す</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/mui-zindex/">3. Material-UI themeで他要素の規定パラメータを取得</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/apt-gpg-error/">4. apt updateで署名エラー</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/pawapuro-ob-nomura/">5. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/elasticsearch-snapshot/">6. Elasticsearchのバックアップ/リストア</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/shimajiro-concert2/">7. 「しまじろうコンサート 2019冬」感想</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/logstash-log/">1. Logstashサーバーのログ閲覧と設定</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/aws-sns-lambda/">2. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/aws-cloudfront-spa/">3. AWS CloudFrontでSPAを返す</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/mui-zindex/">4. Material-UI themeで他要素の規定パラメータを取得</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/apt-gpg-error/">5. apt updateで署名エラー</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/pawapuro-ob-nomura/">6. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/elasticsearch-snapshot/">7. Elasticsearchのバックアップ/リストア</a></li>
 		</ul>
 	</div>
 </div>
@@ -599,6 +552,7 @@ if (!doNotTrack) {
 			<li class="widget__item"><a class="widget__link" href="/categories/javascript">Javascript</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/jenkins">Jenkins</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/linux">Linux</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/logstash">Logstash</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/python">Python</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/react">React</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/ruby">Ruby</a></li>

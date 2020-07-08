@@ -131,30 +131,26 @@
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#基本設定">基本設定</a></li>
-<li><a href="#リモートにあるプロジェクトをローカルにコピーする">リモートにあるプロジェクトをローカルにコピーする</a></li>
-<li><a href="#ローカルにあるプロジェクトをgit管理としリモートに上げる">ローカルにあるプロジェクトをgit管理としリモートに上げる</a></li>
-<li><a href="#ローカルの変更をリモートに反映させる">ローカルの変更をリモートに反映させる</a></li>
-<li><a href="#ブランチ間で変更を反映する">ブランチ間で変更を反映する</a></li>
-<li><a href="#作業を取り消す">作業を取り消す</a></li>
-<li><a href="#作業中の変更を一時的に退避させる">作業中の変更を一時的に退避させる</a></li>
-<li><a href="#その他">その他</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#基本設定">基本設定</a></li>
+        <li><a href="#リモートにあるプロジェクトをローカルにコピーする">リモートにあるプロジェクトをローカルにコピーする</a></li>
+        <li><a href="#ローカルにあるプロジェクトをgit管理としリモートに上げる">ローカルにあるプロジェクトをgit管理としリモートに上げる</a></li>
+        <li><a href="#ローカルの変更をリモートに反映させる">ローカルの変更をリモートに反映させる</a></li>
+        <li><a href="#ブランチ間で変更を反映する">ブランチ間で変更を反映する</a></li>
+        <li><a href="#作業を取り消す">作業を取り消す</a></li>
+        <li><a href="#作業中の変更を一時的に退避させる">作業中の変更を一時的に退避させる</a></li>
+        <li><a href="#その他">その他</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
 			<p>コマンドでのgit管理で基本的なもの、よく使うものをまとめた。</p>
-
-<hr />
-
+<hr>
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7QMVW2+40C4+5Z6WX" target="_blank" rel="nofollow">
         <img border="0" width="702" height="90" alt="" src="https://www21.a8.net/svt/bgt?aid=190503911468&wid=001&eno=01&mid=s00000018706001004000&mc=1"></a>
@@ -165,151 +161,145 @@
         <img border="0" width="300" height="250" alt="" src="https://www20.a8.net/svt/bgt?aid=190503911468&wid=001&eno=01&mid=s00000018706001006000&mc=1"></a>
         <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=35F5RB+7QMVW2+40C4+5ZMCH" alt="">
 </div>
-
-<hr />
-
+<hr>
 <h3 id="基本設定">基本設定</h3>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git config --global user.name <span style="color:#0ff;font-weight:bold">&#34;name&#34;</span>
-$ git config --global user.email <span style="color:#0ff;font-weight:bold">&#34;your@email.address&#34;</span></code></pre></div>
-<hr />
-
+$ git config --global user.email <span style="color:#0ff;font-weight:bold">&#34;your@email.address&#34;</span>
+</code></pre></div><hr>
 <h3 id="リモートにあるプロジェクトをローカルにコピーする">リモートにあるプロジェクトをローカルにコピーする</h3>
-
 <ul>
-<li><p>リモートからcloneする</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git clone https://github.com/{user}/{project}.git</code></pre></div></li>
+<li>リモートからcloneする</li>
 </ul>
-
-<hr />
-
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git clone https://github.com/{user}/{project}.git
+</code></pre></div><hr>
 <h3 id="ローカルにあるプロジェクトをgit管理としリモートに上げる">ローカルにあるプロジェクトをgit管理としリモートに上げる</h3>
-
 <ul>
-<li><p>カレントディレクトリをgit管理する</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git init</code></pre></div></li>
-
-<li><p>カレントディレクトリのファイルをgit管理に追加する</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git add .             <span style="color:#007f7f"># カレントディレクトリの全ファイル</span>
-$ git add {file.name}   <span style="color:#007f7f"># カレントディレクトリの特定ファイル</span></code></pre></div></li>
-
-<li><p>変更をcommitする</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git commit -m <span style="color:#0ff;font-weight:bold">&#34;commit message&#34;</span></code></pre></div></li>
-
-<li><p>リモートを追加しpushする</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git remote add origin https://github.com/{user}/{project}.git
-$ git push -u origin master</code></pre></div></li>
+<li>カレントディレクトリをgit管理する</li>
 </ul>
-
-<hr />
-
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git init
+</code></pre></div><ul>
+<li>カレントディレクトリのファイルをgit管理に追加する</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git add .             <span style="color:#007f7f"># カレントディレクトリの全ファイル</span>
+$ git add {file.name}   <span style="color:#007f7f"># カレントディレクトリの特定ファイル</span>
+</code></pre></div><ul>
+<li>変更をcommitする</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git commit -m <span style="color:#0ff;font-weight:bold">&#34;commit message&#34;</span>
+</code></pre></div><ul>
+<li>リモートを追加しpushする</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git remote add origin https://github.com/{user}/{project}.git
+$ git push -u origin master
+</code></pre></div><hr>
 <h3 id="ローカルの変更をリモートに反映させる">ローカルの変更をリモートに反映させる</h3>
-
 <ul>
-<li><p>リモートの変更を取得する</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git pull</code></pre></div></li>
-
-<li><p>ブランチを作成する・切り替える</p>
+<li>リモートの変更を取得する</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git pull
+</code></pre></div><ul>
+<li>ブランチを作成する・切り替える</li>
+</ul>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git branch {branch_name]      <span style="color:#007f7f"># 作成</span>
 $ git checkout {branch_name]    <span style="color:#007f7f"># 切り替え</span>
 
-$ git checkout -b {branch_name] <span style="color:#007f7f"># 作成 &amp; 切り替え</span></code></pre></div></li>
-
-<li><p>編集したファイルをgit管理に追加する</p>
+$ git checkout -b {branch_name] <span style="color:#007f7f"># 作成 &amp; 切り替え</span>
+</code></pre></div><ul>
+<li>編集したファイルをgit管理に追加する</li>
+</ul>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git add .             <span style="color:#007f7f"># カレントディレクトリの全ファイル</span>
-$ git add {file.name}   <span style="color:#007f7f"># カレントディレクトリの特定ファイル</span></code></pre></div></li>
-
-<li><p>変更をcommitする</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git commit -m <span style="color:#0ff;font-weight:bold">&#34;commit message&#34;</span></code></pre></div></li>
-
-<li><p>リモートにpushする</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git push -u origin {branch_name}</code></pre></div></li>
+$ git add {file.name}   <span style="color:#007f7f"># カレントディレクトリの特定ファイル</span>
+</code></pre></div><ul>
+<li>変更をcommitする</li>
 </ul>
-
-<hr />
-
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git commit -m <span style="color:#0ff;font-weight:bold">&#34;commit message&#34;</span>
+</code></pre></div><ul>
+<li>リモートにpushする</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git push -u origin {branch_name}
+</code></pre></div><hr>
 <h3 id="ブランチ間で変更を反映する">ブランチ間で変更を反映する</h3>
-
 <ul>
-<li><p>commit履歴を見る</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git log</code></pre></div></li>
-
-<li><p>他ブランチへの特定のcommitを取り込む</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git cherry-pick {commit_id}</code></pre></div></li>
-
-<li><p>作業環境に別のブランチをマージする</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git merge {branch_name}           <span style="color:#007f7f"># ローカルブランチ</span>
-$ git merge origin/{branch_name}    <span style="color:#007f7f"># リモートブランチ</span></code></pre></div></li>
+<li>commit履歴を見る</li>
 </ul>
-
-<hr />
-
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git log
+</code></pre></div><ul>
+<li>他ブランチへの特定のcommitを取り込む</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git cherry-pick {commit_id}
+</code></pre></div><ul>
+<li>作業環境に別のブランチをマージする</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git merge {branch_name}           <span style="color:#007f7f"># ローカルブランチ</span>
+$ git merge origin/{branch_name}    <span style="color:#007f7f"># リモートブランチ</span>
+</code></pre></div><hr>
 <h3 id="作業を取り消す">作業を取り消す</h3>
-
 <ul>
-<li><p>addを取り消す</p>
+<li>addを取り消す</li>
+</ul>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git reset .             <span style="color:#007f7f"># カレントディレクトリ以下の更新のaddを取り消し</span>
-$ git reset {file.name}   <span style="color:#007f7f"># 特定ファイルの更新のaddを取り消し</span></code></pre></div></li>
-
-<li><p>commitを取り消す</p>
-
+$ git reset {file.name}   <span style="color:#007f7f"># 特定ファイルの更新のaddを取り消し</span>
+</code></pre></div><ul>
+<li>commitを取り消す
 <ul>
-<li><p><code>commit id</code>でなく、<code>HEAD~{n}</code>で、n個前のcommitを指定することもできる。</p>
+<li><code>commit id</code>でなく、<code>HEAD~{n}</code>で、n個前のcommitを指定することもできる。</li>
+</ul>
+</li>
+</ul>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git reset --hard HEAD^    <span style="color:#007f7f"># 直前のコミットを取り消し、ワークディレクトリも書き換える</span>
 $ git reset --soft HEAD^    <span style="color:#007f7f"># 直前のコミットを取り消す、ワークディレクトリはそのまま</span>
 
 $ git reset --hard {commit_id}    <span style="color:#007f7f"># 特定のコミットを取り消し、ワークディレクトリも書き換える</span>
-$ git reset --soft {commit_id}    <span style="color:#007f7f"># 特定のコミットを取り消す、ワークディレクトリはそのまま</span></code></pre></div></li>
-</ul></li>
-
-<li><p>pushを取り消す</p>
+$ git reset --soft {commit_id}    <span style="color:#007f7f"># 特定のコミットを取り消す、ワークディレクトリはそのまま</span>
+</code></pre></div><ul>
+<li>pushを取り消す</li>
+</ul>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git reset --hard {commit_id}
-$ git push -f</code></pre></div></li>
-</ul>
-
-<hr />
-
+$ git push -f
+</code></pre></div><hr>
 <h3 id="作業中の変更を一時的に退避させる">作業中の変更を一時的に退避させる</h3>
-
 <ul>
-<li><p>作業中の変更を退避させる</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git stash save</code></pre></div></li>
-
-<li><p>退避させた作業中の変更一覧を確認</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git stash list</code></pre></div></li>
-
-<li><p>退避させた作業中の変更一覧を確認</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git stash apply {stash_name}</code></pre></div></li>
-
-<li><p>退避させた作業中の変更を削除</p>
+<li>作業中の変更を退避させる</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git stash save
+</code></pre></div><ul>
+<li>退避させた作業中の変更一覧を確認</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git stash list
+</code></pre></div><ul>
+<li>退避させた作業中の変更一覧を確認</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git stash apply {stash_name}
+</code></pre></div><ul>
+<li>退避させた作業中の変更を削除</li>
+</ul>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git stash drop {stash_name}   <span style="color:#007f7f"># 特定のstashを削除</span>
-$ git stash clear               <span style="color:#007f7f"># 全stashを削除</span></code></pre></div></li>
-</ul>
-
-<hr />
-
+$ git stash clear               <span style="color:#007f7f"># 全stashを削除</span>
+</code></pre></div><hr>
 <h3 id="その他">その他</h3>
-
 <ul>
-<li><p>コミットメッセージを変更する</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git commit --amend <span style="color:#0ff;font-weight:bold">&#34;new commit message&#34;</span></code></pre></div></li>
-
-<li><p>ファイルをgit管理から外す</p>
-
-<ul>
-<li><p>一度git管理したファイルは.gitignoreに追加しただけではgit管理から外れないので、<code>git rm</code>で明示的にgit管理から外す必要がある。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git rm -f {file.name}</code></pre></div></li>
-</ul></li>
-
-<li><p>ブランチを比較する</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git diff {branch_name1} {branch_name2}</code></pre></div></li>
-
-<li><p>ブランチを削除する</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git branch -d {branch_name}
-$ git branch -D {branch_name}</code></pre></div></li>
+<li>コミットメッセージを変更する</li>
 </ul>
-
-<hr />
-
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git commit --amend <span style="color:#0ff;font-weight:bold">&#34;new commit message&#34;</span>
+</code></pre></div><ul>
+<li>
+<p>ファイルをgit管理から外す</p>
+<ul>
+<li>一度git管理したファイルは.gitignoreに追加しただけではgit管理から外れないので、<code>git rm</code>で明示的にgit管理から外す必要がある。</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git rm -f {file.name}
+</code></pre></div><ul>
+<li>ブランチを比較する</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git diff {branch_name1} {branch_name2}
+</code></pre></div><ul>
+<li>ブランチを削除する</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git branch -d {branch_name}
+$ git branch -D {branch_name}
+</code></pre></div><hr>
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E5%2585%25A5%25E9%2596%2580UNIX%25E3%2582%25B7%25E3%2582%25A7%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E2%2580%2595%25E3%2582%25B7%25E3%2582%25A7%25E3%2583%25AB%25E3%2581%25AE%25E5%259F%25BA%25E7%25A4%258E%25E3%2581%258B%25E3%2582%2589%25E5%25AD%25A6%25E3%2581%25B6UNIX%25E3%2581%25AE%25E4%25B8%2596%25E7%2595%258C-%25E3%2583%2596%25E3%2583%25AB%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%25BB%25E3%2583%2596%25E3%2583%25AA%25E3%2583%25B3%2Fdp%2F4797321946"
@@ -352,9 +342,7 @@ $ git branch -D {branch_name}</code></pre></div></li>
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-
-<hr />
-
+<hr>
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6O1Z5" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -367,8 +355,7 @@ $ git branch -D {branch_name}</code></pre></div></li>
             src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001119000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6NU9D" alt="">
 </div>
-
-<hr />
+<hr>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -411,7 +398,7 @@ $ git branch -D {branch_name}</code></pre></div></li>
 		<span class="authorbox__name">About ted027</span>
 	</div>
 	<div class="authorbox__description">
-		筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+		野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 	</div>
 </div>
 
@@ -484,7 +471,7 @@ $ git branch -D {branch_name}</code></pre></div></li>
 			<span class="authorbox__name">ted027</span>
 		</div>
 		<div class="widget-author__description">
-			筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+			野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 		</div>
 	</div>
 </div><div class="widget-search widget">
@@ -619,13 +606,13 @@ $ git branch -D {branch_name}</code></pre></div></li>
 	<h4 class="widget__title">最新記事</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-sns-lambda/">1. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-cloudfront-spa/">2. AWS CloudFrontでSPAを返す</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/mui-zindex/">3. Material-UI themeで他要素の規定パラメータを取得</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/apt-gpg-error/">4. apt updateで署名エラー</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/pawapuro-ob-nomura/">5. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/elasticsearch-snapshot/">6. Elasticsearchのバックアップ/リストア</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/shimajiro-concert2/">7. 「しまじろうコンサート 2019冬」感想</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/logstash-log/">1. Logstashサーバーのログ閲覧と設定</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-sns-lambda/">2. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-cloudfront-spa/">3. AWS CloudFrontでSPAを返す</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/mui-zindex/">4. Material-UI themeで他要素の規定パラメータを取得</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/apt-gpg-error/">5. apt updateで署名エラー</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/pawapuro-ob-nomura/">6. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/elasticsearch-snapshot/">7. Elasticsearchのバックアップ/リストア</a></li>
 		</ul>
 	</div>
 </div>
@@ -644,6 +631,7 @@ $ git branch -D {branch_name}</code></pre></div></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/javascript">Javascript</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/jenkins">Jenkins</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/linux">Linux</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/logstash">Logstash</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/python">Python</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/react">React</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/ruby">Ruby</a></li>

@@ -131,29 +131,21 @@
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#python-setup-py-egg-info-failed">“python setup.py egg_info” failed</a>
-<ul>
-<li><a href="#pip-setuptoolsが最新でない">pip / setuptoolsが最新でない</a></li>
-<li><a href="#必要なライブラリが無い">必要なライブラリが無い</a></li>
-</ul></li>
-<li><a href="#psycopg2のインストール">psycopg2のインストール</a></li>
-<li><a href="#おわり">おわり</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#python-setuppy-egg_info-failed">“python setup.py egg_info” failed</a></li>
+        <li><a href="#psycopg2のインストール">psycopg2のインストール</a></li>
+        <li><a href="#おわり">おわり</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
 			<p>Pythonでpip installしようとした時、表題のエラーで躓くことがあった。</p>
-
-<hr />
-
+<hr>
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+5Z6WX" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -166,9 +158,7 @@
             src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001013000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+614CX" alt="">
 </div>
-
-<hr />
-
+<hr>
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E7%258B%25AC%25E5%25AD%25A6%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259E%25E3%2583%25BC-Python%25E8%25A8%2580%25E8%25AA%259E%25E3%2581%25AE%25E5%259F%25BA%25E6%259C%25AC%25E3%2581%258B%25E3%2582%2589%25E4%25BB%2595%25E4%25BA%258B%25E3%2581%25AE%25E3%2582%2584%25E3%2582%258A%25E6%2596%25B9%25E3%2581%25BE%25E3%2581%25A7-%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25BB%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25BD%25E3%2583%2595%2Fdp%2F4822292274"
@@ -213,39 +203,23 @@
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-
-<hr />
-
-<h3 id="python-setup-py-egg-info-failed">“python setup.py egg_info” failed</h3>
-
+<hr>
+<h3 id="python-setuppy-egg_info-failed">“python setup.py egg_info” failed</h3>
 <p><code>Command “python setup.py egg_info” failed with error code 1 in ...</code></p>
-
 <p>のエラーが起きる原因は大きく分けて二つ。</p>
-
 <ul>
 <li>pip / setuptoolsが最新でない</li>
 <li>必要なライブラリが無い</li>
 </ul>
-
-<hr />
-
-<h4 id="pip-setuptoolsが最新でない">pip / setuptoolsが最新でない</h4>
-
+<hr>
+<h4 id="pip--setuptoolsが最新でない">pip / setuptoolsが最新でない</h4>
 <p>こちらの場合は、単純にこれらをupgradeすればよい。</p>
-
 <pre><code>$ pip install --upgrade pip setuptools
-</code></pre>
-
-<hr />
-
+</code></pre><hr>
 <h4 id="必要なライブラリが無い">必要なライブラリが無い</h4>
-
 <p>こちらはライブラリによって異なるので一概には言えないが、エラーを読むと何が足りないか書いてあったりする。</p>
-
-<hr />
-
+<hr>
 <h3 id="psycopg2のインストール">psycopg2のインストール</h3>
-
 <p>今回の現象は以下。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ pip install psycopg2
 ...
@@ -255,42 +229,35 @@ Error: pg_config executable not found.
     containing pg_config to the $PATH or specify the full executable path with the
     option:
 ...
-<span style="color:#0ff;font-weight:bold">`</span>Command <span style="color:#0ff;font-weight:bold">&#34;python setup.py egg_info&#34;</span> failed with error code <span style="color:#ff0;font-weight:bold">1</span> in /tmp/pip-build-ta2iundk/psycopg2/<span style="color:#0ff;font-weight:bold">`</span></code></pre></div>
-<p>エラーを見ると、<code>必要なライブラリが無い</code>の方のケースだとわかる。</p>
-
+<span style="color:#0ff;font-weight:bold">`</span>Command <span style="color:#0ff;font-weight:bold">&#34;python setup.py egg_info&#34;</span> failed with error code <span style="color:#ff0;font-weight:bold">1</span> in /tmp/pip-build-ta2iundk/psycopg2/<span style="color:#0ff;font-weight:bold">`</span>
+</code></pre></div><p>エラーを見ると、<code>必要なライブラリが無い</code>の方のケースだとわかる。</p>
 <p>無いと言われている<code>pg_config</code>をググると、環境ごとに以下のパッケージに含まれていることがわかる。</p>
-
 <ul>
 <li><code>postgresql-devel</code>(CentOS)</li>
 <li><code>libpq-dev</code>(Debian/Ubuntu)</li>
 <li><code>postgresql</code>(MacOS)</li>
 </ul>
-
 <p>なので、環境によってそれぞれ以下のコマンドでインストールする。</p>
-
 <ul>
-<li><p>CentOS</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ yum install postgresql-devel</code></pre></div></li>
-
-<li><p>Debian/Ubuntu</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ apt-get install libpq-dev</code></pre></div></li>
-
-<li><p>MacOS</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ brew install postgresql</code></pre></div></li>
+<li>CentOS</li>
 </ul>
-
-<p>自分は<code>Ubuntu</code>環境なので、<code>apt</code>でインストールし、再度<code>psycopg2</code>を入れてみる。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ yum install postgresql-devel
+</code></pre></div><ul>
+<li>Debian/Ubuntu</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ apt-get install libpq-dev
+</code></pre></div><ul>
+<li>MacOS</li>
+</ul>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ brew install postgresql
+</code></pre></div><p>自分は<code>Ubuntu</code>環境なので、<code>apt</code>でインストールし、再度<code>psycopg2</code>を入れてみる。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ apt-get install libpq-dev
 
-$ pip install psycopg2</code></pre></div>
-<hr />
-
+$ pip install psycopg2
+</code></pre></div><hr>
 <h3 id="おわり">おわり</h3>
-
 <p>無事入りました。</p>
-
-<hr />
-
+<hr>
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E9%2580%2580%25E5%25B1%2588%25E3%2581%25AA%25E3%2581%2593%25E3%2581%25A8%25E3%2581%25AFPython%25E3%2581%25AB%25E3%2582%2584%25E3%2582%2589%25E3%2581%259B%25E3%2582%2588%25E3%2581%2586-%25E2%2580%2595%25E3%2583%258E%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259E%25E3%2583%25BC%25E3%2581%25AB%25E3%2582%2582%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%25E5%2587%25A6%25E7%2590%2586%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0-Al-Sweigart%2Fdp%2F487311778X"
@@ -335,9 +302,7 @@ $ pip install psycopg2</code></pre></div>
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-
-<hr />
-
+<hr>
 <div class="wide__area">
     <a href="https://t.afi-b.com/visit.php?guid=ON&a=99886h-W336947J&p=J690746r" target="_blank" rel="nofollow"><img
             src="https://www.afi-b.com/upload_image/9886-1534983315-3.jpg" width="728" height="90" style="border:none;"
@@ -350,8 +315,7 @@ $ pip install psycopg2</code></pre></div>
             alt="CodeCampGATE" /></a><img src="https://t.afi-b.com/lead/99886h/J690746r/3336944i" width="1" height="1"
         style="border:none;" />
 </div>
-
-<hr />
+<hr>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -394,7 +358,7 @@ $ pip install psycopg2</code></pre></div>
 		<span class="authorbox__name">About ted027</span>
 	</div>
 	<div class="authorbox__description">
-		筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+		野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 	</div>
 </div>
 
@@ -467,7 +431,7 @@ $ pip install psycopg2</code></pre></div>
 			<span class="authorbox__name">ted027</span>
 		</div>
 		<div class="widget-author__description">
-			筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+			野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 		</div>
 	</div>
 </div><div class="widget-search widget">
@@ -602,13 +566,13 @@ $ pip install psycopg2</code></pre></div>
 	<h4 class="widget__title">最新記事</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-sns-lambda/">1. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-cloudfront-spa/">2. AWS CloudFrontでSPAを返す</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/mui-zindex/">3. Material-UI themeで他要素の規定パラメータを取得</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/apt-gpg-error/">4. apt updateで署名エラー</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/pawapuro-ob-nomura/">5. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/elasticsearch-snapshot/">6. Elasticsearchのバックアップ/リストア</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/shimajiro-concert2/">7. 「しまじろうコンサート 2019冬」感想</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/logstash-log/">1. Logstashサーバーのログ閲覧と設定</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-sns-lambda/">2. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-cloudfront-spa/">3. AWS CloudFrontでSPAを返す</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/mui-zindex/">4. Material-UI themeで他要素の規定パラメータを取得</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/apt-gpg-error/">5. apt updateで署名エラー</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/pawapuro-ob-nomura/">6. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/elasticsearch-snapshot/">7. Elasticsearchのバックアップ/リストア</a></li>
 		</ul>
 	</div>
 </div>
@@ -627,6 +591,7 @@ $ pip install psycopg2</code></pre></div>
 			<li class="widget__item"><a class="widget__link" href="/categories/javascript">Javascript</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/jenkins">Jenkins</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/linux">Linux</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/logstash">Logstash</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/python">Python</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/react">React</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/ruby">Ruby</a></li>

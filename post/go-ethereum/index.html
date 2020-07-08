@@ -130,31 +130,22 @@ if (!doNotTrack) {
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#イーサリアム-ethereum">イーサリアム (Ethereum)</a></li>
-<li><a href="#環境構築">環境構築</a></li>
-<li><a href="#最初のブロックを作る">最初のブロックを作る</a>
-<ul>
-<li><a href="#genesis-jsonを作成">genesis.jsonを作成</a></li>
-<li><a href="#プライベートネットを作成">プライベートネットを作成</a></li>
-<li><a href="#作成したブロックを確認">作成したブロックを確認</a></li>
-</ul></li>
-<li><a href="#おわり">おわり</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#イーサリアム-ethereum">イーサリアム (Ethereum)</a></li>
+        <li><a href="#環境構築">環境構築</a></li>
+        <li><a href="#最初のブロックを作る">最初のブロックを作る</a></li>
+        <li><a href="#おわり">おわり</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
 			<p>ローカルにイーサリアムのネットワークを構築して遊んでみる（※本物のイーサリアムをマイニングするわけではないです）。</p>
-
-<hr />
-
+<hr>
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E5%2585%25A5%25E9%2596%2580UNIX%25E3%2582%25B7%25E3%2582%25A7%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E2%2580%2595%25E3%2582%25B7%25E3%2582%25A7%25E3%2583%25AB%25E3%2581%25AE%25E5%259F%25BA%25E7%25A4%258E%25E3%2581%258B%25E3%2582%2589%25E5%25AD%25A6%25E3%2581%25B6UNIX%25E3%2581%25AE%25E4%25B8%2596%25E7%2595%258C-%25E3%2583%2596%25E3%2583%25AB%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%25BB%25E3%2583%2596%25E3%2583%25AA%25E3%2583%25B3%2Fdp%2F4797321946"
@@ -197,13 +188,9 @@ if (!doNotTrack) {
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-
-<hr />
-
+<hr>
 <h3 id="イーサリアム-ethereum">イーサリアム (Ethereum)</h3>
-
 <p>かの有名なBitCoinに次ぐ、時価総額世界第二位の仮想通貨。</p>
-
 
 <figure >
     
@@ -213,44 +200,34 @@ if (!doNotTrack) {
     
 </figure>
 
-
 <p><a href="https://www.ethereum.org">Ethereum</a></p>
-
 <ul>
 <li>github
-
 <ul>
 <li><a href="https://github.com/ethereum">https://github.com/ethereum</a></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p>今回はGo言語で実装された<code>geth(go ethereum)</code>を使ってみる。</p>
-
-<hr />
-
+<hr>
 <h3 id="環境構築">環境構築</h3>
-
 <p><code>geth</code>をインストールする。</p>
-
 <p>aptでインストールする場合は以下。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ add-apt-repository -y ppa:ethereum/ethereum
 $ apt-get update
-$ apt-get install ethereum</code></pre></div>
-<p>もしくはgithubからバージョンを指定して直接取得する。</p>
+$ apt-get install ethereum
+</code></pre></div><p>もしくはgithubからバージョンを指定して直接取得する。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git clone -b release/1.8 https://github.com/ethereum/go-ethereum
 $ <span style="color:#fff;font-weight:bold">cd</span> go-ethereum/
-$ make geth</code></pre></div>
-<p>PATHに追加。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ <span style="color:#fff;font-weight:bold">export</span> PATH=/(path)/(to)/go-ethereum/build/bin:$PATH</code></pre></div>
-<hr />
-
+$ make geth
+</code></pre></div><p>PATHに追加。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ <span style="color:#fff;font-weight:bold">export</span> PATH=/(path)/(to)/go-ethereum/build/bin:$PATH
+</code></pre></div><hr>
 <h3 id="最初のブロックを作る">最初のブロックを作る</h3>
-
-<h4 id="genesis-jsonを作成">genesis.jsonを作成</h4>
-
+<h4 id="genesisjsonを作成">genesis.jsonを作成</h4>
 <p>とりあえず作業用ディレクトリを作成。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ mkdir ~/geth</code></pre></div>
-<p>最初のブロック(Genesis block)を作るため、作業用ディレクトリに以下のような<code>genesis.json</code>を作る。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ mkdir ~/geth
+</code></pre></div><p>最初のブロック(Genesis block)を作るため、作業用ディレクトリに以下のような<code>genesis.json</code>を作る。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="font-weight:bold">&#34;config&#34;</span>: {
     <span style="font-weight:bold">&#34;chainId&#34;</span>: <span style="color:#ff0;font-weight:bold">15</span>,
@@ -274,86 +251,70 @@ $ make geth</code></pre></div>
   <span style="font-weight:bold">&#34;mixhash&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0x0000000000000000000000000000000000000000000000000000000000000000&#34;</span>,
   <span style="font-weight:bold">&#34;parentHash&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0x0000000000000000000000000000000000000000000000000000000000000000&#34;</span>,
   <span style="font-weight:bold">&#34;timestamp&#34;</span>: <span style="color:#0ff;font-weight:bold">&#34;0x00&#34;</span>
-}</code></pre></div>
-<p><code>chainid</code>は、1はメインネットを表すので、1以外の適当な値を指定。</p>
-
+}
+</code></pre></div><p><code>chainid</code>は、1はメインネットを表すので、1以外の適当な値を指定。</p>
 <p><code>difficulty</code>はマイニングの難易度。</p>
-
 <p><code>alloc</code>でウォレットの初期設定ができる。空<code>{}</code>でもいい。</p>
-
-<hr />
-
+<hr>
 <h4 id="プライベートネットを作成">プライベートネットを作成</h4>
-
 <p>まずは初期化。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ geth --datadir ~/geth/ init ~/geth/genesis.json</code></pre></div>
-<p>処理が成功したら、プライベートネットを起動する。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ geth --networkid <span style="color:#ff0;font-weight:bold">10</span> --datadir ~/geth/ console <span style="color:#ff0;font-weight:bold">2</span>&gt;&gt; ~/geth/error.log</code></pre></div>
-<p>これでプライベートネットが起動し、最初のブロックが作成される。</p>
-
-<hr />
-
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ geth --datadir ~/geth/ init ~/geth/genesis.json
+</code></pre></div><p>処理が成功したら、プライベートネットを起動する。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ geth --networkid <span style="color:#ff0;font-weight:bold">10</span> --datadir ~/geth/ console 2&gt;&gt; ~/geth/error.log
+</code></pre></div><p>これでプライベートネットが起動し、最初のブロックが作成される。</p>
+<hr>
 <h4 id="作成したブロックを確認">作成したブロックを確認</h4>
-
 <p><code>eth</code>で各種情報を確認できる。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">&gt; eth</code></pre></div>
-<p>ブロックの情報は、<code>eth.getBlock([Block Number])</code>で確認できる。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">&gt; eth.getBlock(<span style="color:#ff0;font-weight:bold">0</span>)
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">&gt; eth
+</code></pre></div><p>ブロックの情報は、<code>eth.getBlock([Block Number])</code>で確認できる。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">&gt; eth.getBlock(0)
 {
-  difficulty: <span style="color:#ff0;font-weight:bold">131072</span>,
+  difficulty: 131072,
   extraData: <span style="color:#0ff;font-weight:bold">&#34;0x&#34;</span>,
-  gasLimit: <span style="color:#ff0;font-weight:bold">3141592</span>,
-  gasUsed: <span style="color:#ff0;font-weight:bold">0</span>,
+  gasLimit: 3141592,
+  gasUsed: 0,
   hash: <span style="color:#0ff;font-weight:bold">&#34;0x0a34aafeef87619754f3607753cc229b6f2c88c127cc7ddfad3c54e702ad1373&#34;</span>,
   logsBloom: <span style="color:#0ff;font-weight:bold">&#34;0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000&#34;</span>,
   miner: <span style="color:#0ff;font-weight:bold">&#34;0x0000000000000000000000000000000000000000&#34;</span>,
   mixHash: <span style="color:#0ff;font-weight:bold">&#34;0x0000000000000000000000000000000000000000000000000000000000000000&#34;</span>,
   nonce: <span style="color:#0ff;font-weight:bold">&#34;0x0000000000012345&#34;</span>,
-  number: <span style="color:#ff0;font-weight:bold">0</span>,
+  number: 0,
   parentHash: <span style="color:#0ff;font-weight:bold">&#34;0x0000000000000000000000000000000000000000000000000000000000000000&#34;</span>,
   receiptsRoot: <span style="color:#0ff;font-weight:bold">&#34;0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421&#34;</span>,
   sha3Uncles: <span style="color:#0ff;font-weight:bold">&#34;0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347&#34;</span>,
-  size: <span style="color:#ff0;font-weight:bold">507</span>,
+  size: 507,
   stateRoot: <span style="color:#0ff;font-weight:bold">&#34;0x92683e6af0f8a932e5fe08c870f2ae9d287e39d4518ec544b0be451f1035fd39&#34;</span>,
-  timestamp: <span style="color:#ff0;font-weight:bold">0</span>,
-  totalDifficulty: <span style="color:#ff0;font-weight:bold">131072</span>,
+  timestamp: 0,
+  totalDifficulty: 131072,
   transactions: [],
   transactionsRoot: <span style="color:#0ff;font-weight:bold">&#34;0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421&#34;</span>,
   uncles: []
-}</code></pre></div>
-<hr />
-
+}
+</code></pre></div><hr>
 <h3 id="おわり">おわり</h3>
-
 <p>コンソールは<code>exit</code>で終了。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">&gt; exit</code></pre></div>
-<p>構築したネットワークで遊ぶのは次回。</p>
-
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">&gt; <span style="color:#fff;font-weight:bold">exit</span>
+</code></pre></div><p>構築したネットワークで遊ぶのは次回。</p>
 <ul>
 <li><a href="https://www.ted027.com/post/go-ethereum-send">【ブロックチェーンお勉強】イーサリアムのローカルネットワークでマイニング、送金</a></li>
 </ul>
-
-<hr />
-
+<hr>
 <ul>
 <li>参考
-
 <ul>
 <li><a href="https://github.com/ethereum/go-ethereum/wiki/Private-network">https://github.com/ethereum/go-ethereum/wiki/Private-network</a></li>
 <li><a href="https://enomotodev.hatenablog.com/entry/2018/02/18/182032">https://enomotodev.hatenablog.com/entry/2018/02/18/182032</a></li>
-</ul></li>
 </ul>
-
-<hr />
-
+</li>
+</ul>
+<hr>
 <div>
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6IP2P" target="_blank" rel="nofollow">
         <img border="0" width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001095000&mc=1"></a>
         <img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6IP2P" alt="">
 </div>
 
-
-<hr />
+<hr>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -397,7 +358,7 @@ $ make geth</code></pre></div>
 		<span class="authorbox__name">About ted027</span>
 	</div>
 	<div class="authorbox__description">
-		筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+		野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 	</div>
 </div>
 
@@ -470,7 +431,7 @@ $ make geth</code></pre></div>
 			<span class="authorbox__name">ted027</span>
 		</div>
 		<div class="widget-author__description">
-			筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+			野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 		</div>
 	</div>
 </div><div class="widget-search widget">
@@ -605,13 +566,13 @@ $ make geth</code></pre></div>
 	<h4 class="widget__title">最新記事</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/aws-sns-lambda/">1. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/aws-cloudfront-spa/">2. AWS CloudFrontでSPAを返す</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/mui-zindex/">3. Material-UI themeで他要素の規定パラメータを取得</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/apt-gpg-error/">4. apt updateで署名エラー</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/pawapuro-ob-nomura/">5. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/elasticsearch-snapshot/">6. Elasticsearchのバックアップ/リストア</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/shimajiro-concert2/">7. 「しまじろうコンサート 2019冬」感想</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/logstash-log/">1. Logstashサーバーのログ閲覧と設定</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/aws-sns-lambda/">2. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/aws-cloudfront-spa/">3. AWS CloudFrontでSPAを返す</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/mui-zindex/">4. Material-UI themeで他要素の規定パラメータを取得</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/apt-gpg-error/">5. apt updateで署名エラー</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/pawapuro-ob-nomura/">6. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/elasticsearch-snapshot/">7. Elasticsearchのバックアップ/リストア</a></li>
 		</ul>
 	</div>
 </div>
@@ -630,6 +591,7 @@ $ make geth</code></pre></div>
 			<li class="widget__item"><a class="widget__link" href="/categories/javascript">Javascript</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/jenkins">Jenkins</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/linux">Linux</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/logstash">Logstash</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/python">Python</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/react">React</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/ruby">Ruby</a></li>

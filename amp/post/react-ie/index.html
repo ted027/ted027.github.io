@@ -131,26 +131,22 @@
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#概要">概要</a></li>
-<li><a href="#対策">対策</a></li>
-<li><a href="#作業">作業</a></li>
-<li><a href="#おわり">おわり</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#概要">概要</a></li>
+        <li><a href="#対策">対策</a></li>
+        <li><a href="#作業">作業</a></li>
+        <li><a href="#おわり">おわり</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
 			<p>Reactで作ったページがIEで表示できなかった。</p>
-
-<hr />
-
+<hr>
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7O95GY+3TVC+TUVZL" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -163,9 +159,7 @@
             src="https://www28.a8.net/svt/bgt?aid=190503911464&wid=001&eno=01&mid=s00000017868005009000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=35F5RB+7O95GY+3TVC+TTLOX" alt="">
 </div>
-
-<hr />
-
+<hr>
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E3%2582%25B2%25E3%2583%25BC%25E3%2583%25A0%25E3%2582%2592%25E4%25BD%259C%25E3%2582%258A%25E3%2581%25AA%25E3%2581%258C%25E3%2582%2589%25E6%25A5%25BD%25E3%2581%2597%25E3%2581%258F%25E5%25AD%25A6%25E3%2581%25B9%25E3%2582%258BHTML5-CSS-JavaScript%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0-NextPublishing-%25E8%25B3%25A2%25E4%25B8%2580%25E9%2583%258E%2Fdp%2F4844395963"
@@ -207,59 +201,36 @@
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-
-<hr />
-
+<hr>
 <h3 id="概要">概要</h3>
-
 <p>InternetExplorer11が、JavascriptのES2015(ES6)記法に対応していないため。</p>
-
 <p>マイクロソフトも使わないでくれと言うようなレガシーブラウザですが、今なお結構なシェアを誇っているため、対応せざるを得ないケースも多いかと。</p>
-
-<hr />
-
+<hr>
 <h3 id="対策">対策</h3>
-
 <p><code>polyfill</code>を使います。</p>
-
 <p><code>polyfill</code>は、「隙間を埋める」ような意味の言葉で、「存在しないメソッドを、既存メソッドで擬似的に再現する」ようなもの。</p>
-
 <p>IEが対応していないES6のメソッドも、ES6以前のメソッドを用いて再現してくれます。</p>
-
-<hr />
-
+<hr>
 <h3 id="作業">作業</h3>
-
 <p><code>react-app-polyfill</code>と、<code>@babel/polyfill</code>を使います。</p>
-
 <p>（僕の場合、前者だけだと表示されず。）</p>
-
 <p>まず<code>package-json</code>のあるディレクトリで<code>polyfill</code>をインストール。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ npm install react-app-polyfill --save
-$ npm install @babel/polyfill --save</code></pre></div>
-<p>これで<code>package-json</code>に追加されます。</p>
-
+$ npm install @babel/polyfill --save
+</code></pre></div><p>これで<code>package-json</code>に追加されます。</p>
 <p>続いて、<code>index.js</code>ファイルに<code>import</code>します。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#fff;font-weight:bold">import</span> <span style="color:#0ff;font-weight:bold">&#39;@babel/polyfill&#39;</span>; 
 <span style="color:#fff;font-weight:bold">import</span> <span style="color:#0ff;font-weight:bold">&#34;react-app-polyfill/ie9&#34;</span>;
 <span style="color:#fff;font-weight:bold">import</span> React from <span style="color:#0ff;font-weight:bold">&#34;react&#34;</span>;
 <span style="color:#fff;font-weight:bold">import</span> ReactDOM from <span style="color:#0ff;font-weight:bold">&#34;react-dom&#34;</span>;
 ...
-</code></pre></div>
-<p><code>import &quot;react-app-polyfill/ie11&quot;</code>とするとIE11に、</p>
-
+</code></pre></div><p><code>import &quot;react-app-polyfill/ie11&quot;</code>とするとIE11に、</p>
 <p><code>import &quot;react-app-polyfill/ie9&quot;</code>とするとIE9〜11に対応してくれる。</p>
-
 <p>再度ビルドすると、無事IEから見ることが出来ました。</p>
-
-<hr />
-
+<hr>
 <h3 id="おわり">おわり</h3>
-
 <p>弊社の標準ブラウザもInternet Explorer！！！()</p>
-
-<hr />
-
+<hr>
 <div
   class="kaerebalink-box"
   style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;"
@@ -368,16 +339,13 @@ $ npm install @babel/polyfill --save</code></pre></div>
   <div class="booklink-footer" style="clear: left"></div>
 </div>
 
-
-<hr />
-
+<hr>
 <div>
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6I9N5" target="_blank" rel="nofollow">
         <img border="0" width="300" height="250" alt="" src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001093000&mc=1"></a>
         <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6I9N5" alt="">
 </div>
-
-<hr />
+<hr>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -421,7 +389,7 @@ $ npm install @babel/polyfill --save</code></pre></div>
 		<span class="authorbox__name">About ted027</span>
 	</div>
 	<div class="authorbox__description">
-		筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+		野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 	</div>
 </div>
 
@@ -494,7 +462,7 @@ $ npm install @babel/polyfill --save</code></pre></div>
 			<span class="authorbox__name">ted027</span>
 		</div>
 		<div class="widget-author__description">
-			筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+			野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 		</div>
 	</div>
 </div><div class="widget-search widget">
@@ -629,13 +597,13 @@ $ npm install @babel/polyfill --save</code></pre></div>
 	<h4 class="widget__title">最新記事</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-sns-lambda/">1. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-cloudfront-spa/">2. AWS CloudFrontでSPAを返す</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/mui-zindex/">3. Material-UI themeで他要素の規定パラメータを取得</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/apt-gpg-error/">4. apt updateで署名エラー</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/pawapuro-ob-nomura/">5. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/elasticsearch-snapshot/">6. Elasticsearchのバックアップ/リストア</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/shimajiro-concert2/">7. 「しまじろうコンサート 2019冬」感想</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/logstash-log/">1. Logstashサーバーのログ閲覧と設定</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-sns-lambda/">2. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-cloudfront-spa/">3. AWS CloudFrontでSPAを返す</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/mui-zindex/">4. Material-UI themeで他要素の規定パラメータを取得</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/apt-gpg-error/">5. apt updateで署名エラー</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/pawapuro-ob-nomura/">6. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/elasticsearch-snapshot/">7. Elasticsearchのバックアップ/リストア</a></li>
 		</ul>
 	</div>
 </div>
@@ -654,6 +622,7 @@ $ npm install @babel/polyfill --save</code></pre></div>
 			<li class="widget__item"><a class="widget__link" href="/categories/javascript">Javascript</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/jenkins">Jenkins</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/linux">Linux</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/logstash">Logstash</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/python">Python</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/react">React</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/ruby">Ruby</a></li>

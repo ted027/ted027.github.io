@@ -1,6 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://www.ted027.com/categories/</loc>
+    <lastmod>2020-07-08T07:21:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/logstash/</loc>
+    <lastmod>2020-07-08T07:21:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/logstash-log/</loc>
+    <lastmod>2020-07-08T07:21:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/</loc>
+    <lastmod>2020-07-08T07:21:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/</loc>
+    <lastmod>2020-07-08T07:21:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/%E3%83%AD%E3%82%B0/</loc>
+    <lastmod>2020-07-08T07:21:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/</loc>
+    <lastmod>2020-07-08T07:21:05+09:00</lastmod>
+  </url>
   
   <url>
     <loc>https://www.ted027.com/categories/aws/</loc>
@@ -8,17 +43,7 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/</loc>
-    <lastmod>2020-05-24T00:45:19+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/tags/lambda/</loc>
-    <lastmod>2020-05-24T00:45:19+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/post/</loc>
     <lastmod>2020-05-24T00:45:19+09:00</lastmod>
   </url>
   
@@ -33,17 +58,7 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/tags/</loc>
-    <lastmod>2020-05-24T00:45:19+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/post/aws-sns-lambda/</loc>
-    <lastmod>2020-05-24T00:45:19+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/</loc>
     <lastmod>2020-05-24T00:45:19+09:00</lastmod>
   </url>
   
@@ -1335,15 +1350,6 @@
   <url>
     <loc>https://www.ted027.com/post/hugo/</loc>
     <lastmod>2019-04-15T11:20:46+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/contact/form/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/contact/</loc>
   </url>
   
 </urlset>

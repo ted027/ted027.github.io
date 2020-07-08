@@ -130,27 +130,23 @@ if (!doNotTrack) {
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#jenkinsジョブでdockerイメージをagentを指定">JenkinsジョブでDockerイメージをagentを指定</a></li>
-<li><a href="#docker-buildのデフォルト実行オプション">Docker buildのデフォルト実行オプション</a></li>
-<li><a href="#ジョブによらずdockerのキャッシュを使いたい">ジョブによらずDockerのキャッシュを使いたい</a></li>
-<li><a href="#解決策">解決策</a></li>
-<li><a href="#もう少しちゃんとした解決策">もう少しちゃんとした解決策</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#jenkinsジョブでdockerイメージをagentを指定">JenkinsジョブでDockerイメージをagentを指定</a></li>
+        <li><a href="#docker-buildのデフォルト実行オプション">Docker buildのデフォルト実行オプション</a></li>
+        <li><a href="#ジョブによらずdockerのキャッシュを使いたい">ジョブによらずDockerのキャッシュを使いたい</a></li>
+        <li><a href="#解決策">解決策</a></li>
+        <li><a href="#もう少しちゃんとした解決策">もう少しちゃんとした解決策</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
 			<p>Jenkins PipelineジョブでDockerfileベースのイメージを使っていたら軽く躓いた話。</p>
-
-<hr />
-
+<hr>
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7QMVW2+40C4+5Z6WX" target="_blank" rel="nofollow">
         <img border="0" width="702" height="90" alt="" src="https://www21.a8.net/svt/bgt?aid=190503911468&wid=001&eno=01&mid=s00000018706001004000&mc=1"></a>
@@ -161,9 +157,7 @@ if (!doNotTrack) {
         <img border="0" width="300" height="250" alt="" src="https://www20.a8.net/svt/bgt?aid=190503911468&wid=001&eno=01&mid=s00000018706001006000&mc=1"></a>
         <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=35F5RB+7QMVW2+40C4+5ZMCH" alt="">
 </div>
-
-<hr />
-
+<hr>
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FEffective-DevOps-%25E2%2580%25954%25E6%259C%25AC%25E6%259F%25B1%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%258C%2581%25E7%25B6%259A%25E5%258F%25AF%25E8%2583%25BD%25E3%2581%25AA%25E7%25B5%2584%25E7%25B9%2594%25E6%2596%2587%25E5%258C%2596%25E3%2581%25AE%25E8%2582%25B2%25E3%2581%25A6%25E6%2596%25B9-Jennifer-Davis%2Fdp%2F4873118352"
@@ -206,32 +200,26 @@ if (!doNotTrack) {
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-
-<hr />
-
+<hr>
 <h3 id="jenkinsジョブでdockerイメージをagentを指定">JenkinsジョブでDockerイメージをagentを指定</h3>
-
 <p>Jenkins Pipelineジョブでは、実行agentとしてDocker imageを指定できる。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">agent {
     docker {
         image <span style="color:#0ff;font-weight:bold">&#39;maven:3-alpine&#39;</span>
         args  <span style="color:#0ff;font-weight:bold">&#39;-v /tmp:/tmp&#39;</span>
     }
-}</code></pre></div>
-<p>pullしたイメージを使えるだけでなく、自前のDockerfileからビルドしたイメージを使うこともできる。</p>
+}
+</code></pre></div><p>pullしたイメージを使えるだけでなく、自前のDockerfileからビルドしたイメージを使うこともできる。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">agent {
     dockerfile {
         filename <span style="color:#0ff;font-weight:bold">&#39;Dockerfile&#39;</span>
         additionalBuildArgs  <span style="color:#0ff;font-weight:bold">&#39;--build-arg version=1.0.2&#39;</span>
         args <span style="color:#0ff;font-weight:bold">&#39;-v /tmp:/tmp&#39;</span>
     }
-}</code></pre></div>
-<hr />
-
+}
+</code></pre></div><hr>
 <h3 id="docker-buildのデフォルト実行オプション">Docker buildのデフォルト実行オプション</h3>
-
 <p>上記のように自前のDockerfileを使う場合、<code>docker run</code>時に以下のオプションがついた状態で実行される。</p>
-
 <ul>
 <li><code>-d</code> : デタッチド（バックグラウンド）</li>
 <li><code>-t</code> : 標準出力をつなぐ</li>
@@ -240,25 +228,16 @@ if (!doNotTrack) {
 <li><code>-v ***:***</code> : workspaceの内容をマウント</li>
 <li><code>--entrypoint cat</code> : entrypoint上書きしcat</li>
 </ul>
-
 <p><code>ENTRYPOINT</code>の話は以下の記事に少し書きました。</p>
-
 <ul>
 <li><a href="https://www.ted027.com/post/dockerfile">[参考記事]Dockerfileの書き方や紛らわしいコマンドの話</a></li>
 </ul>
-
 <p>このデフォルトオプションには思惑があるだろうし、ジョブはworkspaceで実行する前提なんだろうけど、自分は少し困ることがあった。</p>
-
-<hr />
-
+<hr>
 <h3 id="ジョブによらずdockerのキャッシュを使いたい">ジョブによらずDockerのキャッシュを使いたい</h3>
-
 <p>以前、GitHubに成果物をpushしたら、CIでモジュールをS3に上げておき、JenkinsのDockerfileにそれを入れて展開する、といったようなことをしていた。</p>
-
 <p>その際、いくつかのジョブで同様の処理を行っていた。</p>
-
-<hr />
-
+<hr>
 
 <figure >
     
@@ -268,17 +247,11 @@ if (!doNotTrack) {
     
 </figure>
 
-
 <p><a href="https://www.ted027.com/post/puml-aws">[参考記事]PlantUMLでAWSアイコンを使ったシステム構成図を作る</a></p>
-
-<hr />
-
+<hr>
 <p>モジュールに差分が無ければキャッシュを使うことでジョブを高速化する狙いだったけど、ジョブごとに各々のworkspaceを実行ディレクトリにされてしまうと、ジョブが違えばキャッシュが効かなくなってしまう。</p>
-
-<hr />
-
+<hr>
 <h3 id="解決策">解決策</h3>
-
 <p>自分は結局、モジュールをルートディレクトリに展開して、</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">stage (<span style="color:#0ff;font-weight:bold">&#39;stage&#39;</span>) {
   agent {
@@ -292,13 +265,10 @@ if (!doNotTrack) {
       cd /
       ...
   }
-}</code></pre></div>
-<p><code>cd</code>するだけでした。すっきりする解決策ではないけど、これだけで問題なく動いたので。。</p>
-
-<hr />
-
+}
+</code></pre></div><p><code>cd</code>するだけでした。すっきりする解決策ではないけど、これだけで問題なく動いたので。。</p>
+<hr>
 <h3 id="もう少しちゃんとした解決策">もう少しちゃんとした解決策</h3>
-
 <p>今後、デフォルトのオプションを上書きしないと無理〜な場面も出てくるかもしれないので、そちらの方法も確認。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">stage (<span style="color:#0ff;font-weight:bold">&#39;stage&#39;</span>) {
   steps {
@@ -309,17 +279,13 @@ if (!doNotTrack) {
       }
     }
   }
-}</code></pre></div>
-<p>確かに、自分で<code>build</code>して<code>run</code>すればいいですね。</p>
-
+}
+</code></pre></div><p>確かに、自分で<code>build</code>して<code>run</code>すればいいですね。</p>
 <p>参考サイトは以下。</p>
-
 <ul>
 <li><a href="https://www.ikemo3.com/inverted/jenkins/docker/">逆引きマニュアル: Jenkins: Dockerの使用方法</a></li>
 </ul>
-
-<hr />
-
+<hr>
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FDocker%25E5%25AE%259F%25E8%25B7%25B5%25E3%2582%25AC%25E3%2582%25A4%25E3%2583%2589-%25E7%25AC%25AC2%25E7%2589%2588-impress-top-gear%2Fdp%2F4295005525"
@@ -361,9 +327,7 @@ if (!doNotTrack) {
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-
-<hr />
-
+<hr>
 <div class="wide__area">
     <a href="//af.moshimo.com/af/c/click?a_id=1437428&p_id=1421&pc_id=2473&pl_id=23948&guid=ON" target="_blank"
         rel="nofollow"><img src="//image.moshimo.com/af-img/0665/000000023948.jpg" width="702" height="90"
@@ -378,8 +342,7 @@ if (!doNotTrack) {
         src="//i.moshimo.com/af/i/impression?a_id=1437428&p_id=1421&pc_id=2473&pl_id=23934" width="1" height="1"
         style="border:none;">
 </div>
-
-<hr />
+<hr>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -422,7 +385,7 @@ if (!doNotTrack) {
 		<span class="authorbox__name">About ted027</span>
 	</div>
 	<div class="authorbox__description">
-		筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+		野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 	</div>
 </div>
 
@@ -495,7 +458,7 @@ if (!doNotTrack) {
 			<span class="authorbox__name">ted027</span>
 		</div>
 		<div class="widget-author__description">
-			筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+			野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 		</div>
 	</div>
 </div><div class="widget-search widget">
@@ -630,13 +593,13 @@ if (!doNotTrack) {
 	<h4 class="widget__title">最新記事</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/aws-sns-lambda/">1. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/aws-cloudfront-spa/">2. AWS CloudFrontでSPAを返す</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/mui-zindex/">3. Material-UI themeで他要素の規定パラメータを取得</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/apt-gpg-error/">4. apt updateで署名エラー</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/pawapuro-ob-nomura/">5. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/elasticsearch-snapshot/">6. Elasticsearchのバックアップ/リストア</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/shimajiro-concert2/">7. 「しまじろうコンサート 2019冬」感想</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/logstash-log/">1. Logstashサーバーのログ閲覧と設定</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/aws-sns-lambda/">2. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/aws-cloudfront-spa/">3. AWS CloudFrontでSPAを返す</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/mui-zindex/">4. Material-UI themeで他要素の規定パラメータを取得</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/apt-gpg-error/">5. apt updateで署名エラー</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/pawapuro-ob-nomura/">6. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/elasticsearch-snapshot/">7. Elasticsearchのバックアップ/リストア</a></li>
 		</ul>
 	</div>
 </div>
@@ -655,6 +618,7 @@ if (!doNotTrack) {
 			<li class="widget__item"><a class="widget__link" href="/categories/javascript">Javascript</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/jenkins">Jenkins</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/linux">Linux</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/logstash">Logstash</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/python">Python</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/react">React</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/ruby">Ruby</a></li>

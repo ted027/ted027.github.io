@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 行けたら行く</title>
@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 24 May 2020 00:45:19 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2020 07:21:05 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Logstashサーバーのログ閲覧と設定</title>
+      <link>https://www.ted027.com/post/logstash-log/</link>
+      <pubDate>Wed, 08 Jul 2020 07:21:05 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/logstash-log/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</title>
@@ -882,7 +891,6 @@
       
       <guid>https://www.ted027.com/post/penant-add/</guid>
       <description>&lt;p&gt;実況パワフルプロ野球のペナントモードで、各球団の補強思考を設定できる。&lt;/p&gt;
-
 &lt;p&gt;Pythonで近年の移籍情報を取得して、各球団の補強実績に即した設定を算出したかった。&lt;/p&gt;</description>
     </item>
     
@@ -920,7 +928,6 @@
       
       <guid>https://www.ted027.com/post/webdominator/</guid>
       <description>&lt;p&gt;ビジネス用のリュックを購入したけど、ピロピロした紐が邪魔だったので、まとめるやつを買った。&lt;/p&gt;
-
 &lt;p&gt;ウェブドミネーターというらしい。&lt;/p&gt;</description>
     </item>
     
@@ -931,7 +938,6 @@
       
       <guid>https://www.ted027.com/post/ubuntu-kindle/</guid>
       <description>&lt;p&gt;UbuntuにKindleをインストールしようとして苦労したのでメモ。&lt;/p&gt;
-
 &lt;p&gt;Ubuntu用のKindle for PCクライアントは無いので、ちょっと手間を掛けてWineというWindowsエミュレータを使ってWindows版をインストールする。&lt;/p&gt;</description>
     </item>
     
@@ -942,7 +948,6 @@
       
       <guid>https://www.ted027.com/post/disqus/</guid>
       <description>&lt;p&gt;ブログなのでコメント欄くらいはほしい。&lt;/p&gt;
-
 &lt;p&gt;DisqusというサービスならHugoに簡単に導入できそう。&lt;/p&gt;</description>
     </item>
     

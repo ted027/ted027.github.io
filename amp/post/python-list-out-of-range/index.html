@@ -131,39 +131,27 @@
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#dictで存在しないkeyを指定">dictで存在しないkeyを指定</a>
-<ul>
-<li><a href="#keyerrorを回避">KeyErrorを回避</a></li>
-</ul></li>
-<li><a href="#listで存在しないindexを指定">listで存在しないindexを指定</a>
-<ul>
-<li><a href="#indexerrorを回避">IndexErrorを回避</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#dictで存在しないkeyを指定">dictで存在しないkeyを指定</a></li>
+        <li><a href="#listで存在しないindexを指定">listで存在しないindexを指定</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<hr />
-
+			<hr>
 <div>
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6I1XD" target="_blank" rel="nofollow">
         <img border="0" width="300" height="250" alt=""
             src="https://www24.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001092000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6I1XD" alt="">
 </div>
-
-<hr />
-
+<hr>
 <h3 id="dictで存在しないkeyを指定">dictで存在しないkeyを指定</h3>
-
 <p>dictで存在しないkeyを指定すると、KeyErrorが返る。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">&gt;&gt;&gt; dic = {
     <span style="color:#0ff;font-weight:bold">&#39;11&#39;</span>: <span style="color:#0ff;font-weight:bold">&#39;Darvish&#39;</span>,
@@ -178,19 +166,16 @@
 &gt;&gt;&gt; dic[<span style="color:#0ff;font-weight:bold">&#39;23&#39;</span>]
 Traceback (most recent call last):
   File <span style="color:#0ff;font-weight:bold">&#34;&lt;stdin&gt;&#34;</span>, line <span style="color:#ff0;font-weight:bold">1</span>, in &lt;module&gt;
-KeyError: <span style="color:#0ff;font-weight:bold">&#39;23&#39;</span></code></pre></div>
-<h4 id="keyerrorを回避">KeyErrorを回避</h4>
-
+KeyError: <span style="color:#0ff;font-weight:bold">&#39;23&#39;</span>
+</code></pre></div><h4 id="keyerrorを回避">KeyErrorを回避</h4>
 <p>存在しないKeyを指定する可能性がある場合、<code>get</code>を使うと、エラーにせず任意の値を返せる。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">&gt;&gt;&gt; error_str = <span style="color:#0ff;font-weight:bold">&#39;Is that number a repdigit?&#39;</span>
 &gt;&gt;&gt; dic.get(<span style="color:#0ff;font-weight:bold">&#39;33&#39;</span>, error_str)
 <span style="color:#0ff;font-weight:bold">&#39;Yamakawa&#39;</span>
 &gt;&gt;&gt; dic.get(<span style="color:#0ff;font-weight:bold">&#39;34&#39;</span>, error_str)
-<span style="color:#0ff;font-weight:bold">&#39;Is that number a repdigit?&#39;</span></code></pre></div>
-<hr />
-
+<span style="color:#0ff;font-weight:bold">&#39;Is that number a repdigit?&#39;</span>
+</code></pre></div><hr>
 <h3 id="listで存在しないindexを指定">listで存在しないindexを指定</h3>
-
 <p>listで存在しない要素を指定した場合は、IndexErrorが返る。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">&gt;&gt;&gt; lst = [<span style="color:#0ff;font-weight:bold">&#39;Darvish&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;Furuta&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;Yamakawa&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;Yanagita&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;Matsui&#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;Kazumi&#39;</span>]
 &gt;&gt;&gt; lst[<span style="color:#ff0;font-weight:bold">5</span>]
@@ -198,19 +183,17 @@ KeyError: <span style="color:#0ff;font-weight:bold">&#39;23&#39;</span></code></
 &gt;&gt;&gt; lst[<span style="color:#ff0;font-weight:bold">6</span>]
 Traceback (most recent call last):
   File <span style="color:#0ff;font-weight:bold">&#34;&lt;stdin&gt;&#34;</span>, line <span style="color:#ff0;font-weight:bold">1</span>, in &lt;module&gt;
-IndexError: <span style="color:#fff;font-weight:bold">list</span> index out of <span style="color:#fff;font-weight:bold">range</span></code></pre></div>
-<h4 id="indexerrorを回避">IndexErrorを回避</h4>
-
+IndexError: <span style="color:#fff;font-weight:bold">list</span> index out of <span style="color:#fff;font-weight:bold">range</span>
+</code></pre></div><h4 id="indexerrorを回避">IndexErrorを回避</h4>
 <p>listにはdictのgetにあたる、要素指定エラーの回避手段が無さそう。</p>
-
 <p>やむを得ず書いた。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#fff;font-weight:bold">def</span> list_get(lst, index, error):
-    <span style="color:#fff;font-weight:bold">return</span> lst[index] <span style="color:#fff;font-weight:bold">if</span> <span style="color:#fff;font-weight:bold">len</span>(lst) &gt; index <span style="color:#fff;font-weight:bold">else</span> error</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">&gt;&gt;&gt; list_get(lst, <span style="color:#ff0;font-weight:bold">5</span>, error_str)
+    <span style="color:#fff;font-weight:bold">return</span> lst[index] <span style="color:#fff;font-weight:bold">if</span> <span style="color:#fff;font-weight:bold">len</span>(lst) &gt; index <span style="color:#fff;font-weight:bold">else</span> error
+</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">&gt;&gt;&gt; list_get(lst, <span style="color:#ff0;font-weight:bold">5</span>, error_str)
 <span style="color:#0ff;font-weight:bold">&#39;Kazumi&#39;</span>
 &gt;&gt;&gt; list_get(lst, <span style="color:#ff0;font-weight:bold">6</span>, error_str)
-<span style="color:#0ff;font-weight:bold">&#39;Is that number a repdigit?&#39;</span></code></pre></div>
-<hr />
-
+<span style="color:#0ff;font-weight:bold">&#39;Is that number a repdigit?&#39;</span>
+</code></pre></div><hr>
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E7%258B%25AC%25E5%25AD%25A6%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259E%25E3%2583%25BC-Python%25E8%25A8%2580%25E8%25AA%259E%25E3%2581%25AE%25E5%259F%25BA%25E6%259C%25AC%25E3%2581%258B%25E3%2582%2589%25E4%25BB%2595%25E4%25BA%258B%25E3%2581%25AE%25E3%2582%2584%25E3%2582%258A%25E6%2596%25B9%25E3%2581%25BE%25E3%2581%25A7-%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25BB%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25BD%25E3%2583%2595%2Fdp%2F4822292274"
@@ -255,17 +238,14 @@ IndexError: <span style="color:#fff;font-weight:bold">list</span> index out of <
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-
-<hr />
-
+<hr>
 <div>
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6NMJL" target="_blank" rel="nofollow">
         <img border="0" width="300" height="250" alt=""
             src="https://www23.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001118000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6NMJL" alt="">
 </div>
-
-<hr />
+<hr>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -309,7 +289,7 @@ IndexError: <span style="color:#fff;font-weight:bold">list</span> index out of <
 		<span class="authorbox__name">About ted027</span>
 	</div>
 	<div class="authorbox__description">
-		筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+		野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 	</div>
 </div>
 
@@ -382,7 +362,7 @@ IndexError: <span style="color:#fff;font-weight:bold">list</span> index out of <
 			<span class="authorbox__name">ted027</span>
 		</div>
 		<div class="widget-author__description">
-			筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+			野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 		</div>
 	</div>
 </div><div class="widget-search widget">
@@ -517,13 +497,13 @@ IndexError: <span style="color:#fff;font-weight:bold">list</span> index out of <
 	<h4 class="widget__title">最新記事</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-sns-lambda/">1. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-cloudfront-spa/">2. AWS CloudFrontでSPAを返す</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/mui-zindex/">3. Material-UI themeで他要素の規定パラメータを取得</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/apt-gpg-error/">4. apt updateで署名エラー</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/pawapuro-ob-nomura/">5. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/elasticsearch-snapshot/">6. Elasticsearchのバックアップ/リストア</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/shimajiro-concert2/">7. 「しまじろうコンサート 2019冬」感想</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/logstash-log/">1. Logstashサーバーのログ閲覧と設定</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-sns-lambda/">2. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-cloudfront-spa/">3. AWS CloudFrontでSPAを返す</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/mui-zindex/">4. Material-UI themeで他要素の規定パラメータを取得</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/apt-gpg-error/">5. apt updateで署名エラー</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/pawapuro-ob-nomura/">6. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/elasticsearch-snapshot/">7. Elasticsearchのバックアップ/リストア</a></li>
 		</ul>
 	</div>
 </div>
@@ -542,6 +522,7 @@ IndexError: <span style="color:#fff;font-weight:bold">list</span> index out of <
 			<li class="widget__item"><a class="widget__link" href="/categories/javascript">Javascript</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/jenkins">Jenkins</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/linux">Linux</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/logstash">Logstash</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/python">Python</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/react">React</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/ruby">Ruby</a></li>

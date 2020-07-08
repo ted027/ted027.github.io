@@ -130,39 +130,21 @@ if (!doNotTrack) {
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#追加する指標">追加する指標</a>
-<ul>
-<li><a href="#woba-weighted-on-base-average">wOBA (weighted On-Base Average)</a>
-<ul>
-<li><a href="#計算式">計算式</a></li>
-</ul></li>
-<li><a href="#woba-basic">wOBA(Basic)</a>
-<ul>
-<li><a href="#計算式-1">計算式</a></li>
-</ul></li>
-<li><a href="#woba-speed">wOBA(Speed)</a>
-<ul>
-<li><a href="#計算式-2">計算式</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#実装">実装</a></li>
-<li><a href="#おわり">おわり</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#追加する指標">追加する指標</a></li>
+        <li><a href="#実装">実装</a></li>
+        <li><a href="#おわり">おわり</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
 			<p>打者の得点への貢献度を表すwOBAを算出し追加する。</p>
-
-<hr />
-
+<hr>
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F4ZJ+1IRWFM+491Q+686ZL" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt="" src="https://www24.a8.net/svt/bgt?aid=190502911092&wid=001&eno=01&mid=s00000019835001046000&mc=1"></a>
@@ -173,9 +155,7 @@ if (!doNotTrack) {
         <img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=190502911092&wid=001&eno=01&mid=s00000019835001036000&mc=1"></a>
         <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=35F4ZJ+1IRWFM+491Q+661TT" alt="">
 </div>
-
-<hr />
-
+<hr>
 <div
 	class="kaerebalink-box"
 	style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;"
@@ -284,74 +264,44 @@ if (!doNotTrack) {
 	<div class="booklink-footer" style="clear: left"></div>
 </div>
 
-
-<hr />
-
+<hr>
 <h3 id="追加する指標">追加する指標</h3>
-
 <h4 id="woba-weighted-on-base-average">wOBA (weighted On-Base Average)</h4>
-
 <ul>
 <li>打者の得点貢献度</li>
 <li>出塁率と同等の基準で評価</li>
 </ul>
-
 <p>1打席あたりの得点貢献を表す指標。スケールは出塁率に合うように調整されており、.320程度が平均とされる。</p>
-
 <p>同じく打者の得点能力を表す指標として<code>OPS</code>があるが、<code>OPS</code>は出塁率と長打率を同スケールで扱うため、高い値が出やすい長打率の影響が大きく、ロングヒッターが高評価されやすいという欠点がある。</p>
-
 <p>一方<code>wOBA</code>では、実際の試合経過から、各打席結果が得点期待値にどの程度影響を与えたかを算出し、それぞれに係数として掛け合わせる。これにより、<code>OPS</code>以上に得点相関が高い指標として導出される。</p>
-
 <p>そのため係数はリーグやシーズンによって異なるが、今回は<a href="https://1point02.jp/op/gnav/glossary/gls_explanation.aspx?eid=20004">DELTA Inc.</a>で紹介されているNPB版の式を利用する。</p>
-
 <h5 id="計算式">計算式</h5>
-
 <p>${0.692 \times (四球 - 故意四球) + 0.73 \times 死球\\\ + 0.865 \times 単打 + 1.334 \times 二塁打\\\ + 1.725 \times 三塁打 + 2.065 \times 本塁打}\\\ \div (打数 + 四球 - 故意四球 + 死球 + 犠飛)$</p>
-
-<hr />
-
-<h4 id="woba-basic">wOBA(Basic)</h4>
-
+<hr>
+<h4 id="wobabasic">wOBA(Basic)</h4>
 <ul>
 <li>係数を固定したwOBA</li>
 <li>打席結果のみを考慮する</li>
 </ul>
-
 <p>「シーズンやリーグごとに係数を変えても影響は微々たるもの」として、上記係数を固定した<code>Standard wOBA</code>。</p>
-
 <p>打席結果のみ考慮するBasic版。</p>
-
 <h5 id="計算式-1">計算式</h5>
-
 <p>${0.7 \times (四球 + 死球 - 故意四球) + 0.9 \times 単打\\\ + 1.3 \times (二塁打 + 三塁打) + 2.0 \times 本塁打}\\\ \div (打席 - 故意四球 - 犠打)$</p>
-
-<hr />
-
-<h4 id="woba-speed">wOBA(Speed)</h4>
-
+<hr>
+<h4 id="wobaspeed">wOBA(Speed)</h4>
 <ul>
 <li>係数を固定したwOBA</li>
 <li>打席結果と盗塁の成否を考慮する</li>
 </ul>
-
 <p>「シーズンやリーグごとに係数を変えても影響は微々たるもの」として、上記係数を固定したバージョンの<code>wOBA</code>。</p>
-
 <p>盗塁を加味するSpeed版。</p>
-
 <h5 id="計算式-2">計算式</h5>
-
 <p>$(0.7 \times (四球 + 死球 - 故意四球) + 0.9 \times 単打\\\ + 1.25 \times 二塁打 + 1.6 \times 三塁打\\\ + 2.0 \times 本塁打 + 0.25 \times 盗塁 - 0.5 \times 盗塁死)\\\ \div (打席 - 故意四球 - 犠打)$</p>
-
-<hr />
-
+<hr>
 <p>なお、</p>
-
 <p><code>失策出塁に関してはデータの入手が難しいため、手に入らない場合は無視してもよいとしている。</code>(Wikipedia)</p>
-
 <p>この記述に甘え、失策出塁を無視させていただくことに。</p>
-
-<hr />
-
+<hr>
 <h3 id="実装">実装</h3>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py:sabr.py" data-lang="py:sabr.py">WOBA_BB = <span style="color:#ff0;font-weight:bold">0.692</span>
 WOBA_HBP = <span style="color:#ff0;font-weight:bold">0.73</span>
@@ -410,31 +360,27 @@ WOBA_HR = <span style="color:#ff0;font-weight:bold">2.065</span>
                         hitter[<span style="color:#0ff;font-weight:bold">&#39;盗塁&#39;</span>]) - Decimal(<span style="color:#0ff;font-weight:bold">&#39;0.5&#39;</span>) * Decimal(
                             hitter[<span style="color:#0ff;font-weight:bold">&#39;盗塁死&#39;</span>])
     woba_s = numerator / denominator
-    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(woba_s)</code></pre></div>
-<p>最新の成績は以下から閲覧できます。</p>
-
+    <span style="color:#fff;font-weight:bold">return</span> <span style="color:#fff;font-weight:bold">str</span>(woba_s)
+</code></pre></div><p>最新の成績は以下から閲覧できます。</p>
 <ul>
 <li><a href="https://www.ted027.com/records/">プロ野球成績表 - 行けたら行く</a></li>
 </ul>
-
-<hr />
-
+<hr>
 <h3 id="おわり">おわり</h3>
-
 <p>成績をかき集める際にリーグ全体成績も取得するようにすると、<a href="https://www.ted027.com/post/sabr-hit-wraa#wraa-weighted-runs-above-average"><code>wRAA</code></a>, <a href="https://www.ted027.com/post/sabr-hit-wraa#wrc-weighted-runs-created"><code>wRC</code></a>も算出できるようになる。</p>
-
-<hr />
-
+<hr>
 <ul>
-<li><p><a href="https://www.ted027.com/post/python-personal-records">[参考記事]Pythonでプロ野球の個人成績一覧をJSONにして取得する</a></p></li>
-
-<li><p><a href="https://www.ted027.com/post/sabr-hit-rc">[参考記事]【RC, RC27, XR, XR27】NPB(2019)セイバーメトリクス野手指標の算出④</a></p></li>
-
-<li><p><a href="https://www.ted027.com/post/sabr-hit-wraa">[参考記事]【wRAA, wRC】NPB(2019)セイバーメトリクス野手指標の算出⑤</a></p></li>
+<li>
+<p><a href="https://www.ted027.com/post/python-personal-records">[参考記事]Pythonでプロ野球の個人成績一覧をJSONにして取得する</a></p>
+</li>
+<li>
+<p><a href="https://www.ted027.com/post/sabr-hit-rc">[参考記事]【RC, RC27, XR, XR27】NPB(2019)セイバーメトリクス野手指標の算出④</a></p>
+</li>
+<li>
+<p><a href="https://www.ted027.com/post/sabr-hit-wraa">[参考記事]【wRAA, wRC】NPB(2019)セイバーメトリクス野手指標の算出⑤</a></p>
+</li>
 </ul>
-
-<hr />
-
+<hr>
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E7%258B%25AC%25E5%25AD%25A6%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259E%25E3%2583%25BC-Python%25E8%25A8%2580%25E8%25AA%259E%25E3%2581%25AE%25E5%259F%25BA%25E6%259C%25AC%25E3%2581%258B%25E3%2582%2589%25E4%25BB%2595%25E4%25BA%258B%25E3%2581%25AE%25E3%2582%2584%25E3%2582%258A%25E6%2596%25B9%25E3%2581%25BE%25E3%2581%25A7-%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25BB%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25BD%25E3%2583%2595%2Fdp%2F4822292274"
@@ -479,9 +425,7 @@ WOBA_HR = <span style="color:#ff0;font-weight:bold">2.065</span>
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-
-<hr />
-
+<hr>
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F4ZJ+1IRWFM+491Q+686ZL" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt="" src="https://www24.a8.net/svt/bgt?aid=190502911092&wid=001&eno=01&mid=s00000019835001046000&mc=1"></a>
@@ -492,8 +436,7 @@ WOBA_HR = <span style="color:#ff0;font-weight:bold">2.065</span>
         <img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=190502911092&wid=001&eno=01&mid=s00000019835001036000&mc=1"></a>
         <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=35F4ZJ+1IRWFM+491Q+661TT" alt="">
 </div>
-
-<hr />
+<hr>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -538,7 +481,7 @@ WOBA_HR = <span style="color:#ff0;font-weight:bold">2.065</span>
 		<span class="authorbox__name">About ted027</span>
 	</div>
 	<div class="authorbox__description">
-		筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+		野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 	</div>
 </div>
 
@@ -611,7 +554,7 @@ WOBA_HR = <span style="color:#ff0;font-weight:bold">2.065</span>
 			<span class="authorbox__name">ted027</span>
 		</div>
 		<div class="widget-author__description">
-			筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+			野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 		</div>
 	</div>
 </div><div class="widget-search widget">
@@ -746,13 +689,13 @@ WOBA_HR = <span style="color:#ff0;font-weight:bold">2.065</span>
 	<h4 class="widget__title">最新記事</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/aws-sns-lambda/">1. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/aws-cloudfront-spa/">2. AWS CloudFrontでSPAを返す</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/mui-zindex/">3. Material-UI themeで他要素の規定パラメータを取得</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/apt-gpg-error/">4. apt updateで署名エラー</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/pawapuro-ob-nomura/">5. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/elasticsearch-snapshot/">6. Elasticsearchのバックアップ/リストア</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/shimajiro-concert2/">7. 「しまじろうコンサート 2019冬」感想</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/logstash-log/">1. Logstashサーバーのログ閲覧と設定</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/aws-sns-lambda/">2. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/aws-cloudfront-spa/">3. AWS CloudFrontでSPAを返す</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/mui-zindex/">4. Material-UI themeで他要素の規定パラメータを取得</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/apt-gpg-error/">5. apt updateで署名エラー</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/pawapuro-ob-nomura/">6. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/elasticsearch-snapshot/">7. Elasticsearchのバックアップ/リストア</a></li>
 		</ul>
 	</div>
 </div>
@@ -771,6 +714,7 @@ WOBA_HR = <span style="color:#ff0;font-weight:bold">2.065</span>
 			<li class="widget__item"><a class="widget__link" href="/categories/javascript">Javascript</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/jenkins">Jenkins</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/linux">Linux</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/logstash">Logstash</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/python">Python</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/react">React</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/ruby">Ruby</a></li>

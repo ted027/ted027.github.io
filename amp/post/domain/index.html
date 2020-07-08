@@ -131,26 +131,22 @@
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#ドメイン取得とcname設定">ドメイン取得とCNAME設定</a></li>
-<li><a href="#github側でcustom-domainを設定">GitHub側でCustom domainを設定</a></li>
-<li><a href="#ルートドメインを転送">ルートドメインを転送</a></li>
-<li><a href="#hugoのconfig-tomlを設定">Hugoのconfig.tomlを設定</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#ドメイン取得とcname設定">ドメイン取得とCNAME設定</a></li>
+        <li><a href="#github側でcustom-domainを設定">GitHub側でCustom domainを設定</a></li>
+        <li><a href="#ルートドメインを転送">ルートドメインを転送</a></li>
+        <li><a href="#hugoのconfigtomlを設定">Hugoのconfig.tomlを設定</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
 			<p>GitHub Pagesに独自ドメインを設定した。</p>
-
-<hr />
-
+<hr>
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35DFWV+F4RNAQ+50+2HLITT" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt="" src="https://www29.a8.net/svt/bgt?aid=190423759915&wid=001&eno=01&mid=s00000000018015049000&mc=1"></a>
@@ -161,39 +157,28 @@
             <img border="0" width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=190423759915&wid=001&eno=01&mid=s00000000018015102000&mc=1"></a>
             <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=35DFWV+F4RNAQ+50+2HWVS1" alt="">
 </div>
-
-<hr />
-
+<hr>
 <p>GitHub Pages上で普通に静的ファイルを配置すると、</p>
-
 <p><code>github.io</code></p>
-
 <p>のサブドメインに公開される。</p>
-
 <ul>
 <li><a href="https://www.ted027.com/post/hugo">[参考記事]Hugo + GitHub Pagesでブログを作った話</a></li>
 </ul>
-
 <p>せっかくなので独自ドメインを取得して設定したい。</p>
-
-<hr />
-
+<hr>
 <h3 id="ドメイン取得とcname設定">ドメイン取得とCNAME設定</h3>
-
-<p><a href="https://px.a8.net/svt/ejp?a8mat=35DFWV+F4RNAQ+50+2HHVNM" target="_blank" rel="nofollow">お名前.com</a>
-<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=35DFWV+F4RNAQ+50+2HHVNM" alt="">で取得しました。</p>
-
+<p><!-- raw HTML omitted -->お名前.com<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->で取得しました。</p>
 <ol>
 <li>取得したいドメインで検索、使用可能であることを確認して購入
-
 <ul>
 <li>レンタルサーバーは不要</li>
 <li>安いドメインは翌年以降の更新料が高いこともあるので要確認</li>
-</ul></li>
+</ul>
+</li>
 <li>「ドメイン設定」→「DNS関連機能の設定」から設定したいドメインを選択し、「次へ」</li>
 <li>「DNSレコード設定を利用する」の「設定する」を押下</li>
 <li>「A/AAAA/CNAME/MX/NS/TXT/SRV/DS/CAAレコード」欄を設定
-
 <ul>
 <li>TYPEは「CNAME」を選択</li>
 <li>ホスト名で適当なサブドメインを入力。定番は「www」など</li>
@@ -207,22 +192,16 @@
     
 </figure>
 </li>
-</ul></li>
+</ul>
+</li>
 <li>「確認画面へ進む」→「設定する」</li>
 </ol>
-
 <p>これで、</p>
-
 <p><code>https://www.[your.domain]</code>→<code>https://[github_user].github.io</code></p>
-
 <p>に転送してくれるようになった。</p>
-
-<hr />
-
+<hr>
 <h3 id="github側でcustom-domainを設定">GitHub側でCustom domainを設定</h3>
-
 <p>GitHub Pagesの公開用レポジトリから「Settings」→「GitHub Pages」項目の「Custom domain」に、先程CNAMEを設定したドメイン名を入力する</p>
-
 
 <figure >
     
@@ -232,18 +211,13 @@
     
 </figure>
 
-
-<hr />
-
+<hr>
 <h3 id="ルートドメインを転送">ルートドメインを転送</h3>
-
 <p>ここは不要なら設定しなくてもいいのですが、自分はルートドメインの入力のみで以下のように転送してアクセスできるようにしたかったので設定。</p>
-
 <p><code>[your.domain]</code>→<code>https://www.[your.domain]</code></p>
-
 <ol>
-<li><a href="https://px.a8.net/svt/ejp?a8mat=35DFWV+F4RNAQ+50+2HHVNM" target="_blank" rel="nofollow">お名前.com</a>
-<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=35DFWV+F4RNAQ+50+2HHVNM" alt="">の「オプション設定」→「転送Plus」項目の「URL転送設定」から該当ドメインの「設定する」を押下</li>
+<li><!-- raw HTML omitted -->お名前.com<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->の「オプション設定」→「転送Plus」項目の「URL転送設定」から該当ドメインの「設定する」を押下</li>
 <li>「転送元URL」には何も入れず、「転送先URL」には先程CNAMEを設定したドメイン名を入力、「転送タイプ」は「リダイレクト」
 
 <figure >
@@ -256,21 +230,14 @@
 </li>
 <li>「確認画面へ進む」→「設定する」</li>
 </ol>
-
-<hr />
-
-<h3 id="hugoのconfig-tomlを設定">Hugoのconfig.tomlを設定</h3>
-
+<hr>
+<h3 id="hugoのconfigtomlを設定">Hugoのconfig.tomlを設定</h3>
 <p>自分はHugoを使っているので、<code>config.toml</code>のbaseURL欄を書き換えておく。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-config.toml" data-lang="config.toml">baseURL = <span style="color:#0ff;font-weight:bold">&#34;https://www.[your.domain]&#34;</span></code></pre></div>
-<p>こちらも関係ない人は不要。</p>
-
-<hr />
-
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-config.toml" data-lang="config.toml">baseURL = <span style="color:#0ff;font-weight:bold">&#34;https://www.[your.domain]&#34;</span>
+</code></pre></div><p>こちらも関係ない人は不要。</p>
+<hr>
 <p>数分待てば設定が完了し、アクセスできるようになります。</p>
-
-<hr />
-
+<hr>
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FGitHub%25E5%25AE%259F%25E8%25B7%25B5%25E5%2585%25A5%25E9%2596%2580-~Pull-Request%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E9%2596%258B%25E7%2599%25BA%25E3%2581%25AE%25E5%25A4%2589%25E9%259D%25A9-PRESS-plus%2Fdp%2F477416366X"
@@ -314,9 +281,7 @@
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-
-<hr />
-
+<hr>
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35DFWV+F4RNAQ+50+2HLITT" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt="" src="https://www29.a8.net/svt/bgt?aid=190423759915&wid=001&eno=01&mid=s00000000018015049000&mc=1"></a>
@@ -327,8 +292,7 @@
             <img border="0" width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=190423759915&wid=001&eno=01&mid=s00000000018015102000&mc=1"></a>
             <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=35DFWV+F4RNAQ+50+2HWVS1" alt="">
 </div>
-
-<hr />
+<hr>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -371,7 +335,7 @@
 		<span class="authorbox__name">About ted027</span>
 	</div>
 	<div class="authorbox__description">
-		筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+		野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 	</div>
 </div>
 
@@ -444,7 +408,7 @@
 			<span class="authorbox__name">ted027</span>
 		</div>
 		<div class="widget-author__description">
-			筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+			野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 		</div>
 	</div>
 </div><div class="widget-search widget">
@@ -579,13 +543,13 @@
 	<h4 class="widget__title">最新記事</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-sns-lambda/">1. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-cloudfront-spa/">2. AWS CloudFrontでSPAを返す</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/mui-zindex/">3. Material-UI themeで他要素の規定パラメータを取得</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/apt-gpg-error/">4. apt updateで署名エラー</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/pawapuro-ob-nomura/">5. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/elasticsearch-snapshot/">6. Elasticsearchのバックアップ/リストア</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/shimajiro-concert2/">7. 「しまじろうコンサート 2019冬」感想</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/logstash-log/">1. Logstashサーバーのログ閲覧と設定</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-sns-lambda/">2. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-cloudfront-spa/">3. AWS CloudFrontでSPAを返す</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/mui-zindex/">4. Material-UI themeで他要素の規定パラメータを取得</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/apt-gpg-error/">5. apt updateで署名エラー</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/pawapuro-ob-nomura/">6. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/elasticsearch-snapshot/">7. Elasticsearchのバックアップ/リストア</a></li>
 		</ul>
 	</div>
 </div>
@@ -604,6 +568,7 @@
 			<li class="widget__item"><a class="widget__link" href="/categories/javascript">Javascript</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/jenkins">Jenkins</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/linux">Linux</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/logstash">Logstash</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/python">Python</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/react">React</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/ruby">Ruby</a></li>

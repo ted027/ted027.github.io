@@ -131,32 +131,24 @@
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#runの使い方">RUNの使い方</a></li>
-<li><a href="#envとarg-とrun">ENVとARG（とRUN）</a></li>
-<li><a href="#addとcopy">ADDとCOPY</a></li>
-<li><a href="#cmdとentrypint">CMDとENTRYPINT</a>
-<ul>
-<li><a href="#docker-run-commandとentrypoint-command">docker run commandとENTRYPOINT[&ldquo;command&rdquo;]</a></li>
-<li><a href="#cmdは上記のデフォルト値指定">CMDは上記のデフォルト値指定</a></li>
-</ul></li>
-<li><a href="#from">FROM</a></li>
-<li><a href="#ファイル構成">ファイル構成</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#runの使い方">RUNの使い方</a></li>
+        <li><a href="#envとargとrun">ENVとARG（とRUN）</a></li>
+        <li><a href="#addとcopy">ADDとCOPY</a></li>
+        <li><a href="#cmdとentrypint">CMDとENTRYPINT</a></li>
+        <li><a href="#from">FROM</a></li>
+        <li><a href="#ファイル構成">ファイル構成</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
 			<p>Dockerfileを書く時に気にしていること、よくわからなくて調べたことなど。</p>
-
-<hr />
-
+<hr>
 <div class="wide__area">
     <a href="https://t.afi-b.com/visit.php?guid=ON&a=99886h-W336947J&p=J690746r" target="_blank" rel="nofollow"><img
             src="https://www.afi-b.com/upload_image/9886-1534983315-3.jpg" width="728" height="90" style="border:none;"
@@ -169,61 +161,42 @@
             alt="CodeCampGATE" /></a><img src="https://t.afi-b.com/lead/99886h/J690746r/3336944i" width="1" height="1"
         style="border:none;" />
 </div>
-
-<hr />
-
+<hr>
 <h3 id="runの使い方">RUNの使い方</h3>
-
 <p>可読性を損ねない範囲で、なるべく一つの<code>RUN</code>で続けて書く。</p>
-
 <p>最初に<code>set -ex</code>をつけると、ビルド状況が出力され、途中でエラーが起きた場合はそこで止まる。</p>
-
 <p>極力<code>cd</code>は使わない。パスでアクセスし、必要なら<code>WORKDIR</code>に絶対パスを指定して移動する。</p>
-
 <p>複数モジュールインストールする場合は一行ずつ分けて、アルファベット順に並べておくのがいい。追加削除がしやすく、重複も防げる。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#fff;font-weight:bold">RUN</span> <span style="color:#fff;font-weight:bold">set</span> -ex &amp;&amp; <span style="color:#0ff;font-weight:bold">\
 </span><span style="color:#0ff;font-weight:bold"></span>    yum -yq install <span style="color:#0ff;font-weight:bold">\
 </span><span style="color:#0ff;font-weight:bold"></span>    clock <span style="color:#0ff;font-weight:bold">\
 </span><span style="color:#0ff;font-weight:bold"></span>    gcc <span style="color:#0ff;font-weight:bold">\
-</span><span style="color:#0ff;font-weight:bold"></span>    make</code></pre></div>
-<hr />
-
-<h3 id="envとarg-とrun">ENVとARG（とRUN）</h3>
-
+</span><span style="color:#0ff;font-weight:bold"></span>    make<span style="color:#f00">
+</span></code></pre></div><hr>
+<h3 id="envとargとrun">ENVとARG（とRUN）</h3>
 <p><code>ENV</code>, <code>ARG</code>, <code>RUN</code>で変数に値を代入できる。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#fff;font-weight:bold">ENV</span><span style="color:#0ff;font-weight:bold"> VAR1 &#34;hoge&#34;</span><span style="color:#f00">
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#fff;font-weight:bold">ENV</span> VAR1 <span style="color:#0ff;font-weight:bold">&#34;hoge&#34;</span><span style="color:#f00">
 </span><span style="color:#f00">
-</span><span style="color:#f00"></span>ARG VAR2=<span style="color:#0ff;font-weight:bold">&#34;fuga&#34;</span><span style="color:#f00">
+</span><span style="color:#f00"></span><span style="color:#fff;font-weight:bold">ARG</span> VAR2=<span style="color:#0ff;font-weight:bold">&#34;fuga&#34;</span><span style="color:#f00">
 </span><span style="color:#f00">
-</span><span style="color:#f00"></span><span style="color:#fff;font-weight:bold">RUN</span> <span style="color:#fff;font-weight:bold">export</span> VAR3=<span style="color:#0ff;font-weight:bold">&#34;piyo&#34;</span></code></pre></div>
-<p><code>ENV</code>で環境変数に設定、runした後のコンテナ内でも使える。利用用途はPATHなど。</p>
-
+</span><span style="color:#f00"></span><span style="color:#fff;font-weight:bold">RUN</span> <span style="color:#fff;font-weight:bold">export</span> VAR3=<span style="color:#0ff;font-weight:bold">&#34;piyo&#34;</span><span style="color:#f00">
+</span></code></pre></div><p><code>ENV</code>で環境変数に設定、runした後のコンテナ内でも使える。利用用途はPATHなど。</p>
 <p><code>ARG</code>はビルド時のみ有効。モジュールのバージョンなど、ビルド時しか使わない変数は<code>ARG</code>を使う。</p>
-
 <p>(ただし、<code>ARG</code>に設定した内容は<code>docker history</code>で確認できるので、公開すべきでない情報は扱わない。)</p>
-
 <p><code>RUN</code>で設定した変数は、同一の<code>RUN</code>の中でしか扱えない</p>
-
 <p>※ Dockerfileで、コマンドの実行結果を変数に格納することは（基本的に）できない。</p>
-
 <ul>
 <li><a href="https://www.ted027.com/post/docker-var">[参考記事]Dockerでコマンド実行結果を変数に入れられなくて困った話</a></li>
 </ul>
-
-<hr />
-
+<hr>
 <h3 id="addとcopy">ADDとCOPY</h3>
-
 <p><code>ADD</code>はtarやgzを解凍して配置したり、リモートから追加する等の機能がある。</p>
-
 <p>ただコピーしたいだけなら<code>COPY</code>を使う。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#fff;font-weight:bold">ADD</span><span style="color:#0ff;font-weight:bold"> add.tar /tmp</span><span style="color:#f00">
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#fff;font-weight:bold">ADD</span> add.tar /tmp<span style="color:#f00">
 </span><span style="color:#f00">
-</span><span style="color:#f00"></span>COPY copy.zip /tmp</code></pre></div>
-<p>※ zipはADDでも解凍してくれないらしい</p>
-
-<hr />
-
+</span><span style="color:#f00"></span><span style="color:#fff;font-weight:bold">COPY</span> copy.zip /tmp<span style="color:#f00">
+</span></code></pre></div><p>※ zipはADDでも解凍してくれないらしい</p>
+<hr>
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FDocker%25E5%25AE%259F%25E8%25B7%25B5%25E3%2582%25AC%25E3%2582%25A4%25E3%2583%2589-%25E7%25AC%25AC2%25E7%2589%2588-impress-top-gear%2Fdp%2F4295005525"
@@ -265,92 +238,68 @@
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-
-<hr />
-
+<hr>
 <h3 id="cmdとentrypint">CMDとENTRYPINT</h3>
-
 <p>それぞれ<code>docker run</code>の時に実行するプロセスを指定する。</p>
-
 <p>使い方が似ているけど意味合いはかなり異なるみたい。</p>
-
-<hr />
-
-<h4 id="docker-run-commandとentrypoint-command">docker run commandとENTRYPOINT[&ldquo;command&rdquo;]</h4>
-
+<hr>
+<h4 id="docker-run-commandとentrypointcommand">docker run commandとENTRYPOINT[&ldquo;command&rdquo;]</h4>
 <p><code>CMD</code>のことは忘れて、<code>run</code>時のプロセスを指定する方法は以下の二つ。</p>
-
 <ol>
-<li><p><code>docker run {image} command param1 param2</code></p></li>
-
-<li><p>Dockerfileに<code>ENTRYPOINT [&quot;command&quot;, &quot;param1&quot;, &quot;param2&quot;]</code>を記載</p></li>
+<li>
+<p><code>docker run {image} command param1 param2</code></p>
+</li>
+<li>
+<p>Dockerfileに<code>ENTRYPOINT [&quot;command&quot;, &quot;param1&quot;, &quot;param2&quot;]</code>を記載</p>
+</li>
 </ol>
-
 <p>ちなみにこの二つが競合した場合は、<code>ENTRYPOINT</code>が優先される。</p>
-
 <p>ただし、<code>docker run {image} --entrypoint command</code>で<code>ENTRYPOINT</code>を上書きすることもできる。</p>
-
-<hr />
-
+<hr>
 <h4 id="cmdは上記のデフォルト値指定">CMDは上記のデフォルト値指定</h4>
-
 <p><code>CMD</code>は、<code>docker run {image}</code>に続く入力のデフォルト値を指定しているだけ。</p>
-
 <p>デフォルトなので、<code>docker run {image}</code>の後にコマンドを指定すればそちらが優先される。</p>
-
 <ol>
-<li><p><code>docker run {image}</code></p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#fff;font-weight:bold">CMD</span><span style="color:#0ff;font-weight:bold"> [&#34;command&#34;,&#34;param1&#34;,&#34;param2&#34;]</span></code></pre></div>
-<p><code>ENTRYPOINT</code>との併用もできるが、コマンドは<code>ENTRYPOINT</code>のものが最優先で実行される。</p>
-
-<p>その場合、<code>ENTRYPOINT</code>に指定された内容の追加引数、のデフォルト値となる。</p></li>
-
-<li><p>Dockerfileに<code>ENTRYPOINT</code>を記載</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#fff;font-weight:bold">ENTRYPOINT</span><span style="color:#0ff;font-weight:bold"> [&#34;command&#34;, &#34;param1&#34;]</span><span style="color:#f00">
+<li>
+<p><code>docker run {image}</code></p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#fff;font-weight:bold">CMD</span> [<span style="color:#0ff;font-weight:bold">&#34;command&#34;</span>,<span style="color:#0ff;font-weight:bold">&#34;param1&#34;</span>,<span style="color:#0ff;font-weight:bold">&#34;param2&#34;</span>]<span style="color:#f00">
+</span></code></pre></div><p><code>ENTRYPOINT</code>との併用もできるが、コマンドは<code>ENTRYPOINT</code>のものが最優先で実行される。</p>
+<p>その場合、<code>ENTRYPOINT</code>に指定された内容の追加引数、のデフォルト値となる。</p>
+</li>
+<li>
+<p>Dockerfileに<code>ENTRYPOINT</code>を記載</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#fff;font-weight:bold">ENTRYPOINT</span> [<span style="color:#0ff;font-weight:bold">&#34;command&#34;</span>, <span style="color:#0ff;font-weight:bold">&#34;param1&#34;</span>]<span style="color:#f00">
 </span><span style="color:#f00">
-</span><span style="color:#f00"></span><span style="color:#fff;font-weight:bold">CMD</span><span style="color:#0ff;font-weight:bold"> [&#34;param2&#34;]</span></code></pre></div></li>
+</span><span style="color:#f00"></span><span style="color:#fff;font-weight:bold">CMD</span> [<span style="color:#0ff;font-weight:bold">&#34;param2&#34;</span>]<span style="color:#f00">
+</span></code></pre></div></li>
 </ol>
-
 <p>以下の例だと、<code>docker run {image}</code>でrunすると、<code>command --help</code>が実行される。</p>
-
 <p>一方、<code>docker run {image} --build</code>でrunすると、<code>command --build</code>が実行されることになる。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#fff;font-weight:bold">ENTRYPOINT</span><span style="color:#0ff;font-weight:bold"> [&#34;command&#34;]</span><span style="color:#f00">
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#fff;font-weight:bold">ENTRYPOINT</span> [<span style="color:#0ff;font-weight:bold">&#34;command&#34;</span>]<span style="color:#f00">
 </span><span style="color:#f00">
-</span><span style="color:#f00"></span><span style="color:#fff;font-weight:bold">CMD</span><span style="color:#0ff;font-weight:bold"> [&#34;--help&#34;]</span></code></pre></div>
-<hr />
-
+</span><span style="color:#f00"></span><span style="color:#fff;font-weight:bold">CMD</span> [<span style="color:#0ff;font-weight:bold">&#34;--help&#34;</span>]<span style="color:#f00">
+</span></code></pre></div><hr>
 <h3 id="from">FROM</h3>
-
 <p>ベースイメージは極力公式のものを使う。</p>
-
 <p>ちょっとした環境なら軽量の<code>alpine</code>をベースとしたイメージを使う。</p>
-
 <p>（複雑になってくると<code>apk</code>で取れるバージョンが古かったり、何かしらで詰まって諦めることが多い気がします。）</p>
-
-<hr />
-
+<hr>
 <h3 id="ファイル構成">ファイル構成</h3>
-
 <p>Dockerfileの同階層以下には、必要なものを除き、極力ファイルを配置しない。</p>
-
 <p>Dockerfile用のディレクトリを一つ掘って置いておく。</p>
-
 <p>それが無理なら.dockerignoreに書く。</p>
-
-<hr />
-
+<hr>
 <p>間違っていたら教えてくれるとありがたいです。</p>
-
 <p>参考サイトは以下。</p>
-
 <ul>
-<li><p><a href="https://qiita.com/ao_log/items/f615e0e82164ad854792">Dockerfile のベストプラクティスを自分なりに整理してみた</a></p></li>
-
-<li><p><a href="https://qiita.com/uehaj/items/e6dd013e28593c26372d">DockerfileのCMDとENTRYPOINTを改めて解説する</a></p></li>
+<li>
+<p><a href="https://qiita.com/ao_log/items/f615e0e82164ad854792">Dockerfile のベストプラクティスを自分なりに整理してみた</a></p>
+</li>
+<li>
+<p><a href="https://qiita.com/uehaj/items/e6dd013e28593c26372d">DockerfileのCMDとENTRYPOINTを改めて解説する</a></p>
+</li>
 </ul>
-
-<hr />
-
+<hr>
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FDocker%25E5%25AE%259F%25E8%25B7%25B5%25E3%2582%25AC%25E3%2582%25A4%25E3%2583%2589-%25E7%25AC%25AC2%25E7%2589%2588-impress-top-gear%2Fdp%2F4295005525"
@@ -392,9 +341,7 @@
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-
-<hr />
-
+<hr>
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35DFWV+F4RNAQ+50+2HLITT" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt="" src="https://www29.a8.net/svt/bgt?aid=190423759915&wid=001&eno=01&mid=s00000000018015049000&mc=1"></a>
@@ -405,8 +352,7 @@
             <img border="0" width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=190423759915&wid=001&eno=01&mid=s00000000018015102000&mc=1"></a>
             <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=35DFWV+F4RNAQ+50+2HWVS1" alt="">
 </div>
-
-<hr />
+<hr>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -448,7 +394,7 @@
 		<span class="authorbox__name">About ted027</span>
 	</div>
 	<div class="authorbox__description">
-		筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+		野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 	</div>
 </div>
 
@@ -521,7 +467,7 @@
 			<span class="authorbox__name">ted027</span>
 		</div>
 		<div class="widget-author__description">
-			筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+			野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 		</div>
 	</div>
 </div><div class="widget-search widget">
@@ -656,13 +602,13 @@
 	<h4 class="widget__title">最新記事</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-sns-lambda/">1. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-cloudfront-spa/">2. AWS CloudFrontでSPAを返す</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/mui-zindex/">3. Material-UI themeで他要素の規定パラメータを取得</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/apt-gpg-error/">4. apt updateで署名エラー</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/pawapuro-ob-nomura/">5. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/elasticsearch-snapshot/">6. Elasticsearchのバックアップ/リストア</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/shimajiro-concert2/">7. 「しまじろうコンサート 2019冬」感想</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/logstash-log/">1. Logstashサーバーのログ閲覧と設定</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-sns-lambda/">2. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-cloudfront-spa/">3. AWS CloudFrontでSPAを返す</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/mui-zindex/">4. Material-UI themeで他要素の規定パラメータを取得</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/apt-gpg-error/">5. apt updateで署名エラー</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/pawapuro-ob-nomura/">6. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/elasticsearch-snapshot/">7. Elasticsearchのバックアップ/リストア</a></li>
 		</ul>
 	</div>
 </div>
@@ -681,6 +627,7 @@
 			<li class="widget__item"><a class="widget__link" href="/categories/javascript">Javascript</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/jenkins">Jenkins</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/linux">Linux</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/logstash">Logstash</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/python">Python</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/react">React</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/ruby">Ruby</a></li>

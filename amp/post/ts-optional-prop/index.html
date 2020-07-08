@@ -127,8 +127,7 @@
 
 			<br/>
 		</header><div class="content post__content clearfix">
-			<hr />
-
+			<hr>
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6O1Z5" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -141,11 +140,9 @@
             src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001119000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6NU9D" alt="">
 </div>
-
-<hr />
-
+<hr>
 <p>TypeScriptで、必須でないpropertyも含めた型宣言をしてしまうと、指定しなかった場合にエラーが出てしまう。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#fff;font-weight:bold">interface</span> Props <span style="color:#fff;font-weight:bold">extends</span> WithStyles&lt;<span style="color:#fff;font-weight:bold">typeof</span> styles&gt; {
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#fff;font-weight:bold">interface</span> Props <span style="color:#fff;font-weight:bold">extends</span> WithStyles&lt;<span style="font-weight:bold">typeof</span> <span style="color:#007f7f">styles</span>&gt; {
   title: <span style="color:#fff;font-weight:bold">string</span>
   default_order: <span style="color:#0ff;font-weight:bold">&#39;asc&#39;</span> | <span style="color:#0ff;font-weight:bold">&#39;desc&#39;</span>;
   default_orderBy: <span style="color:#fff;font-weight:bold">string</span>;
@@ -153,36 +150,34 @@
   ...
 }
 
-<span style="color:#fff;font-weight:bold">class</span> CommonTable <span style="color:#fff;font-weight:bold">extends</span> React.Component&lt;Props, State&gt; {
+<span style="color:#fff;font-weight:bold">class</span> CommonTable <span style="color:#fff;font-weight:bold">extends</span> React.Component&lt;<span style="font-weight:bold">Props</span><span style="color:#f00">,</span> <span style="color:#007f7f">State</span>&gt; {
     ...
 }
 ...
 
-<span style="color:#fff;font-weight:bold">class</span> Main <span style="color:#fff;font-weight:bold">extends</span> React.Component&lt;MainProps&gt; {
+<span style="color:#fff;font-weight:bold">class</span> Main <span style="color:#fff;font-weight:bold">extends</span> React.Component&lt;<span style="font-weight:bold">MainProps</span>&gt; {
 
 render() {
     <span style="color:#fff;font-weight:bold">return</span> (
-        &lt;CommonTable
-            title=<span style="color:#0ff;font-weight:bold">&#34;交流戦順位表&#34;</span>
-            default_order=<span style="color:#0ff;font-weight:bold">&#34;desc&#34;</span>
-            default_orderBy=<span style="color:#0ff;font-weight:bold">&#34;勝率&#34;</span>
-            <span style="color:#007f7f">// league を指定しないとエラーになる
-</span><span style="color:#007f7f"></span>        <span style="color:#f00">/&gt;</span>
+        &lt;<span style="font-weight:bold">CommonTable</span>
+            <span style="color:#007f7f">title</span>=<span style="color:#0ff;font-weight:bold">&#34;交流戦順位表&#34;</span>
+            <span style="color:#007f7f">default_order</span>=<span style="color:#0ff;font-weight:bold">&#34;desc&#34;</span>
+            <span style="color:#007f7f">default_orderBy</span>=<span style="color:#0ff;font-weight:bold">&#34;勝率&#34;</span>
+            <span style="color:#f00">//</span> <span style="color:#007f7f">league</span> <span style="color:#007f7f">を指定しないとエラーになる</span>
+        /&gt;
         ...
     )
-}</code></pre></div>
-<hr />
-
+}
+</code></pre></div><hr>
 <p>Optionalな値を宣言したければ<code>?</code>をつければよい。この場合、必須ではないが指定するならこの型、といった宣言になる。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#fff;font-weight:bold">interface</span> Props <span style="color:#fff;font-weight:bold">extends</span> WithStyles&lt;<span style="color:#fff;font-weight:bold">typeof</span> styles&gt; {
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#fff;font-weight:bold">interface</span> Props <span style="color:#fff;font-weight:bold">extends</span> WithStyles&lt;<span style="font-weight:bold">typeof</span> <span style="color:#007f7f">styles</span>&gt; {
   title: <span style="color:#fff;font-weight:bold">string</span>
   default_order: <span style="color:#0ff;font-weight:bold">&#39;asc&#39;</span> | <span style="color:#0ff;font-weight:bold">&#39;desc&#39;</span>;
   default_orderBy: <span style="color:#fff;font-weight:bold">string</span>;
   league?: <span style="color:#0ff;font-weight:bold">&#39;Central&#39;</span> | <span style="color:#0ff;font-weight:bold">&#39;Pacific&#39;</span>;
   ...
-}</code></pre></div>
-<hr />
-
+}
+</code></pre></div><hr>
 <div
   class="kaerebalink-box"
   style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;"
@@ -291,16 +286,13 @@ render() {
   <div class="booklink-footer" style="clear: left"></div>
 </div>
 
-
-<hr />
-
+<hr>
 <div>
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6I9N5" target="_blank" rel="nofollow">
         <img border="0" width="300" height="250" alt="" src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001093000&mc=1"></a>
         <img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6I9N5" alt="">
 </div>
-
-<hr />
+<hr>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -343,7 +335,7 @@ render() {
 		<span class="authorbox__name">About ted027</span>
 	</div>
 	<div class="authorbox__description">
-		筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+		野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 	</div>
 </div>
 
@@ -416,7 +408,7 @@ render() {
 			<span class="authorbox__name">ted027</span>
 		</div>
 		<div class="widget-author__description">
-			筒香嘉智さんとかと同い年です。子供がいます。プログラムを書いたり書かなかったりする仕事をしています。
+			野球と育児と技術を少し。プログラムを書いたり書かなかったりする仕事をしています。
 		</div>
 	</div>
 </div><div class="widget-search widget">
@@ -551,13 +543,13 @@ render() {
 	<h4 class="widget__title">最新記事</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-sns-lambda/">1. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-cloudfront-spa/">2. AWS CloudFrontでSPAを返す</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/mui-zindex/">3. Material-UI themeで他要素の規定パラメータを取得</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/apt-gpg-error/">4. apt updateで署名エラー</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/pawapuro-ob-nomura/">5. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/elasticsearch-snapshot/">6. Elasticsearchのバックアップ/リストア</a></li>
-			<li class="widget__item"><a class="widget__link" href="/amp/post/shimajiro-concert2/">7. 「しまじろうコンサート 2019冬」感想</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/logstash-log/">1. Logstashサーバーのログ閲覧と設定</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-sns-lambda/">2. サーバーレスのイベント駆動はSNS-Lambdaで十分ではないかと思う話</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/aws-cloudfront-spa/">3. AWS CloudFrontでSPAを返す</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/mui-zindex/">4. Material-UI themeで他要素の規定パラメータを取得</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/apt-gpg-error/">5. apt updateで署名エラー</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/pawapuro-ob-nomura/">6. パワプロ2018(ＯＢ再現) 野村克也捕手</a></li>
+			<li class="widget__item"><a class="widget__link" href="/amp/post/elasticsearch-snapshot/">7. Elasticsearchのバックアップ/リストア</a></li>
 		</ul>
 	</div>
 </div>
@@ -576,6 +568,7 @@ render() {
 			<li class="widget__item"><a class="widget__link" href="/categories/javascript">Javascript</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/jenkins">Jenkins</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/linux">Linux</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/logstash">Logstash</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/python">Python</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/react">React</a></li>
 			<li class="widget__item"><a class="widget__link" href="/categories/ruby">Ruby</a></li>
