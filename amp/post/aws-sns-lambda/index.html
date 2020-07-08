@@ -131,20 +131,27 @@
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#sqs-lambdaの前にはsnsを入れたほうがいい">SQS-Lambdaの前にはSNSを入れたほうがいい</a></li>
-        <li><a href="#sns-lambdaの間にはsqsを入れたほうがいいのか">SNS-Lambdaの間にはSQSを入れたほうがいいのか</a></li>
-        <li><a href="#結論">結論</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#sqs-lambdaの前にはsnsを入れたほうがいい">SQS-Lambdaの前にはSNSを入れたほうがいい</a></li>
+<li><a href="#sns-lambdaの間にはsqsを入れたほうがいいのか">SNS-Lambdaの間にはSQSを入れたほうがいいのか</a>
+<ul>
+<li><a href="#sns-lambdaの危険な点">SNS-Lambdaの危険な点</a></li>
+<li><a href="#sqsを挟むメリット">SQSを挟むメリット</a></li>
+</ul></li>
+<li><a href="#結論">結論</a></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<hr>
+			<hr />
+
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FEffective-DevOps-%25E2%2580%25954%25E6%259C%25AC%25E6%259F%25B1%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%258C%2581%25E7%25B6%259A%25E5%258F%25AF%25E8%2583%25BD%25E3%2581%25AA%25E7%25B5%2584%25E7%25B9%2594%25E6%2596%2587%25E5%258C%2596%25E3%2581%25AE%25E8%2582%25B2%25E3%2581%25A6%25E6%2596%25B9-Jennifer-Davis%2Fdp%2F4873118352"
@@ -187,52 +194,83 @@
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-<hr>
+
+<hr />
+
 <p>以前「SNS-Lambdaの構成にするなら間にSQSを入れないとダメだ！」という意見の方とお話をする機会があり、</p>
+
 <p>それって本当かなあ、と腑に落ちなかったので考えてみました。</p>
-<hr>
+
+<hr />
+
 <h3 id="sqs-lambdaの前にはsnsを入れたほうがいい">SQS-Lambdaの前にはSNSを入れたほうがいい</h3>
+
 <p>SQSの前にはSNSを入れたほうがいい…は以前から言われている話です。</p>
+
 <p>この理由は分かりやすく、送信側を抽象化出来るからです。</p>
+
 <p>送信側が直接SQSに送っている場合、送り先を増やしたり変更したりする度に、送信側を修正しなければなりません。</p>
+
 <p>しかしSNSを挟むことで、送信側を弄らず、SNSからのsubscriptionを変更するだけで上記のような変更に対応できます。</p>
+
 <ul>
 <li>参考記事：<a href="https://dev.classmethod.jp/articles/sns-topic-should-be-placed-behind-sqs-queue/">【AWS】SQSキューの前には難しいこと考えずにSNSトピックを挟むと良いよ、という話</a></li>
 </ul>
-<hr>
+
+<hr />
+
 <h3 id="sns-lambdaの間にはsqsを入れたほうがいいのか">SNS-Lambdaの間にはSQSを入れたほうがいいのか</h3>
+
 <h4 id="sns-lambdaの危険な点">SNS-Lambdaの危険な点</h4>
+
 <p>以前お話した方がSNS-Lambdaの間にSQSが必須と考える理由は「誤って大量のイベントが流れた際、アカウントのLambdaの同時実行数を食い潰して他のLambdaが実行できなくなるから」でした。</p>
+
 <p>ただ、これはLambda関数ごとに最大同時実行数を指定しておけば済む話のような気もします。</p>
+
 <p>最大同時実行数を設定することでスロットリングが生じやすくなりますが、最大6時間はエクスポネンシャルにリトライしてくれる模様。</p>
+
 <ul>
 <li>参考ページ：<a href="https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/invocation-async.html">AWS Lambda 開発者ガイド 非同期呼び出し</a></li>
 </ul>
-<hr>
+
+<hr />
+
 <h4 id="sqsを挟むメリット">SQSを挟むメリット</h4>
+
 <p>必須でないと思う一方、SQSを挟むことによるメリットも散見されました。</p>
+
 <ol>
-<li>
-<p><strong>リトライ</strong></p>
+<li><p><strong>リトライ</strong></p>
+
 <p>一番大きいのがこれだと思います。</p>
+
 <p>関数が実行された上でエラーになった場合、2回リトライした上で失敗したらイベントは破棄されます。この際、デッドレターキューが設定されていればそちらに送られます。要するに、失敗したら割と簡単に捨てられます。</p>
-<p>SQSを挟むことで最大14日間キューに保持し、しつこくリトライを行うことができます。</p>
-</li>
-<li>
-<p><strong>送信側、受信側の分離</strong></p>
+
+<p>SQSを挟むことで最大14日間キューに保持し、しつこくリトライを行うことができます。</p></li>
+
+<li><p><strong>送信側、受信側の分離</strong></p>
+
 <p>SNSを送信側に、SQSを受信側に置くことで、アカウントやマイクロサービスをまたいでのイベント送受信で責務を明確に分離できます。</p>
+
 <p>送信側は自身で管理するSNSにイベントを送信すればよく、受信側は自身で管理するSQSで必要なものをsubscriptionすれば済みます。</p>
+
 <ul>
 <li>参考記事：<a href="https://dev.classmethod.jp/articles/cross-account-sqs-message-send-patterns/">AWSアカウントを跨いでSQSのメッセージを送信するパターン集</a></li>
-</ul>
-</li>
+</ul></li>
 </ol>
-<hr>
+
+<hr />
+
 <h3 id="結論">結論</h3>
+
 <p>SQSを挟むメリットはあるものの、必須というほどではないと思います。</p>
+
 <p>SNS-Lambdaだと関数エラーで3回しかリトライしてくれないので、AWS不具合が起きた場合なんかにデッドレターキューに行ったイベントにいちいち対処するのは面倒です。</p>
+
 <p>その点SQSを挟めば復旧後のリトライで通る可能性が高いので、何かする必要は無さそうです。</p>
-<hr>
+
+<hr />
+
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E5%25BE%25B9%25E5%25BA%2595%25E6%2594%25BB%25E7%2595%25A5-AWS%25E8%25AA%258D%25E5%25AE%259A-%25E3%2582%25BD%25E3%2583%25AA%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%25BC%25E3%2582%25AD%25E3%2583%2586%25E3%2582%25AF%25E3%2583%2588-%25E2%2580%2593-%25E3%2582%25A2%25E3%2582%25BD%25E3%2582%25B7%25E3%2582%25A8%25E3%2582%25A4%25E3%2583%2588%25E6%2595%2599%25E7%25A7%2591%25E6%259B%25B8%2Fdp%2F4295005495"
@@ -274,7 +312,9 @@
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+5ZEMP" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -287,7 +327,8 @@
             src="https://www25.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001014000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+61C2P" alt="">
 </div>
-<hr>
+
+<hr />
 		</div>
 		
 <div class="post__tags tags clearfix">

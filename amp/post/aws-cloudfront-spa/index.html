@@ -131,19 +131,22 @@
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#概要">概要</a></li>
-        <li><a href="#解決策">解決策</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#概要">概要</a></li>
+<li><a href="#解決策">解決策</a></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<hr>
+			<hr />
+
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FEffective-DevOps-%25E2%2580%25954%25E6%259C%25AC%25E6%259F%25B1%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%258C%2581%25E7%25B6%259A%25E5%258F%25AF%25E8%2583%25BD%25E3%2581%25AA%25E7%25B5%2584%25E7%25B9%2594%25E6%2596%2587%25E5%258C%2596%25E3%2581%25AE%25E8%2582%25B2%25E3%2581%25A6%25E6%2596%25B9-Jennifer-Davis%2Fdp%2F4873118352"
@@ -186,45 +189,58 @@
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-<hr>
+
+<hr />
+
 <h3 id="概要">概要</h3>
+
 <p>Reactで作ったSPAをCloudFrontで配信する際、パスを直叩きされると404を返してしまう。</p>
+
 <p>Lambda等でホストする場合はパスに関わらず元の<code>index.html</code>を返してやればいいが、S3にSPAを配置する場合そうはいかない。</p>
-<hr>
+
+<hr />
+
 <h3 id="解決策">解決策</h3>
+
 <p>CloudFrontのError Pagesで、404の場合にルートの<code>index.html</code>を返すように設定する。</p>
-<hr>
+
+<hr />
+
 <ul>
 <li>HTTP Error Code
+
 <ul>
 <li>404: Not Found</li>
-</ul>
-</li>
+</ul></li>
 <li>Error Caching Minimum TTL
+
 <ul>
 <li>300 (適当)</li>
-</ul>
-</li>
+</ul></li>
 <li>Customize Error Response
+
 <ul>
 <li>Yes</li>
-</ul>
-</li>
+</ul></li>
 <li>Response Page Path
+
 <ul>
 <li>/index.html</li>
 <li>※S3上のパスに合わせて、SPAの基になるindex.htmlを指定</li>
-</ul>
-</li>
+</ul></li>
 <li>HTTP Response Code
+
 <ul>
 <li>200: OK</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<hr>
+
+<hr />
+
 <p>SPAの中で、存在しないパスへのアクセスには404を返すようちゃんと書いておく。</p>
-<hr>
+
+<hr />
+
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E5%25BE%25B9%25E5%25BA%2595%25E6%2594%25BB%25E7%2595%25A5-AWS%25E8%25AA%258D%25E5%25AE%259A-%25E3%2582%25BD%25E3%2583%25AA%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%25BC%25E3%2582%25AD%25E3%2583%2586%25E3%2582%25AF%25E3%2583%2588-%25E2%2580%2593-%25E3%2582%25A2%25E3%2582%25BD%25E3%2582%25B7%25E3%2582%25A8%25E3%2582%25A4%25E3%2583%2588%25E6%2595%2599%25E7%25A7%2591%25E6%259B%25B8%2Fdp%2F4295005495"
@@ -266,7 +282,9 @@
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+5ZEMP" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -279,7 +297,8 @@
             src="https://www25.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001014000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+61C2P" alt="">
 </div>
-<hr>
+
+<hr />
 		</div>
 		
 <div class="post__tags tags clearfix">

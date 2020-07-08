@@ -131,48 +131,59 @@
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#内部ログ">内部ログ</a></li>
-        <li><a href="#ログ設定閲覧">ログ設定閲覧</a></li>
-        <li><a href="#ログ設定変更">ログ設定変更</a></li>
-        <li><a href="#おまけvarlogへのログ出力">（おまけ）/var/logへのログ出力</a></li>
-        <li><a href="#参考">参考</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#内部ログ">内部ログ</a></li>
+<li><a href="#ログ設定閲覧">ログ設定閲覧</a></li>
+<li><a href="#ログ設定変更">ログ設定変更</a></li>
+<li><a href="#おまけ-var-logへのログ出力">（おまけ）/var/logへのログ出力</a></li>
+<li><a href="#参考">参考</a></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<hr>
+			<hr />
+
 <div class="wide__area">
-    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+5ZEMP" target="_blank" rel="nofollow">
+    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6O1Z5" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
-            src="https://www28.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001005000&mc=1"></a>
-    <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+5ZEMP" alt="">
+            src="https://www23.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001120000&mc=1"></a>
+    <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6O1Z5" alt="">
 </div>
 <div class="narrow__area">
-    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+61C2P" target="_blank" rel="nofollow">
+    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6NU9D" target="_blank" rel="nofollow">
         <img border="0" width="300" height="250" alt=""
-            src="https://www25.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001014000&mc=1"></a>
-    <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+61C2P" alt="">
+            src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001119000&mc=1"></a>
+    <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6NU9D" alt="">
 </div>
-<hr>
+
+<hr />
+
 <h3 id="内部ログ">内部ログ</h3>
+
 <p>Logstashのログは以下いずれかの配下に吐かれる。</p>
+
 <ul>
 <li>/var/log/logstash</li>
 <li>${LS_HOME}/logs</li>
 </ul>
-<p><code>logstash-plain.log</code>が通常のログ。<br>
+
+<p><code>logstash-plain.log</code>が通常のログ。<br />
 <code>logstash-slowlog-plain.log</code>が時間のかかった処理のログとなっている。</p>
-<hr>
+
+<hr />
+
 <h3 id="ログ設定閲覧">ログ設定閲覧</h3>
+
 <p>外部から<code>GET</code>で見ることが出来る。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -XGET <span style="color:#0ff;font-weight:bold">&#39;localhost:9600/_node/logging?pretty&#39;</span>
-</code></pre></div><p>以下例のようなレスポンスが返る。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -XGET <span style="color:#0ff;font-weight:bold">&#39;localhost:9600/_node/logging?pretty&#39;</span></code></pre></div>
+<p>以下例のようなレスポンスが返る。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">{
 ...
   <span style="color:#0ff;font-weight:bold">&#34;loggers&#34;</span> : {
@@ -198,34 +209,45 @@
     <span style="color:#0ff;font-weight:bold">&#34;slowlog.logstash.inputs.beats&#34;</span> : <span style="color:#0ff;font-weight:bold">&#34;TRACE&#34;</span>,
     <span style="color:#0ff;font-weight:bold">&#34;slowlog.logstash.outputs.stdout&#34;</span> : <span style="color:#0ff;font-weight:bold">&#34;TRACE&#34;</span>
   }
-}
-</code></pre></div><hr>
+}</code></pre></div>
+<hr />
+
 <h3 id="ログ設定変更">ログ設定変更</h3>
+
 <p>外部から<code>PUT</code>で変更出来る。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -XPUT <span style="color:#0ff;font-weight:bold">&#39;localhost:9600/_node/logging?pretty&#39;</span> -H <span style="color:#0ff;font-weight:bold">&#39;Content-Type: application/json&#39;</span> -d<span style="color:#0ff;font-weight:bold">&#39;
 </span><span style="color:#0ff;font-weight:bold">{
 </span><span style="color:#0ff;font-weight:bold">    &#34;logger.logstash.outputs.elasticsearch&#34; : &#34;DEBUG&#34;
 </span><span style="color:#0ff;font-weight:bold">}
-</span><span style="color:#0ff;font-weight:bold">&#39;</span>
-</code></pre></div><p>リセットする際は<code>_node/logging/reset</code>を叩く。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -XPUT <span style="color:#0ff;font-weight:bold">&#39;localhost:9600/_node/logging/reset?pretty&#39;</span>
-</code></pre></div><hr>
-<h3 id="おまけvarlogへのログ出力">（おまけ）/var/logへのログ出力</h3>
-<p>初期設定のままだと、<code>val/log/messages</code>にもlogstashのログを出力する。<br>
+</span><span style="color:#0ff;font-weight:bold">&#39;</span></code></pre></div>
+<p>リセットする際は<code>_node/logging/reset</code>を叩く。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -XPUT <span style="color:#0ff;font-weight:bold">&#39;localhost:9600/_node/logging/reset?pretty&#39;</span></code></pre></div>
+<hr />
+
+<h3 id="おまけ-var-logへのログ出力">（おまけ）/var/logへのログ出力</h3>
+
+<p>初期設定のままだと、<code>val/log/messages</code>にもlogstashのログを出力する。<br />
 これを防ぎたければ。<code>systemctl</code>の設定ファイル(<code>/etc/systemd/system/logstash.service</code>)で<code>StandardOutput</code>と<code>StandardError</code>をnullに設定する。</p>
+
 <pre><code>...
 [Service]
 ...
 StandardOutput=null
 StandardError=null
 ...
-</code></pre><hr>
+</code></pre>
+
+<hr />
+
 <h3 id="参考">参考</h3>
+
 <ul>
 <li><a href="https://www.elastic.co/guide/en/logstash/current/logging.html">Logging | Logstash Reference [7.8] | Elastic</a></li>
 <li><a href="https://qiita.com/baoh0308/items/d27c0c748f6bccb142be">logstashのログが/var/log/messagesにも出力されてしまうのを抑止する</a></li>
 </ul>
-<hr>
+
+<hr />
+
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FEffective-DevOps-%25E2%2580%25954%25E6%259C%25AC%25E6%259F%25B1%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%258C%2581%25E7%25B6%259A%25E5%258F%25AF%25E8%2583%25BD%25E3%2581%25AA%25E7%25B5%2584%25E7%25B9%2594%25E6%2596%2587%25E5%258C%2596%25E3%2581%25AE%25E8%2582%25B2%25E3%2581%25A6%25E6%2596%25B9-Jennifer-Davis%2Fdp%2F4873118352"
@@ -268,7 +290,9 @@ StandardError=null
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+5Z6WX" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -281,7 +305,8 @@ StandardError=null
             src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001013000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+614CX" alt="">
 </div>
-<hr>
+
+<hr />
 		</div>
 		
 <div class="post__tags tags clearfix">

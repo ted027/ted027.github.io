@@ -9,6 +9,7 @@
 	<meta name="description" content="">
 	<meta property="og:title" content="Ubuntu 18.04にKindleをインストールした" />
 <meta property="og:description" content="UbuntuにKindleをインストールしようとして苦労したのでメモ。
+
 Ubuntu用のKindle for PCクライアントは無いので、ちょっと手間を掛けてWineというWindowsエミュレータを使ってWindows版をインストールする。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.ted027.com/post/ubuntu-kindle/" />
@@ -18,6 +19,7 @@ Ubuntu用のKindle for PCクライアントは無いので、ちょっと手間�
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ubuntu 18.04にKindleをインストールした"/>
 <meta name="twitter:description" content="UbuntuにKindleをインストールしようとして苦労したのでメモ。
+
 Ubuntu用のKindle for PCクライアントは無いので、ちょっと手間を掛けてWineというWindowsエミュレータを使ってWindows版をインストールする。"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -132,23 +134,28 @@ if (!doNotTrack) {
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#wineをインストール">Wineをインストール</a></li>
-        <li><a href="#wineの設定">Wineの設定</a></li>
-        <li><a href="#winetricksで表示を直す">winetricksで表示を直す</a></li>
-        <li><a href="#kindle-for-pcをインストール">Kindle for PCをインストール</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#wineをインストール">Wineをインストール</a></li>
+<li><a href="#wineの設定">Wineの設定</a></li>
+<li><a href="#winetricksで表示を直す">winetricksで表示を直す</a></li>
+<li><a href="#kindle-for-pcをインストール">Kindle for PCをインストール</a></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
 			<p>UbuntuにKindleをインストールしようとして苦労したのでメモ。</p>
+
 <p>Ubuntu用のKindle for PCクライアントは無いので、ちょっと手間を掛けてWineというWindowsエミュレータを使ってWindows版をインストールする。</p>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://t.afi-b.com/visit.php?guid=ON&a=C9511S-i324416Z&p=J690746r" target="_blank" rel="nofollow"><img
             src="https://www.afi-b.com/upload_image/9511-1521815201-3.gif" width="728" height="90" style="border:none;"
@@ -161,57 +168,65 @@ if (!doNotTrack) {
             alt="フォスターフリーランス" /></a><img src="https://t.afi-b.com/lead/C9511S/J690746r/B324421K" width="1" height="1"
         style="border:none;" />
 </div>
-<hr>
+
+<hr />
+
 <h3 id="wineをインストール">Wineをインストール</h3>
+
 <ol>
-<li>
-<p>32bit版のWineを使えるようにする</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo dpkg --add-architecture i386
-</code></pre></div></li>
-<li>
-<p>レポジトリを追加</p>
+<li><p>32bit版のWineを使えるようにする</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo dpkg --add-architecture i386</code></pre></div></li>
+
+<li><p>レポジトリを追加</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ wget -nc https://dl.winehq.org/wine-builds/winehq.key
 $ sudo apt-key add winehq.key
-$ sudo apt-add-repository -y -n https://dl.winehq.org/wine-builds/ubuntu/
-</code></pre></div></li>
-<li>
-<p>Wineをインストール</p>
+$ sudo apt-add-repository -y -n https://dl.winehq.org/wine-builds/ubuntu/</code></pre></div></li>
+
+<li><p>Wineをインストール</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo apt update
-$ sudo apt install winehq-stable
-</code></pre></div></li>
+$ sudo apt install winehq-stable</code></pre></div></li>
 </ol>
-<hr>
+
+<hr />
+
 <h3 id="wineの設定">Wineの設定</h3>
+
 <ol>
-<li>
-<p>OSを選択</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ winecfg
-</code></pre></div></li>
+<li><p>OSを選択</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ winecfg</code></pre></div></li>
 </ol>
+
 <p>→ Windows 8.1を選択。10だとうまくいかなかった。</p>
-<hr>
+
+<hr />
+
 <h3 id="winetricksで表示を直す">winetricksで表示を直す</h3>
+
 <p>このままだと文字化けするので、<code>winetricks</code>を使って表示を整える。</p>
+
 <ol>
-<li>
-<p>winetricksをインストール</p>
+<li><p>winetricksをインストール</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ <span style="color:#fff;font-weight:bold">cd</span> ~/.wine
 $ wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
-$ sudo chmod +x winetricks
-</code></pre></div></li>
-<li>
-<p>文字化けを直す</p>
+$ sudo chmod +x winetricks</code></pre></div></li>
+
+<li><p>文字化けを直す</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo sh winetricks allfonts
-$ sudo sh winetricks fontsmooth-rgb
-</code></pre></div></li>
+$ sudo sh winetricks fontsmooth-rgb</code></pre></div></li>
 </ol>
-<hr>
+
+<hr />
+
 <h3 id="kindle-for-pcをインストール">Kindle for PCをインストール</h3>
+
 <ul>
 <li><a href="https://kindle-for-pc.jp.uptodown.com/windows">https://kindle-for-pc.jp.uptodown.com/windows</a></li>
 </ul>
+
 <p>起動したら無事読めました。</p>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://t.afi-b.com/visit.php?guid=ON&a=M10262Q-X351704n&p=J690746r" target="_blank" rel="nofollow"><img
             src="https://www.afi-b.com/upload_image/10262-1549272488-3.jpg" width="728" height="90" style="border:none;"
@@ -224,7 +239,8 @@ $ sudo sh winetricks fontsmooth-rgb
             style="border:none;" alt="BTCエージェント forエンジニア" /></a><img
         src="https://t.afi-b.com/lead/M10262Q/J690746r/t343317O" width="1" height="1" style="border:none;" />
 </div>
-<hr>
+
+<hr />
 		</div>
 		
 <div class="post__tags tags clearfix">

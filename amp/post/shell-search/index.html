@@ -131,20 +131,24 @@
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#ファイル名検索">ファイル名検索</a></li>
-        <li><a href="#ファイル内容検索">ファイル内容検索</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#ファイル名検索">ファイル名検索</a></li>
+<li><a href="#ファイル内容検索">ファイル内容検索</a></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
 			<p>特定ディレクトリや配下ディレクトリのファイル名/ファイルの中身を検索する。</p>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://t.afi-b.com/visit.php?guid=ON&a=99886h-W336947J&p=J690746r" target="_blank" rel="nofollow"><img
             src="https://www.afi-b.com/upload_image/9886-1534983315-3.jpg" width="728" height="90" style="border:none;"
@@ -157,38 +161,40 @@
             alt="CodeCampGATE" /></a><img src="https://t.afi-b.com/lead/99886h/J690746r/3336944i" width="1" height="1"
         style="border:none;" />
 </div>
-<hr>
+
+<hr />
+
 <h3 id="ファイル名検索">ファイル名検索</h3>
+
 <ul>
-<li>特定ディレクトリのファイル名検索</li>
+<li><p>特定ディレクトリのファイル名検索</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ls {directory/path} | grep {search_word}</code></pre></div></li>
+
+<li><p>特定ディレクトリ配下のファイル名検索</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ find {directory/path} | -type f -name <span style="color:#0ff;font-weight:bold">\*</span>{search_word}<span style="color:#0ff;font-weight:bold">\*</span></code></pre></div></li>
+
+<li><p>特定ディレクトリ配下のディレクトリ名検索</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ find {directory/path} | -type d -name <span style="color:#0ff;font-weight:bold">\*</span>{search_word}<span style="color:#0ff;font-weight:bold">\*</span></code></pre></div></li>
 </ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ls {directory/path} | grep {search_word}
-</code></pre></div><ul>
-<li>特定ディレクトリ配下のファイル名検索</li>
-</ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ find {directory/path} | -type f -name <span style="color:#0ff;font-weight:bold">\*</span>{search_word}<span style="color:#0ff;font-weight:bold">\*</span>
-</code></pre></div><ul>
-<li>特定ディレクトリ配下のディレクトリ名検索</li>
-</ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ find {directory/path} | -type d -name <span style="color:#0ff;font-weight:bold">\*</span>{search_word}<span style="color:#0ff;font-weight:bold">\*</span>
-</code></pre></div><h3 id="ファイル内容検索">ファイル内容検索</h3>
+
+<h3 id="ファイル内容検索">ファイル内容検索</h3>
+
 <ul>
-<li>特定ディレクトリのファイル内容検索（一致場所表示）</li>
+<li><p>特定ディレクトリのファイル内容検索（一致場所表示）</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ grep {search_word} {directory/path}/*</code></pre></div></li>
+
+<li><p>特定ディレクトリのファイル内容検索（一致場所非表示）</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ grep {search_word} -l {directory/path}/*</code></pre></div></li>
+
+<li><p>特定ディレクトリ配下のファイル内容検索（一致場所表示）</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ grep {search_word} -r {directory/path}</code></pre></div></li>
+
+<li><p>特定ディレクトリ配下のファイル内容検索（一致場所非表示）</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ grep {search_word} -rl {directory/path}</code></pre></div></li>
 </ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ grep {search_word} {directory/path}/*
-</code></pre></div><ul>
-<li>特定ディレクトリのファイル内容検索（一致場所非表示）</li>
-</ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ grep {search_word} -l {directory/path}/*
-</code></pre></div><ul>
-<li>特定ディレクトリ配下のファイル内容検索（一致場所表示）</li>
-</ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ grep {search_word} -r {directory/path}
-</code></pre></div><ul>
-<li>特定ディレクトリ配下のファイル内容検索（一致場所非表示）</li>
-</ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ grep {search_word} -rl {directory/path}
-</code></pre></div><hr>
+
+<hr />
+
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E5%2585%25A5%25E9%2596%2580UNIX%25E3%2582%25B7%25E3%2582%25A7%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E2%2580%2595%25E3%2582%25B7%25E3%2582%25A7%25E3%2583%25AB%25E3%2581%25AE%25E5%259F%25BA%25E7%25A4%258E%25E3%2581%258B%25E3%2582%2589%25E5%25AD%25A6%25E3%2581%25B6UNIX%25E3%2581%25AE%25E4%25B8%2596%25E7%2595%258C-%25E3%2583%2596%25E3%2583%25AB%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%25BB%25E3%2583%2596%25E3%2583%25AA%25E3%2583%25B3%2Fdp%2F4797321946"
@@ -231,7 +237,9 @@
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+5Z6WX" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -244,7 +252,8 @@
             src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001013000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+614CX" alt="">
 </div>
-<hr>
+
+<hr />
 		</div>
 		
 <div class="post__tags tags clearfix">

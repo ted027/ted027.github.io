@@ -126,7 +126,8 @@ if (!doNotTrack) {
 
 			<br/>
 		</header><div class="content post__content clearfix">
-			<hr>
+			<hr />
+
 <div
   class="kaerebalink-box"
   style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;"
@@ -235,49 +236,64 @@ if (!doNotTrack) {
   <div class="booklink-footer" style="clear: left"></div>
 </div>
 
-<hr>
+
+<hr />
+
 <h3 id="問題">問題</h3>
+
 <p><code>React</code>の<code>Functional Component</code>で、引数を適用して関数を返したい場合がある。</p>
+
 <p>この際、関数内部で関数を定義することになるが、この内部の関数を無名関数にすると<code>ESLint</code>でエラーが出る。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#fff;font-weight:bold">const</span> createIcon = (name: <span style="color:#fff;font-weight:bold">string</span>) =&gt; {
-    <span style="color:#fff;font-weight:bold">return</span> (props =&gt; &lt;<span style="font-weight:bold">i</span> {<span style="color:#007f7f">...props</span>} <span style="color:#007f7f">class</span>={name}&gt;)
-}
-</code></pre></div><p><code>Component definition is missing display name react/display-name</code></p>
-<hr>
+    <span style="color:#fff;font-weight:bold">return</span> (props =&gt; &lt;i {...props} <span style="color:#fff;font-weight:bold">class</span>={name}&gt;)
+}</code></pre></div>
+<p><code>Component definition is missing display name react/display-name</code></p>
+
+<hr />
+
 <h3 id="原因">原因</h3>
+
 <p>デバッグのために、全てのコンポーネントに名前を付けることが推奨されるため。上だと<code>createIcon</code>の返り値が無名コンポーネントになるので怒られる。</p>
-<hr>
-<h3 id="対策">対策①</h3>
+
+<hr />
+
+<h3 id="対策①">対策①</h3>
+
 <p>関数名をつければよい。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#fff;font-weight:bold">const</span> createIcon = (name: <span style="color:#fff;font-weight:bold">string</span>) =&gt; {
     <span style="color:#fff;font-weight:bold">return</span> (
         <span style="color:#fff;font-weight:bold">function</span> icon(props) {
-            <span style="color:#fff;font-weight:bold">return</span> &lt;<span style="font-weight:bold">i</span> {<span style="color:#007f7f">...props</span>} <span style="color:#007f7f">class</span>={name}&gt;
+            <span style="color:#fff;font-weight:bold">return</span> &lt;i {...props} <span style="color:#fff;font-weight:bold">class</span>={name}&gt;
         }
     )
-}
-</code></pre></div><p>もしくは</p>
+}</code></pre></div>
+<p>もしくは</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#fff;font-weight:bold">const</span> createIcon = (name: <span style="color:#fff;font-weight:bold">string</span>) =&gt; {
-    <span style="color:#fff;font-weight:bold">const</span> icon = (props) =&gt;  &lt;<span style="font-weight:bold">i</span> {<span style="color:#007f7f">...props</span>} <span style="color:#007f7f">class</span>={name}&gt;
+    <span style="color:#fff;font-weight:bold">const</span> icon = (props) =&gt;  &lt;i {...props} <span style="color:#fff;font-weight:bold">class</span>={name}&gt;
     <span style="color:#fff;font-weight:bold">return</span> icon
-}
-</code></pre></div><p>それか、debuggableにする価値もないような部分なら抑制すればよい。</p>
+}</code></pre></div>
+<p>それか、debuggableにする価値もないような部分なら抑制すればよい。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#fff;font-weight:bold">const</span> createIcon = (name: <span style="color:#fff;font-weight:bold">string</span>) =&gt; {
     <span style="color:#007f7f">// eslint-disable-next-line react/display-name
-</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">return</span> (props =&gt; &lt;<span style="font-weight:bold">i</span> {<span style="color:#007f7f">...props</span>} <span style="color:#007f7f">class</span>={name}&gt;)
-}
-</code></pre></div><hr>
+</span><span style="color:#007f7f"></span>    <span style="color:#fff;font-weight:bold">return</span> (props =&gt; &lt;i {...props} <span style="color:#fff;font-weight:bold">class</span>={name}&gt;)
+}</code></pre></div>
+<hr />
+
 <p><code>missing display name</code>と言われているが、<code>displayName</code>を指定する必要はない。（が、指定を推奨されている）</p>
+
 <ul>
 <li><a href="https://stackoverflow.com/questions/41581130/what-is-react-component-displayname-is-used-for">https://stackoverflow.com/questions/41581130/what-is-react-component-displayname-is-used-for</a></li>
 </ul>
-<hr>
+
+<hr />
+
 <div>
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6LP3L" target="_blank" rel="nofollow">
         <img border="0" width="300" height="250" alt="" src="https://www28.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001109000&mc=1"></a>
         <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6LP3L" alt="">
 </div>
-<hr>
+
+<hr />
 		</div>
 		
 <div class="post__tags tags clearfix">

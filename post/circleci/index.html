@@ -130,21 +130,25 @@ if (!doNotTrack) {
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#ビルドフローが手間">ビルドフローが手間</a></li>
-        <li><a href="#とりあえずシェル">とりあえずシェル</a></li>
-        <li><a href="#ciで自動化">CIで自動化</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#ビルドフローが手間">ビルドフローが手間</a></li>
+<li><a href="#とりあえずシェル">とりあえずシェル</a></li>
+<li><a href="#ciで自動化">CIで自動化</a></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
 			<p>Hugoのビルドとブログの更新を自動で行うようにした。</p>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35DFWV+F4RNAQ+50+2HLITT" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt="" src="https://www29.a8.net/svt/bgt?aid=190423759915&wid=001&eno=01&mid=s00000000018015049000&mc=1"></a>
@@ -155,21 +159,30 @@ if (!doNotTrack) {
             <img border="0" width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=190423759915&wid=001&eno=01&mid=s00000000018015102000&mc=1"></a>
             <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=35DFWV+F4RNAQ+50+2HWVS1" alt="">
 </div>
-<hr>
+
+<hr />
+
 <h3 id="ビルドフローが手間">ビルドフローが手間</h3>
+
 <ul>
 <li><a href="https://www.ted027.com/post/hugo">[参考記事]Hugo + GitHub Pagesでブログを作った話</a></li>
 </ul>
+
 <p>現状、手動でビルドしてブログを更新しようとすると以下のような感じ。</p>
+
 <ol>
 <li>markdownで記事を書く</li>
 <li><code>hugo</code>でビルド</li>
 <li>Hugoのレポジトリをcommit、pushする</li>
 <li>public(GitHub Pages用のレポジトリ)をcommit、pushする</li>
 </ol>
+
 <p>大した手間ではないが、この手間が原因でブログが終わる予感がする。</p>
+
 <p>2と4は自動化して1と3だけにしたい。</p>
-<hr>
+
+<hr />
+
 <h3 id="とりあえずシェル">とりあえずシェル</h3>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh:deploy.sh" data-lang="sh:deploy.sh"><span style="color:#fff;font-weight:bold">set</span> -ex
 hugo
@@ -179,15 +192,21 @@ git add .
 msg=<span style="color:#0ff;font-weight:bold">&#34;rebuilding site `date +&#39;%Y-%m-%d %H:%M:%S&#39;`&#34;</span>
 git commit -m <span style="color:#0ff;font-weight:bold">&#34;</span>$msg<span style="color:#0ff;font-weight:bold">&#34;</span>
 
-git push origin master
-</code></pre></div><ul>
+git push origin master</code></pre></div>
+<ul>
 <li>参考: <a href="https://github.com/uqichi/blog/blob/master/deploy.sh">https://github.com/uqichi/blog/blob/master/deploy.sh</a></li>
 </ul>
+
 <p>これで2と4がひと手間になった。</p>
-<hr>
+
+<hr />
+
 <h3 id="ciで自動化">CIで自動化</h3>
+
 <p>ひと手間になったが、できればひと手間すらかけたくないので、CIで自動化。</p>
+
 <p>GitHubとの連携が簡単な<a href="https://circleci.com">CircleCI</a>を使いました。</p>
+
 
 <figure >
     
@@ -197,31 +216,31 @@ git push origin master
     
 </figure>
 
+
 <ol>
-<li>
-<p>CircleCIに登録</p>
+<li><p>CircleCIに登録</p>
+
 <ul>
 <li><a href="https://circleci.com">https://circleci.com</a></li>
 <li>GitHubアカウント、Bitbucketアカウントで登録できる</li>
 <li>CIを回したいレポジトリをフォローしておく
 今回はHugoのレポジトリ</li>
-</ul>
-</li>
-<li>
-<p>CircleCI用のSSH Keyを作成</p>
+</ul></li>
+
+<li><p>CircleCI用のSSH Keyを作成</p>
+
 <ul>
-<li>ビルドした静的ファイルをGitHub Pagesのレポジトリにpushしたいので必要</li>
-</ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ssh-keygen -t rsa -b <span style="color:#ff0;font-weight:bold">4096</span> -m pem -C <span style="color:#0ff;font-weight:bold">&#34;CircleCI&#34;</span> -f id_rsa_circleci -N <span style="color:#0ff;font-weight:bold">&#34;&#34;</span>
-</code></pre></div></li>
-<li>
-<p>公開鍵をGitHubに登録する</p>
-</li>
-<li>
-<p>秘密鍵をCirCleCIに登録しておく</p>
+<li><p>ビルドした静的ファイルをGitHub Pagesのレポジトリにpushしたいので必要</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ssh-keygen -t rsa -b <span style="color:#ff0;font-weight:bold">4096</span> -m pem -C <span style="color:#0ff;font-weight:bold">&#34;CircleCI&#34;</span> -f id_rsa_circleci -N <span style="color:#0ff;font-weight:bold">&#34;&#34;</span></code></pre></div></li>
+</ul></li>
+
+<li><p>公開鍵をGitHubに登録する</p></li>
+
+<li><p>秘密鍵をCirCleCIに登録しておく</p>
+
 <ul>
-<li>
-<p>プロジェクト（レポジトリ）横の設定歯車から、<code>SSH Permissions</code>を選択し、<code>Add SSH Key</code>する</p>
+<li><p>プロジェクト（レポジトリ）横の設定歯車から、<code>SSH Permissions</code>を選択し、<code>Add SSH Key</code>する</p>
+
 
 <figure >
     
@@ -230,58 +249,60 @@ git push origin master
         
     
 </figure>
+</li>
 
-</li>
-<li>
-<p>同時に、<code>Checkout SSH Permissions</code>から、自動登録されたRead OnlyのKeyを<code>Remove</code>する。こちらが優先で使われてしまうため</p>
-</li>
-</ul>
-</li>
-<li>
-<p>.circleci/config.ymlを書く</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-:config.yml" data-lang=":config.yml"><span style="color:#fff;font-weight:bold">version</span>: <span style="color:#ff0;font-weight:bold">2</span>
-<span style="color:#fff;font-weight:bold">jobs</span>:
-<span style="color:#fff;font-weight:bold">build</span>:
-    <span style="color:#fff;font-weight:bold">docker</span>:
-    - <span style="color:#fff;font-weight:bold">image</span>: circleci/golang:<span style="color:#ff0;font-weight:bold">1.11</span>
-    <span style="color:#fff;font-weight:bold">working_directory</span>: ~/work
-    <span style="color:#fff;font-weight:bold">steps</span>:
-    - <span style="color:#fff;font-weight:bold">add_ssh_keys</span>:
-        <span style="color:#fff;font-weight:bold">fingerprints</span>:
+<li><p>同時に、<code>Checkout SSH Permissions</code>から、自動登録されたRead OnlyのKeyを<code>Remove</code>する。こちらが優先で使われてしまうため</p></li>
+</ul></li>
+
+<li><p>.circleci/config.ymlを書く</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-:config.yml" data-lang=":config.yml">version: <span style="color:#ff0;font-weight:bold">2</span>
+jobs:
+build:
+    docker:
+    - image: circleci/golang:<span style="color:#ff0;font-weight:bold">1.11</span>
+    working_directory: ~/work
+    steps:
+    - add_ssh_keys:
+        fingerprints:
             - <span style="color:#0ff;font-weight:bold">&#34;YO:UR:FI:NG:ER:PR:IN:T&#34;</span>
-    - <span style="color:#fff;font-weight:bold">run</span>:
-        <span style="color:#fff;font-weight:bold">name</span>: install hugo
-        <span style="color:#fff;font-weight:bold">command</span>: <span style="color:#0ff;font-weight:bold">|
+    - run:
+        name: install hugo
+        command: <span style="color:#0ff;font-weight:bold">|
 </span><span style="color:#0ff;font-weight:bold">            mkdir ~/src; cd $_</span>
             git clone https://github.com/gohugoio/hugo.git
             cd hugo
             go install
     - checkout
-    - <span style="color:#fff;font-weight:bold">run</span>:
-        <span style="color:#fff;font-weight:bold">name</span>: build
-        <span style="color:#fff;font-weight:bold">command</span>: <span style="color:#0ff;font-weight:bold">|
+    - run:
+        name: build
+        command: <span style="color:#0ff;font-weight:bold">|
 </span><span style="color:#0ff;font-weight:bold">            rm -rf public</span>
             git clone git@github.com:[github_user]/[github_user].github.io public
             hugo
-    - <span style="color:#fff;font-weight:bold">run</span>:
-        <span style="color:#fff;font-weight:bold">name</span>: push
-        <span style="color:#fff;font-weight:bold">command</span>: <span style="color:#0ff;font-weight:bold">|
+    - run:
+        name: push
+        command: <span style="color:#0ff;font-weight:bold">|
 </span><span style="color:#0ff;font-weight:bold">            cd public</span>
             git config --global user.name <span style="color:#0ff;font-weight:bold">&#34;CircleCI&#34;</span>
             git config --global user.email <span style="color:#0ff;font-weight:bold">&#34;circleci@example.com&#34;</span>
             git add --all
             msg=<span style="color:#0ff;font-weight:bold">&#34;rebuilding site `date`&#34;</span>
             git commit -m <span style="color:#0ff;font-weight:bold">&#34;$msg&#34;</span>
-            git push origin master
-
-</code></pre></div></li>
+            git push origin master</code></pre></div></li>
 </ol>
+
 <p>適当な別ディレクトリ使ってhugoをインストールしてからビルドしてcommit, pushする。</p>
+
 <p>本当はさっきの<code>deploy.sh</code>を使ってサラッと書きたかったけど、CIからsubmoduleをpushするところが手元と同じようには動かず、結局publicを消してからcloneしてきてビルドしてpush、という微妙な感じに。</p>
-<hr>
+
+<hr />
+
 <p>何はともあれ、これでHugoのレポジトリをpushすればCIが走って、勝手にブログも更新してくれるようになりました。</p>
+
 <p>この作業が無駄にならないことを祈る。</p>
-<hr>
+
+<hr />
+
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FEffective-DevOps-%25E2%2580%25954%25E6%259C%25AC%25E6%259F%25B1%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%258C%2581%25E7%25B6%259A%25E5%258F%25AF%25E8%2583%25BD%25E3%2581%25AA%25E7%25B5%2584%25E7%25B9%2594%25E6%2596%2587%25E5%258C%2596%25E3%2581%25AE%25E8%2582%25B2%25E3%2581%25A6%25E6%2596%25B9-Jennifer-Davis%2Fdp%2F4873118352"
@@ -324,7 +345,9 @@ git push origin master
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+5Z6WX" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -337,7 +360,8 @@ git push origin master
             src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001013000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+614CX" alt="">
 </div>
-<hr>
+
+<hr />
 		</div>
 		
 <div class="post__tags tags clearfix">

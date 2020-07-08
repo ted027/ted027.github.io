@@ -131,21 +131,24 @@
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#事前準備">事前準備</a></li>
-        <li><a href="#仮想化を有効にする">仮想化を有効にする</a></li>
-        <li><a href="#docker-for-windowsをインストール">Docker for Windowsをインストール</a></li>
-        <li><a href="#使ってみる">使ってみる</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#事前準備">事前準備</a></li>
+<li><a href="#仮想化を有効にする">仮想化を有効にする</a></li>
+<li><a href="#docker-for-windowsをインストール">Docker for Windowsをインストール</a></li>
+<li><a href="#使ってみる">使ってみる</a></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<hr>
+			<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35DFWV+F4RNAQ+50+2HLITT" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt="" src="https://www29.a8.net/svt/bgt?aid=190423759915&wid=001&eno=01&mid=s00000000018015049000&mc=1"></a>
@@ -156,46 +159,68 @@
             <img border="0" width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=190423759915&wid=001&eno=01&mid=s00000000018015102000&mc=1"></a>
             <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=35DFWV+F4RNAQ+50+2HWVS1" alt="">
 </div>
-<hr>
+
+<hr />
+
 <p>Windows10にDocker for Windowsをインストールした際の手順をまとめておきます。</p>
-<hr>
+
+<hr />
+
 <h3 id="事前準備">事前準備</h3>
+
 <p>以下のリンクから登録し、Docker IDを取得する。</p>
+
 <ul>
 <li><a href="https://hub.docker.com/signup">https://hub.docker.com/signup</a></li>
 </ul>
+
 <p>※ 既にDocker IDを持っている場合はSign Inする</p>
-<hr>
+
+<hr />
+
 <h3 id="仮想化を有効にする">仮想化を有効にする</h3>
+
 <p>「コントロールパネル」→「プログラム」→「Windowsの機能」から、Hyper-VのチェックをONにする</p>
+
 <p>※ OFF→ONにした場合はPCを再起動する</p>
-<hr>
+
+<hr />
+
 <h3 id="docker-for-windowsをインストール">Docker for Windowsをインストール</h3>
+
 <ol>
 <li>以下のリンクからインストーラをダウンロードする
+
 <ul>
 <li><a href="https://docs.docker.com/docker-for-windows/install/">https://docs.docker.com/docker-for-windows/install/</a></li>
-</ul>
-</li>
+</ul></li>
 <li>インストーラを実行</li>
 <li>インストールが終了したら、「Close and log out」→「Docker for Windows」を起動し再度ログイン</li>
 </ol>
-<hr>
+
+<hr />
+
 <h3 id="使ってみる">使ってみる</h3>
+
 <p>powershellを起動して実行。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps" data-lang="ps">$ docker --version
-</code></pre></div><p>バージョンが表示されれば成功。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps" data-lang="ps">$ docker <span style="color:#f00">--version</span></code></pre></div>
+<p>バージョンが表示されれば成功。</p>
+
 <p>次は適当なイメージをpullしてコンテナを作成してみる。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps" data-lang="ps">$ docker run -it -d alpine:latest
-$ docker ps
-</code></pre></div><p><code>docker ps</code>で確認すると、コンテナが立ち上がっていることがわかる。</p>
+$ docker <span style="color:#f00">ps</span></code></pre></div>
+<p><code>docker ps</code>で確認すると、コンテナが立ち上がっていることがわかる。</p>
+
 <pre><code>CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 4c2b2x31f6gh        alpine:latest       &quot;/bin/sh&quot;           3 minutes ago       Up 3 minutes                            ...
-</code></pre><p>乗り込んでみる。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps" data-lang="ps">$ docker exec -it {countainer_id} /bin/sh
-</code></pre></div><p>ひとしきり試し終わったら<code>docker stop</code>でコンテナを落とす。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps" data-lang="ps">$ docker stop {countainer_id}
-</code></pre></div><hr>
+</code></pre>
+
+<p>乗り込んでみる。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps" data-lang="ps">$ docker exec -it {countainer_id} /bin<span style="color:#f00">/sh</span></code></pre></div>
+<p>ひとしきり試し終わったら<code>docker stop</code>でコンテナを落とす。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ps" data-lang="ps">$ docker stop {countainer_id}</code></pre></div>
+<hr />
+
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FDocker%25E5%25AE%259F%25E8%25B7%25B5%25E3%2582%25AC%25E3%2582%25A4%25E3%2583%2589-%25E7%25AC%25AC2%25E7%2589%2588-impress-top-gear%2Fdp%2F4295005525"
@@ -237,7 +262,9 @@ $ docker ps
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6O1Z5" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -250,7 +277,8 @@ $ docker ps
             src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001119000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6NU9D" alt="">
 </div>
-<hr>
+
+<hr />
 		</div>
 		
 <div class="post__tags tags clearfix">

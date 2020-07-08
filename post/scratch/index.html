@@ -130,31 +130,43 @@ if (!doNotTrack) {
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#導入">導入</a></li>
-        <li><a href="#開発画面">開発画面</a></li>
-        <li><a href="#スプライトステージの準備">スプライト、ステージの準備</a></li>
-        <li><a href="#プログラミングする">プログラミングする</a></li>
-        <li><a href="#できた">できた</a></li>
-        <li><a href="#おわり">おわり</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#導入">導入</a></li>
+<li><a href="#開発画面">開発画面</a></li>
+<li><a href="#スプライト-ステージの準備">スプライト、ステージの準備</a></li>
+<li><a href="#プログラミングする">プログラミングする</a>
+<ul>
+<li><a href="#ボールをプログラミング">ボールをプログラミング</a></li>
+<li><a href="#バットをプログラミング">バットをプログラミング</a></li>
+<li><a href="#再びボールをプログラミング">再びボールをプログラミング</a></li>
+<li><a href="#調整する">調整する</a></li>
+</ul></li>
+<li><a href="#できた">できた</a></li>
+<li><a href="#おわり">おわり</a></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
 			<p>将来子供と遊ぶために教育用プログラミング言語を触ってみる。</p>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="//af.moshimo.com/af/c/click?a_id=1459161&p_id=1757&pc_id=3359&pl_id=24974&guid=ON" target="_blank" rel="nofollow"><img src="//image.moshimo.com/af-img/0303/000000024974.jpg" width="702" height="90" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=1459161&p_id=1757&pc_id=3359&pl_id=24974" width="1" height="1" style="border:none;">
 </div>
 <div class="narrow__area">
     <a href="//af.moshimo.com/af/c/click?a_id=1459161&p_id=1757&pc_id=3359&pl_id=24973&guid=ON" target="_blank" rel="nofollow"><img src="//image.moshimo.com/af-img/0303/000000024973.jpg" width="300" height="250" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=1459161&p_id=1757&pc_id=3359&pl_id=24973" width="1" height="1" style="border:none;">
 </div>
-<hr>
+
+<hr />
+
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E8%25A6%25AA%25E5%25AD%2590%25E3%2581%25A7%25E6%25A5%25BD%25E3%2581%2597%25E3%2581%258F%25E5%25AD%25A6%25E3%2581%25B6-%25E3%2583%259E%25E3%2582%25A4%25E3%2583%25B3%25E3%2582%25AF%25E3%2583%25A9%25E3%2583%2595%25E3%2583%2588%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0-%25E3%2581%25BC%25E3%2581%2586%25E3%2581%2591%25E3%2582%2593%25E3%2582%25AD%25E3%2583%2583%25E3%2582%25BA-Tech-School%2Fdp%2F479814911X"
@@ -199,13 +211,21 @@ if (!doNotTrack) {
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-<hr>
+
+<hr />
+
 <p>小学校でプログラミングを教えるようになるそうですね。</p>
+
 <p>今回取り上げるScratchは、マサチューセッツ工科大学で開発されたプログラミングの学習用言語。</p>
+
 <p>日本でも、NHK教育テレビの<a href="http://www.nhk.or.jp/sougou/programming/">Why!?プログラミング</a>の題材に上がるなど、子供用/教育用のプログラミングとして地位を確立している。多分、授業に取り入れるとしたらこのあたりにになりそう。</p>
-<hr>
+
+<hr />
+
 <h3 id="導入">導入</h3>
+
 <p>ブラウザでできるので環境構築は不要。「よくある質問」を見ると、バージョン2.2.6現在の対応環境は以下。</p>
+
 <ul>
 <li>Google Chrome 35以降</li>
 <li>Mozilla Firefox 31以降</li>
@@ -213,11 +233,17 @@ if (!doNotTrack) {
 <li>Microsoft Edge</li>
 <li>※ 動作には、Adobe Flash Player 10.2以降が必須(Windows 2000以降もしくはMac OS X 10.4以降でのみ使用可能)</li>
 </ul>
+
 <p><a href="https://scratch.mit.edu/">Scratch トップページ</a></p>
+
 <p>人の作ったプロジェクトとか見てみると楽しい。本格的なフラッシュゲームも多数あります。</p>
+
 <p>左上の「作る」から開発画面へ。懇切丁寧というわけでもないけど、チュートリアルもある。</p>
-<hr>
+
+<hr />
+
 <h3 id="開発画面">開発画面</h3>
+
 
 <figure >
     
@@ -227,9 +253,13 @@ if (!doNotTrack) {
     
 </figure>
 
+
 <p>真ん中がビジュアルプログラミングをする画面。右上画面の猫ちゃんをどう動かすかを書きます。コードは自分でガチャガチャ書く必要はなく、左端から目当てのパーツを持ってきて組み合わせる。ビジュアルプログラミングなので。</p>
+
 <p>右上が成果物の画面。今は真ん中に猫ちゃんだけ。</p>
+
 <p>右下で「スプライト（オブジェクト、今は猫ちゃん一匹）」「ステージ（背景、今は真っ白）」のサイズや配置を変えられる。下の青いボタンで変更や追加もできます。</p>
+
 
 <figure >
     
@@ -239,11 +269,17 @@ if (!doNotTrack) {
     
 </figure>
 
-<hr>
-<h3 id="スプライトステージの準備">スプライト、ステージの準備</h3>
+
+<hr />
+
+<h3 id="スプライト-ステージの準備">スプライト、ステージの準備</h3>
+
 <p>僕は野球オタクなので、野球っぽい何かを作ります。</p>
+
 <p>ステージは<code>Baseball 1</code>に、スプライトはそれっぽいのを集める。</p>
+
 <p><code>Batter</code>という適役なスプライトもあるけど、長打力に定評のありそうな<code>Bear</code>を打席に送ります。</p>
+
 
 <figure >
     
@@ -253,13 +289,21 @@ if (!doNotTrack) {
     
 </figure>
 
+
 <p>バットの角度がもう広角打法（バットは無かったので「I」に頑張ってもらいます）。</p>
+
 <p>投手は残念ながらクリストファー・ロビンが見当たらなかったので、リーチのありそうな<code>Dorian</code>を採用。<code>Baseball</code>を持たせて準備完了。</p>
-<hr>
+
+<hr />
+
 <h3 id="プログラミングする">プログラミングする</h3>
+
 <h4 id="ボールをプログラミング">ボールをプログラミング</h4>
+
 <p>とりあえず、<code>Dorian</code>がボールを投げないと始まらないので、ボールをプログラミングする。</p>
+
 <p>右下のスプライト画面からボールを選択し、中央のプログラミング画面にパーツを繋げていく。</p>
+
 
 <figure >
     
@@ -269,10 +313,15 @@ if (!doNotTrack) {
     
 </figure>
 
+
 <p>開始ボタンを押したら、ボールが上にすっ飛んでいき、<code>Bear</code>の前に来たら<code>ボール到着</code>イベントを送信するようにした。このイベント送信を使うと、他のスプライトとの連携ができる。</p>
-<hr>
+
+<hr />
+
 <h4 id="バットをプログラミング">バットをプログラミング</h4>
+
 <p>今度はイベントを受け取るバット側の動作をプログラミングする。</p>
+
 
 <figure >
     
@@ -282,10 +331,15 @@ if (!doNotTrack) {
     
 </figure>
 
+
 <p>何となくスイングしてるっぽい動きに見える。多分。</p>
+
 <p>打ったら<code>ボール粉砕</code>イベントを送信するので、ボール側でこれを受け取り、飛んでいくようにプログラミングする。</p>
-<hr>
+
+<hr />
+
 <h4 id="再びボールをプログラミング">再びボールをプログラミング</h4>
+
 
 <figure >
     
@@ -295,11 +349,17 @@ if (!doNotTrack) {
     
 </figure>
 
+
 <p>左側のブロックが飛んでいく動作。画面端に到達したらボールを消して、画面から出ていった風に見せる。</p>
+
 <p>合わせて、開始ボタンを押した際にボールを表示し、初期位置に配置するようにした。</p>
-<hr>
+
+<hr />
+
 <h4 id="調整する">調整する</h4>
+
 <p>開始ボタンを押した際、バットも初期位置に戻すようにする。</p>
+
 
 <figure >
     
@@ -309,7 +369,9 @@ if (!doNotTrack) {
     
 </figure>
 
+
 <p>ついでに<code>Dorian</code>もプログラミングして、投げてる風の動作をさせることに。</p>
+
 
 <figure >
     
@@ -319,9 +381,13 @@ if (!doNotTrack) {
     
 </figure>
 
+
 <p>コスチュームというのは、スプライトの外見のこと。スプライトのポーズや服装等が何パターンかある場合、今回みたいに途中で変えたりできます。</p>
-<hr>
+
+<hr />
+
 <h3 id="できた">できた</h3>
+
 <div class="img-overlay">
     <div class="overlay" style="position:absolute;top:0%;left:0%;width:100%">
         <div class="progress active">
@@ -333,13 +399,21 @@ if (!doNotTrack) {
         Your browser does not support the video tag.
     </video>
 </div>
+
 <p>レフトスタンドに叩き込みました。</p>
-<hr>
+
+<hr />
+
 <h3 id="おわり">おわり</h3>
+
 <p>この条件の時にスペースキーを押したら…みたいな処理も加えると、簡単なゲームが作れそう。</p>
+
 <p>小学校の授業でやったら、最初に先生の画面を真似しながら作って、「こういう動きを作りたいんだけどどうしたらいい？」って問題出して、終わったら自由に作ってていいよ、って感じですかね。</p>
+
 <p>自分がやった感想としては、左端からコードブロックを探す時、目当てのものを探すのがちょっと大変。でも文法を覚えて書くのと比べれば全然ハードルは低いです。</p>
-<hr>
+
+<hr />
+
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2582%25AD%25E3%2583%2583%25E3%2582%25BA-%25E5%25AD%2590%25E3%2581%25A9%25E3%2582%2582%25E3%2581%25A8%25E5%25AD%25A6%25E3%2581%25B6-Scratch-%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E5%2585%25A5%25E9%2596%2580-%25E7%25AB%25B9%25E6%259E%2597%2Fdp%2F4295001317"
@@ -384,13 +458,16 @@ if (!doNotTrack) {
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-<hr>
+
+<hr />
+
 <div>
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6MJYP" target="_blank" rel="nofollow">
         <img border="0" width="300" height="250" alt="" src="https://www26.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001113000&mc=1"></a>
         <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6MJYP" alt="">
 </div>
-<hr>
+
+<hr />
 		</div>
 		
 <div class="post__tags tags clearfix">

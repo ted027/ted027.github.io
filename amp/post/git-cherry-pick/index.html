@@ -131,21 +131,27 @@
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#概要">概要</a></li>
-        <li><a href="#通常のcherry-pick">通常のcherry-pick</a></li>
-        <li><a href="#範囲を指定してcherry-pick">範囲を指定してcherry-pick</a></li>
-        <li><a href="#マージコミットのcherry-pick">マージコミットのcherry-pick</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#概要">概要</a></li>
+<li><a href="#通常のcherry-pick">通常のcherry-pick</a></li>
+<li><a href="#範囲を指定してcherry-pick">範囲を指定してcherry-pick</a></li>
+<li><a href="#マージコミットのcherry-pick">マージコミットのcherry-pick</a>
+<ul>
+<li><a href="#解説">解説</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<hr>
+			<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+5Z6WX" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -158,48 +164,65 @@
             src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001013000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+614CX" alt="">
 </div>
-<hr>
+
+<hr />
+
 <h3 id="概要">概要</h3>
+
 <p>gitでコミットを他のブランチにも反映させる際に<code>cherry-pick</code>(摘み食い)のコマンドを使う。</p>
-<hr>
+
+<hr />
+
 <h3 id="通常のcherry-pick">通常のcherry-pick</h3>
+
 <p>取り込むコミットIDを調べる。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git log
-</code></pre></div><p>もしくは、GitHubやGitLabのUI上でコミット履歴から調べられる。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git log</code></pre></div>
+<p>もしくは、GitHubやGitLabのUI上でコミット履歴から調べられる。</p>
+
 <p>コミットIDが分かったら、<code>cherry-pick</code>で指定し取り込む。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git cherry-pick {commit_id}
-</code></pre></div><hr>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git cherry-pick {commit_id}</code></pre></div>
+<hr />
+
 <h3 id="範囲を指定してcherry-pick">範囲を指定してcherry-pick</h3>
+
 <p>コミットをまとめて取り込むときは範囲指定が出来る。</p>
+
 <p>ただし、<strong>始点に指定したコミットIDの次のコミット</strong>から取り込むので注意する。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#007f7f"># commit_id1の次のコミットからcommit_id2までを取り込む</span>
-git cherry-pick {commit_id1}..{commit_id2}
-</code></pre></div><p><code>^</code>をつけると「一つ前のコミット」を指定できるので、commit_id1から取り込む場合は以下のように指定する。</p>
+git cherry-pick {commit_id1}..{commit_id2}</code></pre></div>
+<p><code>^</code>をつけると「一つ前のコミット」を指定できるので、commit_id1から取り込む場合は以下のように指定する。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#007f7f"># commit_id1の次のコミットからcommit_id2までを取り込む</span>
-$ git cherry-pick {commit_id1}^..{commit_id2}
-</code></pre></div><hr>
+$ git cherry-pick {commit_id1}^..{commit_id2}</code></pre></div>
+<hr />
+
 <h3 id="マージコミットのcherry-pick">マージコミットのcherry-pick</h3>
+
 <p>コミットをまとめて取り込むために、マージコミットを取り入れたいことがある。ただし、マージコミットを普通にcherry-pickしようとすると失敗する。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git cherry-pick {commit_id}
 error: commit {commit_id} is a merge but no -m option was given.
-fatal: cherry-pick failed
-</code></pre></div><p>マージによって、マージされた側ブランチに生じた差分を取り込む場合、以下のように<code>m</code>オプションを指定すれば良い。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git cherry-pick -m <span style="color:#ff0;font-weight:bold">1</span> {commit_id}
-</code></pre></div><h4 id="解説">解説</h4>
+fatal: cherry-pick failed</code></pre></div>
+<p>マージによって、マージされた側ブランチに生じた差分を取り込む場合、以下のように<code>m</code>オプションを指定すれば良い。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git cherry-pick -m <span style="color:#ff0;font-weight:bold">1</span> {commit_id}</code></pre></div>
+<h4 id="解説">解説</h4>
+
 <p>理由は、マージコミットには2つのブランチを統合しているため親コミットが2つ存在し、どちらの親との差分を取り込めばいいかわからないため。</p>
+
 <p><code>git log</code>でマージコミットを確認すると、<code>Merge</code>欄に2つの親コミットが表示される。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git log {commit_id} <span style="color:#007f7f"># &lt;- マージコミット</span>
 
 commit {commit_id}(branch_name)
 Merge: {parent_id1} {parent_id2}
 Author: John Doe &lt;john.doe@mail.com&gt;
-Date:   Fri Sep <span style="color:#ff0;font-weight:bold">27</span> 00:00:00 <span style="color:#ff0;font-weight:bold">2019</span> +0000
-...
-</code></pre></div><p><code>-m</code>(<code>--mainline</code>)オプションの後に数字を指定すると、何番目の親との差分を取り込むか指定できる（<code>-m 1</code>なら{parent_id1}との差分、<code>-m 2</code>なら{parent_id2}との差分を取り込む）。</p>
+Date:   Fri Sep <span style="color:#ff0;font-weight:bold">27</span> <span style="color:#ff0;font-weight:bold">00</span>:00:00 <span style="color:#ff0;font-weight:bold">2019</span> +0000
+...</code></pre></div>
+<p><code>-m</code>(<code>--mainline</code>)オプションの後に数字を指定すると、何番目の親との差分を取り込むか指定できる（<code>-m 1</code>なら{parent_id1}との差分、<code>-m 2</code>なら{parent_id2}との差分を取り込む）。</p>
+
 <p>マージコミットを取り込む時、多くの場合、マージされる側（{parent_id1}）に生じる変更を取り込みたいはず。なので上に書いたように、</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git cherry-pick -m <span style="color:#ff0;font-weight:bold">1</span> {commit_id}
-</code></pre></div><p>となる。</p>
-<hr>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ git cherry-pick -m <span style="color:#ff0;font-weight:bold">1</span> {commit_id}</code></pre></div>
+<p>となる。</p>
+
+<hr />
+
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E5%2585%25A5%25E9%2596%2580UNIX%25E3%2582%25B7%25E3%2582%25A7%25E3%2583%25AB%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0%25E2%2580%2595%25E3%2582%25B7%25E3%2582%25A7%25E3%2583%25AB%25E3%2581%25AE%25E5%259F%25BA%25E7%25A4%258E%25E3%2581%258B%25E3%2582%2589%25E5%25AD%25A6%25E3%2581%25B6UNIX%25E3%2581%25AE%25E4%25B8%2596%25E7%2595%258C-%25E3%2583%2596%25E3%2583%25AB%25E3%2583%25BC%25E3%2582%25B9%25E3%2583%25BB%25E3%2583%2596%25E3%2583%25AA%25E3%2583%25B3%2Fdp%2F4797321946"
@@ -242,7 +265,9 @@ Date:   Fri Sep <span style="color:#ff0;font-weight:bold">27</span> 00:00:00 <sp
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6O1Z5" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -255,7 +280,8 @@ Date:   Fri Sep <span style="color:#ff0;font-weight:bold">27</span> 00:00:00 <sp
             src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001119000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6NU9D" alt="">
 </div>
-<hr>
+
+<hr />
 		</div>
 		
 <div class="post__tags tags clearfix">

@@ -130,19 +130,23 @@ if (!doNotTrack) {
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#使ってみる">使ってみる</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#使ってみる">使ってみる</a></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
 			<p>PlantUMLで図を作るとき、各種サービスやその他色々なアイコンを入れ込むことができる。</p>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7O95GY+3TVC+TUVZL" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -155,7 +159,9 @@ if (!doNotTrack) {
             src="https://www28.a8.net/svt/bgt?aid=190503911464&wid=001&eno=01&mid=s00000017868005009000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=35F5RB+7O95GY+3TVC+TTLOX" alt="">
 </div>
-<hr>
+
+<hr />
+
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E3%2583%2580%25E3%2582%25A4%25E3%2582%25A2%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%25A0%25E5%2588%25A5UML%25E5%25BE%25B9%25E5%25BA%2595%25E6%25B4%25BB%25E7%2594%25A8-%25E7%25AC%25AC2%25E7%2589%2588-DB-Magazine-SELECTION%2Fdp%2F4798118443"
@@ -197,26 +203,33 @@ if (!doNotTrack) {
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-<hr>
+
+<hr />
+
 <ul>
-<li>
-<p><a href="https://www.ted027.com/post/puml-win">[参考記事]PlantUML + Visual Studio Codeを導入する（Windows環境）</a></p>
-</li>
-<li>
-<p><a href="https://www.ted027.com/post/puml-ubu">[参考記事]PlantUML + Visual Studio Codeを導入する（Ubuntu環境）</a></p>
-</li>
+<li><p><a href="https://www.ted027.com/post/puml-win">[参考記事]PlantUML + Visual Studio Codeを導入する（Windows環境）</a></p></li>
+
+<li><p><a href="https://www.ted027.com/post/puml-ubu">[参考記事]PlantUML + Visual Studio Codeを導入する（Ubuntu環境）</a></p></li>
 </ul>
-<hr>
+
+<hr />
+
 <p>UML図とかちょっとした説明に使う図に、あんなアイコンを入れたい、あのサービスのアイコンを入れたい…と思うときがある。</p>
+
 <p>自分はそういう時、<code>plantuml-icon-font-sprites</code>を使っています。</p>
+
 <ul>
 <li><a href="https://github.com/tupadr3/plantuml-icon-font-sprites">https://github.com/tupadr3/plantuml-icon-font-sprites</a></li>
 </ul>
+
 <p>適当なフォルダを覗くと、画像ファイルも一緒に入っているので、確認しながら選ぶことができる。</p>
-<hr>
+
+<hr />
+
 <h3 id="使ってみる">使ってみる</h3>
+
 <p>適当に使ってみる。</p>
-<pre><code class="language-plantuml" data-lang="plantuml">@startuml
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plantuml" data-lang="plantuml">@startuml
 
 !define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v2.0.0
 !includeurl ICONURL/common.puml
@@ -264,8 +277,8 @@ google .[hidden]r. apple
 apple .[hidden]r. fb
 fb .[hidden]r. amazon
 
-@enduml
-</code></pre>
+@enduml</code></pre></div>
+
 <figure >
     
         <img src="/img/puml-various-1.png"
@@ -274,9 +287,11 @@ fb .[hidden]r. amazon
     
 </figure>
 
+
 <p>どこかで見たことあるアイコン。</p>
-<hr>
-<pre><code class="language-plantuml" data-lang="plantuml">@startuml
+
+<hr />
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plantuml" data-lang="plantuml">@startuml
 
 !define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v2.0.0
 !includeurl ICONURL/common.puml
@@ -300,8 +315,8 @@ FA5_USER(user) #White {
     DEV_UBUNTU(ubuntu) #White
 }
 
-@enduml
-</code></pre>
+@enduml</code></pre></div>
+
 <figure >
     
         <img src="/img/puml-various-2.png"
@@ -310,10 +325,13 @@ FA5_USER(user) #White {
     
 </figure>
 
+
 <p><code>jedi_order</code>がある…！</p>
-<hr>
+
+<hr />
+
 <p><code>example</code>にはこんなのが載ってます。</p>
-<pre><code class="language-plantuml" data-lang="plantuml">@startuml
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-plantuml" data-lang="plantuml">@startuml
 
 skinparam defaultTextAlignment center
 
@@ -366,8 +384,8 @@ gitlab ..&gt; redis : tcp/ip
 
 crond --&gt; letsencrypt : starts every month
 
-@enduml
-</code></pre>
+@enduml</code></pre></div>
+
 <figure >
     
         <img src="/img/puml-various-3.png"
@@ -376,20 +394,21 @@ crond --&gt; letsencrypt : starts every month
     
 </figure>
 
-<hr>
+
+<hr />
+
 <ul>
-<li>
-<p><a href="https://www.ted027.com/post/puml-aws">[参考記事]PlantUMLでAWSアイコンを使ったシステム構成図を作る</a></p>
-</li>
-<li>
-<p><a href="https://www.ted027.com/post/puml-win">[参考記事]PlantUML + Visual Studio Codeを導入する（Windows環境）</a></p>
-</li>
-<li>
-<p><a href="https://www.ted027.com/post/puml-ubu">[参考記事]PlantUML + Visual Studio Codeを導入する（Ubuntu環境）</a></p>
-</li>
+<li><p><a href="https://www.ted027.com/post/puml-aws">[参考記事]PlantUMLでAWSアイコンを使ったシステム構成図を作る</a></p></li>
+
+<li><p><a href="https://www.ted027.com/post/puml-win">[参考記事]PlantUML + Visual Studio Codeを導入する（Windows環境）</a></p></li>
+
+<li><p><a href="https://www.ted027.com/post/puml-ubu">[参考記事]PlantUML + Visual Studio Codeを導入する（Ubuntu環境）</a></p></li>
 </ul>
-<hr>
-<hr>
+
+<hr />
+
+<hr />
+
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E5%25BE%25B9%25E5%25BA%2595%25E6%2594%25BB%25E7%2595%25A5-AWS%25E8%25AA%258D%25E5%25AE%259A-%25E3%2582%25BD%25E3%2583%25AA%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%25BC%25E3%2582%25AD%25E3%2583%2586%25E3%2582%25AF%25E3%2583%2588-%25E2%2580%2593-%25E3%2582%25A2%25E3%2582%25BD%25E3%2582%25B7%25E3%2582%25A8%25E3%2582%25A4%25E3%2583%2588%25E6%2595%2599%25E7%25A7%2591%25E6%259B%25B8%2Fdp%2F4295005495"
@@ -431,7 +450,9 @@ crond --&gt; letsencrypt : starts every month
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+5ZEMP" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -444,7 +465,8 @@ crond --&gt; letsencrypt : starts every month
             src="https://www25.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001014000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+61C2P" alt="">
 </div>
-<hr>
+
+<hr />
 		</div>
 		
 <div class="post__tags tags clearfix">

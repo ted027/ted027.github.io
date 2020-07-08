@@ -127,7 +127,9 @@ if (!doNotTrack) {
 			<br/>
 		</header><div class="content post__content clearfix">
 			<p>PolicyDocumentでワイルドカードを使って部分指定しようとしたところ失敗した。</p>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7O95GY+3TVC+TUVZL" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -140,53 +142,62 @@ if (!doNotTrack) {
             src="https://www28.a8.net/svt/bgt?aid=190503911464&wid=001&eno=01&mid=s00000017868005009000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=35F5RB+7O95GY+3TVC+TTLOX" alt="">
 </div>
-<hr>
+
+<hr />
+
 <p>AWSでポリシーを作成しアクセス制御を行う際、</p>
+
 <ul>
 <li><code>Action</code>で動作を、</li>
 <li><code>Principal</code>で操作するユーザやロールを、</li>
 <li><code>Resource</code>で操作対象のリソースを、</li>
 </ul>
+
 <p>それぞれ指定することができる。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#fff;font-weight:bold">PolicyName</span>: MyS3Policy
-<span style="color:#fff;font-weight:bold">PolicyDocument</span>: 
-  <span style="color:#fff;font-weight:bold">Version</span>: <span style="color:#0ff;font-weight:bold">&#34;2012-10-17&#34;</span>
-  <span style="color:#fff;font-weight:bold">Statement</span>: 
-  - <span style="color:#fff;font-weight:bold">Effect</span>: Allow
-    <span style="color:#fff;font-weight:bold">Action</span>:
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">PolicyName: MyS3Policy
+PolicyDocument: 
+  Version: <span style="color:#0ff;font-weight:bold">&#34;2012-10-17&#34;</span>
+  Statement: 
+  - Effect: Allow
+    Action:
       - s3:PutObject
       - s3:GetObject
-    <span style="color:#fff;font-weight:bold">Principal</span>: 
-      <span style="color:#fff;font-weight:bold">AWS</span>:
+    Principal: 
+      AWS:
         - arn:aws:iam::<span style="color:#ff0;font-weight:bold">123456789012</span>:user/username
-    <span style="color:#fff;font-weight:bold">Resource</span>:
-      - arn:aws:s3:::examplebucket/exampledir
-</code></pre></div><p>例えばこんなPolicyを作ると、「arn:aws:iam::123456789012:user/username」のarnを持つユーザーが、「arn:aws:s3:::examplebucket/exampledir」のリソースに対し、<code>PutObject</code>と<code>GetObject</code>できるようになる。</p>
+    Resource:
+      - arn:aws:s3:::examplebucket/exampledir</code></pre></div>
+<p>例えばこんなPolicyを作ると、「arn:aws:iam::123456789012:user/username」のarnを持つユーザーが、「arn:aws:s3:::examplebucket/exampledir」のリソースに対し、<code>PutObject</code>と<code>GetObject</code>できるようになる。</p>
+
 <p>このあたりの記載は<code>*</code>(ワイルドカード)を使って「何でも」を指定できる。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">  <span style="color:#fff;font-weight:bold">Statement</span>: 
-  - <span style="color:#fff;font-weight:bold">Effect</span>: Allow
-    <span style="color:#fff;font-weight:bold">Action</span>: <span style="color:#0ff;font-weight:bold">&#39;*&#39;</span>
-    <span style="color:#fff;font-weight:bold">Principal</span>:
-      <span style="color:#fff;font-weight:bold">AWS</span>: <span style="color:#0ff;font-weight:bold">&#39;*&#39;</span>
-    <span style="color:#fff;font-weight:bold">Resource</span>: <span style="color:#0ff;font-weight:bold">&#39;*&#39;</span>
-</code></pre></div><p><code>Action</code>や<code>Resource</code>は、文字列中に<code>*</code>を入れて部分指定をすることもできる。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">  Statement: 
+  - Effect: Allow
+    Action: <span style="color:#0ff;font-weight:bold">&#39;*&#39;</span>
+    Principal:
+      AWS: <span style="color:#0ff;font-weight:bold">&#39;*&#39;</span>
+    Resource: <span style="color:#0ff;font-weight:bold">&#39;*&#39;</span></code></pre></div>
+<p><code>Action</code>や<code>Resource</code>は、文字列中に<code>*</code>を入れて部分指定をすることもできる。</p>
+
 <p>ただし、<code>Principal</code>で同じことをしようとするとエラーになる。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">  <span style="color:#fff;font-weight:bold">Statement</span>: 
-  - <span style="color:#fff;font-weight:bold">Effect</span>: Allow
-    <span style="color:#fff;font-weight:bold">Action</span>:
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">  Statement: 
+  - Effect: Allow
+    Action:
       - s3:Put*
       - s3:Get*
-    <span style="color:#fff;font-weight:bold">Principal</span>: 
-      <span style="color:#fff;font-weight:bold">AWS</span>:
+    Principal: 
+      AWS:
         <span style="color:#007f7f"># - arn:aws:iam::123456789012:user/user* &lt;= エラーになる</span>
         - arn:aws:iam::<span style="color:#ff0;font-weight:bold">123456789012</span>:user/user1
         - arn:aws:iam::<span style="color:#ff0;font-weight:bold">123456789012</span>:user/user2
         - arn:aws:iam::<span style="color:#ff0;font-weight:bold">123456789012</span>:user/user_admin
-    <span style="color:#fff;font-weight:bold">Resource</span>:
-      - arn:aws:s3:::examplebucket/*
-</code></pre></div><p>Principalは<code>*</code>で全て許可するか、そうでない場合はきちんと記述しないといけない。</p>
+    Resource:
+      - arn:aws:s3:::examplebucket/*</code></pre></div>
+<p>Principalは<code>*</code>で全て許可するか、そうでない場合はきちんと記述しないといけない。</p>
+
 <p>先日リソースを作ろうとして失敗した時に初めて知りました。</p>
-<hr>
+
+<hr />
+
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E5%25BE%25B9%25E5%25BA%2595%25E6%2594%25BB%25E7%2595%25A5-AWS%25E8%25AA%258D%25E5%25AE%259A-%25E3%2582%25BD%25E3%2583%25AA%25E3%2583%25A5%25E3%2583%25BC%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%25B3%25E3%2582%25A2%25E3%2583%25BC%25E3%2582%25AD%25E3%2583%2586%25E3%2582%25AF%25E3%2583%2588-%25E2%2580%2593-%25E3%2582%25A2%25E3%2582%25BD%25E3%2582%25B7%25E3%2582%25A8%25E3%2582%25A4%25E3%2583%2588%25E6%2595%2599%25E7%25A7%2591%25E6%259B%25B8%2Fdp%2F4295005495"
@@ -228,7 +239,9 @@ if (!doNotTrack) {
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+5ZEMP" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -241,7 +254,8 @@ if (!doNotTrack) {
             src="https://www25.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001014000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+61C2P" alt="">
 </div>
-<hr>
+
+<hr />
 		</div>
 		
 <div class="post__tags tags clearfix">

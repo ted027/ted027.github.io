@@ -127,7 +127,8 @@
 
 			<br/>
 		</header><div class="content post__content clearfix">
-			<hr>
+			<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6O1Z5" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -140,7 +141,9 @@
             src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001119000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6NU9D" alt="">
 </div>
-<hr>
+
+<hr />
+
 <p><code>React</code>で<code>material ui</code>を使っていて、ある要素を他要素より手前に持ってきたかった。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#fff;font-weight:bold">const</span> styles = (theme: Theme): StyleRules =&gt; createStyles({
   mainAppBar: {
@@ -153,7 +156,9 @@
     width: <span style="color:#ff0;font-weight:bold">80</span>,
   },
 }
-</code></pre></div><p>これだけだと<code>selectYearForm</code>が背後に隠れる。</p>
+</code></pre></div>
+<p>これだけだと<code>selectYearForm</code>が背後に隠れる。</p>
+
 
 <figure >
     
@@ -163,7 +168,9 @@
     
 </figure>
 
-<hr>
+
+<hr />
+
 <p>勿論、それぞれに<code>zIndex</code> (<code>z-index</code>)を指定すれば手前に持ってこれる</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#fff;font-weight:bold">const</span> styles = (theme: Theme): StyleRules =&gt; createStyles({
   mainAppBar: {
@@ -178,7 +185,9 @@
     zIndex: <span style="color:#ff0;font-weight:bold">110</span>
   },
 }
-</code></pre></div><p>ただ、既存の<code>mainAppBar</code>の<code>zIndex</code>に影響を与えずに<code>selectYearForm</code>を手前に持ってきたかった。</p>
+</code></pre></div>
+<p>ただ、既存の<code>mainAppBar</code>の<code>zIndex</code>に影響を与えずに<code>selectYearForm</code>を手前に持ってきたかった。</p>
+
 <p>以下のように書いて解決。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#fff;font-weight:bold">const</span> styles = (theme: Theme): StyleRules =&gt; createStyles({
   mainAppBar: {
@@ -193,6 +202,7 @@
   },
 }
 </code></pre></div>
+
 <figure >
     
         <img src="/img/mui-zindex2.png"
@@ -201,7 +211,9 @@
     
 </figure>
 
-<hr>
+
+<hr />
+
 <p>なお、Material UIでコンポーネントのデフォルト<code>z-index</code>は以下のようになっている。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#fff;font-weight:bold">const</span> zIndex = {
   mobileStepper: <span style="color:#ff0;font-weight:bold">1000</span>,
@@ -212,8 +224,11 @@
   snackbar: <span style="color:#ff0;font-weight:bold">1400</span>,
   tooltip: <span style="color:#ff0;font-weight:bold">1500</span>,
 };
-</code></pre></div><p><a href="https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/styles/zIndex.js">https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/styles/zIndex.js</a></p>
-<hr>
+</code></pre></div>
+<p><a href="https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/styles/zIndex.js">https://github.com/mui-org/material-ui/blob/master/packages/material-ui/src/styles/zIndex.js</a></p>
+
+<hr />
+
 <div
   class="kaerebalink-box"
   style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;"
@@ -322,13 +337,16 @@
   <div class="booklink-footer" style="clear: left"></div>
 </div>
 
-<hr>
+
+<hr />
+
 <div>
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6LP3L" target="_blank" rel="nofollow">
         <img border="0" width="300" height="250" alt="" src="https://www28.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001109000&mc=1"></a>
         <img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6LP3L" alt="">
 </div>
-<hr>
+
+<hr />
 		</div>
 		
 <div class="post__tags tags clearfix">

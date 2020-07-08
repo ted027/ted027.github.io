@@ -131,21 +131,28 @@
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#導入">導入</a></li>
-        <li><a href="#書いてみる">書いてみる</a></li>
-        <li><a href="#出力する">出力する</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#導入">導入</a>
+<ul>
+<li><a href="#winidowsにインストール">Winidowsにインストール</a></li>
+</ul></li>
+<li><a href="#書いてみる">書いてみる</a></li>
+<li><a href="#出力する">出力する</a></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
 			<p>PlantUMLは、構成や関連を言語で記載しUML図を作成できるコンポーネント。</p>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://t.afi-b.com/visit.php?guid=ON&a=99886h-W336947J&p=J690746r" target="_blank" rel="nofollow"><img
             src="https://www.afi-b.com/upload_image/9886-1534983315-3.jpg" width="728" height="90" style="border:none;"
@@ -158,49 +165,57 @@
             alt="CodeCampGATE" /></a><img src="https://t.afi-b.com/lead/99886h/J690746r/3336944i" width="1" height="1"
         style="border:none;" />
 </div>
-<hr>
+
+<hr />
+
 <p>追加や削除も簡単で、単純な図ならPowerPointやVisioより使い勝手がいい。（と思っている。）</p>
+
 <p>自分はVisual Studio Codeに拡張機能を入れて使っています。</p>
+
 <p><a href="https://www.ted027.com/post/puml-ubu">[参考記事]PlantUML + Visual Studio Codeを導入する（Ubuntu環境）</a></p>
+
 <h3 id="導入">導入</h3>
+
 <p>以下のものが必要。</p>
+
 <ul>
-<li>
-<p>Java JRE or JDK</p>
-</li>
-<li>
-<p>Graphviz</p>
-</li>
+<li><p>Java JRE or JDK</p></li>
+
+<li><p>Graphviz</p></li>
 </ul>
-<hr>
+
+<hr />
+
 <h4 id="winidowsにインストール">Winidowsにインストール</h4>
+
 <ol>
-<li>
-<p>Visual Studio Codeをインストール</p>
+<li><p>Visual Studio Codeをインストール</p>
+
 <ul>
 <li><a href="https://code.visualstudio.com/">Visual Studio Code</a>からインストーラを落としてきて実行</li>
-</ul>
-</li>
-<li>
-<p>Javaをインストール</p>
+</ul></li>
+
+<li><p>Javaをインストール</p>
+
 <ul>
 <li><a href="https://www.java.com/ja/download/">Oracle Java</a>からインストーラを落としてきて実行</li>
-</ul>
-</li>
-<li>
-<p>Graphvizをインストール</p>
+</ul></li>
+
+<li><p>Graphvizをインストール</p>
+
 <ul>
 <li><a href="http://www.graphviz.org/download/">Graphviz Download</a>からインストーラを落としてきて実行</li>
-</ul>
-</li>
-<li>
-<p>Visual Studio Codeの拡張機能から<code>PlantUML</code>を検索しインストールする</p>
-</li>
+</ul></li>
+
+<li><p>Visual Studio Codeの拡張機能から<code>PlantUML</code>を検索しインストールする</p></li>
 </ol>
-<hr>
+
+<hr />
+
 <h3 id="書いてみる">書いてみる</h3>
+
 <p>VSCodeで拡張子<code>.pu</code>のファイルを作成する。</p>
-<pre><code class="language-sample.pu" data-lang="sample.pu">@startuml
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sample.pu" data-lang="sample.pu">@startuml
 
 actor User
 
@@ -214,8 +229,9 @@ User &lt;- Form : Show success message
 deactivate Form
 
 
-@enduml
-</code></pre><p><code>Alt + D</code>で作成中の図をプレビューできる。</p>
+@enduml</code></pre></div>
+<p><code>Alt + D</code>で作成中の図をプレビューできる。</p>
+
 
 <figure >
     
@@ -225,13 +241,22 @@ deactivate Form
     
 </figure>
 
+
 <p><a href="https://www.ted027.com/post/puml-aws">[参考記事]PlantUMLでAWSアイコンを使ったシステム構成図を作る</a></p>
+
 <h3 id="出力する">出力する</h3>
+
 <p><code>Ctrl + Shift + P</code>でコマンドパレットを開き、</p>
+
 <pre><code>plantuml: export current diagram
-</code></pre><p>を入力し選択。（最後まで入力しなくても出てくる。）</p>
+</code></pre>
+
+<p>を入力し選択。（最後まで入力しなくても出てくる。）</p>
+
 <p>出力フォーマットを選択すると出力されます。</p>
-<hr>
+
+<hr />
+
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E3%2583%2580%25E3%2582%25A4%25E3%2582%25A2%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%25A0%25E5%2588%25A5UML%25E5%25BE%25B9%25E5%25BA%2595%25E6%25B4%25BB%25E7%2594%25A8-%25E7%25AC%25AC2%25E7%2589%2588-DB-Magazine-SELECTION%2Fdp%2F4798118443"
@@ -273,7 +298,9 @@ deactivate Form
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6O1Z5" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -286,7 +313,8 @@ deactivate Form
             src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001119000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6NU9D" alt="">
 </div>
-<hr>
+
+<hr />
 		</div>
 		
 <div class="post__tags tags clearfix">

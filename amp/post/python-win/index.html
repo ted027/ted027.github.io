@@ -131,19 +131,26 @@
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#インストール">インストール</a></li>
-        <li><a href="#helloと言わせる">Helloと言わせる</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#インストール">インストール</a></li>
+<li><a href="#helloと言わせる">Helloと言わせる</a>
+<ul>
+<li><a href="#対話モードでhello">対話モードでHello</a></li>
+<li><a href="#ファイルから実行しhello">ファイルから実行しHello</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<hr>
+			<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7O95GY+3TVC+TUVZL" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -156,7 +163,9 @@
             src="https://www28.a8.net/svt/bgt?aid=190503911464&wid=001&eno=01&mid=s00000017868005009000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=35F5RB+7O95GY+3TVC+TTLOX" alt="">
 </div>
-<hr>
+
+<hr />
+
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E7%258B%25AC%25E5%25AD%25A6%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259E%25E3%2583%25BC-Python%25E8%25A8%2580%25E8%25AA%259E%25E3%2581%25AE%25E5%259F%25BA%25E6%259C%25AC%25E3%2581%258B%25E3%2582%2589%25E4%25BB%2595%25E4%25BA%258B%25E3%2581%25AE%25E3%2582%2584%25E3%2582%258A%25E6%2596%25B9%25E3%2581%25BE%25E3%2581%25A7-%25E3%2582%25B3%25E3%2583%25BC%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25BB%25E3%2582%25A2%25E3%2583%25AB%25E3%2582%25BD%25E3%2583%2595%2Fdp%2F4822292274"
@@ -201,55 +210,77 @@
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-<hr>
+
+<hr />
+
 <p>Pythonは、記述がシンプルで書きやすく読みやすい、ライブラリが豊富でできることも多い、とっつきやすい上に開発の現場でもよく使われる、とりあえずやっておいて損はない言語。</p>
-<hr>
+
+<hr />
+
 <h3 id="インストール">インストール</h3>
+
 <ol>
 <li><a href="https://www.python.org/">Python公式サイト</a>からインストーラをダウンロードする
+
 <ul>
 <li>「Downloads」→「Windows」へ進み、「Python3.X.X」をダウンロード</li>
 <li>Pythonは2系と3系があり少々内容が異なりますが、特に理由がなければ3系（3.X.X）のLatestで問題ないかと思います</li>
-</ul>
-</li>
+</ul></li>
 <li>インストーラを実行
+
 <ul>
 <li>「Add Python3.X to PATH」にチェックが入っていることを確認して「Install Now」</li>
-</ul>
-</li>
-<li>確認
+</ul></li>
+
+<li><p>確認</p>
+
 <ul>
-<li>コマンドプロンプトを起動して、</li>
-</ul>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ python --version
-</code></pre></div><p>と打ち実行、バージョンが表示されればインストールできています</p>
-</li>
+<li><p>コマンドプロンプトを起動して、</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ python --version</code></pre></div>
+<p>と打ち実行、バージョンが表示されればインストールできています</p></li>
+</ul></li>
 </ol>
-<hr>
+
+<hr />
+
 <h3 id="helloと言わせる">Helloと言わせる</h3>
+
 <p>新しく環境を整えたら、バージョンを表示させて<code>Hello, World.</code>を言わせるのが定番です。</p>
-<hr>
+
+<hr />
+
 <h4 id="対話モードでhello">対話モードでHello</h4>
+
 <p>Pythonは、対話モードでの実行と、ファイルを記述しての実行との2パターンあります。</p>
+
 <p>対話モードを使うには、コマンドプロンプトで</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ python
-</code></pre></div><p>と入力し実行。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ python</code></pre></div>
+<p>と入力し実行。</p>
+
 <p>続けて<code>Hello, World.</code>を出力するコマンドを打ち、実行。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ print(<span style="color:#0ff;font-weight:bold">&#34;Hello, World.&#34;</span>)
-</code></pre></div><p>Pythonが<code>&quot;Hello, World.&quot;</code>と画面に出力してくれます。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ print(<span style="color:#0ff;font-weight:bold">&#34;Hello, World.&#34;</span>)</code></pre></div>
+<p>Pythonが<code>&quot;Hello, World.&quot;</code>と画面に出力してくれます。</p>
+
 <p>対話モードを抜けるには、<code>ctrl + D</code>を押すか、</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ exit()
-</code></pre></div><p>を実行。</p>
-<hr>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ exit()</code></pre></div>
+<p>を実行。</p>
+
+<hr />
+
 <h4 id="ファイルから実行しhello">ファイルから実行しHello</h4>
+
 <p>やってる内容は対話モードと一緒です。</p>
+
 <p><code>hello.py</code>ファイルを作成し、コマンドを入力して保存。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python:hello.py" data-lang="python:hello.py"><span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">&#34;Hello, World.&#34;</span>)
-</code></pre></div><p>コマンドプロンプトで<code>hello.py</code>と同階層から、</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ python hello.py
-</code></pre></div><p>で実行。</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python:hello.py" data-lang="python:hello.py"><span style="color:#fff;font-weight:bold">print</span>(<span style="color:#0ff;font-weight:bold">&#34;Hello, World.&#34;</span>)</code></pre></div>
+<p>コマンドプロンプトで<code>hello.py</code>と同階層から、</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ python hello.py</code></pre></div>
+<p>で実行。</p>
+
 <p>先程と同様に、Pythonが<code>&quot;Hello, World.&quot;</code>と画面に出力してくれます。</p>
-<hr>
+
+<hr />
+
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2F%25E9%2580%2580%25E5%25B1%2588%25E3%2581%25AA%25E3%2581%2593%25E3%2581%25A8%25E3%2581%25AFPython%25E3%2581%25AB%25E3%2582%2584%25E3%2582%2589%25E3%2581%259B%25E3%2582%2588%25E3%2581%2586-%25E2%2580%2595%25E3%2583%258E%25E3%2583%25B3%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259E%25E3%2583%25BC%25E3%2581%25AB%25E3%2582%2582%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E8%2587%25AA%25E5%258B%2595%25E5%258C%2596%25E5%2587%25A6%25E7%2590%2586%25E3%2583%2597%25E3%2583%25AD%25E3%2582%25B0%25E3%2583%25A9%25E3%2583%259F%25E3%2583%25B3%25E3%2582%25B0-Al-Sweigart%2Fdp%2F487311778X"
@@ -294,7 +325,9 @@
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6O1Z5" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -307,7 +340,8 @@
             src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001119000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6NU9D" alt="">
 </div>
-<hr>
+
+<hr />
 		</div>
 		
 <div class="post__tags tags clearfix">

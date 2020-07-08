@@ -130,26 +130,29 @@ if (!doNotTrack) {
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
 		<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#uriは名詞">URIは名詞</a></li>
-        <li><a href="#メソッドは基本的にcrudに対応する4つ">メソッドは基本的にCRUDに対応する4つ</a></li>
-        <li><a href="#uriの階層は親子関係">URIの階層は親子関係</a></li>
-        <li><a href="#postの対象になるuriは複数形">POSTの対象になるURIは複数形</a></li>
-        <li><a href="#uriに含むidはランダム文字列">URIに含むIDはランダム文字列</a></li>
-        <li><a href="#バージョニング">バージョニング</a></li>
-        <li><a href="#認証認可">認証/認可</a></li>
-        <li><a href="#おわり">おわり</a></li>
-        <li><a href="#参考">参考</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#uriは名詞">URIは名詞</a></li>
+<li><a href="#メソッドは基本的にcrudに対応する4つ">メソッドは基本的にCRUDに対応する4つ</a></li>
+<li><a href="#uriの階層は親子関係">URIの階層は親子関係</a></li>
+<li><a href="#postの対象になるuriは複数形">POSTの対象になるURIは複数形</a></li>
+<li><a href="#uriに含むidはランダム文字列">URIに含むIDはランダム文字列</a></li>
+<li><a href="#バージョニング">バージョニング</a></li>
+<li><a href="#認証-認可">認証/認可</a></li>
+<li><a href="#おわり">おわり</a></li>
+<li><a href="#参考">参考</a></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<hr>
+			<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6O1Z5" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -162,13 +165,21 @@ if (!doNotTrack) {
             src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001119000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6NU9D" alt="">
 </div>
-<hr>
+
+<hr />
+
 <h3 id="uriは名詞">URIは名詞</h3>
+
 <p>APIのURIはリソースを表す名詞。基本的に複数形を使う。URIが指すリソースに大して、各種メソッド(動詞)の操作を行う。</p>
+
 <p>URIは簡潔で、かつ何のリソースを指すのかわかりやすい名前にする。</p>
-<hr>
+
+<hr />
+
 <h3 id="メソッドは基本的にcrudに対応する4つ">メソッドは基本的にCRUDに対応する4つ</h3>
+
 <p>主に使うのは上4つ。</p>
+
 <table>
 <thead>
 <tr>
@@ -177,47 +188,56 @@ if (!doNotTrack) {
 <th align="center">説明</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
 <td align="center"><strong>GET</strong></td>
 <td align="center">READ</td>
 <td align="center"><strong>リソース取得</strong></td>
 </tr>
+
 <tr>
 <td align="center"><strong>POST</strong></td>
 <td align="center">CREATE</td>
 <td align="center"><strong>リソース作成</strong></td>
 </tr>
+
 <tr>
 <td align="center"><strong>PUT</strong></td>
 <td align="center">UPDATE</td>
 <td align="center"><strong>リソース更新 or 作成</strong></td>
 </tr>
+
 <tr>
 <td align="center"><strong>DELETE</strong></td>
 <td align="center">DELETE</td>
 <td align="center"><strong>リソース削除</strong></td>
 </tr>
+
 <tr>
 <td align="center"></td>
 <td align="center"></td>
-<td></td>
+<td align="center"></td>
 </tr>
+
 <tr>
 <td align="center">HEAD</td>
 <td align="center"></td>
 <td align="center">リソースのヘッダ取得</td>
 </tr>
+
 <tr>
 <td align="center">OPTIONS</td>
 <td align="center"></td>
 <td align="center">リソースがサポートするメソッド取得</td>
 </tr>
+
 <tr>
 <td align="center">TRACE</td>
 <td align="center"></td>
 <td align="center">リクエストを返す</td>
 </tr>
+
 <tr>
 <td align="center">CONNECT</td>
 <td align="center"></td>
@@ -225,39 +245,69 @@ if (!doNotTrack) {
 </tr>
 </tbody>
 </table>
-<hr>
+
+<hr />
+
 <h3 id="uriの階層は親子関係">URIの階層は親子関係</h3>
+
 <p>URIを階層構造にする際は、「コレクション」と「特定の要素」のような関連性を示す。</p>
+
 <p>一番基本形は<code>/コレクション/名詞</code>。</p>
+
 <p>ただし、階層はなるべく浅く保ち、複雑になる部分はクエリパラメータで指定させる。</p>
-<hr>
+
+<hr />
+
 <h3 id="postの対象になるuriは複数形">POSTの対象になるURIは複数形</h3>
+
 <p>POSTは、複数個存在するリソースを対象として、新たな一つを新規作成する。特定の一つを指定してPOSTを行うことはしない。</p>
+
 <p>なので、POSTの対象になるURIは名詞の複数形にする。</p>
-<hr>
+
+<hr />
+
 <h3 id="uriに含むidはランダム文字列">URIに含むIDはランダム文字列</h3>
+
 <p>連番の数字などは予測されやすいため、予測されても問題ないものでなければ、UUID等のランダム文字列にするとよい。</p>
+
 <p>また、あとで変更できなくなるため、IDを意味のある文字列にしない。</p>
-<hr>
+
+<hr />
+
 <h3 id="バージョニング">バージョニング</h3>
+
 <p>階層の最上位や上の方にバージョンを入れておく。</p>
+
 <p>内部処理の変更程度ならバージョンは上げない。振る舞いが保てないほどの変更を入れる場合にバージョンを上げる。</p>
-<hr>
-<h3 id="認証認可">認証/認可</h3>
+
+<hr />
+
+<h3 id="認証-認可">認証/認可</h3>
+
 <p>認可プロトコルはOAuth2を利用する。</p>
+
 <p>認証プロトコルはOpenIDが有名。</p>
-<hr>
+
+<hr />
+
 <h3 id="おわり">おわり</h3>
+
 <p>以上はあくまで基本方針であり、原理主義的にならないようにする。あくまで使い手が使いやすいよう心がける。</p>
+
 <p>間違いあったらすみません。</p>
-<hr>
+
+<hr />
+
 <h3 id="参考">参考</h3>
+
 <ul>
 <li><a href="https://www.slideshare.net/MonstarLabInc/rest-ful-api">RESTful API設計入門</a></li>
 <li><a href="http://please-sleep.cou929.nu/20130121.html">Web API 設計のベストプラクティス集 ”Web API Design - Crafting Interfaces that Developers Love”</a></li>
 <li><a href="https://qiita.com/shrkw/items/c6123ca25981e44a3d82">RESTfulなWeb APIを設計するときに考えること</a></li>
 </ul>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://t.afi-b.com/visit.php?guid=ON&a=M10262Q-X351704n&p=J690746r" target="_blank" rel="nofollow"><img
             src="https://www.afi-b.com/upload_image/10262-1549272488-3.jpg" width="728" height="90" style="border:none;"
@@ -270,7 +320,9 @@ if (!doNotTrack) {
             style="border:none;" alt="BTCエージェント forエンジニア" /></a><img
         src="https://t.afi-b.com/lead/M10262Q/J690746r/t343317O" width="1" height="1" style="border:none;" />
 </div>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+5ZEMP" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -283,7 +335,8 @@ if (!doNotTrack) {
             src="https://www25.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001014000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+61C2P" alt="">
 </div>
-<hr>
+
+<hr />
 		</div>
 		
 <div class="post__tags tags clearfix">

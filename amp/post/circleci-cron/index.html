@@ -128,7 +128,9 @@
 			<br/>
 		</header><div class="content post__content clearfix">
 			<p>CircleCIでジョブをcron設定し定期実行する。</p>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6O1Z5" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -141,7 +143,9 @@
             src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001119000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6NU9D" alt="">
 </div>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35DFWV+F4RNAQ+50+2HLITT" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt="" src="https://www29.a8.net/svt/bgt?aid=190423759915&wid=001&eno=01&mid=s00000000018015049000&mc=1"></a>
@@ -152,37 +156,43 @@
             <img border="0" width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=190423759915&wid=001&eno=01&mid=s00000000018015102000&mc=1"></a>
             <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=35DFWV+F4RNAQ+50+2HWVS1" alt="">
 </div>
-<hr>
+
+<hr />
+
 <p><code>config.yml</code>のworkflow設定で実現できる。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#fff;font-weight:bold">version</span>: <span style="color:#ff0;font-weight:bold">2</span>
-<span style="color:#fff;font-weight:bold">jobs</span>:
-  <span style="color:#fff;font-weight:bold">build</span>:
-    <span style="color:#fff;font-weight:bold">steps</span>:
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">version: <span style="color:#ff0;font-weight:bold">2</span>
+jobs:
+  build:
+    steps:
       - checkout
-      - <span style="color:#fff;font-weight:bold">run</span>:
-        <span style="color:#fff;font-weight:bold">name</span>: build step
-        <span style="color:#fff;font-weight:bold">command</span>: <span style="color:#0ff;font-weight:bold">|
+      - run:
+        name: build step
+        command: <span style="color:#0ff;font-weight:bold">|
 </span><span style="color:#0ff;font-weight:bold">          some commands</span>
 
-<span style="color:#fff;font-weight:bold">workflows</span>:
-  <span style="color:#fff;font-weight:bold">version</span>: <span style="color:#ff0;font-weight:bold">2</span>
-  <span style="color:#fff;font-weight:bold">normal_build</span>:
-    <span style="color:#fff;font-weight:bold">jobs</span>:
+workflows:
+  version: <span style="color:#ff0;font-weight:bold">2</span>
+  normal_build:
+    jobs:
       - build
-  <span style="color:#fff;font-weight:bold">nightly_build</span>:
-    <span style="color:#fff;font-weight:bold">triggers</span>:
-      - <span style="color:#fff;font-weight:bold">schedule</span>:
-          <span style="color:#fff;font-weight:bold">cron</span>: <span style="color:#0ff;font-weight:bold">&#34;0 15 * * *&#34;</span> <span style="color:#007f7f"># UTC15:00, 日本時間0:00</span>
-          <span style="color:#fff;font-weight:bold">filters</span>:
-            <span style="color:#fff;font-weight:bold">branches</span>:
-              <span style="color:#fff;font-weight:bold">only</span>:
+  nightly_build:
+    triggers:
+      - schedule:
+          cron: <span style="color:#0ff;font-weight:bold">&#34;0 15 * * *&#34;</span> <span style="color:#007f7f"># UTC15:00, 日本時間0:00</span>
+          filters:
+            branches:
+              only:
                 - master
-    <span style="color:#fff;font-weight:bold">jobs</span>:
-      - build
-</code></pre></div><p><code>triggers: schedule</code>でcronを設定（UTCなので、日本時間マイナス9時間）する。</p>
+    jobs:
+      - build</code></pre></div>
+<p><code>triggers: schedule</code>でcronを設定（UTCなので、日本時間マイナス9時間）する。</p>
+
 <p>たとえば上のように、毎晩masterブランチでビルドし直したり、毎晩テストを実行したり。</p>
+
 <p>自分はブログのアクセス数上位記事取得に使ってます。</p>
-<hr>
+
+<hr />
+
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
     <div class="kaerebalink-image" style="float:left;margin:0 15px 10px 0;"><a
             href="//af.moshimo.com/af/c/click?a_id=1414800&amp;p_id=170&amp;pc_id=185&amp;pl_id=4062&amp;url=https%3A%2F%2Fwww.amazon.co.jp%2FEffective-DevOps-%25E2%2580%25954%25E6%259C%25AC%25E6%259F%25B1%25E3%2581%25AB%25E3%2582%2588%25E3%2582%258B%25E6%258C%2581%25E7%25B6%259A%25E5%258F%25AF%25E8%2583%25BD%25E3%2581%25AA%25E7%25B5%2584%25E7%25B9%2594%25E6%2596%2587%25E5%258C%2596%25E3%2581%25AE%25E8%2582%25B2%25E3%2581%25A6%25E6%2596%25B9-Jennifer-Davis%2Fdp%2F4873118352"
@@ -225,7 +235,9 @@
                     rel="nofollow"><img src="//i.moshimo.com/af/i/impression?a_id=1414728&p_id=932&pc_id=1188&pl_id=12456" width="1" height="1" style="border:none;">7netで調べる
                         </a> </div> </div> </div> <div class="booklink-footer" style="clear: left"></div>
         </div>
-<hr>
+
+<hr />
+
 <div class="wide__area">
     <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+5Z6WX" target="_blank" rel="nofollow">
         <img border="0" width="728" height="90" alt=""
@@ -238,7 +250,8 @@
             src="https://www20.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001013000&mc=1"></a>
     <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+614CX" alt="">
 </div>
-<hr>
+
+<hr />
 		</div>
 		
 <div class="post__tags tags clearfix">
