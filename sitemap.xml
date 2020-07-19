@@ -3,8 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.ted027.com/post/npm-install/</loc>
+    <lastmod>2020-07-18T22:51:56+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ted027.com/categories/</loc>
-    <lastmod>2020-07-08T07:21:05+09:00</lastmod>
+    <lastmod>2020-07-18T22:51:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/install/</loc>
+    <lastmod>2020-07-18T22:51:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/nodejs/</loc>
+    <lastmod>2020-07-18T22:51:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/npm/</loc>
+    <lastmod>2020-07-18T22:51:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/</loc>
+    <lastmod>2020-07-18T22:51:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/</loc>
+    <lastmod>2020-07-18T22:51:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/version/</loc>
+    <lastmod>2020-07-18T22:51:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/</loc>
+    <lastmod>2020-07-18T22:51:56+09:00</lastmod>
   </url>
   
   <url>
@@ -18,22 +58,7 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/post/</loc>
-    <lastmod>2020-07-08T07:21:05+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/</loc>
-    <lastmod>2020-07-08T07:21:05+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/tags/%E3%83%AD%E3%82%B0/</loc>
-    <lastmod>2020-07-08T07:21:05+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/</loc>
     <lastmod>2020-07-08T07:21:05+09:00</lastmod>
   </url>
   

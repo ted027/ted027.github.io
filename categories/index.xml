@@ -6,10 +6,19 @@
     <description>Recent content in Categories on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 08 Jul 2020 07:21:05 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2020 22:51:56 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://www.ted027.com/categories/nodejs/</link>
+      <pubDate>Sat, 18 Jul 2020 22:51:56 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/categories/nodejs/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Logstash</title>

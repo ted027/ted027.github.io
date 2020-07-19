@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 08 Jul 2020 07:21:05 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2020 22:51:56 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>&#39;npm install&#39;のバージョン固定とdependencies</title>
+      <link>https://www.ted027.com/post/npm-install/</link>
+      <pubDate>Sat, 18 Jul 2020 22:51:56 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/npm-install/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Logstashサーバーのログ閲覧と設定</title>
