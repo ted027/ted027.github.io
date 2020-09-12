@@ -3,12 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.ted027.com/post/npm-install/</loc>
-    <lastmod>2020-07-18T22:51:56+09:00</lastmod>
+    <loc>https://www.ted027.com/categories/</loc>
+    <lastmod>2020-09-12T23:14:52+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/</loc>
+    <loc>https://www.ted027.com/post/</loc>
+    <lastmod>2020-09-12T23:14:52+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/</loc>
+    <lastmod>2020-09-12T23:14:52+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/%E3%83%89%E3%83%A9%E3%83%95%E3%83%88%E5%80%99%E8%A3%9C/</loc>
+    <lastmod>2020-09-12T23:14:52+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/draft-2020-sato/</loc>
+    <lastmod>2020-09-12T23:14:52+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/</loc>
+    <lastmod>2020-09-12T23:14:52+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/%E9%87%8E%E7%90%83/</loc>
+    <lastmod>2020-09-12T23:14:52+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/npm-install/</loc>
     <lastmod>2020-07-18T22:51:56+09:00</lastmod>
   </url>
   
@@ -28,22 +58,7 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/post/</loc>
-    <lastmod>2020-07-18T22:51:56+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/</loc>
-    <lastmod>2020-07-18T22:51:56+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/tags/version/</loc>
-    <lastmod>2020-07-18T22:51:56+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/</loc>
     <lastmod>2020-07-18T22:51:56+09:00</lastmod>
   </url>
   
@@ -174,11 +189,6 @@
   
   <url>
     <loc>https://www.ted027.com/tags/%E5%86%8D%E7%8F%BE/</loc>
-    <lastmod>2020-02-17T01:21:55+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/categories/%E9%87%8E%E7%90%83/</loc>
     <lastmod>2020-02-17T01:21:55+09:00</lastmod>
   </url>
   
