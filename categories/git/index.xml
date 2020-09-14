@@ -6,13 +6,22 @@
     <description>Recent content in Git on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 27 Sep 2019 12:34:38 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2020 21:34:59 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/categories/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>git cherry-pickいろいろ</title>
+      <title>git revertもろもろ</title>
+      <link>https://www.ted027.com/post/git-revert/</link>
+      <pubDate>Mon, 14 Sep 2020 21:34:59 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/git-revert/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git cherry-pickもろもろ</title>
       <link>https://www.ted027.com/post/git-cherry-pick/</link>
       <pubDate>Fri, 27 Sep 2019 12:34:38 +0900</pubDate>
       

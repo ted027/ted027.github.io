@@ -4,17 +4,42 @@
   
   <url>
     <loc>https://www.ted027.com/categories/</loc>
-    <lastmod>2020-09-12T23:14:52+09:00</lastmod>
+    <lastmod>2020-09-14T21:34:59+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/git/</loc>
+    <lastmod>2020-09-14T21:34:59+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/git-revert/</loc>
+    <lastmod>2020-09-14T21:34:59+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.ted027.com/post/</loc>
-    <lastmod>2020-09-12T23:14:52+09:00</lastmod>
+    <lastmod>2020-09-14T21:34:59+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/revert/</loc>
+    <lastmod>2020-09-14T21:34:59+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.ted027.com/tags/</loc>
-    <lastmod>2020-09-12T23:14:52+09:00</lastmod>
+    <lastmod>2020-09-14T21:34:59+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/%E3%83%9E%E3%83%BC%E3%82%B8%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88/</loc>
+    <lastmod>2020-09-14T21:34:59+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/</loc>
+    <lastmod>2020-09-14T21:34:59+09:00</lastmod>
   </url>
   
   <url>
@@ -24,11 +49,6 @@
   
   <url>
     <loc>https://www.ted027.com/post/draft-2020-sato/</loc>
-    <lastmod>2020-09-12T23:14:52+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/</loc>
     <lastmod>2020-09-12T23:14:52+09:00</lastmod>
   </url>
   
@@ -433,17 +453,7 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/git/</loc>
-    <lastmod>2019-09-27T12:34:38+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/post/git-cherry-pick/</loc>
-    <lastmod>2019-09-27T12:34:38+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/%E3%83%9E%E3%83%BC%E3%82%B8%E3%82%B3%E3%83%9F%E3%83%83%E3%83%88/</loc>
     <lastmod>2019-09-27T12:34:38+09:00</lastmod>
   </url>
   
