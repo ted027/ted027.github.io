@@ -143,12 +143,12 @@
 </ul></li>
 <li><a href="#実作業">実作業</a></li>
 <li><a href="#ssd上にpartition作成">SSD上にpartition作成</a></li>
-<li><a href="#gpartedでhddのpartitionnoを小さくする">GPartedでHDDのpartitionnoを小さくする</a></li>
+<li><a href="#gpartedでhddのpartitionを小さくする">GPartedでHDDのpartitionを小さくする</a></li>
 <li><a href="#hdd-ssdにpartition移植">HDD→SSDにpartition移植</a></li>
 <li><a href="#ssd-partitionのuuid変更">SSD partitionのUUID変更</a></li>
 <li><a href="#ssdにgrubをインストール">SSDにgrubをインストール</a></li>
 <li><a href="#起動時にssd側領域をmountするよう修正">起動時にSSD側領域をmountするよう修正</a></li>
-<li><a href="#gpartedでpartitionnoを調整">GPartedでpartitionnoを調整</a></li>
+<li><a href="#gpartedでpartitionを調整">GPartedでpartitionを調整</a></li>
 <li><a href="#参考">参考</a></li>
 </ul></li>
 </ul></li>
@@ -250,7 +250,7 @@
 
 <hr />
 
-<h3 id="gpartedでhddのpartitionnoを小さくする">GPartedでHDDのpartitionnoを小さくする</h3>
+<h3 id="gpartedでhddのpartitionを小さくする">GPartedでHDDのpartitionを小さくする</h3>
 
 <p>移植時間短縮のため、Ubuntuの<code>GParted</code>から、移植するHDD上partitionを縮小する。</p>
 
@@ -312,7 +312,7 @@ $ mkdir /mnt/hdd
 $ sudo mount /dev/sda5 /mnt/hdd
 <span style="color:#007f7f"># /etc/fstabを書き換え</span>
 $ sudo vi /mnt/ssd/etc/fstab</code></pre></div>
-<h3 id="gpartedでpartitionnoを調整">GPartedでpartitionnoを調整</h3>
+<h3 id="gpartedでpartitionを調整">GPartedでpartitionを調整</h3>
 
 <p>SSDのpartitionが起動できることを確認したうえで、<code>GParted</code>でHDD側のpartitionを調整する。</p>
 
