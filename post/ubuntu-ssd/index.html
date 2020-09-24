@@ -140,7 +140,8 @@ if (!doNotTrack) {
 <li><a href="#旧環境">旧環境</a></li>
 <li><a href="#新環境">新環境</a></li>
 </ul></li>
-<li><a href="#実作業">実作業</a></li>
+<li><a href="#実作業">実作業</a>
+<ul>
 <li><a href="#ssd上にpartition作成">SSD上にpartition作成</a></li>
 <li><a href="#gpartedでhddのpartitionを小さくする">GPartedでHDDのpartitionを小さくする</a></li>
 <li><a href="#hdd-ssdにpartition移植">HDD→SSDにpartition移植</a></li>
@@ -148,6 +149,7 @@ if (!doNotTrack) {
 <li><a href="#ssdにgrubをインストール">SSDにgrubをインストール</a></li>
 <li><a href="#起動時にssd側領域をmountするよう修正">起動時にSSD側領域をmountするよう修正</a></li>
 <li><a href="#gpartedでpartitionを調整">GPartedでpartitionを調整</a></li>
+</ul></li>
 <li><a href="#参考">参考</a></li>
 </ul></li>
 </ul></li>
@@ -236,7 +238,7 @@ if (!doNotTrack) {
 
 <hr />
 
-<h3 id="ssd上にpartition作成">SSD上にpartition作成</h3>
+<h4 id="ssd上にpartition作成">SSD上にpartition作成</h4>
 
 <p>Ubuntuの<code>ディスク</code>からSSD上にpartitionを作成する。</p>
 
@@ -249,7 +251,7 @@ if (!doNotTrack) {
 
 <hr />
 
-<h3 id="gpartedでhddのpartitionを小さくする">GPartedでHDDのpartitionを小さくする</h3>
+<h4 id="gpartedでhddのpartitionを小さくする">GPartedでHDDのpartitionを小さくする</h4>
 
 <p>移植時間短縮のため、Ubuntuの<code>GParted</code>から、移植するHDD上partitionを縮小する。</p>
 
@@ -257,7 +259,7 @@ if (!doNotTrack) {
 
 <hr />
 
-<h3 id="hdd-ssdにpartition移植">HDD→SSDにpartition移植</h3>
+<h4 id="hdd-ssdにpartition移植">HDD→SSDにpartition移植</h4>
 
 <p>必要なpartition毎にddrescueで移植。</p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ sudo apt update
@@ -265,13 +267,13 @@ $ sudo apt install gddrescue
 
 $ sudo ddrescue -v -f -r1 /dev/sdb2 /dev/sdb1
 $ sudo ddrescue -v -f -r1 /dev/sdb5 /dev/sdb2</code></pre></div>
-<h3 id="ssd-partitionのuuid変更">SSD partitionのUUID変更</h3>
+<h4 id="ssd-partitionのuuid変更">SSD partitionのUUID変更</h4>
 
 <p>UUIDごとコピーされているので、<code>GParted</code>から移植先のUUIDを変更する。</p>
 
 <p><code>/dev/sdb1</code>, <code>/dev/sdb2</code>を順に選択して右クリック→「新しいUUID」で「実行」。</p>
 
-<h3 id="ssdにgrubをインストール">SSDにgrubをインストール</h3>
+<h4 id="ssdにgrubをインストール">SSDにgrubをインストール</h4>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#007f7f"># Ubuntu領域とboot領域をmount</span>
 $ sudo mkdir /mnt/ssd
 $ sudo mount /dev/sdb2 /mnt/ssd
@@ -295,7 +297,7 @@ $ sudo umount /mnt/ssd/sys &amp;&amp;
 &gt; sudo umount /mnt/ssd/proc &amp;&amp;
 &gt; sudo umount /mnt/ssd/dev/pts &amp;&amp;
 &gt; sudo umount /mnt/ssd/dev</code></pre></div>
-<h3 id="起動時にssd側領域をmountするよう修正">起動時にSSD側領域をmountするよう修正</h3>
+<h4 id="起動時にssd側領域をmountするよう修正">起動時にSSD側領域をmountするよう修正</h4>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#007f7f"># SSDUbuntu領域をmount(上で既にしていれば不要)</span>
 $ mkdir /mnt/ssd
 $ sudo mount /dev/sdb2 /mnt/ssd
@@ -311,7 +313,7 @@ $ mkdir /mnt/hdd
 $ sudo mount /dev/sda5 /mnt/hdd
 <span style="color:#007f7f"># /etc/fstabを書き換え</span>
 $ sudo vi /mnt/ssd/etc/fstab</code></pre></div>
-<h3 id="gpartedでpartitionを調整">GPartedでpartitionを調整</h3>
+<h4 id="gpartedでpartitionを調整">GPartedでpartitionを調整</h4>
 
 <p>SSDのpartitionが起動できることを確認したうえで、<code>GParted</code>でHDD側のpartitionを調整する。</p>
 
