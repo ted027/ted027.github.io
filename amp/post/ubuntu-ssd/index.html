@@ -268,11 +268,15 @@ $ sudo apt install gddrescue
 
 $ sudo ddrescue -v -f -r1 /dev/sdb2 /dev/sdb1
 $ sudo ddrescue -v -f -r1 /dev/sdb5 /dev/sdb2</code></pre></div>
+<hr />
+
 <h4 id="ssd-partitionのuuid変更">SSD partitionのUUID変更</h4>
 
 <p>UUIDごとコピーされているので、<code>GParted</code>から移植先のUUIDを変更する。</p>
 
 <p><code>/dev/sdb1</code>, <code>/dev/sdb2</code>を順に選択して右クリック→「新しいUUID」で「実行」。</p>
+
+<hr />
 
 <h4 id="ssdにgrubをインストール">SSDにgrubをインストール</h4>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#007f7f"># Ubuntu領域とboot領域をmount</span>
@@ -298,6 +302,8 @@ $ sudo umount /mnt/ssd/sys &amp;&amp;
 &gt; sudo umount /mnt/ssd/proc &amp;&amp;
 &gt; sudo umount /mnt/ssd/dev/pts &amp;&amp;
 &gt; sudo umount /mnt/ssd/dev</code></pre></div>
+<hr />
+
 <h4 id="起動時にssd側領域をmountするよう修正">起動時にSSD側領域をmountするよう修正</h4>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#007f7f"># SSDUbuntu領域をmount(上で既にしていれば不要)</span>
 $ mkdir /mnt/ssd
@@ -314,6 +320,8 @@ $ mkdir /mnt/hdd
 $ sudo mount /dev/sda5 /mnt/hdd
 <span style="color:#007f7f"># /etc/fstabを書き換え</span>
 $ sudo vi /mnt/ssd/etc/fstab</code></pre></div>
+<hr />
+
 <h4 id="gpartedでpartitionを調整">GPartedでpartitionを調整</h4>
 
 <p>SSDのpartitionが起動できることを確認したうえで、<code>GParted</code>でHDD側のpartitionを調整する。</p>
