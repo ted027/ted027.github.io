@@ -57,6 +57,17 @@
     </item>
     
     <item>
+      <title>パワプロ ペナントの補強思考設定（2019年8月時点）</title>
+      <link>https://www.ted027.com/post/penant-add/</link>
+      <pubDate>Fri, 23 Aug 2019 09:32:03 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/penant-add/</guid>
+      <description>&lt;p&gt;実況パワフルプロ野球のペナントモードで、各球団の補強思考を設定できる。&lt;/p&gt;
+
+&lt;p&gt;Pythonで近年の移籍情報を取得して、各球団の補強実績に即した設定を算出したかった。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>パワプロ2018 投球フォーム一覧</title>
       <link>https://www.ted027.com/post/pawapuro-p-form/</link>
       <pubDate>Wed, 10 Jul 2019 00:41:48 +0900</pubDate>
@@ -80,18 +91,7 @@
       <pubDate>Tue, 23 Apr 2019 16:19:47 +0900</pubDate>
       
       <guid>https://www.ted027.com/post/penant-add-descript/</guid>
-      <description>&lt;p&gt;補強思考設定、各項目の判断基準の説明です。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>パワプロ ペナントの補強思考設定（2019年8月時点）</title>
-      <link>https://www.ted027.com/post/penant-add/</link>
-      <pubDate>Tue, 23 Apr 2019 09:32:03 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/post/penant-add/</guid>
-      <description>&lt;p&gt;実況パワフルプロ野球のペナントモードで、各球団の補強思考を設定できる。&lt;/p&gt;
-
-&lt;p&gt;Pythonで近年の移籍情報を取得して、各球団の補強実績に即した設定を算出したかった。&lt;/p&gt;</description>
+      <description>&lt;p&gt;補強思考設定、各項目の判断基準詳細。&lt;/p&gt;</description>
     </item>
     
   </channel>
