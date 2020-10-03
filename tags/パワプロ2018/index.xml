@@ -6,10 +6,21 @@
     <description>Recent content in パワプロ2018 on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 17 Feb 2020 01:21:55 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 03 Oct 2020 23:35:20 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/%E3%83%91%E3%83%AF%E3%83%97%E3%83%AD2018/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>パワプロ ペナントの補強思考設定（2020年10月）</title>
+      <link>https://www.ted027.com/post/penant-add/</link>
+      <pubDate>Sat, 03 Oct 2020 23:35:20 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/penant-add/</guid>
+      <description>&lt;p&gt;実況パワフルプロ野球のペナントモードで、各球団の補強思考を設定できる。&lt;/p&gt;
+
+&lt;p&gt;Pythonで近年の移籍情報を取得して、各球団の補強実績に即した設定を算出したかった。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>パワプロ2018(ＯＢ再現) 野村克也捕手</title>
@@ -30,23 +41,12 @@
     </item>
     
     <item>
-      <title>パワプロ ペナント補強思考設定を更新しました</title>
+      <title>パワプロ ペナント補強思考設定を更新（2019年8月）</title>
       <link>https://www.ted027.com/post/penant-add-update/</link>
       <pubDate>Fri, 23 Aug 2019 22:52:51 +0900</pubDate>
       
       <guid>https://www.ted027.com/post/penant-add-update/</guid>
       <description>&lt;p&gt;補強期間も終わったので、シーズン途中の移籍情報をふまえて更新。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>パワプロ ペナントの補強思考設定（2019年8月時点）</title>
-      <link>https://www.ted027.com/post/penant-add/</link>
-      <pubDate>Fri, 23 Aug 2019 09:32:03 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/post/penant-add/</guid>
-      <description>&lt;p&gt;実況パワフルプロ野球のペナントモードで、各球団の補強思考を設定できる。&lt;/p&gt;
-
-&lt;p&gt;Pythonで近年の移籍情報を取得して、各球団の補強実績に即した設定を算出したかった。&lt;/p&gt;</description>
     </item>
     
     <item>
