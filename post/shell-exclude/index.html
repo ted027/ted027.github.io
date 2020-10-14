@@ -170,9 +170,9 @@ if (!doNotTrack) {
 <h3 id="特定パターン以外のファイルを削除する際">特定パターン以外のファイルを削除する際</h3>
 
 <p>カレントディレクトリの<code>*.log</code>と<code>*.txt</code>だけ残して、他のファイルを全て削除したい場合。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ls | grep -v  <span style="color:#0ff;font-weight:bold">&#39;*.log|*.txt&#39;</span> | xargs -r</code></pre></div>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ls | grep -v  <span style="color:#0ff;font-weight:bold">&#39;*.log|*.txt&#39;</span> | xargs rm -r</code></pre></div>
 <p><code>ls -a</code>を指定すれば隠しファイルも消える。</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ls -a | grep -v  <span style="color:#0ff;font-weight:bold">&#39;*.log|*.txt&#39;</span> | xargs -r</code></pre></div>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ls -a | grep -v  <span style="color:#0ff;font-weight:bold">&#39;*.log|*.txt&#39;</span> | xargs rm -r</code></pre></div>
 <hr />
 
 <div class="kaerebalink-box" style="text-align:left;padding-bottom:20px;font-size:small;zoom: 1;overflow: hidden;">
