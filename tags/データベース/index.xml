@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>データベース on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/</link>
+    <description>Recent content in データベース on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 24 Oct 2020 14:17:05 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS Devday2020雑記</title>
+      <link>https://www.ted027.com/post/aws-devday2020/</link>
+      <pubDate>Sat, 24 Oct 2020 14:17:05 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/aws-devday2020/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

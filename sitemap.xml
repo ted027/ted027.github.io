@@ -3,8 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.ted027.com/categories/aws/</loc>
+    <lastmod>2020-10-24T14:17:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/aws-devday2020/</loc>
+    <lastmod>2020-10-24T14:17:05+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ted027.com/categories/</loc>
-    <lastmod>2020-10-04T00:33:27+09:00</lastmod>
+    <lastmod>2020-10-24T14:17:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/docker/</loc>
+    <lastmod>2020-10-24T14:17:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/</loc>
+    <lastmod>2020-10-24T14:17:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/serverless/</loc>
+    <lastmod>2020-10-24T14:17:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/</loc>
+    <lastmod>2020-10-24T14:17:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9/</loc>
+    <lastmod>2020-10-24T14:17:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/</loc>
+    <lastmod>2020-10-24T14:17:05+09:00</lastmod>
   </url>
   
   <url>
@@ -23,22 +63,7 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/post/</loc>
-    <lastmod>2020-10-04T00:33:27+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/tags/ssl/</loc>
-    <lastmod>2020-10-04T00:33:27+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/</loc>
-    <lastmod>2020-10-04T00:33:27+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/</loc>
     <lastmod>2020-10-04T00:33:27+09:00</lastmod>
   </url>
   
@@ -263,22 +288,12 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/categories/aws/</loc>
-    <lastmod>2020-05-24T00:45:19+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/tags/lambda/</loc>
     <lastmod>2020-05-24T00:45:19+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.ted027.com/tags/sns/</loc>
-    <lastmod>2020-05-24T00:45:19+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/sqs/</loc>
     <lastmod>2020-05-24T00:45:19+09:00</lastmod>
   </url>
   
@@ -1330,11 +1345,6 @@
   <url>
     <loc>https://www.ted027.com/post/domain/</loc>
     <lastmod>2019-04-28T21:43:13+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/docker/</loc>
-    <lastmod>2019-04-26T16:05:19+09:00</lastmod>
   </url>
   
   <url>
