@@ -6,10 +6,19 @@
     <description>Recent content in Ubuntu on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 25 Sep 2020 06:57:07 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 03 Jan 2021 22:50:26 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ハッカーになろう How To Become A Hacker</title>
+      <link>https://www.ted027.com/post/become-a-hacker/</link>
+      <pubDate>Sun, 03 Jan 2021 22:50:26 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/become-a-hacker/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>HDDデュアルブート環境でSSDを増設</title>
