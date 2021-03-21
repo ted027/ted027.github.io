@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fake-s3 on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/fake-s3/</link>
+    <description>Recent content in fake-s3 on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 21 Mar 2021 11:42:09 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/tags/fake-s3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>fake-s3にlist objectsをする際の注意点</title>
+      <link>https://www.ted027.com/post/fakes3-listobject/</link>
+      <pubDate>Sun, 21 Mar 2021 11:42:09 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/fakes3-listobject/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
