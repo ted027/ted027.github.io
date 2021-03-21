@@ -6,10 +6,28 @@
     <description>Recent content in Tags on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 14 Jan 2021 05:57:50 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 21 Mar 2021 10:52:11 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GitLabCI</title>
+      <link>https://www.ted027.com/tags/gitlabci/</link>
+      <pubDate>Sun, 21 Mar 2021 10:52:11 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/gitlabci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>localsack</title>
+      <link>https://www.ted027.com/tags/localsack/</link>
+      <pubDate>Sun, 21 Mar 2021 10:52:11 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/localsack/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Ubuntu</title>
@@ -93,7 +111,7 @@
     </item>
     
     <item>
-      <title>docker</title>
+      <title>Docker</title>
       <link>https://www.ted027.com/tags/docker/</link>
       <pubDate>Sat, 24 Oct 2020 14:17:05 +0900</pubDate>
       
@@ -381,7 +399,7 @@
     </item>
     
     <item>
-      <title>material-ui</title>
+      <title>Material-UI</title>
       <link>https://www.ted027.com/tags/material-ui/</link>
       <pubDate>Sun, 12 Apr 2020 21:10:11 +0900</pubDate>
       
@@ -498,7 +516,7 @@
     </item>
     
     <item>
-      <title>JavaScript</title>
+      <title>Javascript</title>
       <link>https://www.ted027.com/tags/javascript/</link>
       <pubDate>Tue, 21 Jan 2020 12:46:18 +0900</pubDate>
       
@@ -804,7 +822,7 @@
     </item>
     
     <item>
-      <title>State</title>
+      <title>state</title>
       <link>https://www.ted027.com/tags/state/</link>
       <pubDate>Mon, 15 Jul 2019 01:13:59 +0900</pubDate>
       
