@@ -11,8 +11,8 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.ted027.com/post/gitlabci-aws/" />
-<meta property="article:published_time" content="2021-03-21T10:52:11+09:00" />
-<meta property="article:modified_time" content="2021-03-21T10:52:11+09:00" />
+<meta property="article:published_time" content="2021-03-21T11:27:11+09:00" />
+<meta property="article:modified_time" content="2021-03-21T11:27:11+09:00" />
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="GitLab-CIでAWSローカル環境を使ったテストを行う"/>
@@ -93,7 +93,7 @@ if (!doNotTrack) {
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2021-03-21T10:52:11">2021-03-21</time>
+	<time class="meta__text" datetime="2021-03-21T11:27:11">2021-03-21</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -196,6 +196,10 @@ if (!doNotTrack) {
 
 <p>これをGitLab-CIで使う際、<code>services</code>のparameterで簡単にDocker環境を準備でき便利。</p>
 
+<ul>
+<li>参考: <a href="https://www.ted027.com/post/gitlabci-services-host/">GitLab-CIでservicesのコンテナに対してアクセスする</a></li>
+</ul>
+
 <hr />
 
 <h3 id="localstackを使う">Localstackを使う</h3>
@@ -208,12 +212,12 @@ if (!doNotTrack) {
 <li><p><a href="https://hub.docker.com/r/localstack/localstack">localstack/localstack</a></p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">my_aws_test:
 services:
-  - localstack/localstack:<span style="color:#ff0;font-weight:bold">0.12.8</span>
+- localstack/localstack:<span style="color:#ff0;font-weight:bold">0.12.8</span>
 variables:
-  DYNAMODB_ENDPOINT: http:localstack-locakstack:<span style="color:#ff0;font-weight:bold">4566</span>
-  S3_ENDPOINT: http:localstack-locakstack:<span style="color:#ff0;font-weight:bold">4566</span>
+DYNAMODB_ENDPOINT: http:localstack-locakstack:<span style="color:#ff0;font-weight:bold">4566</span>
+S3_ENDPOINT: http:localstack-locakstack:<span style="color:#ff0;font-weight:bold">4566</span>
 script:
-  - cd aws <span style="color:#0f0;font-weight:bold">&amp;&amp;</span> pytest test ...</code></pre></div></li>
+- cd aws <span style="color:#0f0;font-weight:bold">&amp;&amp;</span> pytest test ...</code></pre></div></li>
 </ul>
 
 <p>portは指定できず、imageのデフォルトを使う。<br />
@@ -237,11 +241,11 @@ script:
 <li><p><a href="https://hub.docker.com/r/amazon/dynamodb-local">amazon/dynamodb-local</a></p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">my_dynamodb_test:
 services:
-  - amazon/dynamodb-local:<span style="color:#ff0;font-weight:bold">1.15.0</span>
+- amazon/dynamodb-local:<span style="color:#ff0;font-weight:bold">1.15.0</span>
 variables:
-  DYNAMODB_ENDPOINT: http:amazon-dynamodb-local:<span style="color:#ff0;font-weight:bold">8000</span>
+DYNAMODB_ENDPOINT: http:amazon-dynamodb-local:<span style="color:#ff0;font-weight:bold">8000</span>
 script:
-  - cd dynamodb <span style="color:#0f0;font-weight:bold">&amp;&amp;</span> pytest test ...</code></pre></div></li>
+- cd dynamodb <span style="color:#0f0;font-weight:bold">&amp;&amp;</span> pytest test ...</code></pre></div></li>
 </ul>
 
 <p>portはデフォルト (<code>8000</code>)を使う。</p>
@@ -258,11 +262,11 @@ script:
 <li><p><a href="https://hub.docker.com/r/lphoward/fake-s3">lphoward/fake-s3</a></p>
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">my_s3_test:
 services:
-  - lphoward/fake-s3:<span style="color:#ff0;font-weight:bold">14.04</span>
+- lphoward/fake-s3:<span style="color:#ff0;font-weight:bold">14.04</span>
 variables:
-  S3_ENDPOINT: http:lphoward-fake-s3:<span style="color:#ff0;font-weight:bold">4569</span>
+S3_ENDPOINT: http:lphoward-fake-s3:<span style="color:#ff0;font-weight:bold">4569</span>
 script:
-  - cd s3 <span style="color:#0f0;font-weight:bold">&amp;&amp;</span> pytest test ...</code></pre></div></li>
+- cd s3 <span style="color:#0f0;font-weight:bold">&amp;&amp;</span> pytest test ...</code></pre></div></li>
 </ul>
 
 <p>portはデフォルト (現状<code>4569</code>)を使う。</p>
@@ -318,6 +322,15 @@ script:
         </div>
 
 <hr />
+
+<div>
+    <a href="https://px.a8.net/svt/ejp?a8mat=35F5RB+7CCHDE+3GWO+6I1XD" target="_blank" rel="nofollow">
+        <img border="0" width="300" height="250" alt=""
+            src="https://www24.a8.net/svt/bgt?aid=190503911444&wid=001&eno=01&mid=s00000016188001092000&mc=1"></a>
+    <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=35F5RB+7CCHDE+3GWO+6I1XD" alt="">
+</div>
+
+<hr />
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -366,7 +379,7 @@ script:
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/post/ubuntu-woeusb/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Ubuntu20.04でwoeusbのインストールに失敗</p></a>
+		<a class="post-nav__link" href="/post/gitlabci-services-host/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">GitLab-CIでservicesのコンテナに対してアクセスする</p></a>
 	</div>
 </nav>
 
@@ -566,12 +579,12 @@ script:
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item"><a class="widget__link" href="/post/gitlabci-aws/">1. GitLab-CIでAWSローカル環境を使ったテストを行う</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/ubuntu-woeusb/">2. Ubuntu20.04でwoeusbのインストールに失敗</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/npm-eacces-error/">3. NodeJSでlisten EACCES 0.0.0.0:443エラー</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/become-a-hacker/">4. ハッカーになろう — How To Become A Hacker</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/purosupi-b-form/">5. プロスピ2019 打撃フォーム一覧</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/purosupi-p-form/">6. プロスピ2019 投球フォーム一覧</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/aws-devday2020/">7. AWS Devday2020雑記</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/gitlabci-services-host/">2. GitLab-CIでservicesのコンテナに対してアクセスする</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/ubuntu-woeusb/">3. Ubuntu20.04でwoeusbのインストールに失敗</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/npm-eacces-error/">4. NodeJSでlisten EACCES 0.0.0.0:443エラー</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/become-a-hacker/">5. ハッカーになろう — How To Become A Hacker</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/purosupi-b-form/">6. プロスピ2019 打撃フォーム一覧</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/purosupi-p-form/">7. プロスピ2019 投球フォーム一覧</a></li>
 		</ul>
 	</div>
 </div>

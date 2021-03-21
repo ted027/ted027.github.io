@@ -6,7 +6,7 @@
     <description>Recent content in GitLabCI on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 21 Mar 2021 10:52:11 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 21 Mar 2021 11:27:11 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/gitlabci/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>GitLab-CIでAWSローカル環境を使ったテストを行う</title>
       <link>https://www.ted027.com/post/gitlabci-aws/</link>
-      <pubDate>Sun, 21 Mar 2021 10:52:11 +0900</pubDate>
+      <pubDate>Sun, 21 Mar 2021 11:27:11 +0900</pubDate>
       
       <guid>https://www.ted027.com/post/gitlabci-aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GitLab-CIでservicesのコンテナに対してアクセスする</title>
+      <link>https://www.ted027.com/post/gitlabci-services-host/</link>
+      <pubDate>Sun, 21 Mar 2021 11:00:25 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/gitlabci-services-host/</guid>
       <description></description>
     </item>
     
