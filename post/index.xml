@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 05 Apr 2021 00:03:27 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 09 Apr 2021 21:56:21 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dockerイメージ alpine,slim,stretch,buster,jessie等の違いと使い分け</title>
+      <link>https://www.ted027.com/post/docker-debian-difference/</link>
+      <pubDate>Fri, 09 Apr 2021 21:56:21 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/docker-debian-difference/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>映画きかんしゃトーマス　おいでよ！未来の発明ショー！レビュー</title>
@@ -1063,7 +1072,7 @@
       <pubDate>Wed, 24 Apr 2019 17:35:18 +0900</pubDate>
       
       <guid>https://www.ted027.com/post/dockerfile/</guid>
-      <description>&lt;p&gt;Dockerfileを書く時に気にしていること、よくわからなくて調べたことなど。&lt;/p&gt;</description>
+      <description></description>
     </item>
     
     <item>
