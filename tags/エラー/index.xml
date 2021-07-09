@@ -6,10 +6,19 @@
     <description>Recent content in エラー on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 14 Jan 2021 05:57:50 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 09 Jul 2021 19:21:16 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS Cloudformation カスタム名つきリソースの置換</title>
+      <link>https://www.ted027.com/post/aws-custom-name-update/</link>
+      <pubDate>Fri, 09 Jul 2021 19:21:16 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/aws-custom-name-update/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Ubuntu20.04でwoeusbのインストールに失敗</title>

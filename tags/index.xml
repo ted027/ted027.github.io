@@ -6,10 +6,46 @@
     <description>Recent content in Tags on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 09 Apr 2021 21:56:21 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 09 Jul 2021 19:21:16 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cloudformation</title>
+      <link>https://www.ted027.com/tags/cloudformation/</link>
+      <pubDate>Fri, 09 Jul 2021 19:21:16 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/cloudformation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DynamoDB</title>
+      <link>https://www.ted027.com/tags/dynamodb/</link>
+      <pubDate>Fri, 09 Jul 2021 19:21:16 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/dynamodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Elasticsearch</title>
+      <link>https://www.ted027.com/tags/elasticsearch/</link>
+      <pubDate>Fri, 09 Jul 2021 19:21:16 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/elasticsearch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>エラー</title>
+      <link>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</link>
+      <pubDate>Fri, 09 Jul 2021 19:21:16 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Alpine</title>
@@ -129,15 +165,6 @@
     </item>
     
     <item>
-      <title>エラー</title>
-      <link>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</link>
-      <pubDate>Thu, 14 Jan 2021 05:57:50 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>npm</title>
       <link>https://www.ted027.com/tags/npm/</link>
       <pubDate>Wed, 13 Jan 2021 23:54:03 +0900</pubDate>
@@ -192,7 +219,7 @@
     </item>
     
     <item>
-      <title>Docker</title>
+      <title>docker</title>
       <link>https://www.ted027.com/tags/docker/</link>
       <pubDate>Sat, 24 Oct 2020 14:17:05 +0900</pubDate>
       
@@ -885,7 +912,7 @@
     </item>
     
     <item>
-      <title>state</title>
+      <title>State</title>
       <link>https://www.ted027.com/tags/state/</link>
       <pubDate>Mon, 15 Jul 2019 01:13:59 +0900</pubDate>
       

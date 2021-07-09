@@ -3,12 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.ted027.com/tags/alpine/</loc>
-    <lastmod>2021-04-09T21:56:21+09:00</lastmod>
+    <loc>https://www.ted027.com/categories/aws/</loc>
+    <lastmod>2021-07-09T19:21:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/aws-custom-name-update/</loc>
+    <lastmod>2021-07-09T19:21:16+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.ted027.com/categories/</loc>
+    <lastmod>2021-07-09T19:21:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/cloudformation/</loc>
+    <lastmod>2021-07-09T19:21:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/dynamodb/</loc>
+    <lastmod>2021-07-09T19:21:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/elasticsearch/</loc>
+    <lastmod>2021-07-09T19:21:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/</loc>
+    <lastmod>2021-07-09T19:21:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/</loc>
+    <lastmod>2021-07-09T19:21:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</loc>
+    <lastmod>2021-07-09T19:21:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/</loc>
+    <lastmod>2021-07-09T19:21:16+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/alpine/</loc>
     <lastmod>2021-04-09T21:56:21+09:00</lastmod>
   </url>
   
@@ -29,21 +74,6 @@
   
   <url>
     <loc>https://www.ted027.com/post/docker-debian-difference/</loc>
-    <lastmod>2021-04-09T21:56:21+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/post/</loc>
-    <lastmod>2021-04-09T21:56:21+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/</loc>
-    <lastmod>2021-04-09T21:56:21+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/</loc>
     <lastmod>2021-04-09T21:56:21+09:00</lastmod>
   </url>
   
@@ -85,11 +115,6 @@
   <url>
     <loc>https://www.ted027.com/post/python-list-generator/</loc>
     <lastmod>2021-03-26T06:45:02+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/categories/aws/</loc>
-    <lastmod>2021-03-21T11:42:09+09:00</lastmod>
   </url>
   
   <url>
@@ -149,11 +174,6 @@
   
   <url>
     <loc>https://www.ted027.com/tags/woeusb/</loc>
-    <lastmod>2021-01-14T05:57:50+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</loc>
     <lastmod>2021-01-14T05:57:50+09:00</lastmod>
   </url>
   

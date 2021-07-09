@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloudformation on 行けたら行く</title>
+    <link>https://www.ted027.com/tags/cloudformation/</link>
+    <description>Recent content in Cloudformation on 行けたら行く</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 09 Jul 2021 19:21:16 +0900</lastBuildDate>
+    
+	<atom:link href="https://www.ted027.com/tags/cloudformation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS Cloudformation カスタム名つきリソースの置換</title>
+      <link>https://www.ted027.com/post/aws-custom-name-update/</link>
+      <pubDate>Fri, 09 Jul 2021 19:21:16 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/post/aws-custom-name-update/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
