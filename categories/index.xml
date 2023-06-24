@@ -6,10 +6,19 @@
     <description>Recent content in Categories on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 09 Jul 2021 19:21:16 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 24 Jun 2023 12:15:55 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Docker</title>
+      <link>https://www.ted027.com/categories/docker/</link>
+      <pubDate>Sat, 24 Jun 2023 12:15:55 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/categories/docker/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>AWS</title>
@@ -17,15 +26,6 @@
       <pubDate>Fri, 09 Jul 2021 19:21:16 +0900</pubDate>
       
       <guid>https://www.ted027.com/categories/aws/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>https://www.ted027.com/categories/docker/</link>
-      <pubDate>Fri, 09 Apr 2021 21:56:21 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/categories/docker/</guid>
       <description></description>
     </item>
     

@@ -6,10 +6,37 @@
     <description>Recent content in Tags on 行けたら行く</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 09 Jul 2021 19:21:16 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 24 Jun 2023 12:15:55 +0900</lastBuildDate>
     
 	<atom:link href="https://www.ted027.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>pip</title>
+      <link>https://www.ted027.com/tags/pip/</link>
+      <pubDate>Sat, 24 Jun 2023 12:15:55 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/pip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://www.ted027.com/tags/python/</link>
+      <pubDate>Sat, 24 Jun 2023 12:15:55 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>エラー</title>
+      <link>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</link>
+      <pubDate>Sat, 24 Jun 2023 12:15:55 +0900</pubDate>
+      
+      <guid>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Cloudformation</title>
@@ -35,15 +62,6 @@
       <pubDate>Fri, 09 Jul 2021 19:21:16 +0900</pubDate>
       
       <guid>https://www.ted027.com/tags/elasticsearch/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>エラー</title>
-      <link>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</link>
-      <pubDate>Fri, 09 Jul 2021 19:21:16 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</guid>
       <description></description>
     </item>
     
@@ -102,7 +120,7 @@
     </item>
     
     <item>
-      <title>List</title>
+      <title>list</title>
       <link>https://www.ted027.com/tags/list/</link>
       <pubDate>Fri, 26 Mar 2021 06:45:02 +0900</pubDate>
       
@@ -219,7 +237,7 @@
     </item>
     
     <item>
-      <title>docker</title>
+      <title>Docker</title>
       <link>https://www.ted027.com/tags/docker/</link>
       <pubDate>Sat, 24 Oct 2020 14:17:05 +0900</pubDate>
       
@@ -570,15 +588,6 @@
     </item>
     
     <item>
-      <title>Python</title>
-      <link>https://www.ted027.com/tags/python/</link>
-      <pubDate>Sat, 08 Feb 2020 23:36:00 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>snapshot</title>
       <link>https://www.ted027.com/tags/snapshot/</link>
       <pubDate>Sat, 08 Feb 2020 23:36:00 +0900</pubDate>
@@ -615,7 +624,7 @@
     </item>
     
     <item>
-      <title>Javascript</title>
+      <title>JavaScript</title>
       <link>https://www.ted027.com/tags/javascript/</link>
       <pubDate>Tue, 21 Jan 2020 12:46:18 +0900</pubDate>
       
@@ -912,7 +921,7 @@
     </item>
     
     <item>
-      <title>state</title>
+      <title>State</title>
       <link>https://www.ted027.com/tags/state/</link>
       <pubDate>Mon, 15 Jul 2019 01:13:59 +0900</pubDate>
       
@@ -1169,15 +1178,6 @@
       <pubDate>Sun, 19 May 2019 14:28:24 +0900</pubDate>
       
       <guid>https://www.ted027.com/tags/%E8%A6%8F%E5%AE%9A%E6%8A%95%E7%90%83%E5%9B%9E/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pip</title>
-      <link>https://www.ted027.com/tags/pip/</link>
-      <pubDate>Sat, 18 May 2019 22:05:36 +0900</pubDate>
-      
-      <guid>https://www.ted027.com/tags/pip/</guid>
       <description></description>
     </item>
     

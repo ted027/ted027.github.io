@@ -3,17 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.ted027.com/categories/</loc>
+    <lastmod>2023-06-24T12:15:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/categories/docker/</loc>
+    <lastmod>2023-06-24T12:15:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/python-on-docker/</loc>
+    <lastmod>2023-06-24T12:15:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/pip/</loc>
+    <lastmod>2023-06-24T12:15:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/post/</loc>
+    <lastmod>2023-06-24T12:15:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/python/</loc>
+    <lastmod>2023-06-24T12:15:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/</loc>
+    <lastmod>2023-06-24T12:15:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</loc>
+    <lastmod>2023-06-24T12:15:55+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ted027.com/</loc>
+    <lastmod>2023-06-24T12:15:55+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.ted027.com/categories/aws/</loc>
     <lastmod>2021-07-09T19:21:16+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.ted027.com/post/aws-custom-name-update/</loc>
-    <lastmod>2021-07-09T19:21:16+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/categories/</loc>
     <lastmod>2021-07-09T19:21:16+09:00</lastmod>
   </url>
   
@@ -33,37 +73,12 @@
   </url>
   
   <url>
-    <loc>https://www.ted027.com/post/</loc>
-    <lastmod>2021-07-09T19:21:16+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/</loc>
-    <lastmod>2021-07-09T19:21:16+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/%E3%82%A8%E3%83%A9%E3%83%BC/</loc>
-    <lastmod>2021-07-09T19:21:16+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/</loc>
-    <lastmod>2021-07-09T19:21:16+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.ted027.com/tags/alpine/</loc>
     <lastmod>2021-04-09T21:56:21+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.ted027.com/tags/debian/</loc>
-    <lastmod>2021-04-09T21:56:21+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/categories/docker/</loc>
     <lastmod>2021-04-09T21:56:21+09:00</lastmod>
   </url>
   
@@ -579,11 +594,6 @@
   
   <url>
     <loc>https://www.ted027.com/post/elasticsearch-snapshot/</loc>
-    <lastmod>2020-02-08T23:36:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/python/</loc>
     <lastmod>2020-02-08T23:36:00+09:00</lastmod>
   </url>
   
@@ -1215,11 +1225,6 @@
   <url>
     <loc>https://www.ted027.com/tags/%E8%A6%8F%E5%AE%9A%E6%8A%95%E7%90%83%E5%9B%9E/</loc>
     <lastmod>2019-05-19T14:28:24+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ted027.com/tags/pip/</loc>
-    <lastmod>2019-05-18T22:05:36+09:00</lastmod>
   </url>
   
   <url>
