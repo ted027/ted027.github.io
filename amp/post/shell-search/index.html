@@ -137,6 +137,7 @@
 <li>
 <ul>
 <li><a href="#ファイル名検索">ファイル名検索</a></li>
+<li><a href="#ファイル名-パス形式-検索">ファイル名（パス形式）検索</a></li>
 <li><a href="#ファイル内容検索">ファイル内容検索</a></li>
 </ul></li>
 </ul></li>
@@ -171,11 +172,27 @@
 <div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ ls {directory/path} | grep {search_word}</code></pre></div></li>
 
 <li><p>特定ディレクトリ配下のファイル名検索</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ find {directory/path} | -type f -name <span style="color:#0ff;font-weight:bold">\*</span>{search_word}<span style="color:#0ff;font-weight:bold">\*</span></code></pre></div></li>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ find {directory/path} -type f -name <span style="color:#0ff;font-weight:bold">\*</span>{search_word}<span style="color:#0ff;font-weight:bold">\*</span></code></pre></div></li>
 
 <li><p>特定ディレクトリ配下のディレクトリ名検索</p>
-<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ find {directory/path} | -type d -name <span style="color:#0ff;font-weight:bold">\*</span>{search_word}<span style="color:#0ff;font-weight:bold">\*</span></code></pre></div></li>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ find {directory/path} -type d -name <span style="color:#0ff;font-weight:bold">\*</span>{search_word}<span style="color:#0ff;font-weight:bold">\*</span></code></pre></div></li>
 </ul>
+
+<hr />
+
+<h3 id="ファイル名-パス形式-検索">ファイル名（パス形式）検索</h3>
+
+<p>findの<code>-name</code>オプションにはパス形式（&rsquo;/&lsquo;含む）を指定できないので、<code>-path</code>を使う。</p>
+
+<ul>
+<li><p>特定ディレクトリ配下のパス形式ファイル名検索</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ find {prefix/dir} -type f -path <span style="color:#0ff;font-weight:bold">&#34;*/path/*/directory/file&#34;</span></code></pre></div></li>
+
+<li><p>特定ディレクトリ配下のパス形式ディレクトリ名検索</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ find {prefix/dir} -type d -path <span style="color:#0ff;font-weight:bold">&#34;*/path/*/directory&#34;</span></code></pre></div></li>
+</ul>
+
+<hr />
 
 <h3 id="ファイル内容検索">ファイル内容検索</h3>
 
